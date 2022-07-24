@@ -21,5 +21,5 @@ git clone https://github.com/reobin/typewritten.git "$HOME/.zsh/typewritten"
 
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 echo ".dotfiles" >> .gitignore
-git clone --bare https://github.com/kvillaniholland/dotfiles $HOME/.dotfiles
+git clone --bare https://github.com/oatmeaI/dotfiles.git $HOME/.dotfiles
 config checkout
