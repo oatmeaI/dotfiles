@@ -30,15 +30,15 @@ if ! [ -d "$HOME/.config-backup" ]; then
 fi
 
 if [ -d "$HOME/.config/kitty" ]; then
-    mv "$HOME/.config/kitty" "$HOME/.config-backup"
+    mv "$HOME/.config/kitty" "$HOME/.config-backup/kitty"
 fi
 
 if [ -d "$HOME/.config/nvim" ]; then
-    mv "$HOME/.config/nvim" "$HOME/.config-backup"
+    mv "$HOME/.config/nvim" "$HOME/.config-backup/nvim"
 fi
 
 if [ -d "$HOME/.dotfiles" ]; then
-    mv "$HOME/.dotfiles" "$HOME/.config-backup"
+    mv "$HOME/.dotfiles" "$HOME/.config-backup/dotfiles"
 fi
 
 if [ -f "$HOME/.vimrc" ]; then
