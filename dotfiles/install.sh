@@ -21,24 +21,28 @@ if ! [ -d "$HOME/.zsh/typewritten" ]; then
     git clone https://github.com/reobin/typewritten.git "$HOME/.zsh/typewritten"
 fi
 
+if ! [ -d "$HOME/.config-backup"]; then
+    mkdir "$HOME/.config-backup"
+fi
+
 if [ -d "$HOME/.config/kitty" ]; then
-    mv -r "$HOME/.config/kitty" "$HOME/.config-backup/kitty"
+    mv "$HOME/.config/kitty" "$HOME/.config-backup"
 fi
 
 if [ -d "$HOME/.config/nvim" ]; then
-    mv -r "$HOME/.config/nvim" "$HOME/.config-backup/nvim"
+    mv "$HOME/.config/nvim" "$HOME/.config-backup"
 fi
 
 if [ -f "$HOME/.vimrc" ]; then
-    mv "$HOME/.vimrc" "$HOME/.config-backup/.vimrc"
+    mv "$HOME/.vimrc" "$HOME/.config-backup"
 fi
 
 if [ -f "$HOME/.zprofile" ]; then
-    mv "$HOME/.zprofile" "$HOME/.config-backup/.zprofile"
+    mv "$HOME/.zprofile" "$HOME/.config-backup"
 fi
 
 if [ -f "$HOME/.zshrc" ]; then
-    mv "$HOME/.zshrc" "$HOME/.config-backup/.zshrc"
+    mv "$HOME/.zshrc" "$HOME/.config-backup"
 fi
 
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
