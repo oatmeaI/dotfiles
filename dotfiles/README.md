@@ -1,1 +1,1 @@
-`sh -c "$(curl -fsSL https://github.com/oatmeaI/dotfiles/blob/main/dotfiles/install.sh)"`
+`sh -c "$(curl -fsSL https://raw.githubusercontent.com/oatmeaI/dotfiles/main/dotfiles/install.sh)"`
