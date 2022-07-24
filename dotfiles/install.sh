@@ -12,9 +12,13 @@ if ! [ -x "$(command -v brew)" ]; then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
-brew install nvim kitty thefuck yarn nvm
+brew install nvim thefuck yarn nvm
 brew tap homebrew/cask-fonts
 brew install font-fira-code-nerd-font
+
+if ! [ -d "/Applications/kitty.app" ]; then
+    brew install kitty
+fi
 
 if ! [ -d "$HOME/.zsh/typewritten" ]; then
     mkdir -p "$HOME/.zsh"
