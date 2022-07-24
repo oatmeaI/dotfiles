@@ -99,5 +99,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-export EDITOR="nvim"
-alias config='/usr/bin/git --git-dir=/Users/keenan/.dotfiles/ --work-tree=/Users/keenan'
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+export EDITOR='nvim'
+autoload -Uz compinit && compinit
