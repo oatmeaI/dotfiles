@@ -37,6 +37,10 @@ if [ -d "$HOME/.config/nvim" ]; then
     mv "$HOME/.config/nvim" "$HOME/.config-backup"
 fi
 
+if [ -d "$HOME/.dotfiles" ]; then
+    mv "$HOME/.dotfiles" "$HOME/.config-backup"
+fi
+
 if [ -f "$HOME/.vimrc" ]; then
     mv "$HOME/.vimrc" "$HOME/.config-backup"
 fi
