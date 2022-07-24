@@ -3,7 +3,6 @@ ZSH_THEME=""
 plugins=(git gitfast vi-mode)
 source $ZSH/oh-my-zsh.sh
 
-
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 export EDITOR='nvim'
