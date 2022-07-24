@@ -25,7 +25,7 @@ if ! [ -d "$HOME/.zsh/typewritten" ]; then
     git clone https://github.com/reobin/typewritten.git "$HOME/.zsh/typewritten"
 fi
 
-if ! [ -d "$HOME/.config-backup"]; then
+if ! [ -d "$HOME/.config-backup" ]; then
     mkdir "$HOME/.config-backup"
 fi
 
