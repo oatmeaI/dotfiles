@@ -1,3 +1,5 @@
+" If for some reason I have to use Vim instead of Neovim, set it up to be sorta close to my Nvim setup.
+
 set termguicolors
 set backspace=indent,eol,start
 set ruler
