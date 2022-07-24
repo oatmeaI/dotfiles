@@ -16,6 +16,9 @@ brew install nvim kitty thefuck yarn nvm
 brew tap homebrew/cask-fonts
 brew install font-fira-code-nerd-font
 
+mkdir -p "$HOME/.zsh"
+git clone https://github.com/reobin/typewritten.git "$HOME/.zsh/typewritten"
+
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 echo ".dotfiles" >> .gitignore
 git clone --bare https://github.com/kvillaniholland/dotfiles $HOME/.dotfiles
