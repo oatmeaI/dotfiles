@@ -10,13 +10,12 @@ export VISUAL='nvim'
 
 autoload -Uz compinit && compinit
 
-fpath+=$HOME/.zsh/typewritten
-autoload -U promptinit; promptinit
-prompt typewritten
 export TYPEWRITTEN_CURSOR="block"
 export TYPEWRITTEN_DISABLE_RETURN_CODE=true
 export TYPEWRITTEN_RIGHT_PROMPT_PREFIX="# "
-
+fpath+=$HOME/.zsh/typewritten
+autoload -U promptinit; promptinit
+prompt typewritten
 eval $(thefuck --alias)
 
 export NVM_DIR="$HOME/.nvm"
