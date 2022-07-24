@@ -107,6 +107,7 @@ fpath+=$HOME/.zsh/typewritten
 autoload -U promptinit; promptinit
 prompt typewritten
 export TYPEWRITTEN_CURSOR="block"
+export TYPEWRITTEN_DISABLE_RETURN_CODE=true
 eval $(thefuck --alias)
 export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
