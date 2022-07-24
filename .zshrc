@@ -101,8 +101,10 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 export EDITOR='nvim'
+export VISUAL='nvim'
 autoload -Uz compinit && compinit
 fpath+=$HOME/.zsh/typewritten
 autoload -U promptinit; promptinit
 prompt typewritten
 export TYPEWRITTEN_CURSOR="block"
+eval $(thefuck --alias)
