@@ -1,4 +1,3 @@
-" Can probably use XDG vars here instead of absolute path
 source ~/.config/nvim/keys.vim
 
 lua require('impatient')
