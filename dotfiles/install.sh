@@ -55,6 +55,11 @@ if [ -f "$HOME/.zshrc" ]; then
     mv "$HOME/.zshrc" "$HOME/.config-backup"
 fi
 
+# Install P10K
+if ! [ -d "$HOME/powerlevel10k" ]; then
+    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+fi
+
 # Set up the `config` alias, and clone the repo!
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 if ! [-d "$HOME/.dotfiles"]; then
