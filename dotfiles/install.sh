@@ -11,7 +11,6 @@ if ! [ -x "$(command -v brew)" ]; then
 fi
 
 # Install Neovim, TheFuck, Yarn, NVM and the Fira Code Nerd Font
-# Brew will exitn with a warning if the package is already installed
 brew install nvim thefuck yarn nvm
 brew tap homebrew/cask-fonts
 brew install font-fira-code-nerd-font
@@ -58,6 +57,7 @@ fi
 
 # Set up the `config` alias, and clone the repo!
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-echo ".dotfiles" >> .gitignore # This shouldn't be necessary, but just in case.
-git clone --bare https://github.com/oatmeaI/dotfiles.git $HOME/.dotfiles
+if ! [-d "$HOME/.dotfiles"]; then
+    git clone --bare https://github.com/oatmeaI/dotfiles.git $HOME/.dotfiles
+fi
 config checkout
