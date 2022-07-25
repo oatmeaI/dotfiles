@@ -13,6 +13,14 @@ require('packer').startup(function()
     -- https://github.com/mg979/vim-visual-multi
     use 'kyazdani42/nvim-web-devicons'
 
+    -- Base16 Theme Framework
+    -- https://github.com/rrethy/nvim-base16
+    use 'rrethy/nvim-base16'
+
+    -- Sonokai theme - higher contrast than OneDark
+    -- https://github.com/sainnhe/sonokai
+    use 'sainnhe/sonokai'
+
     -- OneDark Theme from Atom
     -- https://github.com/mg979/vim-visual-multi
     use 'joshdick/onedark.vim'
@@ -117,6 +125,7 @@ require('packer').startup(function()
             require('telescope').load_extension('fzf') 
             require('telescope').load_extension('neoclip')
             require("telescope").load_extension('harpoon')
+            require('telescope-colorscheme')
         end,
     }
 

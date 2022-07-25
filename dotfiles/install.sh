@@ -60,6 +60,11 @@ if ! [ -d "$HOME/powerlevel10k" ]; then
     git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 fi
 
+# Install base16-kitty
+if ! [ -d "$HOME/base16-kitty" ]; then
+    git clone --depth=1 git@github.com:kdrag0n/base16-kitty.git ~/base16-kitty
+fi
+
 # Set up the `config` alias, and clone the repo!
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 if ! [-d "$HOME/.dotfiles"]; then

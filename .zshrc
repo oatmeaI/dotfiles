@@ -29,6 +29,11 @@ autoload -Uz compinit && compinit
 # autoload -U promptinit; promptinit
 # prompt typewritten
 
+# Set up adobe environment variables, if the file exists; this way we don't sync these secrets to git.
+if [[ -r "$HOME/adobevars.sh" ]]; then
+  source "$HOME/adobevars.sh"
+fi
+
 # Turn on TheFuck
 eval $(thefuck --alias)
 
@@ -40,3 +45,5 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# eval "kitty @ set-colors -c $HOME/base16-kitty/colors/$(cat $HOME/.config/.base16_theme.conf).conf"

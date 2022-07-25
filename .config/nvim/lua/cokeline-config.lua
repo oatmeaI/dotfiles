@@ -97,15 +97,8 @@ require('cokeline').setup({
         }
     },
     default_hl = {
-        fg = function(buffer)
-            return
-                buffer.is_focused
-                and tabFg
-                or tabFg
-        end,
-        bg = function(buffer)
-            tabBg(buffer)
-        end
+        bg = get_hex('Normal', 'bg'),
+        fg = get_hex('Normal', 'fg'),
     },
     components = {
         components.spacer1,

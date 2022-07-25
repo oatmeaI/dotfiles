@@ -24,7 +24,7 @@ set noshowmode
 set hidden
 set nofoldenable
 syntax on
-colorscheme onedark                                     " So far this theme seems to have the best highlighting for Typescript
+" colorscheme sonokai                                     " So far this theme seems to have the best highlighting for Typescript
 set background=dark
 hi clear SignColumn
 hi FloatBorder guifg=#646e82
