@@ -29,6 +29,7 @@ set background=dark
 hi clear SignColumn
 hi FloatBorder guifg=#646e82
 hi NormalFloat guibg=clear
+hi! link VertSplit Comment
 
 " ---------- Autocommands
 " Refresh syntax highlighting on buffer enter (it gets stuck sometimes)

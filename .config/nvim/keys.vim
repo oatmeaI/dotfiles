@@ -48,9 +48,11 @@ nnoremap <silent><c-f> <cmd>lua require('spectre').open()<cr>|  " Project wide f
 
 " ---------- Insert Mode Keymappings
 imap jj <esc>|                                                  " Quick exit from insert mode
+imap kk <c-space>|                                              " Manually trigger completion
 
 " COQ's default <cr> keymap isn't working for some reason; this gives a
 " quicker and easier <space> shortcut instead which will dismiss the
 " completion popup if nothing is selected, or do the completion if something
 " is selected
 ino <silent><expr><space> pumvisible() ? (complete_info().selected == -1 ? "\<c-e><space>" : "\<c-y>") : "\<space>"
+" Why doesn't this work though?? I have to remap it on start for some reason
