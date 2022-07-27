@@ -19,7 +19,7 @@ export EDITOR='nvim'
 export VISUAL='nvim'
 
 # Git completion
-autoload -Uz compinit && compinit
+# autoload -Uz compinit && compinit
 
 # Configure & load Typewritten prompt
 # export TYPEWRITTEN_CURSOR="block"
@@ -50,3 +50,5 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 bindkey "^[[1;3C" forward-word
 bindkey "^[[1;3D" backward-word
+
+source ~/.zsh/auto-complete/zsh-autocomplete.plugin.zsh
