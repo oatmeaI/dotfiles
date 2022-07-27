@@ -51,4 +51,5 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 bindkey "^[[1;3C" forward-word
 bindkey "^[[1;3D" backward-word
 
+# https://github.com/marlonrichert/zsh-autocomplete
 source ~/.zsh/auto-complete/zsh-autocomplete.plugin.zsh
