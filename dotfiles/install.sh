@@ -68,6 +68,6 @@ fi
 # Set up the `config` alias, and clone the repo!
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 if ! [-d "$HOME/.dotfiles"]; then
-    git clone --bare https://github.com/oatmeaI/dotfiles.git $HOME/.dotfiles
+    git clone --bare git@github.com:oatmeaI/dotfiles.git $HOME/.dotfiles
 fi
 config checkout
