@@ -11,7 +11,7 @@ if ! [ -x "$(command -v brew)" ]; then
 fi
 
 # Install Neovim, TheFuck, Yarn, NVM and the Fira Code Nerd Font
-brew install nvim thefuck yarn nvm
+brew install nvim thefuck yarn nvm nnn
 brew tap homebrew/cask-fonts
 brew install font-fira-code-nerd-font
 
