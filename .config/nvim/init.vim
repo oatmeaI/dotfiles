@@ -1,7 +1,7 @@
-source ~/.config/nvim/keys.vim
-
 lua require('impatient')
 lua require('plugins')
+
+source ~/.config/nvim/keys.vim
 
 " ---------- General Settings
 set termguicolors
@@ -21,10 +21,10 @@ set foldexpr=nvim_treesitter#foldexpr()
 set cursorline
 set modifiable
 set noshowmode
+set fillchars=eob:\ 
 set hidden
 set nofoldenable
 syntax on
-" colorscheme sonokai                                     " So far this theme seems to have the best highlighting for Typescript
 set background=dark
 hi clear SignColumn
 hi FloatBorder guifg=#646e82
@@ -57,7 +57,7 @@ let g:gitblame_display_virtual_text = 0
 let g:gitblame_date_format = '%r'
 
 " ---------- COQ config
-let g:coq_settings = { 'auto_start': 'shut-up' } " In lua file??
+let g:coq_settings = { 'auto_start': 'shut-up' }
 
 " ---------- Minimap config
 let g:minimap_auto_start = 0
@@ -66,4 +66,3 @@ let g:minimap_highlight_search = 1
 
 " This doesn't seem to be working for some reason
 set splitright
-

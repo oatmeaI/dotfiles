@@ -54,5 +54,6 @@ imap kk <c-space>|                                              " Manually trigg
 " quicker and easier <space> shortcut instead which will dismiss the
 " completion popup if nothing is selected, or do the completion if something
 " is selected
-ino <silent><expr><space> pumvisible() ? (complete_info().selected == -1 ? "\<c-e><space>" : "\<c-y>") : "\<space>"
+"  complete_info().selected == -1 ? "\<c-e><space>" :
+imap <silent><expr><space> pumvisible() ? ("\<c-y>") : "\<space>"
 " Why doesn't this work though?? I have to remap it on start for some reason
