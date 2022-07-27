@@ -53,3 +53,6 @@ bindkey "^[[1;3D" backward-word
 
 # https://github.com/marlonrichert/zsh-autocomplete
 source ~/.zsh/auto-complete/zsh-autocomplete.plugin.zsh
+
+# https://github.com/jarun/nnn
+alias ls='nnn -de'
