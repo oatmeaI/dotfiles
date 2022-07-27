@@ -47,3 +47,6 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # eval "kitty @ set-colors -c $HOME/base16-kitty/colors/$(cat $HOME/.config/.base16_theme.conf).conf"
+
+bindkey "^[[1;3C" forward-word
+bindkey "^[[1;3D" backward-word
