@@ -66,3 +66,4 @@ let g:minimap_highlight_search = 1
 
 " This doesn't seem to be working for some reason
 set splitright
+

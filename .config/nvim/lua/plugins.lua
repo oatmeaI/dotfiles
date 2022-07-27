@@ -29,6 +29,13 @@ require('packer').startup(function()
     -- https://github.com/nvim-lua/plenary.nvim
     use 'nvim-lua/plenary.nvim'
 
+    -- Color highligher
+    -- https://github.com/brenoprata10/nvim-highlight-colors
+    use {
+        'brenoprata10/nvim-highlight-colors',
+        config = function() require('nvim-highlight-colors').setup {} end
+    }
+
     -- Commands Cheatsheet
     -- https://github.com/sudormrfbin/cheatsheet.nvim
     use {
