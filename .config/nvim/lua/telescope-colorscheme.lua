@@ -7,7 +7,6 @@ local function set_colorscheme(name)
     vim.cmd('colorscheme '.. name)
     -- Fix tabline background
     vim.cmd('hi TabLineFill guibg=clear')
-    vim.cmd('hi! link VertSplit Comment')
     -- execute `kitty @ set-colors -c <color>` to change terminal window's
     -- colors and newly created terminal windows colors
    -- Job:new({
@@ -24,7 +23,7 @@ vim.keymap.set('n', '<space>c', function()
     local telescope_actions = require("telescope.actions")
     local telescope_action_set = require("telescope.actions.set")
     local action_state = require "telescope.actions.state"
-    local current = vim.g.colors_name 
+    local current = vim.g.colors_name
     -- create our picker
     require('telescope.pickers').new(theme, {
         prompt = 'Change Base16 Colorscheme',
@@ -49,4 +48,4 @@ vim.keymap.set('n', '<space>c', function()
         end
     }):find()
 end)
-set_colorscheme(vim.fn.readfile(base16_theme_fname)[1])
+-- set_colorscheme(vim.fn.readfile(base16_theme_fname)[1])

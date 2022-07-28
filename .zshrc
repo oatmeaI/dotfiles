@@ -56,3 +56,4 @@ source ~/.zsh/auto-complete/zsh-autocomplete.plugin.zsh
 
 # https://github.com/jarun/nnn
 alias ls='nnn -de'
+export PATH=/Users/villanih/.local/bin:$PATH
