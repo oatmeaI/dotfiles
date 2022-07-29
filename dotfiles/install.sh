@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 # Install Oh My ZSH if we don't have it already
-if ! [ -d "~/.oh-my-zsh" ]; then
+if ! [ -d "$HOME/.oh-my-zsh" ]; then
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
 
@@ -21,59 +21,55 @@ if ! [ -d "/Applications/kitty.app" ]; then
 fi
 
 # Create ZSH plugins directory
-if ! [ -d "~/.zsh" ]; then
-    mkdir -p "~/.zsh"
+if ! [ -d "$HOME/.zsh" ]; then
+    mkdir -p "$HOME/.zsh"
 fi
 
 # Install ZSH auto-complete plugin if needed
 # https://github.com/marlonrichert/zsh-autocomplete
-if ! [ -d "~/.zsh/auto-complete" ]; then
-    mkdir -p "~/.zsh/auto-complete"
-    git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git "~/.zsh/auto-complete"
+if ! [ -d "$HOME/.zsh/auto-complete" ]; then
+    mkdir -p "$HOME/.zsh/auto-complete"
+    git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git "$HOME/.zsh/auto-complete"
 fi
 
 # Make backups of everything before pulling all the files down
-if ! [ -d "~/.config-backup" ]; then
-    mkdir "~/.config-backup"
+if ! [ -d "$HOME/.config-backup" ]; then
+    mkdir "$HOME/.config-backup"
 fi
 
-if [ -d "~/.config/kitty" ]; then
-    mv "~/.config/kitty" "~/.config-backup/kitty"
+if [ -d "$HOME/.config/kitty" ]; then
+    mv "$HOME/.config/kitty" "~/.config-backup/kitty"
 fi
 
-if [ -d "~/.config/nvim" ]; then
-    mv "~/.config/nvim" "~/.config-backup/nvim"
+if [ -d "$HOME/.config/nvim" ]; then
+    mv "$HOME/.config/nvim" "~/.config-backup/nvim"
 fi
 
-if [ -d "~/.dotfiles" ]; then
-    mv "~/.dotfiles" "~/.config-backup/dotfiles"
+if [ -d "$HOME/.dotfiles" ]; then
+    mv "$HOME/.dotfiles" "~/.config-backup/dotfiles"
 fi
 
-if [ -f "~/.vimrc" ]; then
-    mv "~/.vimrc" "~/.config-backup"
+if [ -f "$HOME/.vimrc" ]; then
+    mv "$HOME/.vimrc" "~/.config-backup"
 fi
 
-if [ -f "~/.zprofile" ]; then
-    mv "~/.zprofile" "~/.config-backup"
-fi
-
-if [ -f "~/.zshrc" ]; then
-    mv "~/.zshrc" "~/.config-backup"
+if [ -f "$HOME/.zshrc" ]; then
+    mv "$HOME/.zshrc" "~/.config-backup"
 fi
 
 # Install P10K
-if ! [ -d "~/powerlevel10k" ]; then
-    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+if ! [ -d "$HOME/powerlevel10k" ]; then
+    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $HOME/powerlevel10k
 fi
 
 # Install base16-kitty
-if ! [ -d "~/base16-kitty" ]; then
-    git clone --depth=1 git@github.com:kdrag0n/base16-kitty.git ~/base16-kitty
+if ! [ -d "$HOME/base16-kitty" ]; then
+    git clone --depth=1 git@github.com:kdrag0n/base16-kitty.git $HOME/base16-kitty
 fi
 
 # Set up the `config` alias, and clone the repo!
-alias config='/usr/bin/git --git-dir=~/.dotfiles/ --work-tree=~'
-if ! [-d "~/.dotfiles"]; then
-    git clone --bare git@github.com:oatmeaI/dotfiles.git ~/.dotfiles
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=~'
+if ! [ -d "$HOME/.dotfiles" ]; then
+    git clone --bare git@github.com:oatmeaI/dotfiles.git $HOME/.dotfiles
+    config checkout
 fi
-config checkout

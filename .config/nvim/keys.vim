@@ -51,4 +51,4 @@ imap jj <esc>|                                                  " Quick exit fro
 imap kk <c-space>|                                              " Manually trigger completion
 
 " ---------- COQ Keybindings
-ino <silent><expr> <space>    pumvisible() ? (complete_info().selected == -1 ? "\<C-e><space>" : "\<C-y><space>") : "\<space>"
+ino <silent><expr> <space>    pumvisible() ? (complete_info().selected == -1 ? "\<C-e><space>" : "\<C-y>") : "\<space>"
