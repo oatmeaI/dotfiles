@@ -29,7 +29,7 @@ end
 
 require('lualine').setup {
     options = {
-        disabled_filetypes = {'alpha', 'NvimTree', '', 'minimap', 'aerial'},
+        disabled_filetypes = {'alpha', '', 'minimap', 'aerial'},
         extensions = {"mundo"},
     },
     sections = {

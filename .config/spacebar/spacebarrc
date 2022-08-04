@@ -1,0 +1,32 @@
+#!/usr/bin/env sh
+
+spacebar -m config position             top
+spacebar -m config height               26
+spacebar -m config title                on
+spacebar -m config spaces               on
+spacebar -m config clock                on
+spacebar -m config power                off
+spacebar -m config padding_left         20
+spacebar -m config padding_right        20
+spacebar -m config spacing_left         25
+spacebar -m config spacing_right        15
+spacebar -m config text_font            "FiraCode Nerd Font Mono:Retina:12.0"
+spacebar -m config icon_font            "FiraCode Nerd Font Mono:Regular:12.0"
+spacebar -m config background_color     0xff282a36
+spacebar -m config foreground_color     0xffeff0eb
+#spacebar -m config space_icon_color     0xff458588
+spacebar -m config power_icon_color     0xffcd950c
+spacebar -m config battery_icon_color   0xffd75f5f
+spacebar -m config dnd_icon_color       0xffa8a8a8
+spacebar -m config clock_icon_color     0xffa8a8a8
+spacebar -m config power_icon_strip      
+#spacebar -m config space_icon_strip     I II III IV V VI VII VIII IX X
+#spacebar -m config space_icon           
+spacebar -m config clock_icon           " "
+spacebar -m config dnd_icon             
+spacebar -m config clock_format         "%d/%m/%y (%a)   %I:%M%p"
+#spacebar -m config right_shell          on
+#spacebar -m config right_shell_icon     
+spacebar -m config right_shell_command  "whoami"
+
+echo "spacebar configuration loaded.."
