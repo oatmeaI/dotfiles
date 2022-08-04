@@ -11,9 +11,8 @@ if ! [ -x "$(command -v brew)" ]; then
 fi
 
 # Install Neovim, TheFuck, Yarn, NVM and the Fira Code Nerd Font
-brew install nvim thefuck yarn nvm
 brew tap homebrew/cask-fonts
-brew install font-fira-code-nerd-font
+brew install font-fira-code-nerd-font nvim thefuck yarn nvm
 
 # Brew can't seem to tell if KiTTY is installed already, so we check by hand
 if ! [ -d "/Applications/kitty.app" ]; then
