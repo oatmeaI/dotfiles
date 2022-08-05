@@ -9,6 +9,10 @@ shift + alt - h : yabai -m window --warp west
 shift + alt - j : yabai -m window --warp south
 shift + alt - k : yabai -m window --warp north
 shift + alt - l : yabai -m window --warp east
+ctrl + shift + alt - k : yabai -m window --stack north
+
+shift + alt - p : yabai -m window --ratio rel:+0.25
+shift + alt - o : yabai -m window --ratio rel:-0.25
 
 # Make window native fullscreen
 alt - f         : yabai -m window --toggle zoom-fullscreen
@@ -33,3 +37,5 @@ shift + alt - q : yabai -m window --close
 
 # Float or unfloat a window
 shift + alt - space : yabai -m window --toggle float
+shift + alt - i : yabai -m space --layout stack
+shift + alt - u : yabai -m space --layout bsp
