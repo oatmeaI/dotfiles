@@ -5,20 +5,6 @@ local git_blame = require('gitblame')
 local artist = ''
 local title = ''
 
-local function plex()
-    timer:stop()
-    timer:start(
-        250,
-        0,
-        vim.schedule_wrap(function()
-            body = curl.get("http://10.0.0.40:32400/status/sessions?X-Plex-Token=z4GLsbc-gdqPusYW_h-v").body
-            artist = body:match "grandparentTitle=\"([^\"]+)\""
-            title = body:match "title=\"([^\"]+)\""
-        end)
-    )
-    return artist .. ' - ' .. title
-end
-
 local function path()
     return vim.fn.expand('%')
 end
