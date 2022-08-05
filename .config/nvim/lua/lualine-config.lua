@@ -6,7 +6,7 @@ local artist = ''
 local title = ''
 
 local function plex()
-    timer:stop() 
+    timer:stop()
     timer:start(
         250,
         0,
@@ -29,7 +29,7 @@ end
 
 require('lualine').setup {
     options = {
-        disabled_filetypes = {'alpha', '', 'minimap', 'aerial'},
+        disabled_filetypes = {'alpha'},
         extensions = {"mundo"},
     },
     sections = {

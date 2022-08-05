@@ -22,7 +22,8 @@ function yabai(args, completion)
 end
 
 function drawBorders()
-        -- want to hide all borders here somehow
+    oldCanvases = {table.unpack(canvases)}
+    -- want to hide all borders here somehow
     yabai({"-m", "query", "--windows"}, function (out, err)
         if out == nil or type(out) ~= "string" or string.len(out) == 0 then
             return
@@ -31,15 +32,17 @@ function drawBorders()
         local json = "{\"windows\":"..out.."}"
         local json_obj = hs.json.decode(json)
         if json_obj ~= nil then
-          local windows = json_obj.windows
-          for i, win in ipairs(windows) do
-                    createBorder(win)
+            local windows = json_obj.windows
+            for i, win in ipairs(windows) do
+                createBorder(win)
+            end
+            for _, canvas in pairs(oldCanvases) do
+                canvas:hide() -- add a delay to avoid flicker
             end
           end
         end
       end
     )
-
 end
 
 function contains(table, element)
@@ -78,7 +81,6 @@ function createBorder(win)
     canvases[win.id] = hs.canvas.new({ x = win.frame.x, y = win.frame.y, w = win.frame.w, h = win.frame.h })
     canvases[win.id]:topLeft({ x = win.frame.x - spacing, y = win.frame.y - spacing })
     canvases[win.id]:size({ w = win.frame.w + (spacing * 2), h = win.frame.h + (spacing * 2) })
-
     canvases[win.id]:replaceElements({
         type = "rectangle",
         action = "stroke",
