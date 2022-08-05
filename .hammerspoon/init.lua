@@ -4,6 +4,8 @@ require("hs.ipc")
 local canvases = {
 }
 
+local inProgress = false
+
 --# helpers
 function yabai(args, completion)
   local yabai_output = ""
@@ -22,7 +24,12 @@ function yabai(args, completion)
 end
 
 function drawBorders()
-    oldCanvases = {table.unpack(canvases)}
+    if inProgress == true then
+        print("bailing")
+        return
+    end
+    inProgress = true
+    print("go")
     -- want to hide all borders here somehow
     yabai({"-m", "query", "--windows"}, function (out, err)
         if out == nil or type(out) ~= "string" or string.len(out) == 0 then
@@ -33,14 +40,16 @@ function drawBorders()
         local json_obj = hs.json.decode(json)
         if json_obj ~= nil then
             local windows = json_obj.windows
+            oldCanvases = {table.unpack(canvases)}
+            for _, canvas in pairs(canvases) do
+                canvas:hide()
+            end
             for i, win in ipairs(windows) do
                 createBorder(win)
             end
-            for _, canvas in pairs(oldCanvases) do
-                canvas:hide() -- add a delay to avoid flicker
-            end
           end
         end
+        inProgress = false
       end
     )
 end
@@ -61,7 +70,7 @@ function createBorder(win)
         return
     end
     stack = win['stack-index']
-    if win == nil or (win['app'] =='Hammerspoon' and win.title ~= 'Hammerspoon Console') then
+    if win == nil or win.subrole ~= 'AXStandardWindow' or (win['app'] =='Hammerspoon' and win.title ~= 'Hammerspoon Console') then
         return
     end
 
@@ -104,6 +113,10 @@ hs.ipc.cliInstall()
 -- calls made by yabai frow cli, see .yabairc
 -- should replace this all with one message from yabai
 yabaidirectcall = {
+    window = function(source)
+        print(inProgress ~= true and 'triggered by' or 'canceling', source)
+        drawBorders()
+    end,
   window_focused = function(window_id)
     drawBorders()
   end,
