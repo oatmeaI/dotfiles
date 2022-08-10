@@ -18,8 +18,7 @@ function renderBorder(canvas, focused)
         roundedRectRadii = { xRadius = radius, yRadius = radius },
         padding = 2
     })
-    canvas:level(focused and 2 or 0)
-    canvas:orderBelow()
+    canvas:level(focused and 2 or -1)
     canvas:show(fadeSpeed)
 end
 
