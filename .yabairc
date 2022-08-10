@@ -1,4 +1,3 @@
-sudo yabai --load-sa
 # global settings
 yabai -m config mouse_follows_focus          off
 yabai -m config focus_follows_mouse          off
@@ -31,10 +30,5 @@ yabai -m config left_padding                 32
 yabai -m config right_padding                32
 yabai -m config window_gap                   32
 
-yabai -m signal --add event=window_focused action="hs -c \"yabaidirectcall.window_focused(\`printenv YABAI_WINDOW_ID\`)\""
-yabai -m signal --add event=application_activated action="hs -c \"yabaidirectcall.application_activated(\`printenv YABAI_PROCESS_ID\`)\""
 yabai -m signal --add event=window_resized action="hs -c \"yabaidirectcall.window_resized(\`printenv YABAI_WINDOW_ID\`)\""
 yabai -m signal --add event=window_moved action="hs -c \"yabaidirectcall.window_moved(\`printenv YABAI_WINDOW_ID\`)\""
-yabai -m signal --add event=space_changed action="hs -c \"yabaidirectcall.window_moved(\`printenv YABAI_WINDOW_ID\`)\""
-
-echo "yabai configuration loaded.."
