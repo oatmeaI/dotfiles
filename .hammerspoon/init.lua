@@ -19,6 +19,7 @@ function renderBorder(canvas, focused)
         padding = 2
     })
     canvas:level(focused and 2 or 0)
+    canvas:orderBelow()
     canvas:show(fadeSpeed)
 end
 
