@@ -7,7 +7,7 @@ borderColor = { red = 0.0, green = 0.53, blue = 0.74, alpha = 1 }
 inactiveBorderColor = { red = 0.41, green = 0.41, blue = 0.41, alpha = 0.7 }
 fadeSpeed = .25
 
-windowWatcher = hs.window.filter.defaultCurrentSpace
+windowWatcher = hs.window.filter.new():setCurrentSpace(true):setAppFilter('Microsoft Teams', { rejectTitles = 'Microsoft Teams Notification' })
 
 function renderBorder(canvas, focused)
     canvas:replaceElements({
