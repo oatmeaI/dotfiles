@@ -11,8 +11,8 @@ shift + alt - k : yabai -m window --warp north
 shift + alt - l : yabai -m window --warp east
 ctrl + shift + alt - k : yabai -m window --stack north
 
-shift + alt - p : yabai -m window --ratio rel:+0.25
-shift + alt - o : yabai -m window --ratio rel:-0.25
+shift + alt - p : yabai -m window --ratio rel:+0.15
+shift + alt - o : yabai -m window --ratio rel:-0.15
 
 # Make window native fullscreen
 alt - f         : yabai -m window --toggle zoom-fullscreen

@@ -31,13 +31,26 @@ require('packer').startup(function()
    -- -- Trailing whitespace manager
    -- -- https://github.com/zakharykaplan/nvim-retrail
    use {
-       "zakharykaplan/nvim-retrail",
-       config = function() require("retrail").setup({
-           filetype = {
-               exclude = {"vim"}
-           }
-       }) end
+        "zakharykaplan/nvim-retrail",
+        config = function()
+            require("retrail").setup({
+                filetype = {
+                    exclude = {"vim"}
+                }
+            })
+        end
    }
+
+    -- Indent Guides
+    -- https://github.com/lukas-reineke/indent-blankline.nvim
+    use {
+        "lukas-reineke/indent-blankline.nvim",
+        config = function()
+            require("indent_blankline").setup {
+                show_current_context = true,
+            }
+        end
+    }
 
    -- -- Commands Cheatsheet
    -- -- https://github.com/sudormrfbin/cheatsheet.nvim
@@ -71,20 +84,6 @@ require('packer').startup(function()
    use {
        'stevearc/aerial.nvim',
        config = function() require('aerial').setup() end,
-   }
-
-   -- Autosave plugin (duh)
-   -- https://github.com/Pocco81/AutoSave.nvim
-   use {
-       'Pocco81/AutoSave.nvim',
-       config = function() require("autosave").setup() end
-   }
-
-   -- Indent guides
-   -- https://github.com/glepnir/indent-guides.nvim
-   use {
-       'glepnir/indent-guides.nvim',
-       config = function() require('indent-guide-config') end
    }
 
    -- File browser sidebar

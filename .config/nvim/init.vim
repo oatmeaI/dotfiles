@@ -2,6 +2,7 @@ lua require('impatient')
 
 " ---------- General Settings
 set termguicolors
+set laststatus=3
 set backspace=indent,eol,start
 set ruler
 set number
