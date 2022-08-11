@@ -1,0 +1,75 @@
+# ------- Basic Config ----------
+sketchybar --bar color=0x55282a36
+sketchybar --bar position=bottom
+sketchybar --bar height=26
+sketchybar --bar blur_radius=100
+sketchybar --bar shadow=on
+sketchybar --bar margin=28
+sketchybar --bar y_offset=5
+sketchybar --bar corner_radius=20
+
+# ------- Clock ----------
+sketchybar --add item time right
+sketchybar --set time label.font="FiraCode Nerd Font Mono:Medium:12.0"
+sketchybar --set time script='sketchybar --set time label="$(date "+%d/%m/%y (%a)   %I:%M%p")"'
+sketchybar --set time update_freq=2
+
+# ------- Window Title ----------
+TITLE_SCRIPT='
+WINDOW_TITLE=$(/usr/local/bin/yabai -m query --windows --window | jq -r ".title")
+if [[ ${#WINDOW_TITLE} -gt 150 ]]; then
+  WINDOW_TITLE=$(echo "$WINDOW_TITLE" | cut -c 1-150)
+  sketchybar -m --set window label="$WINDOW_TITLE"…
+  exit 0
+fi
+
+APP_TITLE=$(/usr/local/bin/yabai -m query --windows --window | jq -r ".app")
+if [[ $WINDOW_TITLE = "" ]]; then
+    if [[ $APP_TITLE = "" ]]; then
+        TITLE=""
+    else
+        TITLE="${APP_TITLE}"
+    fi
+else
+    CLEANED_WIN_TITLE=${WINDOW_TITLE//$APP_TITLE | /}
+    CLEANED_WIN_TITLE=${CLEANED_WIN_TITLE//$APP_TITLE - /}
+    CLEANED_WIN_TITLE=${CLEANED_WIN_TITLE// | $APP_TITLE/}
+    CLEANED_WIN_TITLE=${CLEANED_WIN_TITLE//$APP_TITLE – /}
+    if [[ $APP_TITLE = $CLEANED_WIN_TITLE ]]; then
+        TITLE="${APP_TITLE}"
+    else
+        TITLE="${APP_TITLE} | ${CLEANED_WIN_TITLE}"
+    fi
+fi
+sketchybar -m --set window label="$TITLE"
+'
+
+sketchybar -m --add event yabai_window
+
+sketchybar --add item window center
+sketchybar --set window label.font="FiraCode Nerd Font Mono:Medium:12.0"
+sketchybar --set window script="$TITLE_SCRIPT"
+
+sketchybar --subscribe window yabai_window
+
+# ------- CPU Usage ----------
+CPU_SCRIPT='
+CORE_COUNT=$(sysctl -n machdep.cpu.thread_count)
+CPU_INFO=$(ps -eo pcpu,user)
+CPU_SYS=$(echo "$CPU_INFO" | sed "s/[^ 0-9\.]//g" | awk "{sum+=\$1} END {print sum/(100.0 * $CORE_COUNT)}")
+CPU_USE=$(printf "%02.0f"\\n "$(echo "$CPU_SYS*100"  | bc -l)")
+sketchybar --set cpu label="CPU: ${CPU_USE}%"
+'
+
+sketchybar --add item cpu left
+sketchybar --set cpu label.font="FiraCode Nerd Font Mono:Medium:12.0"
+sketchybar --set cpu script="$CPU_SCRIPT"
+sketchybar --set cpu update_freq=2
+
+# ------- RAM Usage ----------
+RAM_SCRIPT='sketchybar -m --set ram label="RAM: $(memory_pressure | grep "System-wide memory free percentage:" | awk "{ print 100-\$5 }")%"'
+sketchybar --add item ram left
+sketchybar --set ram label.font="FiraCode Nerd Font Mono:Medium:12.0"
+sketchybar --set ram label.padding_left=20
+sketchybar --set ram script="$RAM_SCRIPT"
+sketchybar --set ram update_freq=2
