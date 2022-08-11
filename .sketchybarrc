@@ -11,7 +11,7 @@ sketchybar --bar corner_radius=20
 # ------- Clock ----------
 sketchybar --add item time right
 sketchybar --set time label.font="FiraCode Nerd Font Mono:Medium:12.0"
-sketchybar --set time script='sketchybar --set time label="$(date "+%d/%m/%y (%a)   %I:%M%p")"'
+sketchybar --set time script='sketchybar --set time label="$(date "+%m/%d/%y (%a)   %I:%M%p")"'
 sketchybar --set time update_freq=2
 
 # ------- Window Title ----------
