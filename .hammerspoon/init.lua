@@ -1,5 +1,10 @@
 require("hs.ipc")
 
+stackline = require "stackline"
+stackline:init()
+stackline.config:set('appearance.showIcons', false)
+stackline.config:set('appearance.offset.x', 12)
+
 canvases = {}
 spacing = 5
 radius = spacing + 8
