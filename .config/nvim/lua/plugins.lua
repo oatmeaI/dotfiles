@@ -132,11 +132,10 @@ require('packer').startup(function()
     use {
         'nvim-telescope/telescope.nvim',
         config = function ()
-            require('telescope').setup{ defaults = { file_ignore_patterns = {"node_modules"} } }
+            require('telescope').setup{ pickers = { buffers = { initial_mode = "normal" } }, defaults = { file_ignore_patterns = {"node_modules"} } }
             require('telescope').load_extension('fzf')
             require('telescope').load_extension('neoclip')
             require("telescope").load_extension('harpoon')
-            require('telescope-colorscheme')
         end,
     }
 

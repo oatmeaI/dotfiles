@@ -5,29 +5,12 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# Setup Oh My ZSH
-# export ZSH="$HOME/.oh-my-zsh"
-# ZSH_THEME=""
-# plugins=(git gitfast vi-mode)
-# source $ZSH/oh-my-zsh.sh
-
 # Setup alias to control config syncing
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # We use Neovim
 export EDITOR='nvim'
 export VISUAL='nvim'
-
-# Git completion
-# autoload -Uz compinit && compinit
-
-# Configure & load Typewritten prompt
-# export TYPEWRITTEN_CURSOR="block"
-# export TYPEWRITTEN_DISABLE_RETURN_CODE=true
-# export TYPEWRITTEN_RIGHT_PROMPT_PREFIX="# "
-# fpath+=$HOME/.zsh/typewritten
-# autoload -U promptinit; promptinit
-# prompt typewritten
 
 # Set up adobe environment variables, if the file exists; this way we don't sync these secrets to git.
 if [[ -r "$HOME/adobevars.sh" ]]; then
@@ -46,13 +29,24 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# eval "kitty @ set-colors -c $HOME/base16-kitty/colors/$(cat $HOME/.config/.base16_theme.conf).conf"
-
 bindkey "^[[1;3C" forward-word
 bindkey "^[[1;3D" backward-word
 
 # https://github.com/marlonrichert/zsh-autocomplete
-source ~/.zsh/auto-complete/zsh-autocomplete.plugin.zsh
+zstyle ':autocomplete:*' insert-unambiguous yes
+zstyle ':autocomplete:*' widget-style complete-word
+
+source ~/fzf-tab/fzf-tab.plugin.zsh
+# disable sort when completing `git checkout`
+zstyle ':completion:*:git-checkout:*' sort false
+# set descriptions format to enable group support
+zstyle ':completion:*:descriptions' format '[%d]'
+# set list-colors to enable filename colorizing
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+# preview directory's content with exa when completing cd
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
+# switch group using `,` and `.`
+zstyle ':fzf-tab:*' switch-group ',' '.'
 
 # https://github.com/jarun/nnn
 alias ls='nnn -de'

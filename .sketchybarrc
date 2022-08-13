@@ -8,11 +8,18 @@ sketchybar --bar margin=28
 sketchybar --bar y_offset=5
 sketchybar --bar corner_radius=20
 
-# ------- Clock ----------
+# ------- Time ----------
 sketchybar --add item time right
 sketchybar --set time label.font="FiraCode Nerd Font Mono:Medium:12.0"
-sketchybar --set time script='sketchybar --set time label="$(date "+%m/%d/%y (%a)   %I:%M%p")"'
+sketchybar --set time script='sketchybar --set time label="$(date "+%I:%M%p")"'
+sketchybar --set time label.padding_left=20
 sketchybar --set time update_freq=2
+
+# ------- Date ----------
+sketchybar --add item date right
+sketchybar --set date label.font="FiraCode Nerd Font Mono:Medium:12.0"
+sketchybar --set date script='sketchybar --set date label="$(date "+%m/%d/%y (%a)")"'
+sketchybar --set date update_freq=4
 
 # ------- Window Title ----------
 TITLE_SCRIPT='
