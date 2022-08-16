@@ -25,4 +25,4 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/oatmeaI/dotfiles/main/dotf
 - `dotinstall` to update dependencies, etc
 
 ## Notes
-The icon I use for Kitty is in the `dotfiles` directory, as is my wallpaper (originall from [wallhaven](https://wallhaven.cc/)
+The icon I use for Kitty is in the `dotfiles` directory, as is my wallpaper (originally from [wallhaven](https://wallhaven.cc/))
