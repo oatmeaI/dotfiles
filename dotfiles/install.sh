@@ -1,74 +1,74 @@
 #!/bin/zsh
 
-# Install Oh My ZSH if we don't have it already
-if ! [ -d "$HOME/.oh-my-zsh" ]; then
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-fi
+##################################
+# Setup Helper Functions
+backup_dir() {
+    if [ -d "$1" ]; then
+        mv "$1" BACKUP_DIR
+    fi
+}
 
-# Install Homebrew if we don't have it already
+backup_file() {
+    if [ -f "$1" ]; then
+        mv "$1" BACKUP_DIR
+    fi
+}
+
+git_install() {
+    if ! [ -d "$HOME/$1" ]; then
+        git clone --depth=1 git@github.com:$2 $HOME/$1
+    }
+}
+##################################
+
+
+##################################
+# Install dependencies
 if ! [ -x "$(command -v brew)" ]; then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
-# Install Neovim, TheFuck, Yarn, NVM and the Fira Code Nerd Font
 brew tap homebrew/cask-fonts
-brew install font-fira-code-nerd-font nvim thefuck yarn nvm nnn
+brew install font-fira-code-nerd-font nvim thefuck yarn nvm nnn sketchybar yabai
 
-# Brew can't seem to tell if KiTTY is installed already, so we check by hand
+# Brew can't seem to tell if App bundles are installed already, so we check by hand
 if ! [ -d "/Applications/kitty.app" ]; then
     brew install kitty
 fi
 
-# Create ZSH plugins directory
-if ! [ -d "$HOME/.zsh" ]; then
-    mkdir -p "$HOME/.zsh"
+if ! [ -d "/Applications/Hammerspoon.app" ]; then
+    brew install hammerspoon
 fi
 
-# Install ZSH auto-complete plugin if needed
-# https://github.com/marlonrichert/zsh-autocomplete
-if ! [ -d "$HOME/.zsh/auto-complete" ]; then
-    mkdir -p "$HOME/.zsh/auto-complete"
-    git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git "$HOME/.zsh/auto-complete"
-fi
+git_install "powerlevel10k" "romkatv/powerlevel10k.git"
+git_install "base16-kitty" "kdrag0n/base16-kitty.git"
+git_install "fzf-tab" "Aloxaf/fzf-tab"
+##################################
 
+
+##################################
 # Make backups of everything before pulling all the files down
-if ! [ -d "$HOME/.config-backup" ]; then
-    mkdir "$HOME/.config-backup"
-fi
+UUID=$(uuidgen)
+BACKUP_DIR="$HOME/.config-backup/$UUID"
+mkdir -p BACKUP_DIR
 
-if [ -d "$HOME/.config/kitty" ]; then
-    mv "$HOME/.config/kitty" "~/.config-backup/kitty"
-fi
+backup_dir "$HOME/.config/kitty"
+backup_dir "$HOME/.config/nvim"
+backup_dir "$HOME/.config/sketchybar"
+backup_dir "$HOME/.config/yabai"
+backup_dir "$HOME/.config/skhd"
+backup_dir "$HOME/.hammerspoon"
+backup_file "$HOME/.vimrc"
+backup_file "$HOME/.zshrc"
+backup_file "$HOME/.p10k.zsh"
+##################################
 
-if [ -d "$HOME/.config/nvim" ]; then
-    mv "$HOME/.config/nvim" "~/.config-backup/nvim"
-fi
 
-if [ -d "$HOME/.dotfiles" ]; then
-    mv "$HOME/.dotfiles" "~/.config-backup/dotfiles"
-fi
-
-if [ -f "$HOME/.vimrc" ]; then
-    mv "$HOME/.vimrc" "~/.config-backup"
-fi
-
-if [ -f "$HOME/.zshrc" ]; then
-    mv "$HOME/.zshrc" "~/.config-backup"
-fi
-
-# Install P10K
-if ! [ -d "$HOME/powerlevel10k" ]; then
-    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $HOME/powerlevel10k
-fi
-
-# Install base16-kitty
-if ! [ -d "$HOME/base16-kitty" ]; then
-    git clone --depth=1 git@github.com:kdrag0n/base16-kitty.git $HOME/base16-kitty
-fi
-
+##################################
 # Set up the `config` alias, and clone the repo!
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=~'
 if ! [ -d "$HOME/.dotfiles" ]; then
     git clone --bare git@github.com:oatmeaI/dotfiles.git $HOME/.dotfiles
     config checkout
 fi
+##################################

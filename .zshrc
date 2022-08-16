@@ -14,7 +14,8 @@ export VISUAL='nvim'
 
 # Set up adobe environment variables, if the file exists; this way we don't sync these secrets to git.
 if [[ -r "$HOME/adobevars.sh" ]]; then
-  source "$HOME/adobevars.sh"
+    source "$HOME/adobevars.sh"
+    export PATH=/Users/villanih/.local/bin:$PATH
 fi
 
 # Turn on TheFuck
@@ -49,5 +50,5 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
 zstyle ':fzf-tab:*' switch-group ',' '.'
 
 # https://github.com/jarun/nnn
-alias ls='nnn -de'
 export PATH=/Users/villanih/.local/bin:$PATH
+alias ls='nnn -de'
