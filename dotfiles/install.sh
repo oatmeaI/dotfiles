@@ -40,9 +40,9 @@ if ! [ -d "/Applications/Hammerspoon.app" ]; then
     brew install hammerspoon
 fi
 
-git_install "powerlevel10k" "romkatv/powerlevel10k.git"
-git_install "base16-kitty" "kdrag0n/base16-kitty.git"
-git_install "fzf-tab" "Aloxaf/fzf-tab"
+git_install ".powerlevel10k" "romkatv/powerlevel10k.git"
+git_install ".base16-kitty" "kdrag0n/base16-kitty.git"
+git_install ".fzf-tab" "Aloxaf/fzf-tab"
 ##################################
 
 
