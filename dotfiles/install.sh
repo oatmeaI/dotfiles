@@ -4,13 +4,13 @@
 # Setup Helper Functions
 backup_dir() {
     if [ -d "$1" ]; then
-        mv "$1" BACKUP_DIR
+        cp "$1" BACKUP_DIR
     fi
 }
 
 backup_file() {
     if [ -f "$1" ]; then
-        mv "$1" BACKUP_DIR
+        cp "$1" BACKUP_DIR
     fi
 }
 
