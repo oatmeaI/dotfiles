@@ -4,20 +4,20 @@
 # Setup Helper Functions
 backup_dir() {
     if [ -d "$1" ]; then
-        cp "$1" BACKUP_DIR
+        cp -r "$1" BACKUP_DIR
     fi
 }
 
 backup_file() {
     if [ -f "$1" ]; then
-        cp "$1" BACKUP_DIR
+        cp -r "$1" BACKUP_DIR
     fi
 }
 
 git_install() {
     if ! [ -d "$HOME/$1" ]; then
         git clone --depth=1 git@github.com:$2 $HOME/$1
-    }
+    fi
 }
 ##################################
 
@@ -29,6 +29,7 @@ if ! [ -x "$(command -v brew)" ]; then
 fi
 
 brew tap homebrew/cask-fonts
+brew tap FelixKratz/formulae
 brew install font-fira-code-nerd-font nvim thefuck yarn nvm nnn sketchybar yabai
 
 # Brew can't seem to tell if App bundles are installed already, so we check by hand
@@ -72,3 +73,12 @@ if ! [ -d "$HOME/.dotfiles" ]; then
     config checkout
 fi
 ##################################
+
+
+##################################
+# Start everything up!
+source "$HOME/.zshrc"
+brew services start yabai
+brew services start skhd
+brew services start sketchybar
+open /Applications/Hammerspoon.app

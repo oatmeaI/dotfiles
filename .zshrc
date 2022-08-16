@@ -51,3 +51,4 @@ zstyle ':fzf-tab:*' switch-group ',' '.'
 
 # https://github.com/jarun/nnn
 alias ls='nnn -de'
+alias dotinstall='dotfiles/install.sh'
