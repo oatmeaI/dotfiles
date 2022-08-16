@@ -15,12 +15,14 @@
 
 ## First time install
 
-Run `sh -c "$(curl -fsSL https://raw.githubusercontent.com/oatmeaI/dotfiles/main/dotfiles/install.sh)"`
+```
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/oatmeaI/dotfiles/main/dotfiles/install.sh)"
+```
 
 ## Updates
 
-`config pull` to download latest configs
-`dotinstall` to update dependencies, etc
+- `config pull` to download latest configs
+- `dotinstall` to update dependencies, etc
 
 ## Notes
 The icon I use for Kitty is in the `dotfiles` directory, as is my wallpaper (originall from [wallhaven](https://wallhaven.cc/)
