@@ -1,6 +1,8 @@
 # Oatmeal's Dots
 
-Contains configs for:
+<img width="1920" alt="image" src="https://user-images.githubusercontent.com/1302124/184759997-85ddc1eb-c9d9-457c-b8d2-a68441502de2.png">
+
+## Contains configs for:
 
 - [Neovim](https://neovim.io/)
 - [Kitty](https://sw.kovidgoyal.net/kitty/)
@@ -19,3 +21,6 @@ Run `sh -c "$(curl -fsSL https://raw.githubusercontent.com/oatmeaI/dotfiles/main
 
 `config pull` to download latest configs
 `dotinstall` to update dependencies, etc
+
+## Notes
+The icon I use for Kitty is in the `dotfiles` directory, as is my wallpaper (originall from [wallhaven](https://wallhaven.cc/)
