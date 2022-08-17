@@ -13,20 +13,28 @@ events = {
 
 _G.borders = {}
 
+colors = {
+    normal = { red = 0.0, green = 0.53, blue = 0.74, alpha = 1 },
+    inactive = { red = 0.41, green = 0.41, blue = 0.41, alpha = 0.7 },
+    window_move = { red = 0.74, green = 0, blue = 0.53, alpha = 1 },
+    window_navigation = { red = 0, green = 0.74, blue = 0.53, alpha = 1 }
+}
+
 function borders:configure(config)
     self.spacing = config.spacing and config.spacing or 5
+    self.mode = 'normal'
     self.fadeSpeed = config.fadeSpeed and config.fadeSpeed or .25
     self.radius = borders.spacing + 8
     self.rules = config.rules and config.rules or {}
-    self.borderColor = config.borderColor and config.borderColor or { red = 0.0, green = 0.53, blue = 0.74, alpha = 1 }
-    self.inactiveBorderColor = config.inactiveBorderColor and config.inactiveBorderColor or { red = 0.41, green = 0.41, blue = 0.41, alpha = 0.7 }
+    self.colors = config.colors and config.colors or colors
 end
 
 function borders:renderBorder(canvas, focused)
+    print(self.mode)
     canvas:replaceElements({
         type = "rectangle",
         action = "stroke",
-        strokeColor = focused and self.borderColor or self.inactiveBorderColor,
+        strokeColor = focused and self.colors[self.mode] or self.colors.inactive,
         strokeWidth = 4,
         roundedRectRadii = { xRadius = self.radius, yRadius = self.radius },
         padding = 2
@@ -90,6 +98,11 @@ function borders:start()
             self.canvases[id]:hide(self.fadeSpeed)
         end,
     }
+
+    setMode = function(mode)
+        self.mode = mode
+        self:updateWindows()
+    end
 end
 
 return borders

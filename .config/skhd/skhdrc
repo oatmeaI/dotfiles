@@ -1,41 +1,61 @@
+# Modes
+:: window_navigation @ : $HOME/.config/skhd/mode_helper.sh -w
+:: window_move @ : $HOME/.config/skhd/mode_helper.sh -m
+:: default : $HOME/.config/skhd/mode_helper.sh -n
+
+# Mode Switching
+window_navigation, default < ctrl - j ; window_move
+window_move, default < ctrl - k ; window_navigation
+window_navigation, window_move < escape ; default
+
 # Navigation
+window_navigation < h : yabai -m window --focus west
+window_navigation < j : yabai -m window --focus south
+window_navigation < k : yabai -m window --focus north
+window_navigation < l : yabai -m window --focus east
+
 alt - h : yabai -m window --focus west
 alt - j : yabai -m window --focus south
 alt - k : yabai -m window --focus north
 alt - l : yabai -m window --focus east
 
-# Moving windows
-shift + alt - h : yabai -m window --warp west
-shift + alt - j : yabai -m window --warp south
-shift + alt - k : yabai -m window --warp north
-shift + alt - l : yabai -m window --warp east
-ctrl + shift + alt - k : yabai -m window --stack north
 
-shift + alt - p : yabai -m window --ratio rel:+0.15
-shift + alt - o : yabai -m window --ratio rel:-0.15
+# Moving / Controlling windows
+window_move < h : yabai -m window --warp west
+window_move < j : yabai -m window --warp south
+window_move < k : yabai -m window --warp north
+window_move < l : yabai -m window --warp east
 
-# Make window native fullscreen
-alt - f         : yabai -m window --toggle zoom-fullscreen
-shift + alt - f : yabai -m window --toggle native-fullscreen
+window_move < ctrl - h : yabai -m window --stack west
+window_move < ctrl - j : yabai -m window --stack south
+window_move < ctrl - k : yabai -m window --stack north
+window_move < ctrl - l : yabai -m window --stack east
 
-# toggle window split type
-alt - e : yabai -m window --toggle split
+window_move < space : yabai -m window --toggle float && sketchybar -m --trigger float_change
+window_move < f : yabai -m window --toggle zoom-fullscreen
+
+window_move < p : yabai -m window --ratio rel:+0.15
+window_move < o : yabai -m window --ratio rel:-0.15
+window_move < e : yabai -m window --toggle split
+window_move < q : yabai -m window --close
+
+window_move < alt - h : yabai -m window --focus west
+window_move < alt - j : yabai -m window --focus south
+window_move < alt - k : yabai -m window --focus north
+window_move < alt - l : yabai -m window --focus east
 
 # Move focus container to workspace
-shift + alt - m : yabai -m window --space last
-shift + alt - p : yabai -m window --space prev
-shift + alt - n : yabai -m window --space next
-shift + alt - 1 : yabai -m window --space 1
-shift + alt - 2 : yabai -m window --space 2
-shift + alt - 3 : yabai -m window --space 3
-shift + alt - 4 : yabai -m window --space 4
-shift + alt - 5 : yabai -m window --space 5
-shift + alt - 6 : yabai -m window --space 6
+# shift + alt - m : yabai -m window --space last
+# shift + alt - p : yabai -m window --space prev
+# shift + alt - n : yabai -m window --space next
+# shift + alt - 1 : yabai -m window --space 1
+# shift + alt - 2 : yabai -m window --space 2
+# shift + alt - 3 : yabai -m window --space 3
+# shift + alt - 4 : yabai -m window --space 4
+# shift + alt - 5 : yabai -m window --space 5
+# shift + alt - 6 : yabai -m window --space 6
 
 # Kill a container
-shift + alt - q : yabai -m window --close
 
-# Float or unfloat a window
-shift + alt - space : yabai -m window --toggle float
 shift + alt - i : yabai -m space --layout stack
 shift + alt - u : yabai -m space --layout bsp

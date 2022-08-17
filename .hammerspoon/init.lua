@@ -26,6 +26,6 @@ rules = {
     ['Microsoft Teams'] = { rejectTitles = {'Microsoft Teams Notification', "Call in progress"} },
     ['Contexts'] = false
 }
-borders:configure({ rules = rules })
+borders:configure({ rules = rules, spacing = 5 })
 borders:start()
 
