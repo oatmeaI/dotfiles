@@ -1,34 +1,15 @@
-local base16_theme_fname = vim.fn.expand(vim.env.HOME..'/.config/.base16_theme.conf')
-local Job = require'plenary.job'
-local function set_colorscheme(name)
-    -- write our colorscheme back to our single source of truth
-    vim.fn.writefile({name}, base16_theme_fname)
-    -- set Neovim's colorscheme
-    vim.cmd('colorscheme '.. name)
-    -- Fix tabline background
-    vim.cmd('hi TabLineFill guibg=clear')
-    -- execute `kitty @ set-colors -c <color>` to change terminal window's
-    -- colors and newly created terminal windows colors
-   -- Job:new({
-   --     command = 'kitty',
-   --     args = { '@', 'set-colors', '-c', string.format(vim.env.HOME..'/base16-kitty/colors/%s.conf', name) },
-   -- }):sync()
-end
-
 vim.keymap.set('n', '<space>c', function()
-    -- get our base16 colorschemes
-    local colors = vim.fn.getcompletion('base16', 'color')
-    -- we're trying to mimic VSCode so we'll use dropdown theme
-    local theme = require('telescope.themes').get_dropdown()
     local telescope_actions = require("telescope.actions")
     local telescope_action_set = require("telescope.actions.set")
     local action_state = require "telescope.actions.state"
-    local current = vim.g.colors_name
+    local buffers =
+    local allfiles = require"telescope.builtin".oldfiles()
+    for k,v in pairs(buffers) do oldfiles[k] = v end
     -- create our picker
     require('telescope.pickers').new(theme, {
-        prompt = 'Change Base16 Colorscheme',
+        prompt = 'Files',
         finder = require('telescope.finders').new_table {
-            results = colors
+            results = allfiles
         },
         sorter = require('telescope.config').values.generic_sorter(theme),
         attach_mappings = function(bufnr)
@@ -48,4 +29,3 @@ vim.keymap.set('n', '<space>c', function()
         end
     }):find()
 end)
--- set_colorscheme(vim.fn.readfile(base16_theme_fname)[1])

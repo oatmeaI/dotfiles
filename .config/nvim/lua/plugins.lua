@@ -21,6 +21,25 @@ require('packer').startup(function()
     -- https://github.com/nvim-lua/plenary.nvim
     use 'nvim-lua/plenary.nvim'
 
+    --  Treesitter-based Syntax Text Objects
+    --  https://github.com/RRethy/nvim-treesitter-textsubjects
+    use {
+        'RRethy/nvim-treesitter-textsubjects',
+        config = function()
+            require('nvim-treesitter.configs').setup {
+                textsubjects = {
+                    enable = true,
+                    prev_selection = ',', -- (Optional) keymap to select the previous selection
+                    keymaps = {
+                        ['.'] = 'textsubjects-smart',
+                        [';'] = 'textsubjects-container-outer',
+                        ['i;'] = 'textsubjects-container-inner',
+                    },
+                },
+            }
+        end
+    }
+
     -- Color highligher
     -- https://github.com/brenoprata10/nvim-highlight-colors
     use {
@@ -132,7 +151,7 @@ require('packer').startup(function()
     use {
         'nvim-telescope/telescope.nvim',
         config = function ()
-            require('telescope').setup{ pickers = { buffers = { initial_mode = "normal" } }, defaults = { file_ignore_patterns = {"node_modules"} } }
+            require('telescope').setup{ pickers = { lsp_references = { initial_mode = "normal" }, lsp_definitions = { initial_mode = "normal" }, buffers = { initial_mode = "normal" } }, defaults = { file_ignore_patterns = {"node_modules"} } }
             require('telescope').load_extension('fzf')
             require('telescope').load_extension('neoclip')
             require("telescope").load_extension('harpoon')
@@ -183,10 +202,10 @@ require('packer').startup(function()
 
     -- Tabline
     -- https://github.com/noib3/nvim-cokeline
-    use {
-        'noib3/nvim-cokeline',
-        config = function() require('cokeline-config') end
-    }
+    -- use {
+    --     'noib3/nvim-cokeline',
+    --     config = function() require('cokeline-config') end
+    -- }
 
     -- Pretty LSP diagnostic display
     -- https://github.com/folke/trouble.nvim

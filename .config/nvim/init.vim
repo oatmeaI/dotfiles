@@ -80,4 +80,5 @@ let g:minimap_highlight_search = 1
 set splitright
 
 lua require('plugins')
+" lua require('telescope-colorscheme')
 source ~/.config/nvim/keys.vim
