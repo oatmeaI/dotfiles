@@ -21,6 +21,15 @@ require('packer').startup(function()
     -- https://github.com/nvim-lua/plenary.nvim
     use 'nvim-lua/plenary.nvim'
 
+    -- Autosave
+    -- https://github.com/Pocco81/auto-save.nvim
+    use {
+	    "Pocco81/auto-save.nvim",
+	    config = function()
+	    	 require("auto-save").setup()
+	    end
+    }
+
     --  Treesitter-based Syntax Text Objects
     --  https://github.com/RRethy/nvim-treesitter-textsubjects
     use {

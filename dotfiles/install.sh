@@ -78,7 +78,7 @@ fi
 ##################################
 # Start everything up!
 source "$HOME/.zshrc"
-brew services start yabai
-brew services start skhd
-brew services start sketchybar
+brew services restart yabai
+brew services restart skhd
+brew services restart sketchybar
 open /Applications/Hammerspoon.app

@@ -26,6 +26,7 @@ syntax on
 set background=dark
 hi clear SignColumn
 set noic
+set ignorecase
 
 colorscheme base16-snazzy
 
