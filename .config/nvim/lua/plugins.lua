@@ -30,6 +30,14 @@ require('packer').startup(function()
 	    end
     }
 
+    use {
+        'akinsho/git-conflict.nvim',
+        tag = "*",
+        config = function()
+            require('git-conflict').setup()
+        end
+    }
+
     --  Treesitter-based Syntax Text Objects
     --  https://github.com/RRethy/nvim-treesitter-textsubjects
     use {
@@ -118,10 +126,10 @@ require('packer').startup(function()
 
     -- File browser sidebar
     -- https://github.com/kyazdani42/nvim-tree.lua
-    use {
-        'kyazdani42/nvim-tree.lua',
-        config = function() require('nvim-tree-config') end
-    }
+    -- use {
+    --     'kyazdani42/nvim-tree.lua',
+    --     config = function() require('nvim-tree-config') end
+    -- }
 
     -- Sublime-esque multi-cursor
     -- https://github.com/mg979/vim-visual-multi

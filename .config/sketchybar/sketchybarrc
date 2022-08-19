@@ -25,8 +25,9 @@ sketchybar --set date update_freq=4
 # ------- Window Title ----------
 TITLE_SCRIPT='
 WINDOW_TITLE=$(/usr/local/bin/yabai -m query --windows --window | jq -r ".title")
-if [[ ${#WINDOW_TITLE} -gt 150 ]]; then
-  WINDOW_TITLE=$(echo "$WINDOW_TITLE" | cut -c 1-150)
+LENGTH=100
+if [[ ${#WINDOW_TITLE} -gt $LENGTH ]]; then
+  WINDOW_TITLE=$(echo "$WINDOW_TITLE" | cut -c 1-$LENGTH)
   sketchybar -m --set window label="$WINDOW_TITLE"…
   exit 0
 fi

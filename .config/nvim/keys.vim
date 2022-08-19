@@ -17,12 +17,13 @@ nnoremap <silent><space>a :Telescope neoclip<cr>|               " Open palette: 
 nnoremap <silent><space>s :Telescope live_grep<cr>|             " Open palette: Search code
 nnoremap <silent><space>d :AerialToggle<cr>|                    " Toggle symbols sidebar
 nnoremap <silent><space>f :Telescope find_files<cr>|               " Open palette: Find open buffers
-nnoremap <silent><space>g :Telescope harpoon marks<cr>|         " List marks
+" nnoremap <silent><space>g :Telescope harpoon marks<cr>|         " List marks
 nnoremap <silent><space>h :NvimTreeFindFile<cr>|                " Reveal file in explorer
 nnoremap <silent><space>j :NvimTreeToggle .<cr>|                " Toggle file explorer
 nnoremap <silent><space>k :w<cr>|                               " Save
 nnoremap <silent><space>l :FloatermToggle<cr>|                  " Open floating terminal
 nnoremap <silent><space>; :noh<cr>|                             " Get rid of find highlighting
+nnoremap <silent><space>g <cmd>lua vim.lsp.buf.formatting_sync()<cr>    
 
 " ----- Other Handy Shortcuts
 vnoremap <silent><space>yy "*y|                                 " Copy to system clipboard
@@ -38,6 +39,7 @@ nnoremap <silent><space><space> :Telescope buffers<cr>|      " Open palette: Fin
 nnoremap <silent><space>e :MinimapToggle<cr>|                   " Toggle minimap (for when it gets jacked up)
 nnoremap <silent><space>u :lua vim.lsp.buf.hover({focusable = false})<cr>| " Show hover doc
 nnoremap <silent><space>i :lua vim.diagnostic.open_float({focusable = false})<cr>| " Show hover diagnostic
+nnoremap <silent><space>rl :LspRestart
 
 "----------- <ctrl> Keymappings
 nnoremap <silent><c-j> :bnext<cr>|                              " Next buffer
@@ -48,7 +50,6 @@ nnoremap <silent><c-f> <cmd>lua require('spectre').open()<cr>|  " Project wide f
 
 " ---------- Insert Mode Keymappings
 imap jj <esc>|                                                  " Quick exit from insert mode
-imap kk <c-space>|                                              " Manually trigger completion
 
 " ---------- COQ Keybindings
 ino <silent><expr> <space>    pumvisible() ? (complete_info().selected == -1 ? "\<C-e><space>" : "\<C-y>") : "\<space>"
