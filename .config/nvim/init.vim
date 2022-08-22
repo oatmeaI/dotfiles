@@ -27,6 +27,7 @@ set background=dark
 hi clear SignColumn
 set noic
 set ignorecase
+let g:netrw_liststyle=3 
 
 colorscheme base16-snazzy
 

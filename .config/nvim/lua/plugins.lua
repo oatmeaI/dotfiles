@@ -226,7 +226,11 @@ require('packer').startup(function()
 
     -- Pretty LSP diagnostic display
     -- https://github.com/folke/trouble.nvim
-    use 'folke/trouble.nvim'
+    use {
+        'folke/trouble.nvim',
+        requires = "kyazdani42/nvim-web-devicons",
+        config = function() require("trouble").setup() end
+    }
 
     -- LSP diagnostic colors for themes that don't have them
     -- https://github.com/folke/lsp-colors.nvim

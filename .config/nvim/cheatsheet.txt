@@ -3,13 +3,14 @@ Show references                     | gr
 Show cheatsheet                     | qq
 Do codeaction                       | do
 Cycle focused windows               | <tab>
+Cycle focused windows backwards     | <shift-tab>
 Open floating terminal              | <space>l
 Close floating terminal             | <esc>
 Open clipboard history              | <space>a
 Live grep                           | <space>s
 Toggle symbols sidebar              | <space>d
-Find open buffer                    | <space>f
-Reveal current file                 | <space>h
+Find files                          | <space>f
+Toggle explorer sidebar             | <space>h
 Toggle file explorer                | <space>j
 Save current buffer                 | <space>k
 Clear find highlighting             | <space>;
@@ -22,10 +23,25 @@ Delete without yanking              | <space>xd
 Reload config and install plugins   | <space>rs
 Close buffer                        | <space>q
 Close window                        | <space>w
-Find files                          | <space><space>
+Switch open buffers                 | <space><space>
 Next buffer                         | <c-j>
 Previous buffer                     | <c-k>
-Close buffer                        | <c-q>
-Close window                        | <c-w>
-Return to Normal mode from Insert   | jj 
+Return to Normal mode from Insert   | jj
 Project-wide find & replace         | <c-f>
+Git Merge: Choose ours              | co
+Git Merge: Choose theirs            | ct
+Git Merge: Choose both              | cb
+Git Merge: Next conflict            | [x
+Git Merge: Previous conflict        | ]x
+Restart LSP                         | <space>rl
+Format file                         | <space>g
+Open project wide find & replace    | <c-f>
+Toggle minimap                      | <space>e
+Show hover doc                      | <space>u
+Show hover diagnostic               | <space>i
+Smart treesitter textsubject        | .
+Treesitter outer textsubject        | ;
+Treesitter inner textsubject        | i;
+Treesitter textsubject previous     | ,
+List document diagnostics           | <space>i
+Dim all but the current code block  | :Twilight

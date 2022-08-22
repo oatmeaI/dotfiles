@@ -18,8 +18,8 @@ nnoremap <silent><space>s :Telescope live_grep<cr>|             " Open palette: 
 nnoremap <silent><space>d :AerialToggle<cr>|                    " Toggle symbols sidebar
 nnoremap <silent><space>f :Telescope find_files<cr>|               " Open palette: Find open buffers
 " nnoremap <silent><space>g :Telescope harpoon marks<cr>|         " List marks
-nnoremap <silent><space>h :NvimTreeFindFile<cr>|                " Reveal file in explorer
-nnoremap <silent><space>j :NvimTreeToggle .<cr>|                " Toggle file explorer
+nnoremap <silent><space>j :Rexplore<cr>|                " Reveal file in explorer
+nnoremap <silent><space>h :20Lexplore<cr>|                " Toggle file explorer
 nnoremap <silent><space>k :w<cr>|                               " Save
 nnoremap <silent><space>l :FloatermToggle<cr>|                  " Open floating terminal
 nnoremap <silent><space>; :noh<cr>|                             " Get rid of find highlighting
@@ -28,6 +28,7 @@ nnoremap <silent><space>g <cmd>lua vim.lsp.buf.formatting_sync()<cr>
 " ----- Other Handy Shortcuts
 vnoremap <silent><space>yy "*y|                                 " Copy to system clipboard
 nnoremap <silent><space>pp "*p|                                 " Paste from system clipboard
+nnoremap <silent><space>i TroubleToggle document_diagnostics|                                 " Paste from system clipboard
 nnoremap <silent><space>r :lua vim.lsp.buf.rename()<cr>|        " Rename symbol
 nnoremap <silent><space>b :<C-u>call gitblame#echo()<cr>|       " Git blame
 nnoremap <silent><space>p o<esc>p|                              " Shortcut to paste something on a new line
@@ -39,7 +40,7 @@ nnoremap <silent><space><space> :Telescope buffers<cr>|      " Open palette: Fin
 nnoremap <silent><space>e :MinimapToggle<cr>|                   " Toggle minimap (for when it gets jacked up)
 nnoremap <silent><space>u :lua vim.lsp.buf.hover({focusable = false})<cr>| " Show hover doc
 nnoremap <silent><space>i :lua vim.diagnostic.open_float({focusable = false})<cr>| " Show hover diagnostic
-nnoremap <silent><space>rl :LspRestart
+nnoremap <silent><space>rl :LspRestart<cr>
 
 "----------- <ctrl> Keymappings
 nnoremap <silent><c-j> :bnext<cr>|                              " Next buffer
