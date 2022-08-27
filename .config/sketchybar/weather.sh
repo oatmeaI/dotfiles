@@ -10,14 +10,17 @@ temp="${temp// /}"
 
 # add more conditions here as appropriate
 case "${condition}" in
-  "sunny")
-    icon=""
+    "sunny")
+        icon=""
     ;;
-  "partlycloudy")
-    icon=""
+    "partlycloudy")
+        icon=""
     ;;
-  *)
-    icon="$condition"
+    "overcast")
+        icon=""
+    ;;
+    *)
+        icon="$condition"
     ;;
 esac
 

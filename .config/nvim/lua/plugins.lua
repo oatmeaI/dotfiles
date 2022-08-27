@@ -71,7 +71,7 @@ require('packer').startup(function()
         config = function()
             require("retrail").setup({
                 filetype = {
-                    exclude = {"vim"}
+                    exclude = {"vim", "aerial"}
                 }
             })
         end
@@ -130,6 +130,13 @@ require('packer').startup(function()
     --     'kyazdani42/nvim-tree.lua',
     --     config = function() require('nvim-tree-config') end
     -- }
+
+    -- NNN Picker & Sidebar (deciding if it's nicer than Netrw)
+    -- https://github.com/luukvbaal/nnn.nvim
+    use {
+        "luukvbaal/nnn.nvim",
+        config = function() require("nnn").setup() end
+    }
 
     -- Sublime-esque multi-cursor
     -- https://github.com/mg979/vim-visual-multi

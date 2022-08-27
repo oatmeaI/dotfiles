@@ -49,8 +49,5 @@ nnoremap <silent><c-q> :Bdelete<cr>|                            " Close buffer
 nnoremap <silent><c-w> <c-w>q|                                  " Close window
 nnoremap <silent><c-f> <cmd>lua require('spectre').open()<cr>|  " Project wide find & replace
 
-" ---------- Insert Mode Keymappings
-imap jj <esc>|                                                  " Quick exit from insert mode
-
 " ---------- COQ Keybindings
 ino <silent><expr> <space>    pumvisible() ? (complete_info().selected == -1 ? "\<C-e><space>" : "\<C-y>") : "\<space>"
