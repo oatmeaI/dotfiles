@@ -45,3 +45,4 @@ Treesitter inner textsubject        | i;
 Treesitter textsubject previous     | ,
 List document diagnostics           | <space>i
 Dim all but the current code block  | :Twilight
+Repeat macro n times                | [n]@[register]

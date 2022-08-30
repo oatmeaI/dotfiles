@@ -124,25 +124,11 @@ require('packer').startup(function()
         config = function() require('aerial').setup() end,
     }
 
-    -- File browser sidebar
-    -- https://github.com/kyazdani42/nvim-tree.lua
-    -- use {
-    --     'kyazdani42/nvim-tree.lua',
-    --     config = function() require('nvim-tree-config') end
-    -- }
-
     -- NNN Picker & Sidebar (deciding if it's nicer than Netrw)
     -- https://github.com/luukvbaal/nnn.nvim
     use {
         "luukvbaal/nnn.nvim",
         config = function() require("nnn").setup() end
-    }
-
-    -- Sublime-esque multi-cursor
-    -- https://github.com/mg979/vim-visual-multi
-    use {
-        'mg979/vim-visual-multi',
-        branch = 'master'
     }
 
     -- Git blame provider
@@ -154,20 +140,6 @@ require('packer').startup(function()
     use {
         'nvim-lualine/lualine.nvim',
         config = function() require('lualine-config') end
-    }
-
-    -- Start page
-    -- https://github.com/goolord/alpha-nvim
-    use {
-        'goolord/alpha-nvim',
-        config = function() require('alpha-config') end
-    }
-
-    -- Session manager
-    -- https://github.com/Shatur/neovim-session-manager
-    use {
-        'Shatur/neovim-session-manager',
-        config = function() require('sessions-config') end
     }
 
     -- Command palette
@@ -224,14 +196,7 @@ require('packer').startup(function()
         config = function() require('null-ls-config') end
     }
 
-    -- Tabline
-    -- https://github.com/noib3/nvim-cokeline
-    -- use {
-    --     'noib3/nvim-cokeline',
-    --     config = function() require('cokeline-config') end
-    -- }
-
-    -- Pretty LSP diagnostic display
+     -- Pretty LSP diagnostic display
     -- https://github.com/folke/trouble.nvim
     use {
         'folke/trouble.nvim',
@@ -255,13 +220,6 @@ require('packer').startup(function()
     use {
         'AckslD/nvim-neoclip.lua',
         config = function() require('neoclip').setup() end
-    }
-
-    -- Dim all but current code block
-    -- https://github.com/folke/twilight.nvim
-    use {
-        'folke/twilight.nvim',
-        cmd = 'Twilight'
     }
 
     -- LSP status spinner
@@ -311,11 +269,51 @@ require('packer').startup(function()
         config = function() require('nvim-ts-autotag').setup() end
     }
 
+    ---- Disabled ----
+    -- Tabline
+    -- https://github.com/noib3/nvim-cokeline
+    -- use {
+    --     'noib3/nvim-cokeline',
+    --     config = function() require('cokeline-config') end
+    -- }
+
+    -- Disabling because I never use it
+    -- Start page
+    -- https://github.com/goolord/alpha-nvim
+    -- use {
+    --     'goolord/alpha-nvim',
+    --     config = function() require('alpha-config') end
+    -- }
+
+    -- Disabling because I don't use it
+    -- Session manager
+    -- https://github.com/Shatur/neovim-session-manager
+    -- use {
+    --     'Shatur/neovim-session-manager',
+    --     config = function() require('sessions-config') end
+    -- }
+
+   -- Disabling in order to train myself to get better with macros
+    -- Sublime-esque multi-cursor
+    -- https://github.com/mg979/vim-visual-multi
+    -- use {
+    --     'mg979/vim-visual-multi',
+    --     branch = 'master'
+    -- }
+
+    -- File browser sidebar
+    -- https://github.com/kyazdani42/nvim-tree.lua
+    -- use {
+    --     'kyazdani42/nvim-tree.lua',
+    --     config = function() require('nvim-tree-config') end
+    -- }
+
+    -- Disabling because I don't use it
     -- Fancy marks for navigation etc
     -- https://github.com/ThePrimeagen/harpoon
-    use {
-        'ThePrimeagen/harpoon',
-    }
+    -- use {
+    --     'ThePrimeagen/harpoon',
+    -- }
 
     if packer_bootstrap then
         require('packer').sync()
