@@ -46,3 +46,4 @@ Treesitter textsubject previous     | ,
 List document diagnostics           | <space>i
 Dim all but the current code block  | :Twilight
 Repeat macro n times                | [n]@[register]
+Insert on multiple lines            | <c-v> (Visual Block) [n][motion]I(or A) [type]<esc>

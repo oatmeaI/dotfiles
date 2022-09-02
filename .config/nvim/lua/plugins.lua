@@ -21,6 +21,17 @@ require('packer').startup(function()
     -- https://github.com/nvim-lua/plenary.nvim
     use 'nvim-lua/plenary.nvim'
 
+    -- Lots of modules
+    -- https://github.com/echasnovski/mini.nvim
+    use {
+        'echasnovski/mini.nvim',
+        branch = 'stable',
+        config = function()
+            require('mini.surround').setup()
+            require('mini.completion').setup()
+        end
+    }
+
     -- Autosave
     -- https://github.com/Pocco81/auto-save.nvim
     use {
@@ -72,6 +83,10 @@ require('packer').startup(function()
             require("retrail").setup({
                 filetype = {
                     exclude = {"vim", "aerial"}
+                },
+                trim = {
+                    whitespace = false,
+                    blanklines = false,
                 }
             })
         end
@@ -101,14 +116,14 @@ require('packer').startup(function()
 
     -- Completion plugin + precompiled artifacts
     -- https://github.com/ms-jpq/coq_nvim
-    use {
-        'ms-jpq/coq_nvim',
-        branch = 'coq',
-        config = function()
-            vim.cmd([[ino <silent><expr> <space>    pumvisible() ? (complete_info().selected == -1 ? "\<C-e><space>" : "\<C-y><space>") : "\<space>"]])
-        end
-    }
-    use { 'ms-jpq/coq.artifacts', branch = 'artifacts'}
+    -- use {
+    --     'ms-jpq/coq_nvim',
+    --     branch = 'coq',
+    --     config = function()
+    --         vim.cmd([[ino <silent><expr> <space>    pumvisible() ? (complete_info().selected == -1 ? "\<C-e><space>" : "\<C-y><space>") : "\<space>"]])
+    --     end
+    -- }
+    -- use { 'ms-jpq/coq.artifacts', branch = 'artifacts'}
 
     -- Quick buffer navigation
     -- https://github.com/ggandor/leap.nvim
@@ -150,7 +165,6 @@ require('packer').startup(function()
             require('telescope').setup{ pickers = { lsp_references = { initial_mode = "normal" }, lsp_definitions = { initial_mode = "normal" }, buffers = { initial_mode = "normal" } }, defaults = { file_ignore_patterns = {"node_modules"} } }
             require('telescope').load_extension('fzf')
             require('telescope').load_extension('neoclip')
-            require("telescope").load_extension('harpoon')
         end,
     }
 
@@ -192,7 +206,7 @@ require('packer').startup(function()
     -- https://github.com/jose-elias-alvarez/null-ls.nvim
     use {
         'jose-elias-alvarez/null-ls.nvim',
-        run = 'npm install -g @fsouza/prettierd',
+        run = 'brew install fsouza/prettierd/prettierd',
         config = function() require('null-ls-config') end
     }
 
@@ -201,7 +215,7 @@ require('packer').startup(function()
     use {
         'folke/trouble.nvim',
         requires = "kyazdani42/nvim-web-devicons",
-        config = function() require("trouble").setup() end
+        config = function() require("trouble").setup({ height = 5 }) end
     }
 
     -- LSP diagnostic colors for themes that don't have them
@@ -277,7 +291,7 @@ require('packer').startup(function()
     --     config = function() require('cokeline-config') end
     -- }
 
-    -- Disabling because I never use it
+   -- Disabling because I never use it
     -- Start page
     -- https://github.com/goolord/alpha-nvim
     -- use {

@@ -12,7 +12,7 @@ set tabstop=4                                           " Tabs are 4 spaces
 set softtabstop=4                                       " More tabs = 4 spaces config
 set updatetime=500
 set shiftwidth=4                                        " Ditto
-set mouse=a
+" set mouse=a
 set foldmethod=expr                                     " Use treesitter for code folding
 set relativenumber
 set foldexpr=nvim_treesitter#foldexpr()

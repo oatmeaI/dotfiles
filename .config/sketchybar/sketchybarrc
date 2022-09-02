@@ -23,43 +23,18 @@ sketchybar --set date script='sketchybar --set date label="$(date "+%m/%d/%y (%a
 sketchybar --set date update_freq=4
 
 # ------- Window Title ----------
-TITLE_SCRIPT='
-WINDOW_TITLE=$(/usr/local/bin/yabai -m query --windows --window | jq -r ".title")
-LENGTH=100
-if [[ ${#WINDOW_TITLE} -gt $LENGTH ]]; then
-  WINDOW_TITLE=$(echo "$WINDOW_TITLE" | cut -c 1-$LENGTH)
-  sketchybar -m --set window label="$WINDOW_TITLE"…
-  exit 0
-fi
-
-APP_TITLE=$(/usr/local/bin/yabai -m query --windows --window | jq -r ".app")
-if [[ $WINDOW_TITLE = "" ]]; then
-    if [[ $APP_TITLE = "" ]]; then
-        TITLE=""
-    else
-        TITLE="${APP_TITLE}"
-    fi
-else
-    CLEANED_WIN_TITLE=${WINDOW_TITLE//$APP_TITLE | /}
-    CLEANED_WIN_TITLE=${CLEANED_WIN_TITLE// | $APP_TITLE/}
-    CLEANED_WIN_TITLE=${CLEANED_WIN_TITLE//$APP_TITLE - /}
-    CLEANED_WIN_TITLE=${CLEANED_WIN_TITLE//$APP_TITLE – /}
-    CLEANED_WIN_TITLE=${CLEANED_WIN_TITLE// – $APP_TITLE/}
-    CLEANED_WIN_TITLE=${CLEANED_WIN_TITLE// - $APP_TITLE/}
-    if [[ $APP_TITLE = $CLEANED_WIN_TITLE ]]; then
-        TITLE="${APP_TITLE}"
-    else
-        TITLE="${APP_TITLE} | ${CLEANED_WIN_TITLE}"
-    fi
-fi
-sketchybar -m --set window label="$TITLE"
-'
-
 sketchybar --add item window center
 sketchybar --set window label.font="FiraCode Nerd Font Mono:Medium:12.0"
-sketchybar --set window script="$TITLE_SCRIPT"
+sketchybar --set window script="$HOME/.config/sketchybar/window_title.sh"
 sketchybar --subscribe window yabai_window
-$($TITLE_SCRIPT)
+
+# ------- BATT Usage ----------
+BATT_SCRIPT='sketchybar -m --set batt label="$(sh $HOME/.config/sketchybar/battery.sh)"'
+sketchybar --add item batt left
+sketchybar --set batt label.font="FiraCode Nerd Font Mono:Medium:12.0"
+sketchybar --set batt label.padding_right=20
+sketchybar --set batt script="$BATT_SCRIPT"
+sketchybar --set batt update_freq=5
 
 # ------- CPU Usage ----------
 CPU_SCRIPT='
@@ -83,6 +58,14 @@ sketchybar --set ram label.padding_left=20
 sketchybar --set ram script="$RAM_SCRIPT"
 sketchybar --set ram update_freq=2
 
+# ------- Uptime ----------
+UPTIME_SCRIPT='sketchybar -m --set uptime label="$(uptime | sed "s/.*\(up [0-9]* [A-z]*\).*/\1/")"'
+sketchybar --add item uptime left
+sketchybar --set uptime label.font="FiraCode Nerd Font Mono:Medium:12.0"
+sketchybar --set uptime label.padding_left=20
+sketchybar --set uptime script="$UPTIME_SCRIPT"
+sketchybar --set uptime update_freq=600
+
 # ------- Weather ----------
 sketchybar --add item weather right
 sketchybar --set weather update_freq=600
@@ -100,20 +83,20 @@ sketchybar --set modal icon=[n]
 sketchybar --set modal icon.padding_left=80
 
 # ------- Yabai Float ----------
-sketchybar --add item yabai_float left
-sketchybar --add event window_focus
-sketchybar --add event float_change
-sketchybar --set yabai_float label.padding_left=20
-sketchybar --set yabai_float label.font="FiraCode Nerd Font Mono:Medium:24.0"
-sketchybar --set yabai_float script="~/.config/sketchybar/yabai_float.sh"
-sketchybar --subscribe yabai_float yabai_window
-$($HOME/.config/sketchybar/yabai_float.sh)
+# sketchybar --add item yabai_float left
+# sketchybar --add event window_focus
+# sketchybar --add event float_change
+# sketchybar --set yabai_float label.padding_left=20
+# sketchybar --set yabai_float label.font="FiraCode Nerd Font Mono:Medium:24.0"
+# sketchybar --set yabai_float script="~/.config/sketchybar/yabai_float.sh"
+# sketchybar --subscribe yabai_float yabai_window
+# $($HOME/.config/sketchybar/yabai_float.sh)
 
 # ------- Yabai Mode ----------
-sketchybar --add item yabai_mode left
-sketchybar --set yabai_mode update_freq=600
-sketchybar --set yabai_mode label.padding_left=20
-sketchybar --set yabai_mode label.font="FiraCode Nerd Font Mono:Medium:12.0"
-sketchybar --set yabai_mode script="~/.config/sketchybar/yabai_mode.sh"
-sketchybar --subscribe yabai_mode yabai_window
-$($HOME/.config/sketchybar/yabai_mode.sh)
+# sketchybar --add item yabai_mode left
+# sketchybar --set yabai_mode update_freq=600
+# sketchybar --set yabai_mode label.padding_left=20
+# sketchybar --set yabai_mode label.font="FiraCode Nerd Font Mono:Medium:12.0"
+# sketchybar --set yabai_mode script="~/.config/sketchybar/yabai_mode.sh"
+# sketchybar --subscribe yabai_mode yabai_window
+# $($HOME/.config/sketchybar/yabai_mode.sh)
