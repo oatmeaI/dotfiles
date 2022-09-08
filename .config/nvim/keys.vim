@@ -11,12 +11,25 @@ noremap <silent><s-k> 10k
 
 " ----------- <space> Keymappings
 " ----- Home Row (Most Used Shortcuts)
+function ToggleExplore()
+    if &ft == "netrw"
+        if exists("w:netrw_rexlocal")
+            Rexplore
+        else
+            if exists("w:netrw_rexfile")
+                exec 'e ' . w:netrw_rexfile
+            endif
+        endif
+    else
+        Explore
+    endif
+endfun
 nnoremap <silent><space>a :Telescope neoclip<cr>|                                   " Open palette: list register contents
 nnoremap <silent><space>s :Telescope live_grep<cr>|                                 " Open palette: Search code
 nnoremap <silent><space>d :AerialToggle<cr>|                                        " Toggle symbols sidebar
 nnoremap <silent><space>f :Telescope find_files<cr>|                                " Open palette: Find files
-nnoremap <silent><space>j :NnnExplorer %:p:h<cr>|                                   " Reveal file in explorer
-nnoremap <silent><space>h :NnnPicker<cr>|                                           " Launch file picker
+nnoremap <silent><space>j :call ToggleExplore()<cr>|                                " Toggle file explorer
+nnoremap <silent><space>h :NnnPicker<cr>|                                           " Launch NNN picker - I might end up deleting this.
 nnoremap <silent><space>k :w<cr>|                                                   " Save
 nnoremap <silent><space>l :FloatermToggle<cr>|                                      " Open floating terminal
 nnoremap <silent><space>; :noh<cr>|                                                 " Get rid of find highlighting

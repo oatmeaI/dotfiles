@@ -59,12 +59,13 @@ sketchybar --set ram script="$RAM_SCRIPT"
 sketchybar --set ram update_freq=2
 
 # ------- Uptime ----------
-UPTIME_SCRIPT='sketchybar -m --set uptime label="$(uptime | sed "s/.*\(up [0-9]* [A-z]*\).*/\1/")"'
+UPTIME_SCRIPT='sketchybar -m --set uptime label="$(uptime | sed "s/.*\(up [0-9:]* *[A-z]*\).*/\1/")"'
 sketchybar --add item uptime left
 sketchybar --set uptime label.font="FiraCode Nerd Font Mono:Medium:12.0"
 sketchybar --set uptime label.padding_left=20
 sketchybar --set uptime script="$UPTIME_SCRIPT"
-sketchybar --set uptime update_freq=600
+sketchybar --set uptime update_freq=1800
+sketchybar -m --set uptime label="$(uptime | sed "s/.*\(up [0-9:]* *[A-z]*\).*/\1/")"
 
 # ------- Weather ----------
 sketchybar --add item weather right
