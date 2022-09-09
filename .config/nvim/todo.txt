@@ -6,4 +6,6 @@ VIM TODOS
 - No current word highlight in Floaterm
 - Cheatsheet sidebar??
 - Annoying lag on raw keymap keys
+test
 - Is it still slowing down after being open for a while?
+- Go through disabled settings in init.vim and remove any ones that I don't miss
