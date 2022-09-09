@@ -1,7 +1,5 @@
 local nvim_lsp = require('lspconfig')
-local coq = require "coq"
 local lsp = vim.lsp
-local handlers = lsp.handlers
 local filetypes = {
     "*.ts",
     "*.tsx",
@@ -9,8 +7,7 @@ local filetypes = {
     "*.jsx"
 }
 local pop_opts = { border = "rounded", max_width = 120 }
-handlers["textDocument/hover"] = lsp.with(handlers.hover, pop_opts)
- 
+
 vim.diagnostic.config({
   virtual_text = false,
   signs = true,
@@ -24,8 +21,8 @@ vim.diagnostic.config({
   },
 })
 
- 
-nvim_lsp.tsserver.setup (coq.lsp_ensure_capabilities({
+
+nvim_lsp.tsserver.setup ({
     init_options = {
         preferences = {
 			importModuleSpecifierPreference = "relative",
@@ -34,4 +31,4 @@ nvim_lsp.tsserver.setup (coq.lsp_ensure_capabilities({
     on_attach = function(client)
         require("aerial").on_attach(client, bufnr)
     end,
-}))
+})

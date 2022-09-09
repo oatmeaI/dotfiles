@@ -13,13 +13,13 @@ require('packer').startup(function()
     -- https://github.com/mg979/vim-visual-multi
     use 'kyazdani42/nvim-web-devicons'
 
-    -- Base16 Theme Framework
-    -- https://github.com/rrethy/nvim-base16
-    use 'rrethy/nvim-base16'
-
     -- General Util Library
     -- https://github.com/nvim-lua/plenary.nvim
     use 'nvim-lua/plenary.nvim'
+
+    -- Base16 Theme Framework
+    -- https://github.com/rrethy/nvim-base16
+    use 'rrethy/nvim-base16'
 
     -- Lots of modules
     -- https://github.com/echasnovski/mini.nvim
@@ -31,6 +31,12 @@ require('packer').startup(function()
             require('mini.completion').setup()
             require('mini.jump2d').setup()
             require('mini.cursorword').setup()
+            require('mini.pairs').setup()
+            require('mini.trailspace').setup()
+            require('mini.ai').setup()
+            require('mini.bufremove').setup()
+            require('mini.fuzzy').setup()
+    --        require('mini.base16').setup() -- TODO: Set up color palette
         end
     }
 
@@ -38,36 +44,15 @@ require('packer').startup(function()
     -- https://github.com/Pocco81/auto-save.nvim
     use {
 	    "Pocco81/auto-save.nvim",
-	    config = function()
-	    	 require("auto-save").setup()
-	    end
+	    config = function() require("auto-save").setup() end
     }
 
+    -- Git Conflict Helper
+    -- https://github.com/akinsho/git-conflict.nvim
     use {
         'akinsho/git-conflict.nvim',
         tag = "*",
-        config = function()
-            require('git-conflict').setup()
-        end
-    }
-
-    --  Treesitter-based Syntax Text Objects
-    --  https://github.com/RRethy/nvim-treesitter-textsubjects
-    use {
-        'RRethy/nvim-treesitter-textsubjects',
-        config = function()
-            require('nvim-treesitter.configs').setup {
-                textsubjects = {
-                    enable = true,
-                    prev_selection = ',', -- (Optional) keymap to select the previous selection
-                    keymaps = {
-                        ['.'] = 'textsubjects-smart',
-                        [';'] = 'textsubjects-container-outer',
-                        ['i;'] = 'textsubjects-container-inner',
-                    },
-                },
-            }
-        end
+        config = function() require('git-conflict').setup() end
     }
 
     -- Color highligher
@@ -77,32 +62,11 @@ require('packer').startup(function()
         config = function() require('nvim-highlight-colors').setup {} end
     }
 
-    -- Trailing whitespace manager
-    -- https://github.com/zakharykaplan/nvim-retrail
-    use {
-        "zakharykaplan/nvim-retrail",
-        config = function()
-            require("retrail").setup({
-                filetype = {
-                    exclude = {"vim", "aerial"}
-                },
-                trim = {
-                    whitespace = false,
-                    blanklines = false,
-                }
-            })
-        end
-    }
-
     -- Indent Guides
     -- https://github.com/lukas-reineke/indent-blankline.nvim
     use {
         "lukas-reineke/indent-blankline.nvim",
-        config = function()
-            require("indent_blankline").setup {
-                show_current_context = true,
-            }
-        end
+        config = function() require("indent_blankline").setup { show_current_context = true } end
     }
 
     -- Commands Cheatsheet
@@ -112,22 +76,20 @@ require('packer').startup(function()
         cmd = 'Cheatsheet'
     }
 
-    -- Close buffers without closing windows
-    -- https://github.com/famiu/bufdelete.nvim
-    use 'famiu/bufdelete.nvim'
-
     -- Symbols outline sidebar
     -- https://github.com/stevearc/aerial.nvim
     use {
         'stevearc/aerial.nvim',
         config = function() require('aerial').setup() end,
+        cmd = "AerialToggle"
     }
 
     -- NNN Picker & Sidebar (deciding if it's nicer than Netrw)
     -- https://github.com/luukvbaal/nnn.nvim
     use {
         "luukvbaal/nnn.nvim",
-        config = function() require("nnn").setup() end
+        config = function() require("nnn").setup() end,
+        cmd = "NnnPicker"
     }
 
     -- Git blame provider
@@ -146,17 +108,19 @@ require('packer').startup(function()
     use {
         'nvim-telescope/telescope.nvim',
         config = function ()
-            require('telescope').setup{ pickers = { lsp_references = { initial_mode = "normal" }, lsp_definitions = { initial_mode = "normal" }, buffers = { initial_mode = "normal" } }, defaults = { file_ignore_patterns = {"node_modules"} } }
-            require('telescope').load_extension('fzf')
+            require('telescope').setup{
+                defaults = {
+                    generic_sorter = require('mini.fuzzy').get_telescope_sorter,
+                    file_ignore_patterns = {"node_modules"}
+                },
+                pickers = {
+                    lsp_references = { initial_mode = "normal" },
+                    lsp_definitions = { initial_mode = "normal" },
+                    buffers = { initial_mode = "normal" }
+                },
+            }
             require('telescope').load_extension('neoclip')
         end,
-    }
-
-    -- Sorting plugin for Telescope
-    -- https://github.com/nvim-telescope/telescope-fzf-native.nvim
-    use {
-        'nvim-telescope/telescope-fzf-native.nvim',
-        run = 'make',
     }
 
     -- Setup native treesitter
@@ -195,7 +159,8 @@ require('packer').startup(function()
     use {
         'folke/trouble.nvim',
         requires = "kyazdani42/nvim-web-devicons",
-        config = function() require("trouble").setup({ height = 5 }) end
+        config = function() require("trouble").setup({ height = 5 }) end,
+        cmd = "TroubleToggle"
     }
 
     -- LSP diagnostic colors for themes that don't have them
@@ -240,13 +205,6 @@ require('packer').startup(function()
     use {
         'windwp/nvim-spectre',
         run = 'brew install gnu-sed'
-    }
-
-    -- Smart pairs in TSX
-    -- https://github.com/windwp/nvim-ts-autotag
-    use {
-        'windwp/nvim-ts-autotag',
-        config = function() require('nvim-ts-autotag').setup() end
     }
 
     if packer_bootstrap then
