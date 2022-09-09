@@ -10,7 +10,7 @@ require('packer').startup(function()
     use 'wbthomason/packer.nvim'
 
     -- General Icons
-    -- https://github.com/mg979/vim-visual-multi
+    -- https://github.com/kyazdani42/nvim-web-devicons
     use 'kyazdani42/nvim-web-devicons'
 
     -- General Util Library
@@ -36,6 +36,7 @@ require('packer').startup(function()
             require('mini.ai').setup()
             require('mini.bufremove').setup()
             require('mini.fuzzy').setup()
+            require('mini.comment').setup()
     --        require('mini.base16').setup() -- TODO: Set up color palette
         end
     }
@@ -137,14 +138,6 @@ require('packer').startup(function()
         'neovim/nvim-lspconfig',
         config = function() require('lsp-config') end
     }
-
-    -- Pretty notifications
-    -- https://github.com/rcarriga/nvim-notify
-    use 'rcarriga/nvim-notify'
-
-    -- Prettier select UI
-    -- https://github.com/stevearc/dressing.nvim
-    use 'stevearc/dressing.nvim'
 
     -- LSP server for doing formatting & linting
     -- https://github.com/jose-elias-alvarez/null-ls.nvim
