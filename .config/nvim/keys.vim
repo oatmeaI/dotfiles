@@ -28,8 +28,8 @@ nnoremap <silent><space>a :Telescope neoclip<cr>|                               
 nnoremap <silent><space>s :Telescope live_grep<cr>|                                 " Open palette: Search code
 nnoremap <silent><space>d :AerialToggle<cr>|                                        " Toggle symbols sidebar
 nnoremap <silent><space>f :Telescope find_files<cr>|                                " Open palette: Find files
-nnoremap <silent><space>j :call ToggleExplore()<cr>|                                " Toggle file explorer
-nnoremap <silent><space>h :NnnPicker<cr>|                                           " Launch NNN picker - I might end up deleting this.
+nnoremap <silent><space>h :call ToggleExplore()<cr>|                                " Toggle file explorer
+nnoremap <silent><space>j :NnnPicker<cr>|                                           " Launch NNN picker - I might end up deleting this.
 nnoremap <silent><space>k :w<cr>|                                                   " Save
 nnoremap <silent><space>l :FloatermToggle<cr>|                                      " Open floating terminal
 nnoremap <silent><space>; :noh<cr>|                                                 " Get rid of find highlighting

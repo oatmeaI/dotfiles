@@ -1,5 +1,3 @@
-lua require('impatient')
-
 " ---------- General Settings
 set termguicolors
 set laststatus=3
@@ -12,7 +10,6 @@ set tabstop=4                                           " Tabs are 4 spaces
 set softtabstop=4                                       " More tabs = 4 spaces config
 set updatetime=500
 set shiftwidth=4                                        " Ditto
-" set mouse=a
 set foldmethod=expr                                     " Use treesitter for code folding
 set relativenumber
 set foldexpr=nvim_treesitter#foldexpr()
@@ -27,6 +24,7 @@ set background=dark
 hi clear SignColumn
 set noic
 set ignorecase
+set splitright
 set noswapfile 
 set undofile
 let g:netrw_liststyle=3 
@@ -37,10 +35,6 @@ colorscheme base16-snazzy
 exec 'hi VertSplit guifg=' . synIDattr(hlID('TabLineFill'),'bg')
 exec 'hi VertSplit guibg=' . synIDattr(hlID('TabLineFill'),'bg')
 
-" All the base16 colorschemes have a background on the bufferline, which
-" messes with the Cokeline config
-hi TabLineFill guibg=clear
-
 " Make all the floating windows look the same
 hi! link FloatBorder TelescopeBorder
 hi! link NormalFloat TelescopeNormal
@@ -49,8 +43,8 @@ hi! link Floaterm TelescopeNormal
 
 " ---------- Autocommands
 " Refresh syntax highlighting on buffer enter (it gets stuck sometimes)
-autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
-autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
+" autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
+" autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
 
 " Show fold preview on hover
 autocmd CursorHold * :lua require('fold-preview').show_preview()
@@ -70,19 +64,5 @@ let g:gitblame_message_template = '<author>, <date>'
 let g:gitblame_display_virtual_text = 0
 let g:gitblame_date_format = '%r'
 
-" ---------- COQ config
-let g:coq_settings = {
-  \ 'auto_start': 'shut-up' 
-\}
-
-" ---------- Minimap config
-let g:minimap_auto_start = 0
-let g:minimap_highlight_range = 1
-let g:minimap_highlight_search = 1
-
-" This doesn't seem to be working for some reason
-set splitright
-
 lua require('plugins')
-" lua require('telescope-colorscheme')
 source ~/.config/nvim/keys.vim

@@ -32,33 +32,6 @@ nvim_lsp.tsserver.setup (coq.lsp_ensure_capabilities({
 		}
     },
     on_attach = function(client)
-        client.resolved_capabilities.document_formatting = false
         require("aerial").on_attach(client, bufnr)
-        if client.resolved_capabilities.document_highlight then
-            vim.cmd [[
-                hi! LspReferenceRead cterm=bold ctermbg=red guibg=LightYellow
-                hi! LspReferenceText cterm=bold ctermbg=red guibg=LightYellow
-                hi! LspReferenceWrite cterm=bold ctermbg=red guibg=LightYellow
-            ]]
-            vim.api.nvim_create_augroup('lsp_document_highlight', {
-              clear = false
-            }) 
-            vim.api.nvim_clear_autocmds({
-              buffer = bufnr,
-              group = 'lsp_document_highlight',
-            }) 
-            vim.api.nvim_create_autocmd({ 'CursorHold', 'CursorHoldI' }, {
-              group = 'lsp_document_highlight',
-              pattern = filetypes,
-              buffer = bufnr,
-              callback = vim.lsp.buf.document_highlight,
-            })
-            vim.api.nvim_create_autocmd('CursorMoved', {
-              group = 'lsp_document_highlight',
-              buffer = bufnr,
-              pattern = filetypes,
-              callback = vim.lsp.buf.clear_references,
-            })
-        end
     end,
 }))

@@ -29,6 +29,8 @@ require('packer').startup(function()
         config = function()
             require('mini.surround').setup()
             require('mini.completion').setup()
+            require('mini.jump2d').setup()
+            require('mini.cursorword').setup()
         end
     }
 
@@ -114,24 +116,6 @@ require('packer').startup(function()
     -- https://github.com/famiu/bufdelete.nvim
     use 'famiu/bufdelete.nvim'
 
-    -- Completion plugin + precompiled artifacts
-    -- https://github.com/ms-jpq/coq_nvim
-    -- use {
-    --     'ms-jpq/coq_nvim',
-    --     branch = 'coq',
-    --     config = function()
-    --         vim.cmd([[ino <silent><expr> <space>    pumvisible() ? (complete_info().selected == -1 ? "\<C-e><space>" : "\<C-y><space>") : "\<space>"]])
-    --     end
-    -- }
-    -- use { 'ms-jpq/coq.artifacts', branch = 'artifacts'}
-
-    -- Quick buffer navigation
-    -- https://github.com/ggandor/leap.nvim
-    use {
-        'ggandor/leap.nvim',
-        config = function() require('leap').set_default_keymaps() end
-    }
-
     -- Symbols outline sidebar
     -- https://github.com/stevearc/aerial.nvim
     use {
@@ -194,10 +178,6 @@ require('packer').startup(function()
     -- https://github.com/rcarriga/nvim-notify
     use 'rcarriga/nvim-notify'
 
-    -- Speed up plugin loading
-    -- https://github.com/lewis6991/impatient.nvim
-    use 'lewis6991/impatient.nvim'
-
     -- Prettier select UI
     -- https://github.com/stevearc/dressing.nvim
     use 'stevearc/dressing.nvim'
@@ -210,7 +190,7 @@ require('packer').startup(function()
         config = function() require('null-ls-config') end
     }
 
-     -- Pretty LSP diagnostic display
+    -- Pretty LSP diagnostic display
     -- https://github.com/folke/trouble.nvim
     use {
         'folke/trouble.nvim',
@@ -252,7 +232,7 @@ require('packer').startup(function()
     use {
         'anuvyklack/fold-preview.nvim',
         requires = { 'anuvyklack/keymap-amend.nvim' },
-        config = function() require('fold-preview-config') end
+        config = function() require('fold-preview').setup({ border = "rounded" }) end
     }
 
     -- Project-wide search & replace
@@ -262,72 +242,12 @@ require('packer').startup(function()
         run = 'brew install gnu-sed'
     }
 
-    -- Markdown preview
-    -- https://github.com/ellisonleao/glow.nvim
-    use {
-        'ellisonleao/glow.nvim',
-        cmd = 'Glow'
-    }
-
-    -- Code minimap
-    -- https://github.com/wfxr/minimap.vim
-    use {
-        'wfxr/minimap.vim',
-        run = 'brew install code-minimap'
-    }
-
     -- Smart pairs in TSX
     -- https://github.com/windwp/nvim-ts-autotag
     use {
         'windwp/nvim-ts-autotag',
         config = function() require('nvim-ts-autotag').setup() end
     }
-
-    ---- Disabled ----
-    -- Tabline
-    -- https://github.com/noib3/nvim-cokeline
-    -- use {
-    --     'noib3/nvim-cokeline',
-    --     config = function() require('cokeline-config') end
-    -- }
-
-   -- Disabling because I never use it
-    -- Start page
-    -- https://github.com/goolord/alpha-nvim
-    -- use {
-    --     'goolord/alpha-nvim',
-    --     config = function() require('alpha-config') end
-    -- }
-
-    -- Disabling because I don't use it
-    -- Session manager
-    -- https://github.com/Shatur/neovim-session-manager
-    -- use {
-    --     'Shatur/neovim-session-manager',
-    --     config = function() require('sessions-config') end
-    -- }
-
-   -- Disabling in order to train myself to get better with macros
-    -- Sublime-esque multi-cursor
-    -- https://github.com/mg979/vim-visual-multi
-    -- use {
-    --     'mg979/vim-visual-multi',
-    --     branch = 'master'
-    -- }
-
-    -- File browser sidebar
-    -- https://github.com/kyazdani42/nvim-tree.lua
-    -- use {
-    --     'kyazdani42/nvim-tree.lua',
-    --     config = function() require('nvim-tree-config') end
-    -- }
-
-    -- Disabling because I don't use it
-    -- Fancy marks for navigation etc
-    -- https://github.com/ThePrimeagen/harpoon
-    -- use {
-    --     'ThePrimeagen/harpoon',
-    -- }
 
     if packer_bootstrap then
         require('packer').sync()
