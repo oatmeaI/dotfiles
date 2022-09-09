@@ -27,10 +27,11 @@ require('packer').startup(function()
         'echasnovski/mini.nvim',
         branch = 'stable',
         config = function()
+            -- TODO - Update cheatsheet
             require('mini.surround').setup()
             require('mini.completion').setup()
             require('mini.jump2d').setup()
-            require('mini.cursorword').setup()
+            require('mini.cursorword').setup() -- TODO: Disable in Floaterm
             require('mini.pairs').setup()
             require('mini.trailspace').setup()
             require('mini.ai').setup()
@@ -81,8 +82,7 @@ require('packer').startup(function()
     -- https://github.com/stevearc/aerial.nvim
     use {
         'stevearc/aerial.nvim',
-        config = function() require('aerial').setup() end,
-        cmd = "AerialToggle"
+        config = function() require('aerial').setup() end
     }
 
     -- NNN Picker & Sidebar (deciding if it's nicer than Netrw)

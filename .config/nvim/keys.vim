@@ -8,6 +8,7 @@ noremap <silent><tab> <c-w><c-w>|                                               
 noremap <silent><s-tab> <c-w><c-h>|                                                 " Cycle focused pane backwards
 noremap <silent><s-j> 10j
 noremap <silent><s-k> 10k
+noremap <silent>wp viw"0p|                                                           "Replace word with register"
 
 " ----------- <space> Keymappings
 " ----- Home Row (Most Used Shortcuts)
@@ -33,26 +34,21 @@ nnoremap <silent><space>h :NnnPicker<cr>|                                       
 nnoremap <silent><space>k :w<cr>|                                                   " Save
 nnoremap <silent><space>l :FloatermToggle<cr>|                                      " Open floating terminal
 nnoremap <silent><space>; :noh<cr>|                                                 " Get rid of find highlighting
-nnoremap <silent><space>g <cmd>lua vim.lsp.buf.formatting()<cr>|                    " Format document   
+nnoremap <silent><space>g <cmd>lua vim.lsp.buf.formatting()<cr>|                    " Format document
 
 " ----- Other Handy Shortcuts
 vnoremap <silent><space>yy "*y|                                                     " Copy to system clipboard
 nnoremap <silent><space>pp "*p|                                                     " Paste from system clipboard
-nnoremap <silent><space>o :TroubleToggle document_diagnostics<cr>|                  " Display diagnostics in lower pane
+nnoremap <silent><space>o :TroubleToggle document_diagnostics<cr>|                  " Display diagnostics in lower panee
 nnoremap <silent><space>r :lua vim.lsp.buf.rename()<cr>|                            " Rename symbol
 nnoremap <silent><space>p o<esc>p|                                                  " Shortcut to paste something on a new line
-nnoremap <silent><space>xd "_dd|                                                    " Shortcut to delete without yanking
 nnoremap <silent><space>rs :so $MYVIMRC<cr>|                                        " Quick reload shortcut
-nnoremap <silent><space>q :lua MiniBufremove.delete()<cr>|                                             " Close buffer
+nnoremap <silent><space>q :lua MiniBufremove.delete()<cr>|                          " Close buffer
 nnoremap <silent><space>w <c-w>q|                                                   " Close window
 nnoremap <silent><space><space> :Telescope buffers<cr>|                             " Open palette: open buffers
-nnoremap <silent><space>e :MinimapToggle<cr>|                                       " Toggle minimap (for when it gets jacked up)
 nnoremap <silent><space>u :lua vim.lsp.buf.hover({focusable = false})<cr>|          " Show hover doc
 nnoremap <silent><space>i :lua vim.diagnostic.open_float({focusable = false})<cr>|  " Show hover diagnostic
 nnoremap <silent><space>rl :LspRestart<cr>                                          " Restart LSP
 
 "----------- <ctrl> Keymappings
 nnoremap <silent><c-f> <cmd>lua require('spectre').open()<cr>|                      " Project wide find & replace
-
-" ---------- COQ Keybindings
-ino <silent><expr> <space>    pumvisible() ? (complete_info().selected == -1 ? "\<C-e><space>" : "\<C-y>") : "\<space>"

@@ -1,0 +1,9 @@
+VIM TODOS
+- Color scheme
+- Tab completion
+- Current word highlight style
+- Auto format server
+- No current word highlight in Floaterm
+- Cheatsheet sidebar??
+- Annoying lag on raw keymap keys
+- Is it still slowing down after being open for a while?

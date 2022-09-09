@@ -11,12 +11,13 @@ set softtabstop=4                                       " More tabs = 4 spaces c
 set updatetime=500
 set shiftwidth=4                                        " Ditto
 set foldmethod=expr                                     " Use treesitter for code folding
-set relativenumber
+"set relativenumber
 set foldexpr=nvim_treesitter#foldexpr()
 set cursorline
 set modifiable
 set noshowmode
 set fillchars=eob:\ 
+set mouse=a
 set hidden
 set nofoldenable
 syntax on
