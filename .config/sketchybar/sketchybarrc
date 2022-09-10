@@ -1,3 +1,7 @@
+PADDING=25
+TEXT_FONT="FiraCode Nerd Font Mono:Medium:12.0"
+ICON_FONT="FiraCode Nerd Font Mono:Medium:22.0"
+
 # ------- Basic Config ----------
 sketchybar --bar color=0x44111111
 sketchybar --bar position=bottom
@@ -9,30 +13,46 @@ sketchybar --bar y_offset=5
 sketchybar --bar corner_radius=20
 sketchybar -m --add event yabai_window
 
+####### RIGHT
 # ------- Time ----------
 sketchybar --add item time right
-sketchybar --set time label.font="FiraCode Nerd Font Mono:Medium:12.0"
+sketchybar --set time label.font="$TEXT_FONT"
 sketchybar --set time script='sketchybar --set time label="$(date "+%I:%M%p")"'
-sketchybar --set time label.padding_left=20
+sketchybar --set time label.padding_left=$PADDING
 sketchybar --set time update_freq=2
 
 # ------- Date ----------
 sketchybar --add item date right
-sketchybar --set date label.font="FiraCode Nerd Font Mono:Medium:12.0"
+sketchybar --set date label.font="$TEXT_FONT"
 sketchybar --set date script='sketchybar --set date label="$(date "+%m/%d/%y (%a)")"'
+sketchybar --set date label.padding_left=$PADDING
 sketchybar --set date update_freq=4
 
+# ------- Weather ----------
+sketchybar --add item weather right
+sketchybar --set weather update_freq=300
+sketchybar --set weather script="$HOME/.config/sketchybar/weather.sh" # Fix this
+sketchybar --set weather icon.font="$ICON_FONT"
+sketchybar --set weather icon.padding_left=$PADDING
+sketchybar --set weather label.font="$TEXT_FONT"
+sketchybar --set weather label.padding_left=5
+
+sketchybar --set weather background.drawing=on
+$($HOME/.config/sketchybar/weather.sh)
+
+####### CENTER
 # ------- Window Title ----------
 sketchybar --add item window center
-sketchybar --set window label.font="FiraCode Nerd Font Mono:Medium:12.0"
+sketchybar --set window label.font="$TEXT_FONT"
 sketchybar --set window script="$HOME/.config/sketchybar/window_title.sh"
 sketchybar --subscribe window yabai_window
 
+####### LEFT
 # ------- BATT Usage ----------
 BATT_SCRIPT='sketchybar -m --set batt label="$(sh $HOME/.config/sketchybar/battery.sh)"'
 sketchybar --add item batt left
-sketchybar --set batt label.font="FiraCode Nerd Font Mono:Medium:12.0"
-sketchybar --set batt label.padding_right=20
+sketchybar --set batt label.font="$TEXT_FONT"
+sketchybar --set batt label.padding_right=$PADDING
 sketchybar --set batt script="$BATT_SCRIPT"
 sketchybar --set batt update_freq=5
 
@@ -46,48 +66,39 @@ sketchybar --set cpu label="CPU: ${CPU_USE}%"
 '
 
 sketchybar --add item cpu left
-sketchybar --set cpu label.font="FiraCode Nerd Font Mono:Medium:12.0"
+sketchybar --set cpu label.font="$TEXT_FONT"
 sketchybar --set cpu script="$CPU_SCRIPT"
 sketchybar --set cpu update_freq=2
+sketchybar --set cpu label.padding_right=$PADDING
 
 # ------- RAM Usage ----------
 RAM_SCRIPT='sketchybar -m --set ram label="RAM: $(memory_pressure | grep "System-wide memory free percentage:" | awk "{ print 100-\$5 }")%"'
 sketchybar --add item ram left
-sketchybar --set ram label.font="FiraCode Nerd Font Mono:Medium:12.0"
-sketchybar --set ram label.padding_left=20
+sketchybar --set ram label.font="$TEXT_FONT"
+sketchybar --set ram label.padding_right=$PADDING
 sketchybar --set ram script="$RAM_SCRIPT"
 sketchybar --set ram update_freq=2
 
 # ------- Uptime ----------
 UPTIME_SCRIPT='sketchybar -m --set uptime label="$(uptime | sed "s/.*\(up [0-9:]* *[A-z]*\).*/\1/")"'
 sketchybar --add item uptime left
-sketchybar --set uptime label.font="FiraCode Nerd Font Mono:Medium:12.0"
-sketchybar --set uptime label.padding_left=20
+sketchybar --set uptime label.font="$TEXT_FONT"
+sketchybar --set uptime label.padding_right=$PADDING
 sketchybar --set uptime script="$UPTIME_SCRIPT"
-sketchybar --set uptime update_freq=1800
+sketchybar --set uptime update_freq=600
 sketchybar -m --set uptime label="$(uptime | sed "s/.*\(up [0-9:]* *[A-z]*\).*/\1/")"
-
-# ------- Weather ----------
-sketchybar --add item weather right
-sketchybar --set weather update_freq=600
-sketchybar --set weather script="$HOME/.config/sketchybar/weather.sh" # Fix this
-sketchybar --set weather icon.font="FiraCode Nerd Font Mono:Medium:22.0"
-sketchybar --set weather label.font="FiraCode Nerd Font Mono:Medium:12.0"
-sketchybar --set weather background.drawing=on
-sketchybar --set weather label.padding_right=80
-sketchybar --set weather label.padding_left=10
-$($HOME/.config/sketchybar/weather.sh)
 
 # ------- skhd Modal ----------
 sketchybar --add item modal left
 sketchybar --set modal icon=[n]
-sketchybar --set modal icon.padding_left=80
+sketchybar --set modal icon.padding_right=$PADDING
+
 
 # ------- Yabai Float ----------
 # sketchybar --add item yabai_float left
 # sketchybar --add event window_focus
 # sketchybar --add event float_change
-# sketchybar --set yabai_float label.padding_left=20
+# sketchybar --set yabai_float label.padding_left=$PADDING
 # sketchybar --set yabai_float label.font="FiraCode Nerd Font Mono:Medium:24.0"
 # sketchybar --set yabai_float script="~/.config/sketchybar/yabai_float.sh"
 # sketchybar --subscribe yabai_float yabai_window
@@ -96,8 +107,8 @@ sketchybar --set modal icon.padding_left=80
 # ------- Yabai Mode ----------
 # sketchybar --add item yabai_mode left
 # sketchybar --set yabai_mode update_freq=600
-# sketchybar --set yabai_mode label.padding_left=20
-# sketchybar --set yabai_mode label.font="FiraCode Nerd Font Mono:Medium:12.0"
+# sketchybar --set yabai_mode label.padding_left=$PADDING
+# sketchybar --set yabai_mode label.font="$TEXT_FONT"
 # sketchybar --set yabai_mode script="~/.config/sketchybar/yabai_mode.sh"
 # sketchybar --subscribe yabai_mode yabai_window
 # $($HOME/.config/sketchybar/yabai_mode.sh)
