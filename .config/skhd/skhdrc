@@ -62,5 +62,5 @@ window_move < q : yabai -m window --toggle float && yabai -m window --toggle flo
 # shift + alt - 5 : yabai -m window --space 5
 # shift + alt - 6 : yabai -m window --space 6
 
-#shift + alt - i : yabai -m space --layout stack
-#shift + alt - u : yabai -m space --layout bsp
+shift + alt - i : yabai -m space --layout float
+shift + alt - u : yabai -m space --layout bsp
