@@ -103,9 +103,20 @@ require('packer').startup(function()
         end
     }
 
+    -- Dim unfocused buffers
+    -- https://github.com/sunjon/Shade.nvim
     use {
         'sunjon/shade.nvim',
-        config = function () require'shade'.setup({ overlay_opacity = 25 }) end
+        config = function () require'shade'.setup({
+            overlay_opacity = 65,
+            opacity_step = 1,
+            keys = {
+                    brightness_up    = '<C-Up>',
+                    brightness_down  = '<C-Down>',
+                    toggle           = '<Leader>s',
+                }
+            })
+        end
     }
 
     -- Base16 Theme Framework
