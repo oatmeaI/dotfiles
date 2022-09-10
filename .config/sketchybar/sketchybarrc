@@ -90,8 +90,9 @@ sketchybar -m --set uptime label="$(uptime | sed "s/.*\(up [0-9:]* *[A-z]*\).*/\
 
 # ------- skhd Modal ----------
 sketchybar --add item modal left
-sketchybar --set modal icon=[n]
-sketchybar --set modal icon.padding_right=$PADDING
+sketchybar --set modal label="[n]"
+sketchybar --set modal label.font="$TEXT_FONT"
+sketchybar --set modal label.padding_right=$PADDING
 
 
 # ------- Yabai Float ----------
