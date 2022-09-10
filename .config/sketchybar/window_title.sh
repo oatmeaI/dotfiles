@@ -1,6 +1,6 @@
 #!/bin/zsh
-
-WINDOW_TITLE=$(/usr/local/bin/yabai -m query --windows --window | jq -r ".title")
+YABAI_PATH=$(which yabai)
+WINDOW_TITLE=$($YABAI_PATH -m query --windows --window | jq -r ".title")
 LENGTH=100
 if [[ ${#WINDOW_TITLE} -gt $LENGTH ]]; then
   WINDOW_TITLE=$(echo "$WINDOW_TITLE" | cut -c 1-$LENGTH)
@@ -8,7 +8,7 @@ if [[ ${#WINDOW_TITLE} -gt $LENGTH ]]; then
   exit 0
 fi
 
-APP_TITLE=$(/usr/local/bin/yabai -m query --windows --window | jq -r ".app")
+APP_TITLE=$($YABAI_PATH -m query --windows --window | jq -r ".app")
 if [[ $WINDOW_TITLE = "" ]]; then
     if [[ $APP_TITLE = "" ]]; then
         TITLE=""
