@@ -1,5 +1,5 @@
 # ------- Basic Config ----------
-sketchybar --bar color=0x55282a36
+sketchybar --bar color=0x44111111
 sketchybar --bar position=bottom
 sketchybar --bar height=26
 sketchybar --bar blur_radius=100

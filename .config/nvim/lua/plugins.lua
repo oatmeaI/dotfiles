@@ -12,11 +12,15 @@ require('packer').startup(function()
 
     -- General Icons
     -- https://github.com/kyazdani42/nvim-web-devicons
-    -- use 'kyazdani42/nvim-web-devicons'
+    use 'kyazdani42/nvim-web-devicons'
 
     -- General Util Library
     -- https://github.com/nvim-lua/plenary.nvim
     use 'nvim-lua/plenary.nvim'
+
+    -- Plugin Caching Etc.
+    -- https://github.com/lewis6991/impatient.nvim
+    use 'lewis6991/impatient.nvim'
     --=============================================================
 
 

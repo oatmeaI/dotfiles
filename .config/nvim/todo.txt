@@ -8,11 +8,7 @@ VIM TODOS
 - Annoying lag on raw keymap keys
 test
 - Is it still slowing down after being open for a while?
-    - I think this might be Floaterm
-    - ...or not...hard to repro because it only happens after some time.
-    - Oh, maybe the clipboard history plugin? Although that should be buffer-independent
-    - Disabling plugins:
-        - Lualine: No effect
-        - Git Blame: TBD
+    - Removed almost all plugins (and put `impatient` back) and it seems to be working better now.
+    - Will re-enable as I feel like I need stuff, hopefully just one plugin at a time.
 - Go through disabled settings in init.vim and remove any ones that I don't miss
 - Shortcuts for trim trailing whitespace

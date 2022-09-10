@@ -1,3 +1,5 @@
+lua require('impatient')
+
 " ==========General Settings==============================================
 set number                                                              " Show line numbers
 set termguicolors                                                       " Use gui colors in terminal (ex. guifg instead of ctermfg)
