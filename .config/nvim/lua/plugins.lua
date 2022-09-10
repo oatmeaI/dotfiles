@@ -5,22 +5,49 @@ if fn.empty(fn.glob(install_path)) > 0 then
 end
 
 require('packer').startup(function()
+    --======================Dependencies===========================
     -- Package management
     -- https://github.com/wbthomason/packer.nvim
     use 'wbthomason/packer.nvim'
 
     -- General Icons
     -- https://github.com/kyazdani42/nvim-web-devicons
-    use 'kyazdani42/nvim-web-devicons'
+    -- use 'kyazdani42/nvim-web-devicons'
 
     -- General Util Library
     -- https://github.com/nvim-lua/plenary.nvim
     use 'nvim-lua/plenary.nvim'
+    --=============================================================
 
-    -- Base16 Theme Framework
-    -- https://github.com/rrethy/nvim-base16
-    use 'rrethy/nvim-base16'
 
+    --======================IDE Essentials=========================
+    -- Setup native treesitter
+    -- https://github.com/nvim-treesitter/nvim-treesitter
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = ':TSUpdate',
+        config = function() require('treesitter-config') end
+    }
+
+    -- Setup native LSP
+    -- https://github.com/neovim/nvim-lspconfig
+    use {
+        'neovim/nvim-lspconfig',
+        config = function() require('lsp-config') end
+    }
+
+    -- LSP server for doing formatting & linting
+    -- https://github.com/jose-elias-alvarez/null-ls.nvim
+    -- use {
+    --     'jose-elias-alvarez/null-ls.nvim',
+    --     run = 'brew install fsouza/prettierd/prettierd',
+    --     config = function() require('null-ls-config') end
+    -- }
+    --=============================================================
+
+
+
+    --======================UI/UX Features & Tweaks ===============
     -- Lots of modules
     -- https://github.com/echasnovski/mini.nvim
     use {
@@ -42,68 +69,6 @@ require('packer').startup(function()
         end
     }
 
-    -- Autosave
-    -- https://github.com/Pocco81/auto-save.nvim
-    use {
-	    "Pocco81/auto-save.nvim",
-	    config = function() require("auto-save").setup() end
-    }
-
-    -- Git Conflict Helper
-    -- https://github.com/akinsho/git-conflict.nvim
-    use {
-        'akinsho/git-conflict.nvim',
-        tag = "*",
-        config = function() require('git-conflict').setup() end
-    }
-
-    -- Color highligher
-    -- https://github.com/brenoprata10/nvim-highlight-colors
-    use {
-        'brenoprata10/nvim-highlight-colors',
-        config = function() require('nvim-highlight-colors').setup {} end
-    }
-
-    -- Indent Guides
-    -- https://github.com/lukas-reineke/indent-blankline.nvim
-    use {
-        "lukas-reineke/indent-blankline.nvim",
-        config = function() require("indent_blankline").setup { show_current_context = true } end
-    }
-
-    -- Commands Cheatsheet
-    -- https://github.com/sudormrfbin/cheatsheet.nvim
-    use {
-        'sudormrfbin/cheatsheet.nvim',
-        cmd = 'Cheatsheet'
-    }
-
-    -- Symbols outline sidebar
-    -- https://github.com/stevearc/aerial.nvim
-    use {
-        'stevearc/aerial.nvim',
-        config = function() require('aerial').setup() end
-    }
-
-    -- NNN Picker & Sidebar (deciding if it's nicer than Netrw)
-    -- https://github.com/luukvbaal/nnn.nvim
-    use {
-        "luukvbaal/nnn.nvim",
-        config = function() require("nnn").setup() end,
-        cmd = "NnnPicker"
-    }
-
-    -- Git blame provider
-    -- https://github.com/f-person/git-blame.nvim
-    use 'f-person/git-blame.nvim'
-
-    -- Statusline
-    -- https://github.com/nvim-lualine/lualine.nvim
-    use {
-        'nvim-lualine/lualine.nvim',
-        config = function() require('lualine-config') end
-    }
-
     -- Command palette
     -- https://github.com/nvim-telescope/telescope.nvim
     use {
@@ -120,85 +85,138 @@ require('packer').startup(function()
                     buffers = { initial_mode = "normal" }
                 },
             }
-            require('telescope').load_extension('neoclip')
+            -- require('telescope').load_extension('neoclip')
         end,
     }
 
-    -- Setup native treesitter
-    -- https://github.com/nvim-treesitter/nvim-treesitter
     use {
-        'nvim-treesitter/nvim-treesitter',
-        run = ':TSUpdate',
-        config = function() require('treesitter-config') end
+        "catppuccin/nvim",
+        as = "catppuccin",
+        config = function ()
+            vim.g.catppuccin_flavour = "macchiato" -- latte, frappe, macchiato, mocha
+            require("catppuccin").setup()
+        end
     }
 
-    -- Setup native LSP
-    -- https://github.com/neovim/nvim-lspconfig
-    use {
-        'neovim/nvim-lspconfig',
-        config = function() require('lsp-config') end
-    }
+    -- Base16 Theme Framework
+    -- https://github.com/rrethy/nvim-base16
+    -- use 'rrethy/nvim-base16'
 
-    -- LSP server for doing formatting & linting
-    -- https://github.com/jose-elias-alvarez/null-ls.nvim
-    use {
-        'jose-elias-alvarez/null-ls.nvim',
-        run = 'brew install fsouza/prettierd/prettierd',
-        config = function() require('null-ls-config') end
-    }
+    -- Autosave
+    -- https://github.com/Pocco81/auto-save.nvim
+    -- use {
+    --  "Pocco81/auto-save.nvim",
+    --  config = function() require("auto-save").setup() end
+    -- }
+
+    -- Git Conflict Helper
+    -- https://github.com/akinsho/git-conflict.nvim
+    -- use {
+    --     'akinsho/git-conflict.nvim',
+    --     tag = "*",
+    --     config = function() require('git-conflict').setup() end
+    -- }
+
+    -- Color highligher
+    -- https://github.com/brenoprata10/nvim-highlight-colors
+    -- use {
+    --     'brenoprata10/nvim-highlight-colors',
+    --     config = function() require('nvim-highlight-colors').setup {} end
+    -- }
+
+    -- Indent Guides
+    -- https://github.com/lukas-reineke/indent-blankline.nvim
+    -- use {
+    --     "lukas-reineke/indent-blankline.nvim",
+    --     config = function() require("indent_blankline").setup { show_current_context = true } end
+    -- }
+
+    -- Commands Cheatsheet
+    -- https://github.com/sudormrfbin/cheatsheet.nvim
+    -- use {
+    --     'sudormrfbin/cheatsheet.nvim',
+    --     cmd = 'Cheatsheet'
+    -- }
+
+    -- Symbols outline sidebar
+    -- https://github.com/stevearc/aerial.nvim
+    -- use {
+    --     'stevearc/aerial.nvim',
+    --     config = function() require('aerial').setup() end
+    -- }
+
+    -- NNN Picker & Sidebar (deciding if it's nicer than Netrw)
+    -- https://github.com/luukvbaal/nnn.nvim
+    -- use {
+    --     "luukvbaal/nnn.nvim",
+    --     config = function() require("nnn").setup() end,
+    --     cmd = "NnnPicker"
+    -- }
+
+    -- Git blame provider
+    -- https://github.com/f-person/git-blame.nvim
+    -- use 'f-person/git-blame.nvim'
+
+    -- Statusline
+    -- https://github.com/nvim-lualine/lualine.nvim
+    -- use {
+    --     'nvim-lualine/lualine.nvim',
+    --     config = function() require('lualine-config') end
+    -- }
 
     -- Pretty LSP diagnostic display
     -- https://github.com/folke/trouble.nvim
-    use {
-        'folke/trouble.nvim',
-        requires = "kyazdani42/nvim-web-devicons",
-        config = function() require("trouble").setup({ height = 5 }) end,
-        cmd = "TroubleToggle"
-    }
+    -- use {
+    --     'folke/trouble.nvim',
+    --     requires = "kyazdani42/nvim-web-devicons",
+    --     config = function() require("trouble").setup({ height = 5 }) end,
+    --     cmd = "TroubleToggle"
+    -- }
 
     -- LSP diagnostic colors for themes that don't have them
     -- https://github.com/folke/lsp-colors.nvim
-    use 'folke/lsp-colors.nvim'
+    -- use 'folke/lsp-colors.nvim'
 
     -- Floating terminal
     -- https://github.com/voldikss/vim-floaterm
-    use {
-        'voldikss/vim-floaterm',
-        cmd = 'FloatermToggle'
-    }
+    -- use {
+    --     'voldikss/vim-floaterm',
+    --     cmd = 'FloatermToggle'
+    -- }
 
     -- Register (clipboard) manager
     -- https://github.com/AckslD/nvim-neoclip.lua
-    use {
-        'AckslD/nvim-neoclip.lua',
-        config = function() require('neoclip').setup() end
-    }
+    -- use {
+    --     'AckslD/nvim-neoclip.lua',
+    --     config = function() require('neoclip').setup() end
+    -- }
 
     -- LSP status spinner
     -- https://github.com/j-hui/fidget.nvim
-    use {
-        'j-hui/fidget.nvim',
-        config = function() require('fidget').setup() end
-    }
+    -- use {
+    --     'j-hui/fidget.nvim',
+    --     config = function() require('fidget').setup() end
+    -- }
 
     -- Prettier folds
     -- https://github.com/anuvyklack/pretty-fold.nvim
-    use 'anuvyklack/pretty-fold.nvim'
+    -- use 'anuvyklack/pretty-fold.nvim'
 
     -- Preview folds
     -- https://github.com/anuvyklack/fold-preview.nvim
-    use {
-        'anuvyklack/fold-preview.nvim',
-        requires = { 'anuvyklack/keymap-amend.nvim' },
-        config = function() require('fold-preview').setup({ border = "rounded" }) end
-    }
+    -- use {
+    --     'anuvyklack/fold-preview.nvim',
+    --     requires = { 'anuvyklack/keymap-amend.nvim' },
+    --     config = function() require('fold-preview').setup({ border = "rounded" }) end
+    -- }
 
     -- Project-wide search & replace
     -- https://github.com/nvim-pack/nvim-spectre
-    use {
-        'windwp/nvim-spectre',
-        run = 'brew install gnu-sed'
-    }
+    -- use {
+    --     'windwp/nvim-spectre',
+    --     run = 'brew install gnu-sed'
+    -- }
+    --=============================================================
 
     if packer_bootstrap then
         require('packer').sync()

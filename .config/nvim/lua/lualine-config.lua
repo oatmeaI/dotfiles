@@ -15,6 +15,7 @@ require('lualine').setup {
          lualine_c = {blame},
          lualine_x = {'filetype', 'location'},
          lualine_y = {},
-         lualine_z = {'aerial'},
+         -- lualine_z = {'aerial'},
+         lualine_z = {},
     },
 }

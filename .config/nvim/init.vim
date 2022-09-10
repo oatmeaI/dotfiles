@@ -12,20 +12,19 @@ set incsearch                                                           " Increm
 set splitright                                                          " Always split to the right
 set noswapfile                                                          " Don't use swapfiles...
 set undofile                                                            " ...use undofiles instead (undo history persists across instances)
-let g:netrw_liststyle=3                                                 " Use tree style browsing in Netrw
-syntax on                                                               " Turn on syntax highlighting by default
 set expandtab                                                           " Tab => 4Spaces: Use spaces for tabs
 set tabstop=4                                                           " Tab => 4Spaces: Tab character (\t) is worth 4 spaces
 set softtabstop=4                                                       " Tab => 4Spaces: Tab keypress is worth 4 spaces
 set shiftwidth=4                                                        " Tab => 4Spaces: Indentation level is worth 4 spaces
 set fillchars=eob:\                                                     " Don't fill line numbers with ~ past the end of the buffer
+let g:netrw_liststyle=3                                                 " Use tree style browsing in Netrw
 " ========================================================================
 
 
 " ==========Colors========================================================
-colorscheme base16-snazzy
-exec 'hi VertSplit guifg=' . synIDattr(hlID('TabLineFill'),'bg')|       " Make the split borders less obtrusive
-exec 'hi VertSplit guibg=' . synIDattr(hlID('TabLineFill'),'bg')|       " Make the split borders less obtrusive
+colorscheme catppuccin
+" exec 'hi VertSplit guifg=' . synIDattr(hlID('TabLineFill'),'bg')|     " Make the split borders less obtrusive
+" exec 'hi VertSplit guibg=' . synIDattr(hlID('TabLineFill'),'bg')|       " Make the split borders less obtrusive
 
 hi! link FloatBorder TelescopeBorder                                    " Make all the floating windows look the same
 hi! link NormalFloat TelescopeNormal                                    " Make all the floating windows look the same
@@ -46,7 +45,6 @@ augroup end
 let g:floaterm_shell = 'zsh'
 let g:floaterm_borderchars='─│─│╭╮╯╰'
 " ========================================================================
-
 
 
 " ==========Git Blame config==============================================

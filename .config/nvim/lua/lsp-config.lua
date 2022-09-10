@@ -29,6 +29,6 @@ nvim_lsp.tsserver.setup ({
 		}
     },
     on_attach = function(client)
-        require("aerial").on_attach(client, bufnr)
+        -- require("aerial").on_attach(client, bufnr)
     end,
 })
