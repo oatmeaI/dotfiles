@@ -14,8 +14,8 @@ events = {
 _G.borders = {}
 
 colors = {
-    normal = { red = 0.0, green = 0.53, blue = 0.74, alpha = 1 },
-    inactive = { red = 0.41, green = 0.41, blue = 0.41, alpha = 0.7 },
+    normal = { red = 0.63, green = 0.67, blue = 0.96, alpha = 1 },
+    inactive = { red = 0.43, green = 0.45, blue = 0.55, alpha = 0.7 },
     window_move = { red = 0.74, green = 0, blue = 0.53, alpha = 1 },
     window_navigation = { red = 0, green = 0.74, blue = 0.53, alpha = 1 }
 }
