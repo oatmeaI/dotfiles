@@ -283,6 +283,8 @@ require('packer').startup(function()
         config = function() require('nvim-ts-autotag').setup() end
     }
 
+    use 'sunjon/shade.nvim'
+
     ---- Disabled ----
     -- Tabline
     -- https://github.com/noib3/nvim-cokeline
