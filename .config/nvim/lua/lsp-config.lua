@@ -30,5 +30,6 @@ nvim_lsp.tsserver.setup ({
     },
     on_attach = function(client)
         -- require("aerial").on_attach(client, bufnr)
+        client.resolved_capabilities.document_formatting = false -- Don't use TS server to format, since we will use null_ls
     end,
 })

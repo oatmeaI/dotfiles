@@ -32,13 +32,21 @@ hi! link FloatBorder TelescopeBorder                                    " Make a
 hi! link NormalFloat TelescopeNormal                                    " Make all the floating windows look the same
 hi! link FloatermBorder TelescopeBorder                                 " Make all the floating windows look the same
 hi! link Floaterm TelescopeNormal                                       " Make all the floating windows look the same
+hi! link MiniCursorWord Search                                          " Nicer highlight on cursor word
+hi! MiniCursorwordCurrent gui=nocombine guifg=NONE guibg=NONE           " Don't highlight word under cursor
 " ========================================================================
 
 
 " ==========Autocommands==================================================
-augroup packer_user_config
+augroup packer_user_config                                              " Autoreload Packer when config changes
   autocmd!
-  autocmd BufWritePost plugins.lua source <afile> | PackerCompile|      " Autoreload Packer when config changes
+  autocmd BufWritePost plugins.lua source <afile> | PackerCompile|
+augroup end
+
+augroup on_save                                                         " Auto trim whitespace, trim final whitespace lines, and format on save
+    autocmd BufWritePre * lua MiniTrailspace.trim()
+    autocmd BufWritePre * lua MiniTrailspace.trim_last_lines()
+    autocmd BufWritePre * lua vim.lsp.buf.formatting()
 augroup end
 " ========================================================================
 
@@ -60,13 +68,3 @@ let g:gitblame_date_format = '%r'
 lua require('plugins')
 source ~/.config/nvim/keys.vim
 " ========================================================================
-
-
-" ========== Disabled = check back later and delete if I don't miss them
-" set relativenumber                                                     " Not sure I want to keep this one, should also help performance when off
-" set updatetime=500                                                     " Not sure what this was for, disabling for now"
-" set backspace=indent,eol,start                                         " Not sure what this does, disabling for now
-" autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart             " Disable for now = not sure if I need it // Refresh syntax highlighting on buffer enter (it gets stuck sometimes)
-" autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear                 " Disable for now = not sure if I need it // Refresh syntax highlighting on buffer enter (it gets stuck sometimes)
-" autocmd CursorHold * :lua require('fold=preview').show_preview()|     " Disable for now = not sure if I like it // Show fold preview on hover
-" hi clear SignColumn                                                    " Not sure what this is for, disable for now
