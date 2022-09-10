@@ -64,14 +64,13 @@ require('packer').startup(function()
             vim.api.nvim_set_keymap('i', '<Tab>',   [[pumvisible() ? "\<C-n>" : "\<Tab>"]],   { noremap = true, expr = true })
             vim.api.nvim_set_keymap('i', '<S-Tab>', [[pumvisible() ? "\<C-p>" : "\<S-Tab>"]], { noremap = true, expr = true })
             require('mini.jump2d').setup()
-            require('mini.cursorword').setup() -- TODO: Disable in Floaterm
+            require('mini.cursorword').setup()
             require('mini.pairs').setup()
             require('mini.trailspace').setup()
             require('mini.ai').setup()
             require('mini.bufremove').setup()
             require('mini.fuzzy').setup()
             require('mini.comment').setup()
-    --        require('mini.base16').setup() -- TODO: Set up color palette
         end
     }
 
