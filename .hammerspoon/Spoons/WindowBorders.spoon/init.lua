@@ -23,7 +23,7 @@ colors = {
 function borders:configure(config)
     self.spacing = config.spacing and config.spacing or 5
     self.mode = 'normal'
-    self.fadeSpeed = config.fadeSpeed and config.fadeSpeed or .25
+    self.fadeSpeed = config.fadeSpeed and config.fadeSpeed or .15
     self.radius = borders.spacing + 8
     self.rules = config.rules and config.rules or {}
     self.colors = config.colors and config.colors or colors
