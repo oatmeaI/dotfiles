@@ -3,7 +3,7 @@ TEXT_FONT="FiraCode Nerd Font Mono:Medium:12.0"
 ICON_FONT="FiraCode Nerd Font Mono:Medium:22.0"
 
 # ------- Basic Config ----------
-sketchybar --bar color=0x44111111
+sketchybar --bar color=0xBB24273A
 sketchybar --bar position=bottom
 sketchybar --bar height=26
 sketchybar --bar blur_radius=100
