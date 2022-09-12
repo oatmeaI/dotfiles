@@ -28,4 +28,3 @@ rules = {
 }
 borders:configure({ rules = rules, spacing = 5 })
 borders:start()
-

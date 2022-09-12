@@ -64,3 +64,5 @@ window_move < q : yabai -m window --toggle float && yabai -m window --toggle flo
 
 shift + alt - i : yabai -m space --layout float
 shift + alt - u : yabai -m space --layout bsp
+
+cmd + ctrl + alt - w : m wallpaper ~/dotfiles/current.jpg

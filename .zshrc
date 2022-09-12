@@ -53,6 +53,5 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
 zstyle ':fzf-tab:*' switch-group ',' '.'
 
 # https://github.com/jarun/nnn
-alias ls='nnn -de'
-alias dotinstall='~/dotfiles/install.sh'
+alias dotinstall='config pull && ~/dotfiles/install.sh'
 export PATH="/usr/local/sbin:$PATH"
