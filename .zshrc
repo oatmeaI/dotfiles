@@ -54,4 +54,5 @@ zstyle ':fzf-tab:*' switch-group ',' '.'
 
 # https://github.com/jarun/nnn
 alias dotinstall='config pull && ~/dotfiles/install.sh'
+alias ls="exa"
 export PATH="/usr/local/sbin:$PATH"

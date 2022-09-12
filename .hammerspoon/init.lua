@@ -17,7 +17,15 @@ hs.hotkey.alertDuration = 0
 hs.hotkey.bind({"cmd", "alt", "ctrl"}, "R", function()
   hs.reload()
 end)
-hs.alert.show("Config loaded")
+hs.alert.show("Config loaded", {
+    atScreenEdge = 0,
+    padding = 10,
+    fillColor = { red = 0.10, green = 0.11, blue = 0.18, alpha = 0.95 },
+    strokeColor  = { red = 0.10, green = 0.11, blue = 0.18, alpha = 0.95 },
+    textFont = 'FiraCodeNerdFontCompleteM-Retina',
+    textSize = 14,
+    textStyle = { paragraphStyle = { alignment = "center" } }
+})
 
 -- WindowBorders
 borders = hs.loadSpoon('WindowBorders')
@@ -35,18 +43,41 @@ helperFormat = {
     fillColor = { red = 0.10, green = 0.11, blue = 0.18, alpha = 0.95 },
     strokeColor  = { red = 0.10, green = 0.11, blue = 0.18, alpha = 0.95 },
     textFont = 'FiraCodeNerdFontCompleteM-Retina',
-    textSize=14
+    textSize = 14,
+    textStyle = { paragraphStyle = { alignment = "center" } }
 }
 
 keyHints = {
-    window_move = "h,j,k,l -> warp      alt+h,j,k,l -> stack      a -> shrink      f -> grow      d -> toggle split      space -> float      q -> unfloat"
+    window_move = {
+        { key = "w", action = "float layout" },
+        { key = "e", action = "bsp layout" },
+        { key = "", action = "\n\n" },
+        { key = "u,i,o,p", action = "focus" },
+        { key = "a", action = "shrink" },
+        { key = "d", action = "toggle split" },
+        { key = "f", action = "grow" },
+        { key = "", action = "\n\n" },
+        { key = "h,j,k,l", action = "warp" },
+        { key = "alt + h,j,k,l", action = "stack" },
+        { key = "", action = "\n\n" },
+        { key = "q", action = "unfloat window" },
+        { key = "space", action = "float window" },
+    }
 }
-previousHelperID = ""
+
 skhd_help = {
         show = function (mode)
-            previousHelperID = hs.alert.show(keyHints[mode], helperFormat, true)
+            string = ''
+            for _,mapping in ipairs(keyHints[mode]) do
+                if string.len(mapping.key) > 0 then
+                    string = string..mapping.key.." -> "..mapping.action..'      '
+                else
+                    string = string..mapping.action
+                end
+            end
+            alertId = hs.alert.show(string, helperFormat, true)
         end,
         hide = function ()
-            hs.alert.closeSpecific(previousHelperID)
+            hs.alert.closeSpecific(alertId)
         end,
     }

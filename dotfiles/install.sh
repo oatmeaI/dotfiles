@@ -30,7 +30,7 @@ fi
 
 brew tap homebrew/cask-fonts
 brew tap FelixKratz/formulae
-brew install font-fira-code-nerd-font nvim thefuck yarn nvm sketchybar yabai jq fzf fff m-cli
+brew install font-fira-code-nerd-font nvim thefuck yarn nvm sketchybar yabai jq fzf fff m-cli exa
 brew upgrade
 
 # Brew can't seem to tell if App bundles are installed already, so we check by hand

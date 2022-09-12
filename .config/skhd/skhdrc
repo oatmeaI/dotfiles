@@ -29,27 +29,36 @@ window_navigation < l : yabai -m window --focus east
 
 ####### Modification Mode ###########################################
 # Moving / Controlling windows
+# QWERTY
+window_move < q : yabai -m window --toggle float && yabai -m window --toggle float
+window_move < w : yabai -m space --layout float ; skhd -k "escape"
+window_move < e : yabai -m space --layout bsp ; skhd -k "escape"
+
+# UIOP
+window_move < u : yabai -m window --focus west
+window_move < i : yabai -m window --focus south
+window_move < o : yabai -m window --focus north
+window_move < p : yabai -m window --focus east
+
+# ASDF
+window_move < a : yabai -m window --ratio rel:-0.15
+window_move < d : yabai -m window --toggle split
+window_move < f : yabai -m window --ratio rel:+0.15
+
+# HJKL
 window_move < h : yabai -m window --warp west
 window_move < j : yabai -m window --warp south
 window_move < k : yabai -m window --warp north
 window_move < l : yabai -m window --warp east
 
+# Alt-HJKL
 window_move < alt - h : yabai -m window --stack west
 window_move < alt - j : yabai -m window --stack south
 window_move < alt - k : yabai -m window --stack north
 window_move < alt - l : yabai -m window --stack east
 
-window_move < a : yabai -m window --ratio rel:-0.15
-window_move < f : yabai -m window --ratio rel:+0.15
+# Space
 window_move < space : yabai -m window --toggle zoom-fullscreen
-window_move < d : yabai -m window --toggle split
-window_move < q : yabai -m window --toggle float && yabai -m window --toggle float
-
-# Drop down to window focusing in move mode for convenience
-# window_move < alt - h : yabai -m window --focus west
-# window_move < alt - j : yabai -m window --focus south
-# window_move < alt - k : yabai -m window --focus north
-# window_move < alt - l : yabai -m window --focus east
 
 # Move focus container to workspace
 # shift + alt - m : yabai -m window --space last
@@ -62,7 +71,5 @@ window_move < q : yabai -m window --toggle float && yabai -m window --toggle flo
 # shift + alt - 5 : yabai -m window --space 5
 # shift + alt - 6 : yabai -m window --space 6
 
-shift + alt - i : yabai -m space --layout float
-shift + alt - u : yabai -m space --layout bsp
 
 cmd + ctrl + alt - w : m wallpaper ~/dotfiles/current.jpg

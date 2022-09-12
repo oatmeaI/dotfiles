@@ -94,7 +94,6 @@ sketchybar --set modal label="[n]"
 sketchybar --set modal label.font="$TEXT_FONT"
 sketchybar --set modal label.padding_right=$PADDING
 
-
 # ------- Yabai Float ----------
 # sketchybar --add item yabai_float left
 # sketchybar --add event window_focus
@@ -105,11 +104,10 @@ sketchybar --set modal label.padding_right=$PADDING
 # sketchybar --subscribe yabai_float yabai_window
 # $($HOME/.config/sketchybar/yabai_float.sh)
 
-# ------- Yabai Mode ----------
-# sketchybar --add item yabai_mode left
-# sketchybar --set yabai_mode update_freq=600
-# sketchybar --set yabai_mode label.padding_left=$PADDING
-# sketchybar --set yabai_mode label.font="$TEXT_FONT"
-# sketchybar --set yabai_mode script="~/.config/sketchybar/yabai_mode.sh"
-# sketchybar --subscribe yabai_mode yabai_window
-# $($HOME/.config/sketchybar/yabai_mode.sh)
+------- Yabai Mode ----------
+sketchybar --add item yabai_mode left
+sketchybar --set yabai_mode update_freq=1
+sketchybar --set yabai_mode label.font="$TEXT_FONT"
+sketchybar --set yabai_mode script="~/.config/sketchybar/yabai_mode.sh"
+sketchybar --subscribe yabai_mode yabai_window
+$($HOME/.config/sketchybar/yabai_mode.sh)
