@@ -36,7 +36,6 @@ nnoremap <silent><space>l :FloatermToggle<cr>|                                  
 nnoremap <silent><space>; :noh<cr>|                                                 " Get rid of find highlighting
 
 " ----- Qwerty Row (Other Handy Shortcuts)
-nnoremap <silent><space><space> :Telescope buffers<cr>|                             " Open palette: open buffers
 nnoremap <silent><space>q :lua MiniBufremove.delete()<cr>|                          " Close buffer
 nnoremap <silent><space>w <c-w>q|                                                   " Close window
 nnoremap <silent><space>e viw"0p|                                                   " Replace word with register
@@ -49,6 +48,8 @@ nnoremap <silent><space>i :lua vim.diagnostic.open_float({focusable = false})<cr
 nnoremap <silent><space>o :TroubleToggle document_diagnostics<cr>|                  " Display diagnostics in lower panee
 nnoremap <silent><space>p o<esc>p|                                                  " Shortcut to paste something on a new line
 
-"----------- <ctrl> Keymappings
-nnoremap <silent><c-f> <cmd>lua require('spectre').open()<cr>|                      " Project wide find & replace
-nnoremap <silent><c-q> :Cheatsheet<cr>|                                             " Show cheatsheet
+nnoremap <silent><space><space> :Telescope buffers<cr>|                             " Open palette: open buffers
+
+"----------- Leader Keymappings
+nnoremap <silent><leader>f <cmd>lua require('spectre').open()<cr>|                  " Project wide find & replace
+nnoremap <silent><leader>q :Cheatsheet<cr>|                                         " Show cheatsheet
