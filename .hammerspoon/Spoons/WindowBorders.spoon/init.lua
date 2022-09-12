@@ -16,8 +16,8 @@ _G.borders = {}
 colors = {
     normal = { red = 0.63, green = 0.67, blue = 0.96, alpha = 1 },
     inactive = { red = 0.43, green = 0.45, blue = 0.55, alpha = 0.7 },
-    window_move = { red = 0.74, green = 0, blue = 0.53, alpha = 1 },
-    window_navigation = { red = 0, green = 0.74, blue = 0.53, alpha = 1 }
+    window_move = { red = 0.96, green = 0.74, blue = 0.9, alpha = 1 }, -- TODO: Fix colors
+    window_navigation = { red = 0, green = 0.74, blue = 0.53, alpha = 1 } -- TODO: Fix colors
 }
 
 function borders:configure(config)

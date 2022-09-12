@@ -23,8 +23,29 @@ hs.alert.show("Config loaded")
 borders = hs.loadSpoon('WindowBorders')
 rules = {
     ["Microsoft Outlook"] = { rejectTitles = {'Reminder'} },
-    ['Microsoft Teams'] = { rejectTitles = {'Microsoft Teams Notification', "Call in progress"} },
+    ['Microsoft Teams'] = false,
     ['Contexts'] = false
 }
 borders:configure({ rules = rules, spacing = 5 })
 borders:start()
+
+helperFormat = {
+    atScreenEdge = 1,
+    padding = 10,
+    strokeColor = { white = 0, alpha = 2 },
+    textFont = 'FiraCodeNerdFontCompleteM-Retina',
+    textSize=14
+}
+
+keyHints = {
+    window_move = "h,j,k,l -> warp      alt+h,j,k,l -> stack      a -> shrink      f -> grow      d -> toggle split      space -> float      q -> unfloat"
+}
+previousHelperID = ""
+skhd_help = {
+        show = function (mode)
+            previousHelperID = hs.alert.show(keyHints[mode], helperFormat, true)
+        end,
+        hide = function ()
+            hs.alert.closeSpecific(previousHelperID)
+        end,
+    }

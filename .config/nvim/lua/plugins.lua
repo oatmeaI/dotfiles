@@ -42,11 +42,11 @@ require('packer').startup(function()
 
     -- LSP server for doing formatting & linting
     -- https://github.com/jose-elias-alvarez/null-ls.nvim
-    -- use {
-    --     'jose-elias-alvarez/null-ls.nvim',
-    --     run = 'brew install fsouza/prettierd/prettierd',
-    --     config = function() require('null-ls-config') end
-    -- }
+    use {
+        'jose-elias-alvarez/null-ls.nvim',
+        run = 'brew install fsouza/prettierd/prettierd',
+        config = function() require('null-ls-config') end
+    }
     --=============================================================
 
 
@@ -94,6 +94,8 @@ require('packer').startup(function()
         end,
     }
 
+    -- Catppuccin Theme for NeoVim
+    -- https://github.com/catppuccin/nvim
     use {
         "catppuccin/nvim",
         as = "catppuccin",
@@ -102,6 +104,17 @@ require('packer').startup(function()
             require("catppuccin").setup()
         end
     }
+
+    -- Git Diff / Conflict Viewer & Editor
+    -- NOTE: Didn't have time to learn to use this, but I think when I have a minute, it would be nicer to use than the git conflict plugin I already have. Need to figure out how to show unified diff, mainly.
+    -- https://github.com/sindrets/diffview.nvim
+    -- use {
+    --     'sindrets/diffview.nvim',
+    --     requires = 'nvim-lua/plenary.nvim',
+    --     config = function ()
+    --         require("diffview").setup()
+    --     end
+    -- }
 
     -- Dim unfocused buffers
     -- https://github.com/sunjon/Shade.nvim
@@ -130,13 +143,20 @@ require('packer').startup(function()
     --  config = function() require("auto-save").setup() end
     -- }
 
+    -- Better QuickFix List
+    -- https://gitlab.com/yorickpeterse/nvim-pqf
+    use {
+        'https://gitlab.com/yorickpeterse/nvim-pqf.git',
+        config = function () require('pqf').setup() end
+    }
+
     -- Git Conflict Helper
     -- https://github.com/akinsho/git-conflict.nvim
-    -- use {
-    --     'akinsho/git-conflict.nvim',
-    --     tag = "*",
-    --     config = function() require('git-conflict').setup() end
-    -- }
+    use {
+        'akinsho/git-conflict.nvim',
+        tag = "*",
+        config = function() require('git-conflict').setup() end
+    }
 
     -- Color highligher
     -- https://github.com/brenoprata10/nvim-highlight-colors

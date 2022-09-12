@@ -19,6 +19,7 @@ set tabstop=4                                                           " Tab =>
 set softtabstop=4                                                       " Tab => 4Spaces: Tab keypress is worth 4 spaces
 set shiftwidth=4                                                        " Tab => 4Spaces: Indentation level is worth 4 spaces
 set fillchars=eob:\                                                     " Don't fill line numbers with ~ past the end of the buffer
+set fillchars+=diff:╱                                                   " Use different fillchars for Diff view
 let g:netrw_liststyle=3                                                 " Use tree style browsing in Netrw
 " ========================================================================
 
