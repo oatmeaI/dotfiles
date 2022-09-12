@@ -32,7 +32,8 @@ borders:start()
 helperFormat = {
     atScreenEdge = 1,
     padding = 10,
-    strokeColor = { white = 0, alpha = 2 },
+    fillColor = { red = 0.10, green = 0.11, blue = 0.18, alpha = 0.95 },
+    strokeColor  = { red = 0.10, green = 0.11, blue = 0.18, alpha = 0.95 },
     textFont = 'FiraCodeNerdFontCompleteM-Retina',
     textSize=14
 }
