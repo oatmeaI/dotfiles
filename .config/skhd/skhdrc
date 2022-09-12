@@ -1,13 +1,11 @@
 # Modes
-:: window_navigation @ : $HOME/.config/skhd/mode_helper.sh -w
 :: window_move @ : $HOME/.config/skhd/mode_helper.sh -m
 :: default : $HOME/.config/skhd/mode_helper.sh -n
 
 # Mode Switching
-window_navigation, default < ctrl - j ; window_move
-window_move, default < ctrl - k ; window_navigation
+default < ctrl - j ; window_move
 window_move < ctrl - j ; default
-window_navigation, window_move < escape ; default
+window_move < escape ; default
 
 ####### Normal Mode ###########################################
 # Normal mode window navigation for convenience
@@ -21,14 +19,7 @@ ctrl + alt - j : yabai -m window --stack south
 ctrl + alt - k : yabai -m window --stack north
 ctrl + alt - l : yabai -m window --stack east
 
-####### Navigation Mode ###########################################
-window_navigation < h : yabai -m window --focus west
-window_navigation < j : yabai -m window --focus south
-window_navigation < k : yabai -m window --focus north
-window_navigation < l : yabai -m window --focus east
-
 ####### Modification Mode ###########################################
-# Moving / Controlling windows
 # QWERTY
 window_move < q : yabai -m window --toggle float && yabai -m window --toggle float
 window_move < w : yabai -m space --layout float ; skhd -k "escape"

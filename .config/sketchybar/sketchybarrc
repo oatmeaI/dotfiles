@@ -81,7 +81,7 @@ sketchybar --set ram update_freq=2
 
 # ------- Uptime ----------
 UPTIME_SCRIPT='sketchybar -m --set uptime label="$(uptime | sed "s/.*\(up [0-9:]* *[A-z]*\).*/\1/")"'
-sketchybar --add item uptime left
+sketchybar --add item uptime right
 sketchybar --set uptime label.font="$TEXT_FONT"
 sketchybar --set uptime label.padding_right=$PADDING
 sketchybar --set uptime script="$UPTIME_SCRIPT"

@@ -138,10 +138,10 @@ require('packer').startup(function()
 
     -- Autosave
     -- https://github.com/Pocco81/auto-save.nvim
-    -- use {
-    --  "Pocco81/auto-save.nvim",
-    --  config = function() require("auto-save").setup() end
-    -- }
+    use {
+     "Pocco81/auto-save.nvim",
+     config = function() require("auto-save").setup() end
+    }
 
     -- Better QuickFix List
     -- https://gitlab.com/yorickpeterse/nvim-pqf
@@ -253,10 +253,10 @@ require('packer').startup(function()
 
     -- Project-wide search & replace
     -- https://github.com/nvim-pack/nvim-spectre
-    -- use {
-    --     'windwp/nvim-spectre',
-    --     run = 'brew install gnu-sed'
-    -- }
+    use {
+        'windwp/nvim-spectre',
+        run = 'brew install gnu-sed'
+    }
     --=============================================================
 
     if packer_bootstrap then
