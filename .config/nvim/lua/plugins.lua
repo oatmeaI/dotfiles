@@ -71,6 +71,7 @@ require('packer').startup(function()
             require('mini.bufremove').setup()
             require('mini.fuzzy').setup()
             require('mini.comment').setup()
+            require('mini.sessions').setup()
         end
     }
 
@@ -105,17 +106,6 @@ require('packer').startup(function()
         end
     }
 
-    -- Git Diff / Conflict Viewer & Editor
-    -- NOTE: Didn't have time to learn to use this, but I think when I have a minute, it would be nicer to use than the git conflict plugin I already have. Need to figure out how to show unified diff, mainly.
-    -- https://github.com/sindrets/diffview.nvim
-    -- use {
-    --     'sindrets/diffview.nvim',
-    --     requires = 'nvim-lua/plenary.nvim',
-    --     config = function ()
-    --         require("diffview").setup()
-    --     end
-    -- }
-
     -- Dim unfocused buffers
     -- https://github.com/sunjon/Shade.nvim
     use {
@@ -132,15 +122,11 @@ require('packer').startup(function()
         end
     }
 
-    -- Base16 Theme Framework
-    -- https://github.com/rrethy/nvim-base16
-    -- use 'rrethy/nvim-base16'
-
     -- Autosave
     -- https://github.com/Pocco81/auto-save.nvim
     use {
      "Pocco81/auto-save.nvim",
-     config = function() require("auto-save").setup() end
+     config = function() require("auto-save").setup({trigger_events = {"FocusLost"}, write_all_buffers = true}) end
     }
 
     -- Better QuickFix List
@@ -162,8 +148,33 @@ require('packer').startup(function()
     -- https://github.com/brenoprata10/nvim-highlight-colors
     use {
         'brenoprata10/nvim-highlight-colors',
-        config = function() require('nvim-highlight-colors').setup {} end
+        config = function() require('nvim-highlight-colors').setup() end
     }
+
+    -- Project-wide search & replace
+    -- https://github.com/nvim-pack/nvim-spectre
+    use {
+        'windwp/nvim-spectre',
+        run = 'brew install gnu-sed'
+    }
+
+    -- Better select ui
+    -- https://github.com/stevearc/dressing.nvim
+    use {
+        'stevearc/dressing.nvim',
+        config = function() require('dressing').setup() end
+    }
+
+    -- Git Diff / Conflict Viewer & Editor
+    -- NOTE: Didn't have trme to learn to use this, but I think when I have a minute, it would be nicer to use than the git conflict plugin I already have. Need to figure out how to show unified diff, mainly.
+    -- https://github.com/sindrets/diffview.nvim
+    -- use {
+    --     'sindrets/diffview.nvim',
+    --     requires = 'nvim-lua/plenary.nvim',
+    --     config = function ()
+    --         require("diffview").setup()
+    --     end
+    -- }
 
     -- Indent Guides
     -- https://github.com/lukas-reineke/indent-blankline.nvim
@@ -186,12 +197,18 @@ require('packer').startup(function()
     --     config = function() require('aerial').setup() end
     -- }
 
-    -- NNN Picker & Sidebar (deciding if it's nicer than Netrw)
-    -- https://github.com/luukvbaal/nnn.nvim
+    -- Stop buffers from loading into Aerial window, etc
+    -- https://github.com/stevearc/stickybuf.nvim
     -- use {
-    --     "luukvbaal/nnn.nvim",
-    --     config = function() require("nnn").setup() end,
-    --     cmd = "NnnPicker"
+    --     'stevearc/stickybuf.nvim',
+    --     config = function() require('stickybuf').setup() end
+    -- }
+
+    -- Comment highlighting
+    -- https://github.com/Djancyp/better-comments.nvim
+    -- use {
+    --     'Djancyp/better-comments.nvim',
+    --     config = function() require('better-comment').setup() end
     -- }
 
     -- Git blame provider
@@ -250,13 +267,6 @@ require('packer').startup(function()
     --     requires = { 'anuvyklack/keymap-amend.nvim' },
     --     config = function() require('fold-preview').setup({ border = "rounded" }) end
     -- }
-
-    -- Project-wide search & replace
-    -- https://github.com/nvim-pack/nvim-spectre
-    use {
-        'windwp/nvim-spectre',
-        run = 'brew install gnu-sed'
-    }
     --=============================================================
 
     if packer_bootstrap then

@@ -1,3 +1,5 @@
+# TODO - default to unamanaged on small screens, add some grid layout affordance via skhd??
+
 # global settings
 yabai -m config mouse_follows_focus          off
 yabai -m config focus_follows_mouse          off

@@ -49,6 +49,15 @@ augroup on_save                                                         " Auto t
     autocmd BufWritePre * lua MiniTrailspace.trim_last_lines()
     autocmd BufWritePre * lua vim.lsp.buf.formatting()
 augroup end
+
+lua << EOF
+function DetachBufferFromClients(bufnr)
+  local clients = vim.lsp.buf_get_clients(bufnr)
+  for client_id, _ in pairs(clients) do
+    vim.lsp.buf_detach_client(bufnr, client_id)
+  end
+end
+EOF
 " ========================================================================
 
 

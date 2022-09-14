@@ -36,7 +36,7 @@ nnoremap <silent><space>l :FloatermToggle<cr>|                                  
 nnoremap <silent><space>; :noh<cr>|                                                 " Get rid of find highlighting
 
 " ----- Qwerty Row (Other Handy Shortcuts)
-nnoremap <silent><space>q :lua MiniBufremove.delete()<cr>|                          " Close buffer
+nnoremap <silent><space>q :lua DetachBufferFromClients()<cr> \| :lua MiniBufremove.delete()<cr>|                          " Close buffer
 nnoremap <silent><space>w <c-w>q|                                                   " Close window
 nnoremap <silent><space>e viw"0p|                                                   " Replace word with register
 nnoremap <silent><space>r :lua vim.lsp.buf.rename()<cr>|                            " Rename symbol
