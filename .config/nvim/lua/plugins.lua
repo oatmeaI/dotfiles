@@ -210,6 +210,39 @@ require('packer').startup(function()
         cmd = "TroubleToggle"
     }
 
+    -- LSP status spinner
+    -- https://github.com/j-hui/fidget.nvim
+    use {
+        'j-hui/fidget.nvim',
+        config = function() require('fidget').setup() end
+    }
+
+    -- Indent Guides
+    -- https://github.com/lukas-reineke/indent-blankline.nvim
+    use {
+        "lukas-reineke/indent-blankline.nvim",
+        config = function() require("indent_blankline").setup { show_current_context = true } end
+    }
+
+    -- Register (clipboard) manager
+    -- https://github.com/AckslD/nvim-neoclip.lua
+    use {
+        'AckslD/nvim-neoclip.lua',
+        config = function() require('neoclip').setup() end
+    }
+
+    -- Git blame provider
+    -- https://github.com/f-person/git-blame.nvim
+    use {
+        'f-person/git-blame.nvim'
+    }
+
+    -- Prettier folds
+    -- https://github.com/anuvyklack/pretty-fold.nvim
+    use {
+        'anuvyklack/pretty-fold.nvim'
+    }
+
     -- Git Diff / Conflict Viewer & Editor
     -- NOTE: Didn't have trme to learn to use this, but I think when I have a minute, it would be nicer to use than the git conflict plugin I already have. Need to figure out how to show unified diff, mainly.
     -- https://github.com/sindrets/diffview.nvim
@@ -221,13 +254,6 @@ require('packer').startup(function()
     --     end
     -- }
 
-    -- Indent Guides
-    -- https://github.com/lukas-reineke/indent-blankline.nvim
-    -- use {
-    --     "lukas-reineke/indent-blankline.nvim",
-    --     config = function() require("indent_blankline").setup { show_current_context = true } end
-    -- }
-
     -- Commands Cheatsheet
     -- https://github.com/sudormrfbin/cheatsheet.nvim
     -- use {
@@ -235,31 +261,9 @@ require('packer').startup(function()
     --     cmd = 'Cheatsheet'
     -- }
 
-    -- Git blame provider
-    -- https://github.com/f-person/git-blame.nvim
-    -- use 'f-person/git-blame.nvim'
-
     -- LSP diagnostic colors for themes that don't have them
     -- https://github.com/folke/lsp-colors.nvim
     -- use 'folke/lsp-colors.nvim'
-
-    -- Register (clipboard) manager
-    -- https://github.com/AckslD/nvim-neoclip.lua
-    -- use {
-    --     'AckslD/nvim-neoclip.lua',
-    --     config = function() require('neoclip').setup() end
-    -- }
-
-    -- LSP status spinner
-    -- https://github.com/j-hui/fidget.nvim
-    -- use {
-    --     'j-hui/fidget.nvim',
-    --     config = function() require('fidget').setup() end
-    -- }
-
-    -- Prettier folds
-    -- https://github.com/anuvyklack/pretty-fold.nvim
-    -- use 'anuvyklack/pretty-fold.nvim'
 
     -- Preview folds
     -- https://github.com/anuvyklack/fold-preview.nvim
