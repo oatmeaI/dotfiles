@@ -25,6 +25,13 @@ require('packer').startup(function()
 
 
     --======================IDE Essentials=========================
+    -- Typescript Language Server
+    --
+    use {
+        'jose-elias-alvarez/typescript.nvim',
+        config = function() require("typescript").setup({}) end
+    }
+
     -- Setup native treesitter
     -- https://github.com/nvim-treesitter/nvim-treesitter
     use {
@@ -37,6 +44,7 @@ require('packer').startup(function()
     -- https://github.com/neovim/nvim-lspconfig
     use {
         'neovim/nvim-lspconfig',
+        run = 'npm install -g typescript typescript-language-server',
         config = function() require('lsp-config') end
     }
 
