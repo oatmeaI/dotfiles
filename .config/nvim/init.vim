@@ -41,7 +41,7 @@ hi! MiniCursorwordCurrent gui=nocombine guifg=NONE guibg=NONE           " Don't 
 " ==========Autocommands==================================================
 augroup packer_user_config                                              " Autoreload Packer when config changes
   autocmd!
-  autocmd BufWritePost plugins.lua source <afile> | PackerCompile|
+  autocmd BufWritePost plugins.lua source <afile> | PackerSync
 augroup end
 
 augroup on_save                                                         " Auto trim whitespace, trim final whitespace lines, and format on save
@@ -58,6 +58,7 @@ function DetachBufferFromClients(bufnr)
   end
 end
 EOF
+
 " ========================================================================
 
 

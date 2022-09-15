@@ -1,4 +1,4 @@
-local git_blame = require('gitblame')
+--blame local git_blame = require('gitblame')
 
 local function path()
     return vim.fn.expand('%')
@@ -12,10 +12,10 @@ require('lualine').setup {
     sections = {
          lualine_a = {'mode'},
          lualine_b = {path},
-         lualine_c = {blame},
+         -- lualine_c = {blame},
+         lualine_c = {},
          lualine_x = {'filetype', 'location'},
          lualine_y = {},
-         -- lualine_z = {'aerial'},
-         lualine_z = {},
+         lualine_z = {'aerial'},
     },
 }

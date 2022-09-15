@@ -44,7 +44,7 @@ require('packer').startup(function()
     -- https://github.com/jose-elias-alvarez/null-ls.nvim
     use {
         'jose-elias-alvarez/null-ls.nvim',
-        run = 'brew install fsouza/prettierd/prettierd',
+        run = 'brew install fsouza/prettierd/prettierd jsonlint && npm install -g eslint_d',
         config = function() require('null-ls-config') end
     }
     --=============================================================
@@ -125,8 +125,8 @@ require('packer').startup(function()
     -- Autosave
     -- https://github.com/Pocco81/auto-save.nvim
     use {
-     "Pocco81/auto-save.nvim",
-     config = function() require("auto-save").setup({trigger_events = {"FocusLost"}, write_all_buffers = true}) end
+        "Pocco81/auto-save.nvim",
+        config = function() require("auto-save").setup({trigger_events = {"FocusLost"}, write_all_buffers = true}) end
     }
 
     -- Better QuickFix List
@@ -165,6 +165,43 @@ require('packer').startup(function()
         config = function() require('dressing').setup() end
     }
 
+    -- Statusline
+    -- https://github.com/nvim-lualine/lualine.nvim
+    use {
+        'nvim-lualine/lualine.nvim',
+        config = function() require('lualine-config') end
+    }
+
+    -- Symbols outline sidebar
+    -- https://github.com/stevearc/aerial.nvim
+    use {
+        'stevearc/aerial.nvim',
+        config = function() require('aerial').setup() end
+    }
+
+    -- Stop buffers from loading into Aerial window, etc
+    -- https://github.com/stevearc/stickybuf.nvim
+    use {
+        'stevearc/stickybuf.nvim',
+        config = function() require('stickybuf').setup() end
+    }
+
+    -- Floating terminal
+    -- https://github.com/voldikss/vim-floaterm
+    use {
+        'voldikss/vim-floaterm',
+        cmd = 'FloatermToggle'
+    }
+
+    -- Pretty LSP diagnostic display
+    -- https://github.com/folke/trouble.nvim
+    use {
+        'folke/trouble.nvim',
+        requires = "kyazdani42/nvim-web-devicons",
+        config = function() require("trouble").setup({ height = 5 }) end,
+        cmd = "TroubleToggle"
+    }
+
     -- Git Diff / Conflict Viewer & Editor
     -- NOTE: Didn't have trme to learn to use this, but I think when I have a minute, it would be nicer to use than the git conflict plugin I already have. Need to figure out how to show unified diff, mainly.
     -- https://github.com/sindrets/diffview.nvim
@@ -190,57 +227,13 @@ require('packer').startup(function()
     --     cmd = 'Cheatsheet'
     -- }
 
-    -- Symbols outline sidebar
-    -- https://github.com/stevearc/aerial.nvim
-    -- use {
-    --     'stevearc/aerial.nvim',
-    --     config = function() require('aerial').setup() end
-    -- }
-
-    -- Stop buffers from loading into Aerial window, etc
-    -- https://github.com/stevearc/stickybuf.nvim
-    -- use {
-    --     'stevearc/stickybuf.nvim',
-    --     config = function() require('stickybuf').setup() end
-    -- }
-
-    -- Comment highlighting
-    -- https://github.com/Djancyp/better-comments.nvim
-    -- use {
-    --     'Djancyp/better-comments.nvim',
-    --     config = function() require('better-comment').setup() end
-    -- }
-
     -- Git blame provider
     -- https://github.com/f-person/git-blame.nvim
     -- use 'f-person/git-blame.nvim'
 
-    -- Statusline
-    -- https://github.com/nvim-lualine/lualine.nvim
-    -- use {
-    --     'nvim-lualine/lualine.nvim',
-    --     config = function() require('lualine-config') end
-    -- }
-
-    -- Pretty LSP diagnostic display
-    -- https://github.com/folke/trouble.nvim
-    -- use {
-    --     'folke/trouble.nvim',
-    --     requires = "kyazdani42/nvim-web-devicons",
-    --     config = function() require("trouble").setup({ height = 5 }) end,
-    --     cmd = "TroubleToggle"
-    -- }
-
     -- LSP diagnostic colors for themes that don't have them
     -- https://github.com/folke/lsp-colors.nvim
     -- use 'folke/lsp-colors.nvim'
-
-    -- Floating terminal
-    -- https://github.com/voldikss/vim-floaterm
-    -- use {
-    --     'voldikss/vim-floaterm',
-    --     cmd = 'FloatermToggle'
-    -- }
 
     -- Register (clipboard) manager
     -- https://github.com/AckslD/nvim-neoclip.lua

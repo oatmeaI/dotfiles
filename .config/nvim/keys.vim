@@ -5,8 +5,6 @@ nnoremap <silent>do :lua vim.lsp.buf.code_action()<cr>|                         
 tnoremap <silent><esc> <cmd>FloatermHide!<cr>|                                      " Close floating terminal (while in terminal mode)
 noremap <silent><tab> <c-w><c-w>|                                                   " Cycle focused pane
 noremap <silent><s-tab> <c-w><c-h>|                                                 " Cycle focused pane backwards
-noremap <silent><s-j> 10j
-noremap <silent><s-k> 10k
 
 " ----------- <space> Keymappings
 function ToggleExplore()
@@ -21,7 +19,7 @@ function ToggleExplore()
     else
         Explore
     endif
-endfun
+endfunction
 
 " ----- Home Row (Most Used Shortcuts)
 nnoremap <silent><space>a :Telescope neoclip<cr>|                                   " Open palette: list register contents
@@ -53,3 +51,6 @@ nnoremap <silent><space><space> :Telescope buffers<cr>|                         
 "----------- Leader Keymappings
 nnoremap <silent><leader>f <cmd>lua require('spectre').open()<cr>|                  " Project wide find & replace
 nnoremap <silent><leader>q :Cheatsheet<cr>|                                         " Show cheatsheet
+
+"----------- Commands
+command! Ls :lua MiniSessions.select()
