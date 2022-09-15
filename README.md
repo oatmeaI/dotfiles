@@ -14,7 +14,8 @@
 - [yabai](https://github.com/koekeishiya/yabai)
 - [powerlevel10k](https://github.com/romkatv/powerlevel10k)
 - [Hammerspoon](https://www.hammerspoon.org/)
-- [Noteplan](https://noteplan.co/) (I included a half-done port of the Catppuccin Macchiato theme for Noteplan; I haven't updated the install script to put it in the right place yet though)
+- [Noteplan](https://noteplan.co/) 
+  - (I included a half-done port of the Catppuccin Macchiato theme for Noteplan; I haven't updated the install script to put it in the right place yet though)
 
 ## First time install
 
@@ -28,4 +29,5 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/oatmeaI/dotfiles/main/dotf
 - `dotinstall` to update dependencies, etc
 
 ## Notes
-The icon I use for Kitty is in the `dotfiles` directory, as is my wallpaper (originally from [wallhaven](https://wallhaven.cc/))
+- The icon I use for Kitty is in the `dotfiles` directory.
+- There are also a few wallpapers that I've collected, as well as the one I'm currently using.
