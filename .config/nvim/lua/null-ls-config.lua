@@ -8,13 +8,13 @@ require("null-ls").setup({
 
         null_ls.builtins.diagnostics.write_good,        -- Prose
         null_ls.builtins.completion.spell,              -- Spelling
-        -- null_ls.builtins.diagnostics.codespell,         -- More spelling
+        null_ls.builtins.diagnostics.codespell,         -- More spelling
 
         null_ls.builtins.diagnostics.markdownlint,      -- Markdown linter
         null_ls.builtins.diagnostics.stylelint,         -- CSS, etc. linter
 
-        -- null_ls.builtins.formatting.lua_format,         -- Lua formatting
-        -- null_ls.builtins.diagnostics.luacheck,          -- Lua linting
+        null_ls.builtins.formatting.stylua,             -- Lua formatting
+        null_ls.builtins.diagnostics.luacheck,          -- Lua linting
 
         null_ls.builtins.formatting.shellharden,        -- Shell linting
         null_ls.builtins.diagnostics.zsh,               -- ZSH diagnostics

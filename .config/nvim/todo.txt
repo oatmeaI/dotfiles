@@ -1,5 +1,0 @@
-VIM TODOS
-- Is it still slowing down after being open for a while?
-    - Removed almost all plugins (and put `impatient` back) and it seems to be working better now.
-    - Will re-enable as I feel like I need stuff, hopefully just one plugin at a time.
-- Cheatsheet sidebar??
