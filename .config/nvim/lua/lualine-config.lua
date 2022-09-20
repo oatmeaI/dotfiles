@@ -18,4 +18,8 @@ require("lualine").setup({
 		lualine_y = {},
 		lualine_z = { "aerial" },
 	},
+	tabline = {
+		lualine_a = { "diagnostics" },
+		lualine_z = { "tabs" },
+	},
 })

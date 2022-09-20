@@ -41,6 +41,14 @@ local function map(mode, key, command, opts)
 	vim.api.nvim_set_keymap(mode, key, command, options)
 end
 
+function DetachBufferFromClients(bufnr)
+	local clients = vim.lsp.buf_get_clients(bufnr)
+	for client_id, _ in pairs(clients) do
+		vim.lsp.buf_detach_client(bufnr, client_id)
+	end
+	vim.cmd("bd")
+end
+
 map("n", "gd", ":Telescope lsp_definitions<cr>")
 map("n", "gr", ":Telescope lsp_references<cr>")
 map("n", "do", ":lua vim.lsp.buf.code_action()<cr>")
@@ -60,7 +68,7 @@ map("n", "<space>k", ":w<cr>")
 map("n", "<space>l", ":FloatermToggle<cr>")
 map("n", "<space>;", ":noh<cr>")
 
-map("n", "<space>q", ":lua DetachBufferFromClients()<cr>") -- add close here
+map("n", "<space>q", ":lua DetachBufferFromClients()<cr>")
 map("n", "<space>w", "<c-w>q")
 map("n", "<space>e", 'viw"0p')
 map("n", "<space>r", ":lua vim.lsp.buf.rename()<cr>")
