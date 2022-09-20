@@ -32,6 +32,8 @@ vim.g.netrw_banner = false
 vim.g.netrw_hide = 0
 
 vim.cmd([[colorscheme catppuccin]])
+-- " exec 'hi VertSplit guifg=' . synIDattr(hlID('TabLineFill'),'bg')|     " Make the split borders less obtrusive
+-- " exec 'hi VertSplit guibg=' . synIDattr(hlID('TabLineFill'),'bg')|     " Make the split borders less obtrusive
 vim.cmd([[hi! link FloatBorder TelescopeBorder]])
 vim.cmd([[hi! link NormalFloat TelescopeNormal]])
 vim.cmd([[hi! link FloatermBorder TelescopeBorder]])
@@ -74,7 +76,7 @@ map("n", "do", ":lua vim.lsp.buf.code_action()<cr>")
 map("t", "<esc>", "<cmd>FloatermHide!<cr>")
 map("n", "<tab>", "<c-w><c-w>")
 map("n", "<s-tab>", "<c-w><c-h>")
-map("n", "sj", ":lua require('sj').run()<cr>")
+map("n", "<cr>", ":Pounce<cr>")
 
 map("n", "<s-j>", "<c-d>")
 map("n", "<s-k>", "<c-u>")
@@ -83,7 +85,7 @@ map("n", "<space>a", ":Telescope neoclip<cr>")
 map("n", "<space>s", ":Telescope live_grep<cr>")
 map("n", "<space>d", ":AerialToggle<cr>")
 map("n", "<space>f", ":Telescope find_files<cr>")
-map("n", "<space>g", "<cmd>lua vim.lsp.buf.formatting()<cr>")
+map("n", "<space>g", ":lua vim.lsp.buf.formatting()<cr>")
 map("n", "<space>j", ":lua ToggleExplore()<cr>")
 map("n", "<space>h", ":lua ToggleFileTree()<cr>")
 map("n", "<space>k", ":w<cr>")
@@ -116,8 +118,11 @@ local function autocommand(trigger, opts)
 end
 
 autocommand("BufWritePre", { command = "lua MiniTrailspace.trim()" })
+autocommand("BufWritePre", { command = "lua MiniTrailspace.trim_last_lines()" })
 autocommand("BufWritePre", { command = "lua vim.lsp.buf.formatting()" })
 autocommand("FocusLost", { command = "wall" })
+
+-- command! Ls :lua MiniSessions.select()
 
 -- ============================== Plugins =================================
 require("packer").startup(function(use)
@@ -142,9 +147,9 @@ require("packer").startup(function(use)
 	--======================IDE Essentials=========================
 	-- Better Jumping
 	use({
-		"woosaaahh/sj.nvim",
+		"rlane/pounce.nvim",
 		config = function()
-			require("sj").setup()
+			require("pounce").setup({})
 		end,
 	})
 
@@ -205,7 +210,6 @@ require("packer").startup(function(use)
 		config = function()
 			require("mini.surround").setup()
 			require("mini.completion").setup()
-			require("mini.jump2d").setup()
 			require("mini.cursorword").setup()
 			require("mini.pairs").setup()
 			require("mini.trailspace").setup()
