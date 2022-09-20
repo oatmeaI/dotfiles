@@ -43,7 +43,7 @@ local function map(mode, key, command, opts)
 end
 
 function ToggleExplore()
-	if vim.fn.exists("w:netrw_rexlocal") == 1 or vim.fn.exists("w:netrw_rexfile") == 1 then
+	if vim.fn.exists("w:netrw_rexlocal") == 1 or (vim.fn.exists("w:netrw_rexfile") == 1 and vim.bo.filetype == "netrw") then
 		vim.api.nvim_command("Rexplore")
 	else
 		vim.api.nvim_command("Explore")

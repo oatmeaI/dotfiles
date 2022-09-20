@@ -19,9 +19,10 @@ ctrl + alt - j : yabai -m window --stack south
 ctrl + alt - k : yabai -m window --stack north
 ctrl + alt - l : yabai -m window --stack east
 
+ctrl + alt - d : node ~/.config/skhd/toggle_layout.js
+
 ####### Modification Mode ###########################################
 # QWERTY
-window_move < q : yabai -m window --toggle float && yabai -m window --toggle float
 window_move < w : yabai -m space --layout float ; skhd -k "escape"
 window_move < e : yabai -m space --layout bsp ; skhd -k "escape"
 
