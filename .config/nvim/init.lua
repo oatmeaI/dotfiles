@@ -19,7 +19,6 @@ vim.o.expandtab = true
 vim.o.tabstop = 4
 vim.o.softtabstop = 4
 vim.o.shiftwidth = 4
--- vim.o.fillchars = "diff:╱eob: " -- TODO: This doesn't work, idk
 vim.o.signcolumn = "yes"
 vim.o.number = true
 
@@ -43,7 +42,9 @@ local function map(mode, key, command, opts)
 end
 
 function ToggleExplore()
-	if vim.fn.exists("w:netrw_rexlocal") == 1 or (vim.fn.exists("w:netrw_rexfile") == 1 and vim.bo.filetype == "netrw") then
+	if
+		vim.fn.exists("w:netrw_rexlocal") == 1 or (vim.fn.exists("w:netrw_rexfile") == 1 and vim.bo.filetype == "netrw")
+	then
 		vim.api.nvim_command("Rexplore")
 	else
 		vim.api.nvim_command("Explore")
