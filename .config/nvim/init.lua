@@ -42,6 +42,14 @@ local function map(mode, key, command, opts)
 	vim.api.nvim_set_keymap(mode, key, command, options)
 end
 
+function ToggleExplore()
+	if vim.fn.exists("w:netrw_rexlocal") == 1 or vim.fn.exists("w:netrw_rexfile") == 1 then
+		vim.api.nvim_command("Rexplore")
+	else
+		vim.api.nvim_command("Explore")
+	end
+end
+
 map("n", "gd", ":Telescope lsp_definitions<cr>")
 map("n", "gr", ":Telescope lsp_references<cr>")
 map("n", "do", ":lua vim.lsp.buf.code_action()<cr>")
@@ -55,7 +63,7 @@ map("n", "<space>s", ":Telescope live_grep<cr>")
 map("n", "<space>d", ":AerialToggle<cr>")
 map("n", "<space>f", ":Telescope find_files<cr>")
 map("n", "<space>g", "<cmd>lua vim.lsp.buf.formatting()<cr>")
-map("n", "<space>j", ":FloatermNew fff<cr>")
+map("n", "<space>j", ":lua ToggleExplore()<cr>")
 map("n", "<space>h", ":Lexplore<cr>")
 map("n", "<space>k", ":w<cr>")
 map("n", "<space>l", ":FloatermToggle<cr>")
