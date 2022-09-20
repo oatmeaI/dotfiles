@@ -3,7 +3,6 @@ local vim = vim
 require("impatient")
 
 --==========General Settings==============================================
-vim.o.hlsearch = false
 vim.o.mouse = "a"
 vim.o.undofile = true
 vim.o.breakindent = true
@@ -29,6 +28,8 @@ vim.g.gitblame_message_template = "<author>, <date>"
 vim.g.gitblame_display_virtual_text = 0
 vim.g.gitblame_date_format = "%r"
 vim.g.catppuccin_flavour = "macchiato"
+vim.g.netrw_banner = false
+vim.g.netrw_hide = 0
 
 vim.cmd([[colorscheme catppuccin]])
 
@@ -42,13 +43,23 @@ local function map(mode, key, command, opts)
 end
 
 function ToggleExplore()
-	if
-		vim.fn.exists("w:netrw_rexlocal") == 1 or (vim.fn.exists("w:netrw_rexfile") == 1 and vim.bo.filetype == "netrw")
-	then
+	if vim.fn.exists("w:netrw_rexlocal") == 1 then
 		vim.api.nvim_command("Rexplore")
+	elseif vim.fn.exists("w:netrw_rexfile") == 1 and vim.bo.filetype == "netrw" then
+		vim.api.nvim_command("e " .. vim.w.netrw_rexfile)
 	else
 		vim.api.nvim_command("Explore")
 	end
+end
+
+function ToggleFileTree()
+	-- TODO - cleaner way to track if Lexplore is open
+	if vim.g.netrw_liststyle == 3 then
+		vim.g.netrw_liststyle = 1
+	else
+		vim.g.netrw_liststyle = 3
+	end
+	vim.api.nvim_command("15Lexplore")
 end
 
 map("n", "gd", ":Telescope lsp_definitions<cr>")
@@ -59,13 +70,16 @@ map("n", "<tab>", "<c-w><c-w>")
 map("n", "<s-tab>", "<c-w><c-h>")
 map("n", "sj", ":lua require('sj').run()<cr>")
 
+map("n", "<s-j>", "<c-d>")
+map("n", "<s-k>", "<c-u>")
+
 map("n", "<space>a", ":Telescope neoclip<cr>")
 map("n", "<space>s", ":Telescope live_grep<cr>")
 map("n", "<space>d", ":AerialToggle<cr>")
 map("n", "<space>f", ":Telescope find_files<cr>")
 map("n", "<space>g", "<cmd>lua vim.lsp.buf.formatting()<cr>")
 map("n", "<space>j", ":lua ToggleExplore()<cr>")
-map("n", "<space>h", ":Lexplore<cr>")
+map("n", "<space>h", ":lua ToggleFileTree()<cr>")
 map("n", "<space>k", ":w<cr>")
 map("n", "<space>l", ":FloatermToggle<cr>")
 map("n", "<space>;", ":noh<cr>")
