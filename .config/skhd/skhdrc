@@ -27,10 +27,10 @@ window_move < w : yabai -m space --layout float ; skhd -k "escape"
 window_move < e : yabai -m space --layout bsp ; skhd -k "escape"
 
 # UIOP
-window_move < u : yabai -m window --focus west
-window_move < i : yabai -m window --focus south
-window_move < o : yabai -m window --focus north
-window_move < p : yabai -m window --focus east
+window_move < ctrl - h : yabai -m window --focus west
+window_move < ctrl - j : yabai -m window --focus south
+window_move < ctrl - k : yabai -m window --focus north
+window_move < ctrl - l : yabai -m window --focus east
 
 # ASDF
 window_move < a : yabai -m window --ratio rel:-0.15

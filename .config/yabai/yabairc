@@ -23,8 +23,8 @@ yabai -m config left_padding                 32
 yabai -m config right_padding                32
 yabai -m config window_gap                   32
 
-#yabai -m signal --add event=window_resized action="hs -c \"yabaidirectcall.window_resized(\`printenv YABAI_WINDOW_ID\`)\""
-#yabai -m signal --add event=window_moved action="hs -c \"yabaidirectcall.window_moved(\`printenv YABAI_WINDOW_ID\`)\""
+yabai -m signal --add event=window_resized action="hs -c \"yabaidirectcall.window_resized(\`printenv YABAI_WINDOW_ID\`)\""
+yabai -m signal --add event=window_moved action="hs -c \"yabaidirectcall.window_moved(\`printenv YABAI_WINDOW_ID\`)\""
 
 yabai -m signal --add event=window_created action="sketchybar -m --trigger yabai_window &> /dev/null"
 yabai -m signal --add event=window_destroyed action="sketchybar -m --trigger yabai_window &> /dev/null"
