@@ -82,7 +82,7 @@ map("n", "<s-k>", "<c-u>")
 
 map("n", "<space>a", ":Telescope neoclip<cr>")
 map("n", "<space>s", ":Telescope live_grep<cr>")
-map("n", "<space>d", ":AerialToggle<cr>")
+map("n", "<space>d", ":AerialToggle<cr>:AerialTreeSetCollapseLevel 1<cr>")
 map("n", "<space>f", ":Telescope find_files<cr>")
 map("n", "<space>g", ":lua vim.lsp.buf.formatting()<cr>")
 map("n", "<space>j", ":lua ToggleExplore()<cr>")
@@ -116,9 +116,9 @@ local function autocommand(trigger, opts)
 	vim.api.nvim_create_autocmd(trigger, opts)
 end
 
+autocommand("BufWritePre", { command = "lua vim.lsp.buf.formatting()" })
 autocommand("BufWritePre", { command = "lua MiniTrailspace.trim()" })
 autocommand("BufWritePre", { command = "lua MiniTrailspace.trim_last_lines()" })
-autocommand("BufWritePre", { command = "lua vim.lsp.buf.formatting()" })
 autocommand("FocusLost", { command = "wall" })
 
 vim.cmd([[command! Ls :lua MiniSessions.select()]])
@@ -220,10 +220,52 @@ require("packer").startup(function(use)
 				},
 				pickers = {
 					lsp_references = { initial_mode = "normal" },
+					find_files = { initial_mode = "insert" },
 					lsp_definitions = { initial_mode = "normal" },
 				},
 			})
 			require("telescope").load_extension("neoclip")
+		end,
+	})
+
+	-- Symbols outline sidebar
+	-- https://github.com/stevearc/aerial.nvim
+	use({
+		"stevearc/aerial.nvim",
+		config = function()
+			require("aerial").setup({
+				backends = { "lsp" },
+				filter_kind = {
+					"Class",
+					"Constructor",
+					"Enum",
+					"Field",
+					"File",
+					"Function",
+					"Interface",
+					"Key",
+					"Method",
+					"Module",
+					"Namespace",
+					"Null",
+					"Package",
+					"Property",
+					"String",
+					"Struct",
+					"Operator",
+					"TypeParameter",
+					"Variable",
+				},
+			})
+		end,
+	})
+
+	-- Stop buffers from loading into Aerial window, etc
+	-- https://github.com/stevearc/stickybuf.nvim
+	use({
+		"stevearc/stickybuf.nvim",
+		config = function()
+			require("stickybuf").setup()
 		end,
 	})
 

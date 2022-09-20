@@ -20,15 +20,14 @@ nvim_lsp.tsserver.setup({
 		},
 	},
 	on_attach = function(client)
-		-- require("aerial").on_attach(client, bufnr)
+		require("aerial").on_attach(client)
 		client.resolved_capabilities.document_formatting = false -- Don't use TS server to format, since we will use null_ls
 	end,
 })
 
 nvim_lsp.sumneko_lua.setup({
 	on_attach = function(client)
-		-- require("aerial").on_attach(client, bufnr)
+		require("aerial").on_attach(client)
 		client.resolved_capabilities.document_formatting = false -- Don't use TS server to format, since we will use null_ls
 	end,
 })
-
