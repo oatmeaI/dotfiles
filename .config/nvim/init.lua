@@ -32,13 +32,12 @@ vim.g.netrw_banner = false
 vim.g.netrw_hide = 0
 
 vim.cmd([[colorscheme catppuccin]])
--- " exec 'hi VertSplit guifg=' . synIDattr(hlID('TabLineFill'),'bg')|     " Make the split borders less obtrusive
--- " exec 'hi VertSplit guibg=' . synIDattr(hlID('TabLineFill'),'bg')|     " Make the split borders less obtrusive
 vim.cmd([[hi! link FloatBorder TelescopeBorder]])
 vim.cmd([[hi! link NormalFloat TelescopeNormal]])
 vim.cmd([[hi! link FloatermBorder TelescopeBorder]])
 vim.cmd([[hi! link Floaterm TelescopeNormal]])
 vim.cmd([[hi! link MiniCursorWord Search]])
+vim.cmd([[hi! link VertSplit SignColumn]])
 vim.cmd([[hi! MiniCursorwordCurrent gui=nocombine guifg=NONE guibg=NONE]])
 
 -- Keymaps
@@ -122,18 +121,13 @@ autocommand("BufWritePre", { command = "lua MiniTrailspace.trim_last_lines()" })
 autocommand("BufWritePre", { command = "lua vim.lsp.buf.formatting()" })
 autocommand("FocusLost", { command = "wall" })
 
--- command! Ls :lua MiniSessions.select()
+vim.cmd([[command! Ls :lua MiniSessions.select()]])
 
--- ============================== Plugins =================================
 require("packer").startup(function(use)
 	--======================Dependencies===========================
 	-- Package management
 	-- https://github.com/wbthomason/packer.nvim
 	use("wbthomason/packer.nvim")
-
-	-- General Icons
-	-- https://github.com/kyazdani42/nvim-web-devicons
-	-- use 'kyazdani42/nvim-web-devicons'
 
 	-- General Util Library
 	-- https://github.com/nvim-lua/plenary.nvim
@@ -142,25 +136,8 @@ require("packer").startup(function(use)
 	-- Plugin Caching Etc.
 	-- https://github.com/lewis6991/impatient.nvim
 	use("lewis6991/impatient.nvim")
-	--=============================================================
 
 	--======================IDE Essentials=========================
-	-- Better Jumping
-	use({
-		"rlane/pounce.nvim",
-		config = function()
-			require("pounce").setup({})
-		end,
-	})
-
-	-- Statusline
-	-- https://github.com/nvim-lualine/lualine.nvim
-	use({
-		"nvim-lualine/lualine.nvim",
-		config = function()
-			require("lualine-config")
-		end,
-	})
 
 	-- Setup native treesitter
 	-- https://github.com/nvim-treesitter/nvim-treesitter
@@ -199,7 +176,6 @@ require("packer").startup(function(use)
 			require("mason").setup()
 		end,
 	})
-	--=============================================================
 
 	--======================UI/UX Features & Tweaks ===============
 	-- Lots of modules
@@ -222,6 +198,15 @@ require("packer").startup(function(use)
 		end,
 	})
 
+	-- Register (clipboard) manager
+	-- https://github.com/AckslD/nvim-neoclip.lua
+	use({
+		"AckslD/nvim-neoclip.lua",
+		config = function()
+			require("neoclip").setup()
+		end,
+	})
+
 	-- Command palette
 	-- https://github.com/nvim-telescope/telescope.nvim
 	use({
@@ -238,7 +223,25 @@ require("packer").startup(function(use)
 					lsp_definitions = { initial_mode = "normal" },
 				},
 			})
-			-- require('telescope').load_extension('neoclip')
+			require("telescope").load_extension("neoclip")
+		end,
+	})
+
+	-- Better Jumping
+	-- https://github.com/rlane/pounce.nvim
+	use({
+		"rlane/pounce.nvim",
+		config = function()
+			require("pounce").setup({})
+		end,
+	})
+
+	-- Statusline
+	-- https://github.com/nvim-lualine/lualine.nvim
+	use({
+		"nvim-lualine/lualine.nvim",
+		config = function()
+			require("lualine-config")
 		end,
 	})
 
