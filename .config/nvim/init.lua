@@ -32,6 +32,12 @@ vim.g.netrw_banner = false
 vim.g.netrw_hide = 0
 
 vim.cmd([[colorscheme catppuccin]])
+vim.cmd([[hi! link FloatBorder TelescopeBorder]])
+vim.cmd([[hi! link NormalFloat TelescopeNormal]])
+vim.cmd([[hi! link FloatermBorder TelescopeBorder]])
+vim.cmd([[hi! link Floaterm TelescopeNormal]])
+vim.cmd([[hi! link MiniCursorWord Search]])
+vim.cmd([[hi! MiniCursorwordCurrent gui=nocombine guifg=NONE guibg=NONE]])
 
 -- Keymaps
 local function map(mode, key, command, opts)
@@ -55,7 +61,7 @@ end
 function ToggleFileTree()
 	-- TODO - cleaner way to track if Lexplore is open
 	if vim.g.netrw_liststyle == 3 then
-		vim.g.netrw_liststyle = 1
+		vim.g.netrw_liststyle = 0
 	else
 		vim.g.netrw_liststyle = 3
 	end
