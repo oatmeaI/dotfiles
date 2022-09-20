@@ -85,6 +85,7 @@ end
 autocommand("BufWritePre", { command = "lua MiniTrailspace.trim()" })
 autocommand("BufWritePre", { command = "lua vim.lsp.buf.formatting()" })
 autocommand("BufEnter", { command = "nnoremap <space>j :Rexplore<cr>", pattern = "netrw" })
+autocommand("FocusLost", { command = "wall" })
 
 -- ============================== Plugins =================================
 require("packer").startup(function(use)
