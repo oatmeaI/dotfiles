@@ -178,6 +178,25 @@ require("packer").startup(function(use)
 	})
 
 	--======================UI/UX Features & Tweaks ===============
+	-- Auto List Continuation
+	-- https://github.com/gaoDean/autolist.nvim
+	use({
+		"gaoDean/autolist.nvim",
+		config = function()
+			require("autolist").setup({})
+		end,
+	})
+
+	-- Note taking
+	-- https://github.com/phaazon/mind.nvim
+	use({
+		"phaazon/mind.nvim",
+		branch = "v2.2",
+		requires = { "nvim-lua/plenary.nvim" },
+		config = function()
+			require("mind").setup({ ui = { width = 45 } })
+		end,
+	})
 	-- Lots of modules
 	-- https://github.com/echasnovski/mini.nvim
 	use({
