@@ -19,6 +19,9 @@ case "${condition}" in
     "overcast")
         icon=""
     ;;
+    "lightrain")
+        icon=""
+    ;;
     *)
         icon="$condition"
     ;;
