@@ -23,6 +23,8 @@ yabai -m config left_padding                 32
 yabai -m config right_padding                32
 yabai -m config window_gap                   32
 
+yabai -m rule --add title=choose manage=off
+
 yabai -m signal --add event=window_resized action="hs -c \"yabaidirectcall.window_resized(\`printenv YABAI_WINDOW_ID\`)\""
 yabai -m signal --add event=window_moved action="hs -c \"yabaidirectcall.window_moved(\`printenv YABAI_WINDOW_ID\`)\""
 
