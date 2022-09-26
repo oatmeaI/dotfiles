@@ -32,33 +32,45 @@ const choose = (items) => call(`echo "${items.join("\n")}" | choose -i`);
 async function main() {
   // TODO - is there any way to make tab cycle? - possibly compile choose on my own
   const letters = [
-    "jj",
-    "kk",
-    "ll",
-    "ff",
-    "dd",
-    "ss",
-    "jf",
-    "kd",
+    "lf",
+    "ld",
     "ls",
-    "jk",
+    "la",
     "fd",
-    "fj",
-    "dk",
+    "fl",
+    "dl",
     "sl",
-    "kj",
     "df",
+    "as",
+    "sd",
+    "ds",
+    "sa",
   ];
 
-  const windows = (await yabai("query", "windows", "", { json: true }))
-    .filter((window) => window.subrole === "AXStandardWindow")
-    .sort((a, b) => a.id - b.id);
-  const windowKeys = windows.map(
-    (w, i) => `${letters[i]} -> ${w.app}: ${w.title}`
-  );
-  console.log(windows);
+  const ignore = ["Microsoft Teams Notification", "Call in progress"];
 
-  choose(windowKeys).then((id) => yabai("window", "focus", windows[id].id));
+  const windows = (await yabai("query", "windows", "", { json: true }))
+    .filter((window) => {
+      return (
+        window.subrole === "AXStandardWindow" &&
+        !ignore.find((f) =>
+          window.title.toLowerCase().includes(f.toLowerCase())
+        )
+      );
+    })
+    .sort((a, b) => a.id - b.id);
+
+  const hsWindows = windows.map((w, i) => ({
+    id: w.id,
+    subText: letters[i],
+    text: `${w.app}: ${w.title.replace(/"/g, "")}`,
+  }));
+  const jsonWindows = JSON.stringify(hsWindows);
+  const windowTable = jsonWindows.replace(/"/g, '\\"');
+  hammerspoon("windowSwitcher", `'${windowTable}'`);
+
+  //const windowKeys = windows.map((w, i) => `${w.app}: ${w.title}`);
+  //choose(windowKeys).then((id) => yabai("window", "focus", windows[id].id));
   //run("skhd -t f");
   //run("skhd -k left");
 }

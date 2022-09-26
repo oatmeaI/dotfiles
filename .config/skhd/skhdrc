@@ -21,11 +21,21 @@ ctrl + alt - l : yabai -m window --stack east
 
 ctrl + alt - d : node ~/.config/skhd/toggle_layout.js
 
-alt - tab : node ~/.config/skhd/windowpicker.js ; 
+cmd - 0x32 : node ~/.config/skhd/windowpicker.js ;
 ####### Modification Mode ###########################################
 # QWERTY
-window_move < w : yabai -m space --layout float ; skhd -k "escape"
-window_move < e : yabai -m space --layout bsp ; skhd -k "escape"
+window_move < q : yabai -m space --layout float ; skhd -k "escape" ;  node ~/.config/yabai/hammerspoon_bsp_helper.js
+window_move < w : yabai -m space --layout bsp ; skhd -k "escape" ;  node ~/.config/yabai/hammerspoon_bsp_helper.js
+window_move < 1 : yabai -m window --grid 1:2:0:0:1:2
+window_move < 2 : yabai -m window --grid 1:2:1:0:1:2
+window_move < 3 : yabai -m window --grid 1:3:0:0:1:2
+window_move < 4 : yabai -m window --grid 1:3:1:0:1:2
+window_move < 5 : yabai -m window --grid 1:3:2:0:1:2
+window_move < right : yabai -m window --resize right:40:0
+window_move < left : yabai -m window --resize right:-40:0
+window_move < alt - right : yabai -m window --resize left:40:0
+window_move < alt - left : yabai -m window --resize left:-40:0
+window_move < space : yabai -m window --grid 1:1:1:1:1:1
 
 # UIOP
 window_move < ctrl - h : yabai -m window --focus west
@@ -51,7 +61,6 @@ window_move < alt - k : yabai -m window --stack north
 window_move < alt - l : yabai -m window --stack east
 
 # Space
-window_move < space : yabai -m window --toggle zoom-fullscreen
 
 # Move focus container to workspace
 # shift + alt - m : yabai -m window --space last
