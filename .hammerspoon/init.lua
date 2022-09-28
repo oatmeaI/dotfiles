@@ -61,8 +61,10 @@ helperFormat = {
 
 keyHints = {
 	window_move = {
-		{ mode = "bsp", key = "q", action = "float layout" },
-		{ mode = "float", key = "w", action = "bsp layout" },
+		{ mode = "", key = "q", action = "stack layout" },
+		{ mode = "", key = "w", action = "bsp layout" },
+		{ mode = "", key = "e", action = "float layout" },
+		{ mode = "", key = "", action = "\n\n" },
 		{ mode = "float", key = "space", action = "fullscreen" },
 		{ mode = "", key = "", action = "\n\n" },
 		{ mode = "bsp", key = "a", action = "resize left" },
