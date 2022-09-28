@@ -121,6 +121,8 @@ autocommand("BufWritePre", { command = "lua MiniTrailspace.trim()" })
 autocommand("BufWritePre", { command = "lua MiniTrailspace.trim_last_lines()" })
 autocommand("FocusLost", { command = "wall" })
 
+autocommand("BufEnter", { command = "silent! call HardMode()" })
+
 vim.cmd([[command! Ls :lua MiniSessions.select()]])
 
 require("packer").startup(function(use)
@@ -340,5 +342,15 @@ require("packer").startup(function(use)
 	-- https://github.com/voldikss/vim-floaterm
 	use({
 		"voldikss/vim-floaterm",
+	})
+
+	-- HARD MODE (stop using hjkl)
+	-- https://github.com/wikitopian/hardmode
+	use({
+		"wikitopian/hardmode",
+	})
+
+	use({
+		"rhysd/clever-f.vim",
 	})
 end)
