@@ -41,7 +41,7 @@ function borders:renderBorder(canvas, focused)
 		padding = 2,
 	})
 	canvas:level(focused and 2 or -1)
-	canvas:show(self.fadeSpeed)
+--	canvas:show(self.fadeSpeed)
 end
 
 -- Returns a new frame that surrounds the given frame based on the spacing config

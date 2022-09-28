@@ -42,12 +42,12 @@ hs.alert.show("Config loaded", {
 -- WindowBorders
 borders = hs.loadSpoon("WindowBorders")
 rules = {
-	["Microsoft Outlook"] = { rejectTitles = { "Reminder" } },
-	["Microsoft Teams"] = false,
-	["Contexts"] = false,
-}
-borders:configure({ rules = rules, spacing = 5 })
-borders:start()
+ 	["Microsoft Outlook"] = { rejectTitles = { "Reminder" } },
+ 	["Microsoft Teams"] = false,
+ 	["Contexts"] = false,
+ }
+ borders:configure({ rules = rules, spacing = 5 })
+ borders:start()
 
 helperFormat = {
 	atScreenEdge = 0,
