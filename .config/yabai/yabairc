@@ -18,11 +18,11 @@ yabai -m config normal_window_border_color 0xB26D738C
 
 # general space settings
 yabai -m config layout                       stack
-yabai -m config top_padding                  32
-yabai -m config bottom_padding               32
-yabai -m config left_padding                 32
-yabai -m config right_padding                32
-yabai -m config window_gap                   32
+yabai -m config top_padding                  16
+yabai -m config bottom_padding               24
+yabai -m config left_padding                 16
+yabai -m config right_padding                16
+yabai -m config window_gap                   16
 
 # exclude some stuff from being managed
 yabai -m rule --add title=choose manage=off
