@@ -30,6 +30,7 @@ vim.g.gitblame_date_format = "%r"
 vim.g.catppuccin_flavour = "macchiato"
 vim.g.netrw_banner = false
 vim.g.netrw_hide = 0
+vim.g.hardtime_default_on = false
 
 vim.cmd([[colorscheme catppuccin]])
 vim.cmd([[hi! link FloatBorder TelescopeBorder]])
@@ -59,6 +60,39 @@ function ToggleExplore()
 	end
 end
 
+-- TODO:
+-- x make hotkey toggle
+-- x use lua api
+-- o set buffer type, options, etc (like aerial)
+-- o make cheatsheet display prettier - icons, etc.
+-- o read cheatsheet from data directory instead of hardcoding path
+-- o allow options passed in, etc
+-- o make it not show up in buffer list
+--
+-- o add autocommands for mksession
+-- o make mini.sessions store sessions in data folder, not project folder
+CheatsheetWinId = false
+function ViewCheatsheet()
+	if CheatsheetWinId ~= false then
+		vim.api.nvim_win_close(CheatsheetWinId, false)
+		CheatsheetWinId = false
+		return
+	end
+	vim.cmd([[topleft vs]])
+	vim.cmd([[vertical resize 35]])
+	vim.cmd([[view ~/.config/nvim/cheatsheet.txt]])
+	vim.api.nvim_buf_set_option(0, "modifiable", false)
+	vim.api.nvim_win_set_option(0, "list", false)
+	vim.api.nvim_win_set_option(0, "winfixwidth", true)
+	vim.api.nvim_win_set_option(0, "number", false)
+	vim.api.nvim_win_set_option(0, "signcolumn", "no")
+	vim.api.nvim_win_set_option(0, "foldcolumn", "0")
+	vim.api.nvim_win_set_option(0, "relativenumber", false)
+	vim.api.nvim_win_set_option(0, "wrap", false)
+	vim.api.nvim_win_set_option(0, "spell", false)
+	CheatsheetWinId = vim.api.nvim_get_current_win()
+end
+
 function ToggleFileTree()
 	-- TODO - cleaner way to track if Lexplore is open
 	if vim.g.netrw_liststyle == 3 then
@@ -76,15 +110,13 @@ map("t", "<esc>", "<cmd>FloatermHide!<cr>")
 map("n", "<tab>", "<c-w><c-w>")
 map("n", "<s-tab>", "<c-w><c-h>")
 map("n", "<cr>", ":Pounce<cr>")
-
-map("n", "<s-j>", "<c-d>")
-map("n", "<s-k>", "<c-u>")
+map("n", "<leader>g", ":PounceRepeat<cr>")
 
 map("n", "<space>a", ":Telescope neoclip<cr>")
 map("n", "<space>s", ":Telescope live_grep<cr>")
 map("n", "<space>d", ":AerialToggle<cr>:AerialTreeSetCollapseLevel 1<cr>")
 map("n", "<space>f", ":Telescope find_files<cr>")
-map("n", "<space>g", ":lua vim.lsp.buf.formatting()<cr>")
+map("n", "<space>g", ":lua ViewCheatsheet()<cr>")
 map("n", "<space>j", ":lua ToggleExplore()<cr>")
 map("n", "<space>h", ":lua ToggleFileTree()<cr>")
 map("n", "<space>k", ":w<cr>")
@@ -120,10 +152,12 @@ autocommand("BufWritePre", { command = "lua vim.lsp.buf.formatting()" })
 autocommand("BufWritePre", { command = "lua MiniTrailspace.trim()" })
 autocommand("BufWritePre", { command = "lua MiniTrailspace.trim_last_lines()" })
 autocommand("FocusLost", { command = "wall" })
-
-autocommand("BufEnter", { command = "silent! call HardMode()" })
+autocommand("VimLeave", { command = "lua MiniSessions.write(nil, {force = true})" })
 
 vim.cmd([[command! Ls :lua MiniSessions.select()]])
+vim.cmd([[command! -nargs=1 Ms :lua MiniSessions.write(<f-args>, {force = true})]])
+
+autocommand("VimEnter", { command = ":Ls" })
 
 require("packer").startup(function(use)
 	--======================Dependencies===========================
@@ -215,7 +249,6 @@ require("packer").startup(function(use)
 			require("mini.fuzzy").setup()
 			require("mini.comment").setup()
 			require("mini.sessions").setup()
-			-- vim.api.nvim_create_user_command("Ls", ":lua MiniSessions.select()<cr>", {})
 		end,
 	})
 
@@ -242,6 +275,7 @@ require("packer").startup(function(use)
 				pickers = {
 					lsp_references = { initial_mode = "normal" },
 					find_files = { initial_mode = "insert" },
+					live_grep = { initial_mode = "insert" },
 					lsp_definitions = { initial_mode = "normal" },
 				},
 			})
@@ -345,12 +379,66 @@ require("packer").startup(function(use)
 	})
 
 	-- HARD MODE (stop using hjkl)
-	-- https://github.com/wikitopian/hardmode
+	-- https://github.com/takac/vim-hardtime
 	use({
-		"wikitopian/hardmode",
+		"takac/vim-hardtime",
+	})
+
+	-- Smooth scrolling
+	use({
+		"karb94/neoscroll.nvim",
+		config = function()
+			require("neoscroll").setup()
+			local t = {}
+			-- Syntax: t[keys] = {function, {function arguments}}
+			t["<s-j>"] = { "scroll", { "vim.wo.scroll", "true", "150" } }
+			t["<s-k>"] = { "scroll", { "-vim.wo.scroll", "true", "150" } }
+			require("neoscroll.config").set_mappings(t)
+		end,
+	})
+
+	-- Better find in line experience
+	use({
+		"rhysd/clever-f.vim",
+	})
+
+	-- Exchange operator
+	use({
+		"tommcdo/vim-exchange",
 	})
 
 	use({
-		"rhysd/clever-f.vim",
+		"RRethy/nvim-treesitter-textsubjects",
+		config = function()
+			require("nvim-treesitter.configs").setup({
+				textsubjects = {
+					enable = true,
+					prev_selection = ",", -- (Optional) keymap to select the previous selection
+					keymaps = {
+						["."] = "textsubjects-smart",
+						[";"] = "textsubjects-container-outer",
+						["i;"] = "textsubjects-container-inner",
+					},
+				},
+			})
+		end,
+	})
+
+	-- LSP Loading Spinner
+	-- https://github.com/j-hui/fidget.nvim
+	use({
+		"j-hui/fidget.nvim",
+		config = function()
+			require("fidget").setup()
+		end,
+	})
+
+	-- Better yank / system clipboard integration
+	-- https://github.com/ibhagwan/smartyank.nvim
+	use({
+		"ibhagwan/smartyank.nvim",
+		config = function()
+			require("smartyank").setup()
+		end,
 	})
 end)
