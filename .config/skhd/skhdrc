@@ -22,6 +22,7 @@ ctrl + alt - l : yabai -m window --stack east
 ctrl + alt - d : node ~/.config/skhd/toggle_layout.js
 
 cmd - 0x32 : node ~/.config/skhd/windowpicker.js ;
+
 ####### Modification Mode ###########################################
 # QWERTY
 window_move < q : yabai -m space --layout stack ; skhd -k "escape" ;  node ~/.config/yabai/hammerspoon_bsp_helper.js

@@ -5,6 +5,7 @@ require("impatient")
 --==========General Settings==============================================
 vim.o.mouse = "a"
 vim.o.undofile = true
+vim.o.swapfile = false
 vim.o.breakindent = true
 vim.o.ignorecase = true
 vim.o.smartcase = true

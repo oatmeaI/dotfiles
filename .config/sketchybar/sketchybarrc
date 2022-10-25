@@ -29,16 +29,16 @@ sketchybar --set date label.padding_left=$PADDING
 sketchybar --set date update_freq=4
 
 # ------- Weather ----------
-sketchybar --add item weather right
-sketchybar --set weather update_freq=300
-sketchybar --set weather script="$HOME/.config/sketchybar/weather.sh" # Fix this
-sketchybar --set weather icon.font="$ICON_FONT"
-sketchybar --set weather icon.padding_left=$PADDING
-sketchybar --set weather label.font="$TEXT_FONT"
-sketchybar --set weather label.padding_left=5
-
-sketchybar --set weather background.drawing=on
-$($HOME/.config/sketchybar/weather.sh)
+# sketchybar --add item weather right
+# sketchybar --set weather update_freq=300
+# sketchybar --set weather script="$HOME/.config/sketchybar/weather.sh" # Fix this
+# sketchybar --set weather icon.font="$ICON_FONT"
+# sketchybar --set weather icon.padding_left=$PADDING
+# sketchybar --set weather label.font="$TEXT_FONT"
+# sketchybar --set weather label.padding_left=5
+#
+# sketchybar --set weather background.drawing=on
+# $($HOME/.config/sketchybar/weather.sh)
 
 ####### CENTER
 # ------- Window Title ----------
