@@ -28,9 +28,6 @@ yabai -m config window_gap                   16
 yabai -m rule --add title=choose manage=off
 yabai -m rule --add title=Microsoft\ Teams\ Notification border=off
 
-# Hammerspoon connections
-yabai -m signal --add event=window_resized action="hs -c \"yabaidirectcall.window_resized(\`printenv YABAI_WINDOW_ID\`)\""
-yabai -m signal --add event=window_moved action="hs -c \"yabaidirectcall.window_moved(\`printenv YABAI_WINDOW_ID\`)\""
 yabai -m signal --add event=space_changed action="node ~/.config/yabai/hammerspoon_bsp_helper.js"
 
 # Sketchybar connections

@@ -21,8 +21,6 @@ ctrl + alt - l : yabai -m window --stack east
 
 ctrl + alt - d : node ~/.config/skhd/toggle_layout.js
 
-cmd - 0x32 : node ~/.config/skhd/windowpicker.js ;
-
 ####### Modification Mode ###########################################
 # QWERTY
 window_move < q : yabai -m space --layout stack ; skhd -k "escape" ;  node ~/.config/yabai/hammerspoon_bsp_helper.js
@@ -62,18 +60,17 @@ window_move < alt - j : yabai -m window --stack south
 window_move < alt - k : yabai -m window --stack north
 window_move < alt - l : yabai -m window --stack east
 
-# Space
-
+# Spaces
 # Move focus container to workspace
-# shift + alt - m : yabai -m window --space last
-# shift + alt - p : yabai -m window --space prev
-# shift + alt - n : yabai -m window --space next
-# shift + alt - 1 : yabai -m window --space 1
-# shift + alt - 2 : yabai -m window --space 2
-# shift + alt - 3 : yabai -m window --space 3
-# shift + alt - 4 : yabai -m window --space 4
-# shift + alt - 5 : yabai -m window --space 5
-# shift + alt - 6 : yabai -m window --space 6
+ window_move < shift + alt - m : yabai -m window --space last
+ window_move < shift + alt - p : yabai -m window --space prev
+ window_move < shift + alt - n : yabai -m window --space next
+ window_move < shift + alt - 1 : yabai -m window --space 1
+ window_move < shift + alt - 2 : yabai -m window --space 2
+ window_move < shift + alt - 3 : yabai -m window --space 3
+ window_move < shift + alt - 4 : yabai -m window --space 4
+ window_move < shift + alt - 5 : yabai -m window --space 5
+ window_move < shift + alt - 6 : yabai -m window --space 6
 
 
 cmd + ctrl + alt - w : m wallpaper ~/dotfiles/current.jpg

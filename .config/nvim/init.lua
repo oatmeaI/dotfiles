@@ -224,16 +224,6 @@ require("packer").startup(function(use)
 		end,
 	})
 
-	-- Note taking
-	-- https://github.com/phaazon/mind.nvim
-	use({
-		"phaazon/mind.nvim",
-		branch = "v2.2",
-		requires = { "nvim-lua/plenary.nvim" },
-		config = function()
-			require("mind").setup({ ui = { width = 45 } })
-		end,
-	})
 	-- Lots of modules
 	-- https://github.com/echasnovski/mini.nvim
 	use({
@@ -290,7 +280,6 @@ require("packer").startup(function(use)
 		"stevearc/aerial.nvim",
 		config = function()
 			require("aerial").setup({
-				backends = { "lsp" },
 				filter_kind = {
 					"Class",
 					"Constructor",

@@ -38,7 +38,7 @@ async function main() {
 
   await yabai("space", "layout", layout);
   await sketchybar("set", "yabai_mode", `label="${layout}"`);
-  await hammerspoon("setBspActive", layout === "float" ? 0 : 1);
+  await hammerspoon("skhd_help.setBspActive", layout === "float" ? 0 : 1);
 
   process.exit(0);
 }
