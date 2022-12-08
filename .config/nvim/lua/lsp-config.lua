@@ -1,3 +1,4 @@
+local vim = vim
 local nvim_lsp = require("lspconfig")
 
 vim.diagnostic.config({
@@ -21,13 +22,11 @@ nvim_lsp.tsserver.setup({
 	},
 	on_attach = function(client)
 		client.server_capabilities.documentFormattingProvider = false -- Don't use TS server to format, since we will use null_ls
-		require("aerial").on_attach(client)
 	end,
 })
 
 nvim_lsp.sumneko_lua.setup({
 	on_attach = function(client)
 		client.server_capabilities.documentFormattingProvider = false -- Don't use TS server to format, since we will use null_ls
-		require("aerial").on_attach(client)
 	end,
 })
