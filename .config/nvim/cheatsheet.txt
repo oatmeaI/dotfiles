@@ -1,0 +1,36 @@
+> ctrl-w =
+equalize windows
+
+> :[number],d
+delete to line [number]
+
+> :[number],[number]d
+delete lines [number] to [number]
+
+> <leader>g
+repeat last pounce
+
+> sd[char]
+delete surrounding [char]
+(no visual or motion)
+
+> sr[char][char2]<cr>
+replace surrounding [char]
+with [char2]
+(no visual or motion)
+
+> cxx[motion]
+once -> define [motion] to swap
+twice -> swap above with [motion]
+
+> .
+LSP text subject - smart
+
+> ;
+LSP text subject - container outer
+
+> i;
+LSP text subject - container inner
+
+> <C-a> / <C-x>
+Increment & decrement
