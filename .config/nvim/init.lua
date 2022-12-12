@@ -59,6 +59,8 @@ require("packer").startup(function(use)
 		{ name = "fidget", repo = "j-hui/fidget.nvim" },
 		{ name = "smartyank", repo = "ibhagwan/smartyank.nvim" },
 		{ name = "boole", repo = "nat-418/boole.nvim" },
+		{ name = "devicons", repo = "nvim-tree/nvim-web-devicons" },
+		{ name = "silicon", repo = "narutoxy/silicon.lua", run = "brew install silicon" },
 	})
 
 	if packer_bootstrap then
@@ -214,6 +216,7 @@ map("i", "<Tab>", [[pumvisible() ? "\<C-n>" : "\<Tab>"]], { expr = true })
 map("i", "<S-Tab>", [[pumvisible() ? "\<C-p>" : "\<S-Tab>"]], { expr = true })
 
 vim.cmd([[command! Ls :lua MiniSessions.select()]])
+vim.cmd([[command! Silicon :lua require('silicon').visualise_cmdline({})]])
 vim.cmd([[command! -nargs=1 Ms :lua MiniSessions.write(<f-args>, {force = true})]])
 
 -- Autocommands
