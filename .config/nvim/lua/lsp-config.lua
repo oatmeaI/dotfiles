@@ -14,6 +14,8 @@ vim.diagnostic.config({
 	},
 })
 
+nvim_lsp.eslint.setup({})
+
 nvim_lsp.tsserver.setup({
 	init_options = {
 		preferences = {

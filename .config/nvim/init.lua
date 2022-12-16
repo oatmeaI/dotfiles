@@ -5,7 +5,7 @@ local autocommand = require("helpers").autocommand
 
 -- Packages
 packup({
-    { name = "packer", repo = "wbthomason/packer.nvim" },
+	{ name = "packer", repo = "wbthomason/packer.nvim" },
 	{ name = "plenary", repo = "nvim-lua/plenary.nvim" },
 	{ name = "treesitter", repo = "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" },
 	{ name = "lsp", repo = "neovim/nvim-lspconfig" },
@@ -34,7 +34,6 @@ packup({
 	{ name = "devicons", repo = "nvim-tree/nvim-web-devicons" },
 	{ name = "silicon", repo = "narutoxy/silicon.lua", run = "brew install silicon" },
 })
-
 
 -- Settings
 vim.o.mouse = "a"
@@ -122,8 +121,9 @@ vim.cmd([[command! Silicon :lua require('silicon').visualise_cmdline({})]])
 vim.cmd([[command! -nargs=1 Ms :lua MiniSessions.write(<f-args>, {force = true})]])
 
 -- Autocommands
-autocommand("BufWritePre", { command = "lua vim.lsp.buf.formatting()" })
+autocommand("BufWritePre", { command = "lua if vim.lsp.buf.server_ready() then vim.lsp.buf.format() end" })
 autocommand("BufWritePre", { command = "lua MiniTrailspace.trim()" })
+autocommand("BufWritePre", { command = ":EslintFixAll", pattern = "*.tsx,*.ts,*.jsx,*.js" })
 autocommand("BufWritePre", { command = "lua MiniTrailspace.trim_last_lines()" })
 autocommand("FocusLost", { command = "wall" })
 autocommand("VimLeave", { command = "lua MiniSessions.write(nil, {force = true})" })
