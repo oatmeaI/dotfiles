@@ -4,13 +4,12 @@ local map = require("helpers").map
 local autocommand = require("helpers").autocommand
 
 -- Packages
-local null_ls_run = "brew install fsouza/prettierd/prettierd stylua jsonlint && npm install -g eslint_d"
 packup({
     { name = "packer", repo = "wbthomason/packer.nvim" },
 	{ name = "plenary", repo = "nvim-lua/plenary.nvim" },
 	{ name = "treesitter", repo = "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" },
 	{ name = "lsp", repo = "neovim/nvim-lspconfig" },
-	{ name = "null-ls", repo = "jose-elias-alvarez/null-ls.nvim", run = null_ls_run },
+	{ name = "nullls", repo = "jose-elias-alvarez/null-ls.nvim" },
 	{ name = "mason", repo = "williamboman/mason.nvim", run = "brew install luarocks" },
 	{ name = "autolist", repo = "gaoDean/autolist.nvim" },
 	{ name = "mini", repo = "echasnovski/mini.nvim" },

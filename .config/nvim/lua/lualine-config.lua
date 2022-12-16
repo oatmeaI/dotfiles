@@ -10,6 +10,9 @@ local function blame()
 end
 
 require("lualine").setup({
+	options = {
+		globalstatus = true,
+	},
 	sections = {
 		lualine_a = { "mode" },
 		lualine_b = { path },
