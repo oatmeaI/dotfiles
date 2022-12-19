@@ -11,6 +11,8 @@ packup({
 	{ name = "lsp", repo = "neovim/nvim-lspconfig" },
 	{ name = "nullls", repo = "jose-elias-alvarez/null-ls.nvim" },
 	{ name = "mason", repo = "williamboman/mason.nvim", run = "brew install luarocks" },
+	{ name = "mason_nullls", repo = "jayp0521/mason-null-ls.nvim" },
+	{ name = "mason_lspconfig", repo = "williamboman/mason-lspconfig.nvim" },
 	{ name = "autolist", repo = "gaoDean/autolist.nvim" },
 	{ name = "mini", repo = "echasnovski/mini.nvim" },
 	{ name = "neoclip", repo = "AckslD/nvim-neoclip.lua" },
@@ -118,7 +120,7 @@ map("i", "<S-Tab>", [[pumvisible() ? "\<C-p>" : "\<S-Tab>"]], { expr = true })
 -- Custom commands
 vim.cmd([[command! Ls :lua MiniSessions.select()]])
 vim.cmd([[command! Silicon :lua require('silicon').visualise_cmdline({})]])
-vim.cmd([[command! -nargs=1 Ms :lua MiniSessions.write(<f-args>, {force = true})]])
+vim.cmd([[command! Ms :lua MiniSessions.write(require('helpers').getSessionName(), {force = true})]])
 
 -- Autocommands
 autocommand("BufWritePre", { command = "lua if vim.lsp.buf.server_ready() then vim.lsp.buf.format() end" })
@@ -127,4 +129,4 @@ autocommand("BufWritePre", { command = ":EslintFixAll", pattern = "*.tsx,*.ts,*.
 autocommand("BufWritePre", { command = "lua MiniTrailspace.trim_last_lines()" })
 autocommand("FocusLost", { command = "wall" })
 autocommand("VimLeave", { command = "lua MiniSessions.write(nil, {force = true})" })
-autocommand("VimEnter", { command = ":Ls" })
+autocommand("VimEnter", { command = "lua require('helpers').loadSession()" })

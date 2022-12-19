@@ -14,7 +14,9 @@ function M.ensure_packer()
 end
 
 function config(packageName)
-	pcall(function() require(packageName).setup() end)
+	pcall(function()
+		require(packageName).setup()
+	end)
 	pcall(require, packageName .. "-config")
 end
 
@@ -42,14 +44,44 @@ function M.map(mode, key, command, opts)
 end
 
 function M.packup(packages)
-    local packer_bootstrap = M.ensure_packer()
-    require("packer").startup(function(use)
-	    M.install(use, packages)
+	local packer_bootstrap = M.ensure_packer()
+	require("packer").startup(function(use)
+		M.install(use, packages)
 
-        if packer_bootstrap then
-		    require("packer").sync()
-	    end
-    end)
+		if packer_bootstrap then
+			require("packer").sync()
+		end
+	end)
+end
+
+function M.getSessionName()
+	return vim.fn.fnamemodify(vim.fn.getcwd(), ":t:s?\\.??")
+end
+
+function M.sessionExists()
+	local name = M.getSessionName()
+	local sessions = MiniSessions.detected
+	for _, session in pairs(sessions) do
+		if session.name == name then
+			return true
+		end
+	end
+end
+
+function M.loadSession()
+	local name = M.getSessionName()
+	if M.sessionExists() then
+		local timer = vim.loop.new_timer()
+		-- This is hacky
+		timer:start(
+			0,
+			0,
+			vim.schedule_wrap(function()
+				MiniSessions.read(name, { force = true })
+				timer:close()
+			end)
+		)
+	end
 end
 
 return M
