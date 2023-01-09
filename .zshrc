@@ -15,10 +15,10 @@ alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 export EDITOR='nvim'
 export VISUAL='nvim'
 
-# Set up adobe environment variables, if the file exists; this way we don't sync these secrets to git.
-if [[ -r "$HOME/adobevars.sh" ]]; then
-    source "$HOME/adobevars.sh"
-    export PATH=/Users/villanih/.local/bin:$PATH
+# Set up environment variables, if the file exists; this way we don't sync these secrets to git.
+if [[ -r "$HOME/secretvars.sh" ]]; then
+    source "$HOME/secretvars.sh"
+    export PATH=~/.local/bin:$PATH
 fi
 
 # Turn on TheFuck
