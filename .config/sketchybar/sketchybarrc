@@ -6,9 +6,9 @@ ICON_FONT="FiraCode Nerd Font Mono:Medium:22.0"
 sketchybar --bar color=0xBA24273A
 sketchybar --bar position=bottom
 sketchybar --bar height=26
+sketchybar --bar margin=32
 sketchybar --bar blur_radius=100
 sketchybar --bar shadow=on
-sketchybar --bar margin=28
 sketchybar --bar y_offset=5
 sketchybar --bar corner_radius=20
 sketchybar -m --add event yabai_window
@@ -21,6 +21,8 @@ sketchybar --set batt label.font="$TEXT_FONT"
 sketchybar --set batt label.padding_right=$PADDING
 sketchybar --set batt script="$BATT_SCRIPT"
 sketchybar --set batt update_freq=5
+
+asdfasdf
 
 # ------- CPU Usage ----------
 CPU_SCRIPT='
@@ -55,6 +57,7 @@ sketchybar --set modal label.padding_right=$PADDING
 sketchybar --add item yabai_mode left
 sketchybar --set yabai_mode label.font="$TEXT_FONT"
 sketchybar --set yabai_mode script="~/.config/sketchybar/yabai_mode.sh"
+sketchybar --set yabai_mode label.padding_right=10
 sketchybar --subscribe yabai_mode yabai_window
 $($HOME/.config/sketchybar/yabai_mode.sh)
 
@@ -66,9 +69,6 @@ sketchybar --add item window center
 sketchybar --set window label.font="$TEXT_FONT"
 sketchybar --set window script="$HOME/.config/sketchybar/window_title.sh"
 sketchybar --subscribe window yabai_window
-
-
-
 
 ####### RIGHT
 # ------- Time ----------
@@ -93,3 +93,30 @@ sketchybar --set uptime label.padding_right=$PADDING
 sketchybar --set uptime script="$UPTIME_SCRIPT"
 sketchybar --set uptime update_freq=600
 sketchybar -m --set uptime label="$(uptime | sed "s/.*\(up [0-9:]* *[A-z]*\).*/\1/")"
+
+
+SPACE_ICONS=("" "" "" "")
+SPACE_LABELS=("1" "2" "3" "4")
+
+for i in "${!SPACE_ICONS[@]}"
+do
+  sid=$(($i+1))
+  sketchybar --add space space.$sid left                                 \
+             --set space.$sid associated_space=$sid                      \
+                              icon=${SPACE_ICONS[i]}                     \
+                              icon.font="$ICON_FONT"                     \
+                              icon.padding_left=4                       \
+                              icon.padding_right=4                       \
+                              icon.align=center                          \
+                              label=${SPACE_LABELS[i]}                  \
+                              label.font="$TEXT_FONT"\
+                              label.padding_right=4                       \
+                              background.padding_left=5                 \
+                              background.padding_right=5                \
+                              background.color=0x44ffffff                \
+                              background.corner_radius=5                 \
+                              background.height=18                       \
+                              background.drawing=off                     \
+                              label.drawing=on                          \
+                              script="~/.config/sketchybar/space.sh"
+done

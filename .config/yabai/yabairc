@@ -12,20 +12,21 @@ yabai -m config mouse_drop_action            swap
 yabai -m config external_bar                 all:0:26
 yabai -m config window_border_width          4
 yabai -m config window_border                on
+yabai -m config window_border_hidpi          on
+yabai -m config window_border_blur           off
 yabai -m config active_window_border_color   0xFFA0ABF5
 yabai -m config normal_window_border_color   0xB26D738C
 
-yabai -m config layout                       stack
+yabai -m config layout                       bsp
 yabai -m config top_padding                  16
 yabai -m config bottom_padding               24
-yabai -m config left_padding                 16
-yabai -m config right_padding                16
+yabai -m config left_padding                 32
+yabai -m config right_padding                32
 yabai -m config window_gap                   16
 
-yabai -m rule --add title=choose manage=off
 yabai -m rule --add title=Microsoft\ Teams\ Notification border=off
-yabai -m signal --add event=space_changed action="node ~/.config/yabai/hammerspoon_bsp_helper.js"
 
+yabai -m signal --add event=space_changed action="node ~/.config/yabai/hammerspoon_bsp_helper.js"
 yabai -m signal --add event=window_created action="sketchybar -m --trigger yabai_window &> /dev/null"
 yabai -m signal --add event=window_destroyed action="sketchybar -m --trigger yabai_window &> /dev/null"
 yabai -m signal --add event=window_focused action="sketchybar -m --trigger yabai_window &> /dev/null"

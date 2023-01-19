@@ -1,0 +1,28 @@
+- CTRL: Do yabai stuff in normal mode (nav is default)
+- ALT: ALTer stuff (move windows around)
+- SHIFT: interact with stacks
+- CMD: interact with spaces
+
+Normal Mode:
+ctrl + m => force window focus
+ctrl + [h/j/k/l] => navigate windows
+ctrl + alt + [h/j/k/l] => stack windows
+ctrl + shift + [j/k] => navigate stack
+ctrl + cmd + [1/2/3/4] => navigate spaces
+
+Mod Mode:
+- [h/j/k/l]: navigate
+- alt + [h/j/k/l]: move windows around
+- cmd + [1/2/3/4]: move windows to space
+- [a/d/f]: modify split
+
+Nvim Only:
+- alt + [h/j/k/l]: navigate vim windows (breaks paradigm...but consider as a separate world)
+
+Todo:
+- Make Yabai find focused window automatically (instead of ctrl-m)
+- Correct hammerspoon hints
+- setup cheatsheet?
+- Ergonomics are bad - how to improve?
+- Nvim -> annoying message on format and save autocommands if no LSP format, or file is not saved
+- Make stack nav loop?

@@ -2,8 +2,18 @@ local null_ls = require("null-ls")
 
 null_ls.setup({
 	sources = {
-		null_ls.builtins.formatting.prettierd, -- Prettier
+		null_ls.builtins.formatting.prettier.with({
+			extra_args = {
+				"--print-width",
+				120,
+				"--tab-width",
+				4,
+			},
+		}),
+
 		null_ls.builtins.diagnostics.jsonlint, -- JSON Lint
+
+		null_ls.builtins.completion.vsnip, -- Snippet engine
 
 		null_ls.builtins.diagnostics.markdownlint, -- Markdown linter
 		null_ls.builtins.diagnostics.stylelint, -- CSS, etc. linter

@@ -1,5 +1,11 @@
 require("hs.ipc")
 
+stackline = require("stackline")
+stackline:init(stacklineConfig)
+stackline.config:set("appearance.offset.x", 8)
+stackline.config:set("appearance.size", 24)
+stackline.config:set("advanced.maxRefreshRate", 0.25)
+
 hs.alert.show("Config loaded", {
 	atScreenEdge = 0,
 	padding = 10,
@@ -27,6 +33,20 @@ helperFormat = {
 	textStyle = { paragraphStyle = { alignment = "center" } },
 }
 
+-- hs.alert.show(
+-- 	"alt + [h/j/k/l]: -> focus windows      alt + tab: -> cycle windows      shift + alt + [j/k]: -> cycle stacks",
+-- 	{
+-- 		atScreenEdge = 1,
+-- 		padding = 6,
+-- 		fillColor = { red = 0.10, green = 0.11, blue = 0.18, alpha = 0.95 },
+-- 		strokeColor = { red = 0.10, green = 0.11, blue = 0.18, alpha = 0.95 },
+-- 		textFont = "FiraCodeNerdFontCompleteM-Retina",
+-- 		textSize = 14,
+-- 		textStyle = { paragraphStyle = { alignment = "center" } },
+-- 	},
+-- 	true
+-- )
+
 keyHints = {
 	window_move = {
 		{ mode = "", key = "q", action = "stack layout" },
@@ -34,13 +54,13 @@ keyHints = {
 		{ mode = "", key = "e", action = "float layout" },
 		{ mode = "", key = "", action = "\n\n" },
 		{ mode = "float", key = "space", action = "fullscreen" },
-		{ mode = "", key = "", action = "\n\n" },
+		{ mode = "float", key = "", action = "\n\n" },
 		{ mode = "bsp", key = "a", action = "resize left" },
 		{ mode = "bsp", key = "f", action = "resize right" },
 		{ mode = "bsp", key = "d", action = "toggle split" },
 		{ mode = "bsp", key = "", action = "\n\n" },
-		{ mode = "bsp", key = "ctrl + h,j,k,l", action = "focus" },
-		{ mode = "bsp", key = "h,j,k,l", action = "warp" },
+		{ mode = "bsp", key = "h,j,k,l", action = "focus" },
+		{ mode = "bsp", key = "ctrl + h,j,k,l", action = "warp" },
 		{ mode = "bsp", key = "alt + h,j,k,l", action = "stack" },
 		{ mode = "float", key = "1, 2", action = "half screen" },
 		{ mode = "float", key = "3, 4, 5", action = "third screen" },

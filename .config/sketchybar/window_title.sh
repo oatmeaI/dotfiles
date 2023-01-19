@@ -1,11 +1,10 @@
 #!/bin/zsh
 YABAI_PATH=$(which yabai)
 WINDOW_TITLE=$($YABAI_PATH -m query --windows --window | jq -r ".title")
-LENGTH=100
+LENGTH=25
 if [[ ${#WINDOW_TITLE} -gt $LENGTH ]]; then
   WINDOW_TITLE=$(echo "$WINDOW_TITLE" | cut -c 1-$LENGTH)
-  sketchybar -m --set window label="$WINDOW_TITLE"…
-  exit 0
+  WINDOW_TITLE="$WINDOW_TITLE…"
 fi
 
 APP_TITLE=$($YABAI_PATH -m query --windows --window | jq -r ".app")

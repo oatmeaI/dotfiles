@@ -14,7 +14,12 @@ vim.diagnostic.config({
 	},
 })
 
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
 nvim_lsp.eslint.setup({})
+
+nvim_lsp["jsonls"].setup({ capabilities = capabilities })
 
 nvim_lsp.tsserver.setup({
 	init_options = {
@@ -22,7 +27,7 @@ nvim_lsp.tsserver.setup({
 			importModuleSpecifierPreference = "relative",
 		},
 	},
-	on_attach = function(client)
+	on_attach = function(client, bufnr)
 		client.server_capabilities.documentFormattingProvider = false -- Don't use TS server to format, since we will use null_ls
 	end,
 })
