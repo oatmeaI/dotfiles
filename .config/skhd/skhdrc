@@ -6,31 +6,17 @@
 default < shift - escape ; window_move
 window_move < escape ; default
 
-####### Normal Mode ###########################################
-cmd + ctrl + alt - w : m wallpaper ~/dotfiles/current.jpg
-ctrl + alt - d : node ~/.config/skhd/toggle_layout.js
-
-# Normal mode window navigation for convenience
-ctrl - m : yabai -m window --focus # Sometimes we end up without a focused window, this will fix that.
-# ctrl - h : yabai -m window --focus west
-# ctrl - j : yabai -m window --focus south
-# ctrl - k : yabai -m window --focus north
-# ctrl - l : yabai -m window --focus east
-
+####### Modification Mode ###########################################
 # Window Stack Controls
-ctrl + alt - h : yabai -m window --stack west
-ctrl + alt - j : yabai -m window --stack south
-ctrl + alt - k : yabai -m window --stack north
-ctrl + alt - l : yabai -m window --stack east
+window_move < ctrl + alt - h : yabai -m window --stack west
+window_move < ctrl + alt - j : yabai -m window --stack south
+window_move < ctrl + alt - k : yabai -m window --stack north
+window_move < ctrl + alt - l : yabai -m window --stack east
 
 # Stack Nav
-ctrl + shift - j : yabai -m window --focus stack.next
-ctrl + shift - k : yabai -m window --focus stack.prev
+window_move < ctrl + shift - j : yabai -m window --focus stack.next
+window_move < ctrl + shift - k : yabai -m window --focus stack.prev
 
-## Space nav is handled by OS level shortcuts because I don't have the scripting addition installed
-# ctrl + cmd + [1/2/3/4] : switch to space 1/2/3/4
-
-####### Modification Mode ###########################################
 window_move < q : yabai -m space --layout stack;  node ~/.config/yabai/hammerspoon_bsp_helper.js
 window_move < w : yabai -m space --layout bsp;  node ~/.config/yabai/hammerspoon_bsp_helper.js
 window_move < e : yabai -m space --layout float; node ~/.config/yabai/hammerspoon_bsp_helper.js
