@@ -1,4 +1,3 @@
-require("command-palette")
 local command_center = require("command_center")
 
 require("telescope").setup({

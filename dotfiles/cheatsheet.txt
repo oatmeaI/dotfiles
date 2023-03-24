@@ -26,3 +26,5 @@ Todo:
 - Ergonomics are bad - how to improve?
 - Nvim -> annoying message on format and save autocommands if no LSP format, or file is not saved
 - Make stack nav loop?
+- Clone stackline
+- Add selected space script to repo

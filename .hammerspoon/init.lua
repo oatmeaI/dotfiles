@@ -5,6 +5,7 @@ stackline:init(stacklineConfig)
 stackline.config:set("appearance.offset.x", 8)
 stackline.config:set("appearance.size", 24)
 stackline.config:set("advanced.maxRefreshRate", 0.25)
+stackline.config:set("paths.yabai", "/opt/homebrew/bin/yabai")
 
 hs.alert.show("Config loaded", {
 	atScreenEdge = 0,

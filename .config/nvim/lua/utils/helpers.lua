@@ -1,7 +1,4 @@
 local vim = vim -- Just to get rid of the annoying warnings
-local command_center = require("command_center")
-local wk = require("which-key")
-
 local M = {}
 
 function M.ensure_packer()
@@ -15,8 +12,8 @@ function M.ensure_packer()
 	return false
 end
 
-function config(packageName)
-	if pcall(require, packageName .. "-config") then
+function M.config(packageName)
+	if pcall(require, "plugins/" .. packageName .. "-config") then
 		return
 	else
 		pcall(function()
@@ -29,31 +26,10 @@ function M.install(use, packages)
 	for _, package in ipairs(packages) do
 		use({
 			package.repo,
-			config = config(package.name),
+			config = M.config(package.name),
 			run = package.run,
 			as = package.as,
 		})
-	end
-end
-
-function M.autocommand(trigger, opts)
-	vim.api.nvim_create_autocmd(trigger, opts)
-end
-
-function M.map(mode, key, command, opts, hint)
-	local options = { noremap = true, silent = true }
-	if opts then
-		options = vim.tbl_extend("force", options, opts)
-	end
-	vim.api.nvim_set_keymap(mode, key, command, options)
-	if hint ~= nil then
-		command_center.add(
-			{ { category = hint.category, desc = hint.desc, cmd = command, keys = { mode, key } } },
-			command_center.mode.ADD
-		)
-		wk.register({
-			[key] = { command, hint.desc },
-		}, { mode = mode })
 	end
 end
 
@@ -66,6 +42,10 @@ function M.packup(packages)
 			require("packer").sync()
 		end
 	end)
+end
+
+function M.autocommand(trigger, opts)
+	vim.api.nvim_create_autocmd(trigger, opts)
 end
 
 function M.getSessionName()

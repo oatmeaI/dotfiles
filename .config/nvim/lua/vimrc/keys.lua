@@ -1,9 +1,30 @@
-local map = require("helpers").map
+local command_center = require("command_center")
+local wk = require("which-key")
 local vim = vim
+
+local function map(mode, key, command, opts, hint)
+	local options = { noremap = true, silent = true }
+	if opts then
+		options = vim.tbl_extend("force", options, opts)
+	end
+	vim.api.nvim_set_keymap(mode, key, command, options)
+	if hint ~= nil then
+		command_center.add(
+			{ { category = hint.category, desc = hint.desc, cmd = command, keys = { mode, key } } },
+			command_center.mode.ADD
+		)
+		wk.register({
+			[key] = { command, hint.desc },
+		}, { mode = mode })
+	end
+end
 
 -- J/K navigation handles broken lines
 map("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 map("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
+-- Shift+J/K to scroll fast
+map("n", "<s-j>", ":lua require('neoscroll').scroll(vim.wo.scroll, true, 150)<cr>")
+map("n", "<s-k>", ":lua require('neoscroll').scroll(-vim.wo.scroll, true, 150)<cr>")
 
 -- Space + ASDF
 map("n", "<space>a", ":Telescope neoclip<cr>", {}, {
@@ -36,7 +57,7 @@ map("n", "<space>h", '<cmd>lua require("spectre").open()<cr>', {}, {
 	desc = "Find & replace in project",
 })
 
-map("n", "<space>j", ":lua require('netrw-toggle').ToggleExplore()<cr>", {}, {
+map("n", "<space>j", ":lua require('utils/netrw-toggle').ToggleExplore()<cr>", {}, {
 	category = "Application",
 	desc = "Toggle file explorer",
 })
@@ -208,7 +229,6 @@ map("v", "π", ":<c-u>Telescope command_center<cr>", {}, {
 	desc = "Open command center in visual mode",
 }) -- Open Command Center in visual mode
 
--- Textobject Mapping
 -- Goto args for current function
 map(
 	"n",

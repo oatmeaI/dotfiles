@@ -124,4 +124,44 @@ command_center.add({
 			{ "n", "<c-w> =" },
 		},
 	},
+	{
+		category = "Editor",
+		desc = "Autocomplete: Show autocomplete list",
+		cmd = "<c-space>",
+		keys = {
+			{ "i", "<c-space>" },
+		},
+	},
+	{
+		category = "Editor",
+		desc = "Autocomplete: Close autocomplete list",
+		cmd = "<c-e>",
+		keys = {
+			{ "i", "<c-e>" },
+		},
+	},
+	{
+		category = "Editor",
+		desc = "Autocomplete: Select autocomplete item",
+		cmd = "",
+		keys = {
+			{ "i", "<cr>" },
+		},
+	},
+	{
+		category = "Editor",
+		desc = "Autocomplete: Next in autocomplete list",
+		cmd = "",
+		keys = {
+			{ "i", "<tab>" },
+		},
+	},
+	{
+		category = "Editor",
+		desc = "Autocomplete: Previous in autocomplete list",
+		cmd = "",
+		keys = {
+			{ "i", "<s-tab>" },
+		},
+	},
 }, command_center.mode.ADD)
