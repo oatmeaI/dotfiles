@@ -16,13 +16,15 @@ require("lualine").setup({
 	sections = {
 		lualine_a = { "mode" },
 		lualine_b = { path },
-		lualine_c = { blame },
-		lualine_x = { "filetype", "location" },
-		lualine_y = {},
-		lualine_z = { "aerial" },
+		lualine_c = { "aerial" },
+		lualine_x = {},
+		lualine_y = { blame },
+		lualine_z = { "filetype" },
 	},
 	tabline = {
-		lualine_a = { "diagnostics" },
-		lualine_z = { "tabs" },
+		lualine_a = { "filename" },
+		lualine_b = { "diagnostics", { sources = { "nvim_lsp" } } },
+		lualine_y = { "tabs" },
+		lualine_z = { "branch" },
 	},
 })

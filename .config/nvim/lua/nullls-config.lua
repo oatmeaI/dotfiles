@@ -13,11 +13,6 @@ null_ls.setup({
 
 		null_ls.builtins.diagnostics.jsonlint, -- JSON Lint
 
-		null_ls.builtins.completion.vsnip, -- Snippet engine
-
-		null_ls.builtins.diagnostics.markdownlint, -- Markdown linter
-		null_ls.builtins.diagnostics.stylelint, -- CSS, etc. linter
-
 		null_ls.builtins.formatting.stylua, -- Lua formatting
 		null_ls.builtins.diagnostics.luacheck, -- Lua linting
 	},

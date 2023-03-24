@@ -14,14 +14,25 @@ vim.diagnostic.config({
 	},
 })
 
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities.textDocument.completion.completionItem.snippetSupport = true
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-nvim_lsp.eslint.setup({})
+nvim_lsp.eslint.setup({
+	capabilities = capabilities,
+	on_attach = function(client, bufnr)
+		client.server_capabilities.documentFormattingProvider = true
+	end,
+})
 
-nvim_lsp["jsonls"].setup({ capabilities = capabilities })
+nvim_lsp["jsonls"].setup({
+	capabilities = capabilities,
+	on_attach = function(client, bufnr)
+		client.server_capabilities.documentFormattingProvider = false -- Don't use TS server to format, since we will use null_ls
+	end,
+})
 
+-- TODO: LSP completion will only work for typescript & lua right now
 nvim_lsp.tsserver.setup({
+	capabilities = capabilities,
 	init_options = {
 		preferences = {
 			importModuleSpecifierPreference = "relative",
@@ -32,7 +43,8 @@ nvim_lsp.tsserver.setup({
 	end,
 })
 
-nvim_lsp.sumneko_lua.setup({
+nvim_lsp.lua_ls.setup({
+	capabilities = capabilities,
 	on_attach = function(client)
 		client.server_capabilities.documentFormattingProvider = false -- Don't use TS server to format, since we will use null_ls
 	end,

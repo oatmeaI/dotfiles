@@ -5,8 +5,8 @@ local M = {}
 function M.ToggleExplore()
 	if vim.fn.exists("w:netrw_rexlocal") == 1 then
 		vim.api.nvim_command("Rexplore")
-	elseif vim.fn.exists("w:netrw_rexfile") == 1 and vim.bo.filetype == "netrw" then
-		vim.api.nvim_command("e " .. vim.w.netrw_rexfile)
+		-- elseif vim.fn.exists("w:netrw_rexfile") == 1 and vim.bo.filetype == "netrw" then
+		-- vim.api.nvim_command("e " .. vim.w.netrw_rexfile)
 	else
 		vim.api.nvim_command("Explore")
 	end

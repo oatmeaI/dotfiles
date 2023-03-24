@@ -1,4 +1,6 @@
 local vim = vim -- Just to get rid of the annoying warnings
+local command_center = require("command_center")
+local wk = require("which-key")
 
 local M = {}
 
@@ -14,10 +16,13 @@ function M.ensure_packer()
 end
 
 function config(packageName)
-	pcall(function()
-		require(packageName).setup()
-	end)
-	pcall(require, packageName .. "-config")
+	if pcall(require, packageName .. "-config") then
+		return
+	else
+		pcall(function()
+			require(packageName).setup()
+		end)
+	end
 end
 
 function M.install(use, packages)
@@ -35,12 +40,21 @@ function M.autocommand(trigger, opts)
 	vim.api.nvim_create_autocmd(trigger, opts)
 end
 
-function M.map(mode, key, command, opts)
+function M.map(mode, key, command, opts, hint)
 	local options = { noremap = true, silent = true }
 	if opts then
 		options = vim.tbl_extend("force", options, opts)
 	end
 	vim.api.nvim_set_keymap(mode, key, command, options)
+	if hint ~= nil then
+		command_center.add(
+			{ { category = hint.category, desc = hint.desc, cmd = command, keys = { mode, key } } },
+			command_center.mode.ADD
+		)
+		wk.register({
+			[key] = { command, hint.desc },
+		}, { mode = mode })
+	end
 end
 
 function M.packup(packages)

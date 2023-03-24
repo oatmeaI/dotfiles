@@ -19,10 +19,6 @@ replace surrounding [char]
 with [char2]
 (no visual or motion)
 
-> cxx[motion]
-once -> define [motion] to swap
-twice -> swap above with [motion]
-
 > .
 LSP text subject - smart
 
@@ -34,3 +30,17 @@ LSP text subject - container inner
 
 > <C-a> / <C-x>
 Increment & decrement
+
+> <C-o> / <C-p>
+Move back & forward
+
+> <space>p
+Paste from yank register
+(not overwritten by dd, etc)
+
+> [q
+go to function args
+
+> aq/iq
+outer/inner function arg
+(textobject)
