@@ -17,6 +17,7 @@ vim.diagnostic.config({
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 nvim_lsp.eslint.setup({
+	root_dir = nvim_lsp.util.find_node_modules_ancestor,
 	capabilities = capabilities,
 	on_attach = function(client, bufnr)
 		client.server_capabilities.documentFormattingProvider = true
