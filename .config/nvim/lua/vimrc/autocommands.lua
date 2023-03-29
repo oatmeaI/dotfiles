@@ -25,6 +25,8 @@ autocommand("BufWritePre", { command = "lua MiniTrailspace.trim_last_lines()" })
 autocommand("FocusLost", { command = "wall" })
 -- Write a session when exiting Neovim
 autocommand("VimLeave", { command = "lua MiniSessions.write(nil, {force = true})" })
+-- Close Quickfix window on exit (it's annoying when reopening)
+autocommand("VimLeavePre", { command = ":cclose" })
 -- Load session if one exists when starting Neovim
 autocommand("VimEnter", { command = "lua require('utils/helpers').loadSession()" })
 -- Check if we need to reload the file when it changed

@@ -10,6 +10,9 @@ require("vimrc/ui")
 -- Set up keymaps
 require("vimrc/keys")
 
+-- Make quickfix list prettier
+require("vimrc/setup-qf")
+
 -- Define custom editor commands
 require("vimrc/commands")
 

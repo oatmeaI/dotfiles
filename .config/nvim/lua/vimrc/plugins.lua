@@ -99,4 +99,8 @@ packup({
 	{ name = "hologram", repo = "giusgad/hologram.nvim" },
 	{ name = "nui", repo = "MunifTanjim/nui.nvim" },
 	{ name = "pets", repo = "giusgad/pets.nvim" },
+	-- Enhance QF list
+	{ name = "bqf", repo = "kevinhwang91/nvim-bqf" },
+	-- Better marks
+	{ name = "harpoon", repo = "ThePrimeagen/harpoon" },
 })

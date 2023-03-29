@@ -89,11 +89,6 @@ map("n", "<space>w", "<c-w>q", {}, {
 	desc = "Close window",
 })
 
-map("n", "<c-p>", "<c-o>", {}, {
-	category = "Jump",
-	desc = "Jump forward",
-})
-
 map("n", "<space>e", ":so $MYVIMRC<cr>", {}, {
 	category = "Application",
 	desc = "Reload .vimrc",
@@ -109,6 +104,11 @@ map("n", "<space>t", ":LspRestart<cr>", {}, {
 	desc = "Restart LSP",
 })
 
+map("n", "<space>y", ":lua require('utils/quickmarks').toggleMark()<cr>", {}, {
+	category = "Marks",
+	desc = "Add global mark (Harpoon)",
+})
+
 map("n", "<space>u", ":lua vim.lsp.buf.hover({focusable = false})<cr>", {}, {
 	category = "LSP",
 	desc = "Show LSP info popover",
@@ -122,6 +122,11 @@ map("n", "<space>i", ":lua vim.diagnostic.open_float({focusable = false})<cr>", 
 map("n", "<space>o", ":TroubleToggle document_diagnostics<cr>", {}, {
 	category = "LSP",
 	desc = "Toggle document diagnostics window",
+})
+
+map("n", "<space>p", ":copen<cr>", {}, {
+	category = "Window",
+	desc = "Open QuickFix list",
 })
 
 map("n", "<space><space>", ":Telescope command_center<cr>", {}, {
@@ -222,6 +227,11 @@ map("t", "<esc>", "<cmd>FloatermHide!<cr>", {}, {
 map("n", "<cr>", ":Pounce<cr>", {}, {
 	category = "Editor",
 	desc = "Jump to search string",
+})
+
+map("n", "<c-p>", "<c-o>", {}, {
+	category = "Jump",
+	desc = "Jump forward",
 })
 
 map("v", "π", ":<c-u>Telescope command_center<cr>", {}, {
