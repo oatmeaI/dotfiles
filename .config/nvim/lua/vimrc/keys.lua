@@ -106,7 +106,7 @@ map("n", "<space>t", ":LspRestart<cr>", {}, {
 
 map("n", "<space>y", ":lua require('utils/quickmarks').toggleMark()<cr>", {}, {
 	category = "Marks",
-	desc = "Add global mark (Harpoon)",
+	desc = "Add quickmark",
 })
 
 map("n", "<space>u", ":lua vim.lsp.buf.hover({focusable = false})<cr>", {}, {
@@ -126,7 +126,7 @@ map("n", "<space>o", ":TroubleToggle document_diagnostics<cr>", {}, {
 
 map("n", "<space>p", ":copen<cr>", {}, {
 	category = "Window",
-	desc = "Open QuickFix list",
+	desc = "Open quickfix list",
 })
 
 map("n", "<space><space>", ":Telescope command_center<cr>", {}, {

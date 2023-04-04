@@ -1,6 +1,10 @@
 local vim = vim
 local M = {}
 
+-- TODO: persist across launches? -> Might not make sense with QF list
+-- TODO: breaks if you close buffer with mark...-> Might not be fixable while using QF list
+-- TODO: sign in sign column if marked
+
 M.marks = {}
 
 local function _updateQfList()
@@ -8,7 +12,6 @@ local function _updateQfList()
 	local qf_list = {}
 	for idx = 1, #M.marks do
 		qf_list[idx] = {
-			bufnr = M.marks[idx].bufnr,
 			filename = M.marks[idx].filename,
 			lnum = M.marks[idx].lnum,
 			col = M.marks[idx].col,
@@ -26,16 +29,15 @@ function M.removeMark()
 end
 
 function M.toggleMark()
-	local bufnr = vim.api.nvim_get_current_buf()
 	local bufname = vim.api.nvim_buf_get_name(0)
 	local pos = vim.api.nvim_win_get_cursor(0)
 	local removed = false
 
 	-- If mark already exists at this line in this file, remove it
 	for idx = 1, #M.marks do
-		local m_bufnr = M.marks[idx].bufnr
+		local m_filename = M.marks[idx].filename
 		local m_lnum = M.marks[idx].lnum
-		if m_bufnr == bufnr and m_lnum == pos[1] then
+		if m_filename == bufname and m_lnum == pos[1] then
 			table.remove(M.marks, idx)
 			removed = true
 			break
@@ -44,7 +46,7 @@ function M.toggleMark()
 
 	-- If we didn't remove a mark, that means we should add one instead
 	if removed ~= true then
-		table.insert(M.marks, { bufnr = bufnr, filename = bufname, lnum = pos[1], col = pos[2] })
+		table.insert(M.marks, { filename = bufname, lnum = pos[1], col = pos[2] })
 	end
 
 	_updateQfList()
@@ -52,5 +54,6 @@ end
 
 -- Setup dd mapping in quickfix list to remove mark
 vim.cmd([[autocmd FileType qf map <buffer> dd :lua require('utils/quickmarks').removeMark()<cr>]])
+vim.cmd([[au FileType qf setlocal nonumber]])
 
 return M

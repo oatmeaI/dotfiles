@@ -6,7 +6,6 @@ require("telescope").setup({
 		file_ignore_patterns = { "node_modules", "bundle", "dll" },
 		initial_mode = "normal",
 		layout_strategy = "vertical",
-		path_display = "absolute",
 	},
 	pickers = {
 		lsp_references = { initial_mode = "normal" },
@@ -14,7 +13,6 @@ require("telescope").setup({
 		live_grep = { initial_mode = "insert" },
 		lsp_definitions = { initial_mode = "normal" },
 		command_center = { initial_mode = "normal" },
-		harpoon = { path_display = "absolute" },
 	},
 	extensions = {
 		command_center = {
@@ -34,4 +32,3 @@ require("telescope").setup({
 })
 require("telescope").load_extension("neoclip")
 require("telescope").load_extension("command_center")
-require("telescope").load_extension("harpoon")

@@ -2,11 +2,6 @@ local command_center = require("command_center")
 
 command_center.add({
 	{
-		category = "Telescope",
-		desc = "List marks (Harpoon)",
-		cmd = ":Telescope harpoon marks<cr>",
-	},
-	{
 		category = "Text Objects",
 		desc = "Change CamelCase segment",
 		cmd = "cav",

@@ -89,8 +89,6 @@ packup({
 	{ name = "nvim-cmp-luasnip", repo = "saadparwaiz1/cmp_luasnip" },
 	-- Automatically switch between relative linenumbers and absolute
 	{ name = "relative-toggle", repo = "cpea2506/relative-toggle.nvim" },
-	-- Prettier notifications
-	{ name = "notify", repo = "rcarriga/nvim-notify" },
 	-- Keyboard shortcut coach
 	{ name = "which-key", repo = "folke/which-key.nvim" },
 	-- Help correct typos when opening files
@@ -101,6 +99,6 @@ packup({
 	{ name = "pets", repo = "giusgad/pets.nvim" },
 	-- Enhance QF list
 	{ name = "bqf", repo = "kevinhwang91/nvim-bqf" },
-	-- Better marks
-	{ name = "harpoon", repo = "ThePrimeagen/harpoon" },
+	-- Git diff view
+	{ name = "diffview", repo = "sindrets/diffview.nvim" },
 })
