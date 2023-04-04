@@ -229,7 +229,7 @@ map("n", "<cr>", ":Pounce<cr>", {}, {
 	desc = "Jump to search string",
 })
 
-map("n", "<c-p>", "<c-o>", {}, {
+map("n", "<c-p>", "<c-i>", {}, {
 	category = "Jump",
 	desc = "Jump forward",
 })

@@ -43,6 +43,9 @@ command_center.add({
 		category = "Jump",
 		desc = "Jump backward",
 		cmd = "<c-o>",
+		keys = {
+			{ "n", "<c-o>" },
+		},
 	},
 	{
 		category = "Application",
