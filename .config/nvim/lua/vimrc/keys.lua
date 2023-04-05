@@ -23,8 +23,8 @@ end
 map("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 map("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 -- Shift+J/K to scroll fast
-map("n", "<s-j>", ":lua require('neoscroll').scroll(vim.wo.scroll, true, 150)<cr>")
-map("n", "<s-k>", ":lua require('neoscroll').scroll(-vim.wo.scroll, true, 150)<cr>")
+map("n", "<down>", ":lua require('neoscroll').scroll(vim.wo.scroll, true, 150)<cr>")
+map("n", "<up>", ":lua require('neoscroll').scroll(-vim.wo.scroll, true, 150)<cr>")
 
 -- Space + ASDF
 map("n", "<space>a", ":Telescope neoclip<cr>", {}, {
