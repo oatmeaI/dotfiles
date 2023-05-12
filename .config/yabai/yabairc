@@ -25,7 +25,7 @@ yabai -m config window_gap                   16
 
 yabai -m rule --add title=Microsoft\ Teams\ Notification border=off
 
-yabai -m signal --add event=space_changed action="node ~/.config/yabai/hammerspoon_bsp_helper.js"
+# yabai -m signal --add event=space_changed action="node ~/.config/yabai/hammerspoon_bsp_helper.js"
 yabai -m signal --add event=window_created action="sketchybar -m --trigger yabai_window &> /dev/null"
 yabai -m signal --add event=window_destroyed action="sketchybar -m --trigger yabai_window &> /dev/null"
 yabai -m signal --add event=window_focused action="sketchybar -m --trigger yabai_window &> /dev/null"

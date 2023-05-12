@@ -7,7 +7,7 @@ local function map(mode, key, command, opts, hint)
 	if opts then
 		options = vim.tbl_extend("force", options, opts)
 	end
-	vim.api.nvim_set_keymap(mode, key, command, options)
+	vim.keymap.set(mode, key, command, options)
 	if hint ~= nil then
 		command_center.add(
 			{ { category = hint.category, desc = hint.desc, cmd = command, keys = { mode, key } } },
@@ -19,14 +19,18 @@ local function map(mode, key, command, opts, hint)
 	end
 end
 
+-->> Tweaking J/K <<--
 -- J/K navigation handles broken lines
 map("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 map("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
--- Shift+J/K to scroll fast
+-- Shift + J/K to scroll fast
 map("n", "<down>", ":lua require('neoscroll').scroll(vim.wo.scroll, true, 150)<cr>")
 map("n", "<up>", ":lua require('neoscroll').scroll(-vim.wo.scroll, true, 150)<cr>")
+-- Shift + J/K for visual mode too
+map("v", "<down>", "10j")
+map("v", "<up>", "10k")
 
--- Space + ASDF
+-->> Space + ASDF <<--
 map("n", "<space>a", ":Telescope neoclip<cr>", {}, {
 	category = "Telescope",
 	desc = "Clipboard history",
@@ -53,7 +57,7 @@ map("n", "<space>g", ":Telescope buffers<cr>", {}, {
 })
 
 map("n", "<space>h", '<cmd>lua require("spectre").open()<cr>', {}, {
-	category = "Project",
+	category = "Editor",
 	desc = "Find & replace in project",
 })
 
@@ -77,8 +81,8 @@ map("n", "<space>;", ":noh<cr>", {}, {
 	desc = "Turn off search highlight",
 })
 
--- Space + QWERTY
--- TODO: y,p are empty
+-->> Space + QWERTY <<--
+-- E is empty
 map("n", "<space>q", ":lua MiniBufremove.wipeout()<cr>", {}, {
 	category = "Editor",
 	desc = "Close buffer",
@@ -89,24 +93,19 @@ map("n", "<space>w", "<c-w>q", {}, {
 	desc = "Close window",
 })
 
-map("n", "<space>e", ":so $MYVIMRC<cr>", {}, {
-	category = "Application",
-	desc = "Reload .vimrc",
-})
-
 map("n", "<space>r", ":lua vim.lsp.buf.rename()<cr>", {}, {
 	category = "LSP",
 	desc = "Rename symbol",
 })
 
-map("n", "<space>t", ":LspRestart<cr>", {}, {
-	category = "Application",
-	desc = "Restart LSP",
-})
-
-map("n", "<space>y", ":lua require('utils/quickmarks').toggleMark()<cr>", {}, {
+map("n", "<space>t", ":lua require('utils/quickmarks').toggleMark()<cr>", {}, {
 	category = "Marks",
 	desc = "Add quickmark",
+})
+
+map("n", "<space>y", ":Telescope quickfix<cr>", {}, {
+	category = "Marks",
+	desc = "Show quickmarks popup",
 })
 
 map("n", "<space>u", ":lua vim.lsp.buf.hover({focusable = false})<cr>", {}, {
@@ -124,9 +123,9 @@ map("n", "<space>o", ":TroubleToggle document_diagnostics<cr>", {}, {
 	desc = "Toggle document diagnostics window",
 })
 
-map("n", "<space>p", ":copen<cr>", {}, {
+map("n", "<space>p", ":lua require('utils/helpers').toggleQf()<cr>", {}, {
 	category = "Window",
-	desc = "Open quickfix list",
+	desc = "Toggle quickfix list",
 })
 
 map("n", "<space><space>", ":Telescope command_center<cr>", {}, {
@@ -134,7 +133,7 @@ map("n", "<space><space>", ":Telescope command_center<cr>", {}, {
 	desc = "Open command center",
 })
 
--- TODO: Think about ergonomics & mnemonics of Git and Diag maps
+-->> Ctrl Maps <<--
 -- Git Conflicts
 map("n", "<c-g><c-o>", ":GitConflictChooseOurs<cr>", {}, {
 	category = "Git",
@@ -172,26 +171,51 @@ map("n", "<c-d><c-[>", ":lua vim.diagnostic.goto_prev()<cr>", {}, {
 	desc = "Diagnostics: Previous diagnostic",
 })
 
--- Window navigation
+-- Misc ctrl maps
+map("n", "<c-n>", ":lua require('tsht').move()<cr>", {}, {
+	category = "Syntax Tree",
+	desc = "Jump to node",
+})
+
+map("n", "<c-m>", ":lua require('tsht').nodes()<cr>", {}, {
+	category = "Syntax Tree",
+	desc = "Select node with hints",
+})
+
+map("n", "<c-p>", "<c-i>", {}, {
+	category = "Jump",
+	desc = "Jump forward",
+})
+
+map("n", "<c-b>", ":HopChar2<cr>", {}, {
+	category = "Jump",
+	desc = "Jump to two character pattern",
+})
+
+-->> Window navigation <<--
+-- Alt + j
 map("n", "∆", "<c-w>j", {}, {
 	category = "Window",
 	desc = "Focus south window",
-}) -- Alt + j
+})
 
+-- Alt + h
 map("n", "˙", "<c-w>h", {}, {
 	category = "Window",
 	desc = "Focus west window",
-}) -- Alt + h
+})
 
+-- Alt + k
 map("n", "˚", "<c-w>k", {}, {
 	category = "Window",
 	desc = "Focus north window",
-}) -- Alt + k
+})
 
+-- Alt + l
 map("n", "¬", "<c-w>l", {}, {
 	category = "Window",
 	desc = "Focus east window",
-}) -- Alt + l
+})
 
 map("n", "<s-tab>", "<c-w>h", {}, {
 	category = "Window",
@@ -203,7 +227,7 @@ map("n", "<tab>", "<c-w>l", {}, {
 	desc = "Focus east window",
 })
 
--- Other Misc. Keymaps
+-->> Other Misc. Keymaps <<--
 map("n", "gd", ":Telescope lsp_definitions<cr>", {}, {
 	category = "LSP",
 	desc = "Go to symbol definition",
@@ -225,59 +249,22 @@ map("t", "<esc>", "<cmd>FloatermHide!<cr>", {}, {
 })
 
 map("n", "<cr>", ":Pounce<cr>", {}, {
-	category = "Editor",
+	category = "Jump",
 	desc = "Jump to search string",
 })
 
-map("n", "<c-p>", "<c-i>", {}, {
-	category = "Jump",
-	desc = "Jump forward",
-})
-
+-- Open Command Center in visual mode (Alt-P)
 map("v", "π", ":<c-u>Telescope command_center<cr>", {}, {
 	category = "Application",
-	desc = "Open command center in visual mode",
-}) -- Open Command Center in visual mode
+	desc = "Open command center while in visual mode",
+})
 
--- Goto args for current function
-map(
-	"n",
-	"[q",
-	":lua require'nvim-treesitter.textobjects.move'.goto_previous('@function.outer'); require'nvim-treesitter.textobjects.move'.goto_next('@parameter.outer')<cr>"
-)
-
--- Setup tab functionality in autocomplete
+-->> Setup tab functionality in autocomplete <<--
 map("i", "<Tab>", [[pumvisible() ? "\<C-n>" : "\<Tab>"]], { expr = true })
 map("i", "<S-Tab>", [[pumvisible() ? "\<C-p>" : "\<S-Tab>"]], { expr = true })
 
--- Syntax Tree Maps
+-->> Syntax Tree Maps <<--
 local opts = { noremap = true, silent = true }
-
-map("n", "<c-h>", ":lua require('tree-climber').goto_parent({highlight = true})<cr>", opts, {
-	category = "Syntax Tree",
-	desc = "Go to parent node",
-})
-
-map("n", "<c-l>", ":lua require('tree-climber').goto_child({highlight = true})<cr>", opts, {
-	category = "Syntax Tree",
-	desc = "Go to child node",
-})
-
-map("n", "<c-j>", ":lua require('tree-climber').goto_next({highlight = true})<cr>", opts, {
-	category = "Syntax Tree",
-	desc = "Go to next sibling node",
-})
-
-map("n", "<c-k>", ":lua require('tree-climber').goto_prev({highlight = true})<cr>", opts, {
-	category = "Syntax Tree",
-	desc = "Go to previous sibling node",
-})
-
-map("n", "<c-;>", ":lua require('tree-climber').highlight_node()<cr>", opts, {
-	category = "Syntax Tree",
-	desc = "Highlight current node",
-})
-
 map("v", "n", ":lua require('tree-climber').select_node()<cr>", opts, {
 	category = "Syntax Tree",
 	desc = "Select current node",

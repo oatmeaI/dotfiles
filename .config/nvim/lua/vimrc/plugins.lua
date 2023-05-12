@@ -2,12 +2,15 @@ local packup = require("utils/helpers").packup
 
 -- Packages
 packup({
+	-- -- Dependencies
 	-- Package manager
 	{ name = "packer", repo = "wbthomason/packer.nvim" },
 	-- Depedencies for other plugins
 	{ name = "plenary", repo = "nvim-lua/plenary.nvim" },
 	-- Dependencies for other plugins(?)
 	{ name = "kevin-promise", repo = "kevinhwang91/promise-async" },
+
+	-- -- Basic capabilities
 	-- Language parsing for things like symbols, etc
 	{ name = "treesitter", repo = "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" },
 	-- Configs for builtin language servers
@@ -101,4 +104,24 @@ packup({
 	{ name = "bqf", repo = "kevinhwang91/nvim-bqf" },
 	-- Git diff view
 	{ name = "diffview", repo = "sindrets/diffview.nvim" },
+	-- Close buffers after inactivity
+	{ name = "early-retirement", repo = "chrisgrieser/nvim-early-retirement" },
+	-- Show current func / whatever context at top of screen
+	{ name = "treesitter-context", repo = "nvim-treesitter/nvim-treesitter-context" },
+	-- Learning tool for treesitter
+	{ name = "treesitter-playground", repo = "nvim-treesitter/playground" },
+	-- Treesitter-powered color-matched brackets
+	{ name = "treesitter-rainbow", repo = "HiPhish/nvim-ts-rainbow2" },
+	-- Cleaner w,e,b motions for camelcase, etc
+	{ name = "spider", repo = "chrisgrieser/nvim-spider" },
+	-- Easily inspect registers with ""
+	{ name = "nvim-peekup", repo = "gennaro-tedesco/nvim-peekup" },
+	-- Autopairs with complex config options
+	{ name = "nvim-autopairs", repo = "windwp/nvim-autopairs" },
+	-- EasyMotion (I mostly use Pounce for moving around still, but this is dep for below)
+	{ name = "hop", repo = "phaazon/hop.nvim" },
+	-- Hop hints for treesitter syntax
+	{ name = "tsht", repo = "mfussenegger/nvim-treehopper" },
+	-- Better TSServer support
+	{ name = "typescript", repo = "jose-elias-alvarez/typescript.nvim" },
 })

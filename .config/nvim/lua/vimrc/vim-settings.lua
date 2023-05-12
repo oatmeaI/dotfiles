@@ -52,3 +52,9 @@ vim.o.smartindent = true
 vim.g.netrw_banner = false
 -- Don't hide files in Netrw
 vim.g.netrw_hide = 0
+-- Autowrite
+vim.o.autowriteall = true
+vim.o.autoread = true
+vim.o.confirm = true
+vim.o.undolevels = 10000
+vim.o.clipboard = "unnamedplus"

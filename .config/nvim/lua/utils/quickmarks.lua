@@ -56,4 +56,22 @@ end
 vim.cmd([[autocmd FileType qf map <buffer> dd :lua require('utils/quickmarks').removeMark()<cr>]])
 vim.cmd([[au FileType qf setlocal nonumber]])
 
+-- TODO: Telescope picker for quickmarks?
+-- local pickers = require("telescope.pickers")
+-- local finders = require("telescope.finders")
+-- local conf = require("telescope.config").values
+--
+-- function M.quickmarkPicker(opts)
+-- 	opts = opts or {}
+-- 	pickers
+-- 		.new(opts, {
+-- 			prompt_title = "colors",
+-- 			finder = finders.new_table({
+-- 				results = M.marks,
+-- 			}),
+-- 			sorter = conf.generic_sorter(opts),
+-- 		})
+-- 		:find()
+-- end
+
 return M

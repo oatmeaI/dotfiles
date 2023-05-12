@@ -2,7 +2,7 @@ local command_center = require("command_center")
 
 command_center.add({
 	{
-		category = "Text Objects",
+		category = "Editor",
 		desc = "Change CamelCase segment",
 		cmd = "cav",
 		keys = {
@@ -13,6 +13,11 @@ command_center.add({
 		category = "Pets",
 		desc = "New random pet",
 		cmd = ":PetsNew {name}",
+	},
+	{
+		category = "Application",
+		desc = "Reload .vimrc",
+		cmd = ":so $MYVIMRC<cr>",
 	},
 	{
 		category = "Pets",

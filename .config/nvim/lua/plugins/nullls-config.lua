@@ -15,5 +15,6 @@ null_ls.setup({
 
 		null_ls.builtins.formatting.stylua, -- Lua formatting
 		null_ls.builtins.diagnostics.luacheck, -- Lua linting
+		require("typescript.extensions.null-ls.code-actions"),
 	},
 })

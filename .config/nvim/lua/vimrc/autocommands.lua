@@ -22,7 +22,7 @@ autocommand("BufWritePre", { command = ":EslintFixAll", pattern = "*.tsx,*.ts,*.
 -- Trim trailing whitespace lines on write
 autocommand("BufWritePre", { command = "lua MiniTrailspace.trim_last_lines()" })
 -- Write all files when going away from Neovim
-autocommand("FocusLost", { command = "wall" })
+autocommand("FocusLost", { command = "lua pcall(vim.cmd('wall'))" })
 -- Write a session when exiting Neovim
 autocommand("VimLeave", { command = "lua MiniSessions.write(nil, {force = true})" })
 -- Close Quickfix window on exit (it's annoying when reopening)

@@ -32,17 +32,30 @@ nvim_lsp["jsonls"].setup({
 })
 
 -- TODO: LSP completion will only work for typescript & lua right now
-nvim_lsp.tsserver.setup({
-	capabilities = capabilities,
-	init_options = {
-		preferences = {
-			importModuleSpecifierPreference = "relative",
+require("typescript").setup({
+	server = { -- pass options to lspconfig's setup method
+		capabilities = capabilities,
+		init_options = {
+			preferences = {
+				importModuleSpecifierPreference = "relative",
+			},
 		},
+		on_attach = function(client, bufnr)
+			client.server_capabilities.documentFormattingProvider = false -- Don't use TS server to format, since we will use null_ls
+		end,
 	},
-	on_attach = function(client, bufnr)
-		client.server_capabilities.documentFormattingProvider = false -- Don't use TS server to format, since we will use null_ls
-	end,
 })
+-- nvim_lsp.tsserver.setup({
+-- 	capabilities = capabilities,
+-- 	init_options = {
+-- 		preferences = {
+-- 			importModuleSpecifierPreference = "relative",
+-- 		},
+-- 	},
+-- 	on_attach = function(client, bufnr)
+-- 		client.server_capabilities.documentFormattingProvider = false -- Don't use TS server to format, since we will use null_ls
+-- 	end,
+-- })
 
 nvim_lsp.lua_ls.setup({
 	capabilities = capabilities,
