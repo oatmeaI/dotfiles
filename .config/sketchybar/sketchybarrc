@@ -22,8 +22,6 @@ sketchybar --set batt label.padding_right=$PADDING
 sketchybar --set batt script="$BATT_SCRIPT"
 sketchybar --set batt update_freq=5
 
-asdfasdf
-
 # ------- CPU Usage ----------
 CPU_SCRIPT='
 CORE_COUNT=$(sysctl -n machdep.cpu.thread_count)
