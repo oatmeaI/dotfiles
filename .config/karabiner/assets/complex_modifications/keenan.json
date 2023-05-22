@@ -1,5 +1,5 @@
 {
-    "title": "Caps -> Hyper + Esc",
+    "title": "My Custom Maps",
     "rules": [
         {
             "description": "Caps -> Hyper",
@@ -15,6 +15,46 @@
                         }
                     ],
                     "to_if_alone": [{ "key_code": "escape" }],
+                    "type": "basic"
+                }
+            ]
+        },
+        {
+            "description": "Hyper + J -> Down",
+            "manipulators": [
+                {
+                    "from": {
+                        "key_code": "j",
+                        "modifiers": {
+                            "mandatory": ["left_option", "left_command", "left_control", "left_shift"],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "down_arrow"
+                        }
+                    ],
+                    "type": "basic"
+                }
+            ]
+        },
+        {
+            "description": "Hyper + K -> Up",
+            "manipulators": [
+                {
+                    "from": {
+                        "key_code": "k",
+                        "modifiers": {
+                            "mandatory": ["left_option", "left_command", "left_control", "left_shift"],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "up_arrow"
+                        }
+                    ],
                     "type": "basic"
                 }
             ]
