@@ -4,13 +4,15 @@ ICON_FONT="FiraCode Nerd Font Mono:Medium:22.0"
 
 # ------- Basic Config ----------
 sketchybar --bar color=0xBA24273A
+sketchybar --bar display=all
 sketchybar --bar position=bottom
-sketchybar --bar height=26
-sketchybar --bar margin=32
+sketchybar --bar height=31
+sketchybar --bar margin=0
 sketchybar --bar blur_radius=100
 sketchybar --bar shadow=on
-sketchybar --bar y_offset=5
-sketchybar --bar corner_radius=20
+sketchybar --bar topmost=on
+sketchybar --bar y_offset=0
+sketchybar --bar corner_radius=0
 sketchybar -m --add event yabai_window
 
 ####### LEFT
