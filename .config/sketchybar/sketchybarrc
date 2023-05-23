@@ -6,14 +6,14 @@ ICON_FONT="FiraCode Nerd Font Mono:Medium:22.0"
 sketchybar --bar color=0xBA24273A
 sketchybar --bar display=all
 sketchybar --bar position=bottom
-sketchybar --bar height=31
-sketchybar --bar margin=0
+sketchybar --bar height=25
+sketchybar --bar margin=250
 sketchybar --bar blur_radius=100
-sketchybar --bar shadow=on
+sketchybar --bar shadow=off
 sketchybar --bar topmost=on
-sketchybar --bar y_offset=0
-sketchybar --bar corner_radius=0
-sketchybar -m --add event yabai_window
+sketchybar --bar y_offset=5
+sketchybar --bar corner_radius=5
+#sketchybar -m --add event yabai_window
 
 ####### LEFT
 # ------- BATT Usage ----------

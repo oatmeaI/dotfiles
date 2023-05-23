@@ -58,6 +58,46 @@
                     "type": "basic"
                 }
             ]
+        },
+        {
+            "description": "Hyper + H -> Left",
+            "manipulators": [
+                {
+                    "from": {
+                        "key_code": "h",
+                        "modifiers": {
+                            "mandatory": ["left_option", "left_command", "left_control", "left_shift"],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "left_arrow"
+                        }
+                    ],
+                    "type": "basic"
+                }
+            ]
+        },
+        {
+            "description": "Hyper + L -> Right",
+            "manipulators": [
+                {
+                    "from": {
+                        "key_code": "l",
+                        "modifiers": {
+                            "mandatory": ["left_option", "left_command", "left_control", "left_shift"],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "right_arrow"
+                        }
+                    ],
+                    "type": "basic"
+                }
+            ]
         }
     ]
 }
