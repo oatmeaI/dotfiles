@@ -1,3 +1,36 @@
+# ------- Scripts (should maybe be in plugins folder) ----------
+DATE_SCRIPT='sketchybar --set date label="$(date "+%m/%d/%y (%a)")"'
+
+TIME_SCRIPT='sketchybar --set time label="$(date "+%I:%M%p")"'
+
+UPTIME_SCRIPT='sketchybar -m --set uptime label="UP $(uptime | sed "s/.*up *\([^,]*\).*/\1/")"'
+
+RAM_SCRIPT='sketchybar -m --set ram label="RAM: $(memory_pressure | grep "System-wide memory free percentage:" | awk "{ print 100-\$5 }")%"'
+
+BATT_SCRIPT='sketchybar -m --set batt label="$(sh $HOME/.config/sketchybar/battery.sh)"'
+
+CPU_SCRIPT='
+CORE_COUNT=$(sysctl -n machdep.cpu.thread_count)
+CPU_INFO=$(ps -eo pcpu,user)
+CPU_SYS=$(echo "$CPU_INFO" | sed "s/[^ 0-9\.]//g" | awk "{sum+=\$1} END {print sum/(100.0 * $CORE_COUNT)}")
+CPU_USE=$(printf "%02.0f"\\n "$(echo "$CPU_SYS*100"  | bc -l)")
+sketchybar --set cpu label="CPU: ${CPU_USE}%"
+'
+
+
+# ------- Basic Config ----------
+sketchybar --bar color=0x00000000
+sketchybar --bar display=all
+sketchybar --bar position=bottom
+sketchybar --bar height=25
+sketchybar --bar margin=5
+sketchybar --bar blur_radius=100
+sketchybar --bar shadow=off
+sketchybar --bar topmost=on
+sketchybar --bar y_offset=5
+sketchybar --bar corner_radius=5
+
+# ------- Item Defaults ----------
 PADDING=20
 TEXT_FONT="FiraCode Nerd Font Mono:Medium:12.0"
 ICON_FONT="FiraCode Nerd Font Mono:Medium:22.0"
@@ -13,118 +46,36 @@ default=(
   background.padding_right=12
   background.padding_left=12
   background.corner_radius=5
+  update_freq=1
 )
 
 sketchybar --default "${default[@]}"
 
-# ------- Basic Config ----------
-sketchybar --bar color=0x00000000
-sketchybar --bar display=all
-sketchybar --bar position=bottom
-sketchybar --bar height=25
-sketchybar --bar margin=5
-sketchybar --bar blur_radius=100
-sketchybar --bar shadow=off
-sketchybar --bar topmost=on
-sketchybar --bar y_offset=5
-sketchybar --bar corner_radius=5
-#sketchybar -m --add event yabai_window
-
-####### LEFT
 # ------- BATT Usage ----------
-BATT_SCRIPT='sketchybar -m --set batt label="$(sh $HOME/.config/sketchybar/battery.sh)"'
 sketchybar --add item batt left
 sketchybar --set batt script="$BATT_SCRIPT"
-sketchybar --set batt update_freq=5
-sketchybar --set batt background.padding_left=0
-sketchybar --set batt label.padding_left=7
+sketchybar --set batt sketchybar --set batt background.padding_left=0
+sketchybar --set batt label.padding_left=6
 sketchybar --set batt label.padding_right=7
 
 
 # ------- CPU Usage ----------
-CPU_SCRIPT='
-CORE_COUNT=$(sysctl -n machdep.cpu.thread_count)
-CPU_INFO=$(ps -eo pcpu,user)
-CPU_SYS=$(echo "$CPU_INFO" | sed "s/[^ 0-9\.]//g" | awk "{sum+=\$1} END {print sum/(100.0 * $CORE_COUNT)}")
-CPU_USE=$(printf "%02.0f"\\n "$(echo "$CPU_SYS*100"  | bc -l)")
-sketchybar --set cpu label="CPU: ${CPU_USE}%"
-'
-
 sketchybar --add item cpu left
 sketchybar --set cpu script="$CPU_SCRIPT"
-sketchybar --set cpu update_freq=2
 
 # ------- RAM Usage ----------
-RAM_SCRIPT='sketchybar -m --set ram label="RAM: $(memory_pressure | grep "System-wide memory free percentage:" | awk "{ print 100-\$5 }")%"'
 sketchybar --add item ram left
 sketchybar --set ram script="$RAM_SCRIPT"
-sketchybar --set ram update_freq=2
 
-# ------- skhd Modal ----------
-#sketchybar --add item modal left
-#sketchybar --set modal label="[n]"
-#sketchybar --set modal label.font="$TEXT_FONT"
-#sketchybar --set modal label.padding_right=$PADDING
-#
-## ------- Yabai Mode ----------
-#sketchybar --add item yabai_mode left
-#sketchybar --set yabai_mode label.font="$TEXT_FONT"
-#sketchybar --set yabai_mode script="~/.config/sketchybar/yabai_mode.sh"
-#sketchybar --set yabai_mode label.padding_right=10
-#sketchybar --subscribe yabai_mode yabai_window
-#$($HOME/.config/sketchybar/yabai_mode.sh)
-
-
-
-####### CENTER
-# ------- Window Title ----------
-#sketchybar --add item window center
-#sketchybar --set window label.font="$TEXT_FONT"
-#sketchybar --set window script="$HOME/.config/sketchybar/window_title.sh"
-#sketchybar --subscribe window yabai_window
-
-####### RIGHT
 # ------- Time ----------
 sketchybar --add item time right
-sketchybar --set time script='sketchybar --set time label="$(date "+%I:%M%p")"'
-sketchybar --set time update_freq=2
+sketchybar --set time script="$TIME_SCRIPT"
 sketchybar --set time background.padding_right=0
 
 # ------- Date ----------
 sketchybar --add item date right
-sketchybar --set date script='sketchybar --set date label="$(date "+%m/%d/%y (%a)")"'
-sketchybar --set date update_freq=4
+sketchybar --set date script="$DATE_SCRIPT"
 
 # ------- Uptime ----------
-UPTIME_SCRIPT='sketchybar -m --set uptime label="$(uptime | sed "s/.*\(up [0-9:]* *[A-z]*\).*/\1/")"'
 sketchybar --add item uptime right
 sketchybar --set uptime script="$UPTIME_SCRIPT"
-sketchybar --set uptime update_freq=600
-sketchybar -m --set uptime label="$(uptime | sed "s/.*\(up [0-9:]* *[A-z]*\).*/\1/")"
-
-
-#SPACE_ICONS=("" "" "" "")
-#SPACE_LABELS=("1" "2" "3" "4")
-#
-#for i in "${!SPACE_ICONS[@]}"
-#do
-#  sid=$(($i+1))
-#  sketchybar --add space space.$sid left                                 \
-#             --set space.$sid associated_space=$sid                      \
-#                              icon=${SPACE_ICONS[i]}                     \
-#                              icon.font="$ICON_FONT"                     \
-#                              icon.padding_left=4                       \
-#                              icon.padding_right=4                       \
-#                              icon.align=center                          \
-#                              label=${SPACE_LABELS[i]}                  \
-#                              label.font="$TEXT_FONT"\
-#                              label.padding_right=4                       \
-#                              background.padding_left=5                 \
-#                              background.padding_right=5                \
-#                              background.color=0x44ffffff                \
-#                              background.corner_radius=5                 \
-#                              background.height=18                       \
-#                              background.drawing=off                     \
-#                              label.drawing=on                          \
-#                              script="~/.config/sketchybar/space.sh"
-#done
