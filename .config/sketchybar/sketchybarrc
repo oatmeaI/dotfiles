@@ -1,9 +1,9 @@
 # ------- Scripts (should maybe be in plugins folder) ----------
-DATE_SCRIPT='sketchybar --set date label="$(date "+%m/%d/%y (%a)")"'
+DATE_SCRIPT='sketchybar --set date label="$(date "+%m/%d/%y (%a)" | awk "{print toupper(\$0)}")"'
 
 TIME_SCRIPT='sketchybar --set time label="$(date "+%I:%M%p")"'
 
-UPTIME_SCRIPT='sketchybar -m --set uptime label="UP $(uptime | sed "s/.*up *\([^,]*\).*/\1/")"'
+UPTIME_SCRIPT='sketchybar -m --set uptime label="UP: $(uptime | sed "s/.*up *\([^,]*\).*/\1/" | awk "{print toupper(\$0)}")"'
 
 RAM_SCRIPT='sketchybar -m --set ram label="RAM: $(memory_pressure | grep "System-wide memory free percentage:" | awk "{ print 100-\$5 }")%"'
 
@@ -54,7 +54,7 @@ sketchybar --default "${default[@]}"
 # ------- BATT Usage ----------
 sketchybar --add item batt left
 sketchybar --set batt script="$BATT_SCRIPT"
-sketchybar --set batt sketchybar --set batt background.padding_left=0
+sketchybar --set batt background.padding_left=0
 sketchybar --set batt label.padding_left=6
 sketchybar --set batt label.padding_right=7
 
