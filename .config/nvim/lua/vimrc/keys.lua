@@ -95,6 +95,11 @@ map("n", "<space>w", "<c-w>q", {}, {
 	desc = "Close window",
 })
 
+map("n", "<space>e", ":lua require('telescope.builtin').resume()<cr>", {}, {
+	category = "Telescope",
+	desc = "Resume previous search",
+})
+
 map("n", "<space>r", ":lua vim.lsp.buf.rename()<cr>", {}, {
 	category = "LSP",
 	desc = "Rename symbol",
@@ -269,6 +274,9 @@ map("n", "<cr>", ":Pounce<cr>", {}, {
 	category = "Jump",
 	desc = "Jump to search string",
 })
+
+-- Yank in visual mode doesn't jump the cursor to the beginning
+map("v", "y", "ygv<esc>", {})
 
 -- Open Command Center in visual mode (Alt-P)
 map("v", "π", ":<c-u>Telescope command_center<cr>", {}, {
