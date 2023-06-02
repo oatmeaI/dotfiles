@@ -12,6 +12,8 @@ null_ls.setup({
 		}),
 
 		null_ls.builtins.diagnostics.jsonlint, -- JSON Lint
+		null_ls.builtins.diagnostics.mypy,
+		null_ls.builtins.formatting.black,
 
 		null_ls.builtins.formatting.stylua, -- Lua formatting
 		null_ls.builtins.diagnostics.luacheck, -- Lua linting
