@@ -230,6 +230,21 @@ map("n", "<tab>", "<c-w>l", {}, {
 })
 
 -->> Other Misc. Keymaps <<--
+map("n", "<bs>w", "ciw", {}, {
+	category = "Editor",
+	desc = "Change word",
+})
+
+map("n", "<bs>e", 'ci"', {}, {
+	category = "Editor",
+	desc = "Change inner double quote",
+})
+
+map("n", "<bs>", "ci", {}, {
+	category = "Editor",
+	desc = "Change inner [blank]",
+})
+
 map("n", "gd", ":Telescope lsp_definitions<cr>", {}, {
 	category = "LSP",
 	desc = "Go to symbol definition",

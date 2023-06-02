@@ -165,6 +165,22 @@ command_center.add({
 		},
 	},
 	{
+		category = "Syntax Tree",
+		desc = "Select node incremental",
+		cmd = "",
+		keys = {
+			{ "n", "\\" },
+		},
+	},
+	{
+		category = "Syntax Tree",
+		desc = "Select node decremental",
+		cmd = "",
+		keys = {
+			{ "n", "|" },
+		},
+	},
+	{
 		category = "Editor",
 		desc = "Autocomplete: Previous in autocomplete list",
 		cmd = "",

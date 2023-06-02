@@ -3,6 +3,14 @@ require("nvim-treesitter.configs").setup({
 	sync_install = false,
 	auto_install = true,
 	highlight = { enable = true },
+	incremental_selection = {
+		enable = true,
+		keymaps = {
+			init_selection = "\\",
+			node_incremental = "\\",
+			node_decremental = "|",
+		},
+	},
 	rainbow = {
 		enable = true,
 		-- list of languages you want to disable the plugin for
