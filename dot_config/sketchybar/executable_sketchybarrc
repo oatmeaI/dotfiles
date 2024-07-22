@@ -1,0 +1,85 @@
+# ------- Scripts (should maybe be in plugins folder) ----------
+DATE_SCRIPT='sketchybar --set date label="$(date "+%m/%d/%y (%a)" | awk "{print toupper(\$0)}")"'
+
+TIME_SCRIPT='sketchybar --set time label="$(date "+%I:%M%p")"'
+
+UPTIME_SCRIPT='sketchybar -m --set uptime label="UP: $(uptime | sed "s/.*up *\([^,]*\).*/\1/" | awk "{print toupper(\$0)}")"'
+
+RAM_SCRIPT='sketchybar -m --set ram label="RAM: $(memory_pressure | grep "System-wide memory free percentage:" | awk "{ print 100-\$5 }")%"'
+
+BATT_SCRIPT='sketchybar -m --set batt label="$(sh $HOME/.config/sketchybar/battery.sh)"'
+
+CPU_SCRIPT='
+CORE_COUNT=$(sysctl -n machdep.cpu.thread_count)
+CPU_INFO=$(ps -eo pcpu,user)
+CPU_SYS=$(echo "$CPU_INFO" | sed "s/[^ 0-9\.]//g" | awk "{sum+=\$1} END {print sum/(100.0 * $CORE_COUNT)}")
+CPU_USE=$(printf "%02.0f"\\n "$(echo "$CPU_SYS*100"  | bc -l)")
+sketchybar --set cpu label="CPU: ${CPU_USE}%"
+'
+
+
+# ------- Basic Config ----------
+sketchybar --bar color=0x00000000
+sketchybar --bar display=all
+sketchybar --bar position=top
+sketchybar --bar height=26
+sketchybar --bar margin=-4
+sketchybar --bar blur_radius=100
+sketchybar --bar shadow=off
+sketchybar --bar topmost=window
+sketchybar --bar y_offset=6
+sketchybar --bar corner_radius=5
+
+# ------- Item Defaults ----------
+PADDING=20
+TEXT_FONT="FiraCode Nerd Font Mono:Medium:12.0"
+ICON_FONT="FiraCode Nerd Font Mono:Medium:22.0"
+
+default=(
+  icon.font="$ICON_FONT"
+  label.font="$TEXT_FONT"
+  padding_left=5
+  padding_right=5
+  label.padding_left=5
+  label.padding_right=5
+  background.color=0xFF24273A
+  background.padding_right=12
+  background.padding_left=12
+  background.corner_radius=5
+  update_freq=1
+)
+
+sketchybar --default "${default[@]}"
+
+# ------- BATT Usage ----------
+sketchybar --add item batt left
+sketchybar --set batt script="$BATT_SCRIPT"
+#sketchybar --set batt background.padding_left=0
+#sketchybar --set batt label.padding_left=6
+#sketchybar --set batt label.padding_right=7
+
+
+# ------- CPU Usage ----------
+sketchybar --add item cpu left
+sketchybar --set cpu script="$CPU_SCRIPT"
+
+# ------- AeroSpace Mode ----------
+sketchybar --add item mode center
+sketchybar --set mode label="normal"
+
+# ------- RAM Usage ----------
+sketchybar --add item ram left
+sketchybar --set ram script="$RAM_SCRIPT"
+
+# ------- Time ----------
+sketchybar --add item time right
+sketchybar --set time script="$TIME_SCRIPT"
+#sketchybar --set time background.padding_right=0
+
+# ------- Date ----------
+sketchybar --add item date right
+sketchybar --set date script="$DATE_SCRIPT"
+
+# ------- Uptime ----------
+sketchybar --add item uptime right
+sketchybar --set uptime script="$UPTIME_SCRIPT"

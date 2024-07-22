@@ -1,0 +1,24 @@
+taps = ["homebrew/cask-fonts", "FelixKratz/formulae"]
+
+brews = [
+  "exa",
+  "btop",
+  "fzf",
+  "neovim",
+  "node",
+  "python3",
+  "yarn",
+  "npm",
+  "fx",
+  "ripgrep",
+  "sketchybar",
+  "jq",
+  "gnu-sed",
+  "fff",
+  "tree-sitter",
+  "fish",
+  "ffmpeg",
+  "luajit",
+  "font-fira-code-nerd-font",
+  "kitty",
+]
