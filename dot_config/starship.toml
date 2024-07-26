@@ -1,73 +1,55 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
+palette = 'ref'
+
 format = """
-[](rose)\
+[](primary)\
 $os\
 $username\
-[](bg:pine fg:rose)\
+[](bg:secondary fg:primary)\
 $directory\
-[](fg:pine bg:gold)\
+[](fg:lavender bg:yellow)\
 $git_branch\
 $git_status\
-[](fg:gold bg:overlay)\
+[ ](fg:yellow)\
 $line_break$character"""
-
-palette = 'rose-pine-moon'
-
-[palettes.rose-pine]
-base = '#191724'
-surface = '#1f1d2e'
-overlay = '#26233a'
-muted = '#6e6a86'
-subtle = '#908caa'
-text = '#e0def4'
-love = '#eb6f92'
-gold = '#f6c177'
-rose = '#ebbcba'
-pine = '#31748f'
-foam = '#9ccfd8'
-iris = '#c4a7e7'
-highlight_low = '#21202e'
-highlight_med = '#403d52'
-highlight_high = '#524f67'
-
-[palettes.rose-pine-moon]
-base = '#232136'
-surface = '#2a273f'
-overlay = '#393552'
-muted = '#6e6a86'
-subtle = '#908caa'
-text = '#e0def4'
-love = '#eb6f92'
-gold = '#f6c177'
-rose = '#ea9a97'
-pine = '#3e8fb0'
-foam = '#9ccfd8'
-iris = '#c4a7e7'
-highlight_low = '#2a283e'
-highlight_med = '#44415a'
-highlight_high = '#56526e'
-
-[palettes.rose-pine-dawn]
-base = '#faf4ed'
-surface = '#fffaf3'
-overlay = '#f2e9e1'
-muted = '#9893a5'
-subtle = '#797593'
-text = '#575279'
-love = '#b4637a'
-gold = '#ea9d34'
-rose = '#d7827e'
-pine = '#286983'
-foam = '#56949f'
-iris = '#907aa9'
-highlight_low = '#f4ede8'
-highlight_med = '#dfdad9'
-highlight_high = '#cecacd'
 
 [os]
 disabled = false
-style = "bg:rose fg:overlay"
+style = "bg:primary fg:overlay0"
+
+[username]
+show_always = true
+style_user = "bg:primary fg:overlay0"
+style_root = "bg:primary fg:overlay0"
+format = '[ $user ]($style)'
+
+[directory]
+style = "fg:text bg:lavender"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = ""
+
+[git_branch]
+symbol = ""
+style = "bg:yellow"
+format = '[[ $symbol $branch ](fg:overlay0 bg:yellow)]($style)'
+
+[git_status]
+style = "bg:yellow"
+format = '[[($all_status$ahead_behind )](fg:overlay0 bg:yellow)]($style)'
+
+[line_break]
+disabled = false
+
+[character]
+disabled = true
+success_symbol = '[](bold fg:color_green)'
+error_symbol = '[](bold fg:love)'
+vimcmd_symbol = '[](bold fg:color_green)'
+vimcmd_replace_one_symbol = '[](bold fg:color_purple)'
+vimcmd_replace_symbol = '[](bold fg:color_purple)'
+vimcmd_visual_symbol = '[](bold fg:color_yellow)'
 
 [os.symbols]
 Windows = "󰍲"
@@ -90,103 +72,182 @@ Debian = "󰣚"
 Redhat = "󱄛"
 RedHatEnterprise = "󱄛"
 
-[username]
-show_always = true
-style_user = "bg:rose fg:overlay"
-style_root = "bg:rose fg:overlay"
-format = '[ $user ]($style)'
+[palettes.ref]
+base = '#232136'
+surface = '#2a273f'
+overlay = '#393552'
+muted = '#6e6a86'
+subtle = '#908caa'
+text = '#e0def4'
+love = '#eb6f92'
+primary = '#ea9a97'
+secondary = '#3e8fb0'
+tertiary = '#f6c177'
+foam = '#9ccfd8'
+iris = '#c4a7e7'
+highlight_low = '#2a283e'
+highlight_med = '#44415a'
+highlight_high = '#56526e'
 
-[directory]
-style = "fg:text bg:pine"
-format = "[ $path ]($style)"
-truncation_length = 3
-truncation_symbol = "…/"
+[palettes.rose-pine-moon]
+base = '#232136'
+surface = '#2a273f'
+overlay0 = '#393552'
+muted = '#6e6a86'
+subtle = '#908caa'
+text = '#e0def4'
+love = '#eb6f92'
+yellow = '#f6c177'
+pink = '#ea9a97'
+lavender = '#3e8fb0'
+foam = '#9ccfd8'
+iris = '#c4a7e7'
+highlight_low = '#2a283e'
+highlight_med = '#44415a'
+highlight_high = '#56526e'
 
-[directory.substitutions]
-"Documents" = "󰈙 "
-"Downloads" = " "
-"Music" = "󰝚 "
-"Pictures" = " "
-"Developer" = "󰲋 "
+[palettes.catppuccin_macchiato]
+pinkwater = "#f4dbd6"
+flamingo = "#f0c6c6"
+pink = "#f5bde6"
+mauve = "#c6a0f6"
+red = "#ed8796"
+maroon = "#ee99a0"
+peach = "#f5a97f"
+yellow = "#eed49f"
+green = "#a6da95"
+teal = "#8bd5ca"
+sky = "#91d7e3"
+sapphire = "#7dc4e4"
+blue = "#8aadf4"
+lavender = "#b7bdf8"
+text = "#cad3f5"
+subtext1 = "#b8c0e0"
+subtext0 = "#a5adcb"
+overlay2 = "#939ab7"
+overlay1 = "#8087a2"
+overlay0 = "#6e738d"
+surface2 = "#5b6078"
+surface1 = "#494d64"
+surface0 = "#363a4f"
+base = "#24273a"
+mantle = "#1e2030"
+crust = "#181926"
 
-[git_branch]
-symbol = ""
-style = "bg:gold"
-format = '[[ $symbol $branch ](fg:overlay bg:gold)]($style)'
+[palettes.catppuccin_frappe]
+pinkwater = "#f2d5cf"
+flamingo = "#eebebe"
+pink = "#f4b8e4"
+mauve = "#ca9ee6"
+red = "#e78284"
+maroon = "#ea999c"
+peach = "#ef9f76"
+yellow = "#e5c890"
+green = "#a6d189"
+teal = "#81c8be"
+sky = "#99d1db"
+sapphire = "#85c1dc"
+blue = "#8caaee"
+lavender = "#babbf1"
+text = "#c6d0f5"
+subtext1 = "#b5bfe2"
+subtext0 = "#a5adce"
+overlay2 = "#949cbb"
+overlay1 = "#838ba7"
+overlay0 = "#737994"
+surface2 = "#626880"
+surface1 = "#51576d"
+surface0 = "#414559"
+base = "#303446"
+mantle = "#292c3c"
+crust = "#232634"
 
-[git_status]
-# style = "bg:foam"
-style = "bg:gold"
-format = '[[($all_status$ahead_behind )](fg:overlay bg:gold)]($style)'
+[palettes.catppuccin_latte]
+pinkwater = "#dc8a78"
+flamingo = "#dd7878"
+pink = "#ea76cb"
+mauve = "#8839ef"
+red = "#d20f39"
+maroon = "#e64553"
+peach = "#fe640b"
+yellow = "#df8e1d"
+green = "#40a02b"
+teal = "#179299"
+sky = "#04a5e5"
+sapphire = "#209fb5"
+blue = "#1e66f5"
+lavender = "#7287fd"
+text = "#4c4f69"
+subtext1 = "#5c5f77"
+subtext0 = "#6c6f85"
+overlay2 = "#7c7f93"
+overlay1 = "#8c8fa1"
+overlay0 = "#9ca0b0"
+surface2 = "#acb0be"
+surface1 = "#bcc0cc"
+surface0 = "#ccd0da"
+base = "#eff1f5"
+mantle = "#e6e9ef"
+crust = "#dce0e8"
 
-[nodejs]
-symbol = ""
-style = "bg:overlay"
-format = '[[ $symbol( $version) ](fg:rose bg:overlay)]($style)'
+[palettes.catppuccin_mocha]
+pinkwater = "#f5e0dc"
+flamingo = "#f2cdcd"
+pink = "#f5c2e7"
+mauve = "#cba6f7"
+red = "#f38ba8"
+maroon = "#eba0ac"
+peach = "#fab387"
+yellow = "#f9e2af"
+green = "#a6e3a1"
+teal = "#94e2d5"
+sky = "#89dceb"
+sapphire = "#74c7ec"
+blue = "#89b4fa"
+lavender = "#b4befe"
+text = "#cdd6f4"
+subtext1 = "#bac2de"
+subtext0 = "#a6adc8"
+overlay2 = "#9399b2"
+overlay1 = "#7f849c"
+overlay0 = "#6c7086"
+surface2 = "#585b70"
+surface1 = "#45475a"
+surface0 = "#313244"
+base = "#1e1e2e"
+mantle = "#181825"
+crust = "#11111b"
 
-[c]
-symbol = " "
-style = "bg:overlay"
-format = '[[ $symbol( $version) ](fg:rose bg:overlay)]($style)'
+[palettes.rose-pine]
+base = '#191724'
+surface = '#1f1d2e'
+overlay = '#26233a'
+muted = '#6e6a86'
+subtle = '#908caa'
+text = '#e0def4'
+love = '#eb6f92'
+yellow = '#f6c177'
+pink = '#ebbcba'
+teal = '#31748f'
+foam = '#9ccfd8'
+iris = '#c4a7e7'
+highlight_low = '#21202e'
+highlight_med = '#403d52'
+highlight_high = '#524f67'
 
-[rust]
-symbol = ""
-style = "bg:overlay"
-format = '[[ $symbol( $version) ](fg:rose bg:overlay)]($style)'
-
-[golang]
-symbol = ""
-style = "bg:overlay"
-format = '[[ $symbol( $version) ](fg:rose bg:overlay)]($style)'
-
-[php]
-symbol = ""
-style = "bg:overlay"
-format = '[[ $symbol( $version) ](fg:rose bg:overlay)]($style)'
-
-[java]
-symbol = " "
-style = "bg:overlay"
-format = '[[ $symbol( $version) ](fg:rose bg:overlay)]($style)'
-
-[kotlin]
-symbol = ""
-style = "bg:overlay"
-format = '[[ $symbol( $version) ](fg:rose bg:overlay)]($style)'
-
-[haskell]
-symbol = ""
-style = "bg:overlay"
-format = '[[ $symbol( $version) ](fg:rose bg:overlay)]($style)'
-
-[python]
-symbol = ""
-style = "bg:overlay"
-format = '[[ $symbol( $version) ](fg:rose bg:overlay)]($style)'
-
-[docker_context]
-symbol = ""
-style = "bg:iris"
-format = '[[ $symbol( $context) ](fg:text bg:iris)]($style)'
-
-[conda]
-style = "bg:iris"
-format = '[[ $symbol( $environment) ](fg:text bg:iris)]($style)'
-
-[time]
-disabled = false
-time_format = "%R"
-style = "bg:gold"
-format = '[[  $time ](fg:text bg:overlay)]($style)'
-
-[line_break]
-disabled = false
-
-[character]
-disabled = true
-success_symbol = '[](bold fg:color_green)'
-error_symbol = '[](bold fg:love)'
-vimcmd_symbol = '[](bold fg:color_green)'
-vimcmd_replace_one_symbol = '[](bold fg:color_purple)'
-vimcmd_replace_symbol = '[](bold fg:color_purple)'
-vimcmd_visual_symbol = '[](bold fg:color_yellow)'
+[palettes.rose-pine-dawn]
+base = '#faf4ed'
+surface = '#fffaf3'
+overlay = '#f2e9e1'
+muted = '#9893a5'
+subtle = '#797593'
+text = '#575279'
+love = '#b4637a'
+yellow = '#ea9d34'
+pink = '#d7827e'
+teal = '#286983'
+foam = '#56949f'
+iris = '#907aa9'
+highlight_low = '#f4ede8'
+highlight_med = '#dfdad9'
+highlight_high = '#cecacd'
