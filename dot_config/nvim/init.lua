@@ -1,18 +1,11 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
 
--- TODO
--- - get rid of bufferline
--- - autosave
--- - does formatting work?
--- - make which-key always show everything
+-- LATER / MAYBE
 -- - can I make the command prompt not show when saving etc?
--- - might want the <space>e for telescope resume back
+-- - neotree synmbols??
 -- - try to hook up DAP
--- - make neotree not open by default
 -- - start sessions in folder automatically
--- - default theme
--- - civ for changing camelcase
 
 -- NOTES
 -- <space>/ to grep project

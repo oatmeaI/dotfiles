@@ -20,7 +20,6 @@ map("n", "<s-tab>", "<c-w>h", { desc = "Focus west window" })
 map("n", "<tab>", "<c-w>l", { desc = "Focus east window" })
 
 map("n", "<space>k", ":w<cr>", { desc = "Write buffer" })
--- map("n", "<space>w", "<c-w>c", { desc = "Close window" })
 
 -- Floating terminal
 map("n", "<space>l", function()
@@ -33,29 +32,25 @@ map("n", "<c-p>", "<c-i>", { desc = "Jump forward" })
 
 -->> Window navigation <<--
 -- Alt + j
-map("n", "∆", "<c-w>j", {}, {
-  category = "Window",
+map("n", "∆", "<c-w>j", {
   desc = "Focus south window",
 })
 
 -- Alt + h
-map("n", "˙", "<c-w>h", {}, {
-  category = "Window",
-  desc = "Focus west window",
-})
+map("n", "˙", "<c-w>h", { desc = "Focus west window" })
 
 -- Alt + k
-map("n", "˚", "<c-w>k", {}, {
-  category = "Window",
-  desc = "Focus north window",
-})
+map("n", "˚", "<c-w>k", { desc = "Focus north window" })
 
 -- Alt + l
-map("n", "¬", "<c-w>l", {}, {
-  category = "Window",
-  desc = "Focus east window",
-})
+map("n", "¬", "<c-w>l", { desc = "Focus east window" })
 
 -- Floating file / buffer explorer
-map("n", "<space>j", ":Neotree position=float<cr>", { desc = "Show file explorer" })
-map("n", "<space>h", ":Neotree position=float source=buffers<cr>", { desc = "Show buffer list" })
+map("n", "<space>j", ":Neotree position=current toggle=true reveal=true<cr>", { desc = "Show file explorer" })
+map("n", "<space>h", ":Neotree position=current source=buffers<cr>", { desc = "Show buffer list" })
+
+-- Resume previous search
+map("n", "<space>e", ":FzfLua resume<cr>", { desc = "Resume previous search" })
+
+-- Jump using flash via Enter
+map("n", "<cr>", ":lua require('flash').jump()<cr>", { desc = "Flash" })
