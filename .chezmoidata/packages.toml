@@ -1,4 +1,4 @@
-taps = ["homebrew/cask-fonts", "FelixKratz/formulae"]
+taps = ["homebrew/cask-fonts", "FelixKratz/formulae", "nikitabobko/tap"]
 
 brews = [
   "exa",
@@ -21,4 +21,7 @@ brews = [
   "luajit",
   "font-fira-code-nerd-font",
   "kitty",
+  "font-iosevka",
+  "fish",
+  "aerospace",
 ]
