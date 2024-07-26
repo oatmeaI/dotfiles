@@ -8,22 +8,8 @@ $username\
 $directory\
 [](fg:pine bg:gold)\
 $git_branch\
-[](fg:gold bg:iris)\
-$c\
-$rust\
-$golang\
-$nodejs\
-$php\
-$java\
-$kotlin\
-$haskell\
-$python\
-[](fg:iris bg:iris)\
-$docker_context\
-$conda\
-[](fg:iris bg:overlay)\
-$time\
-[ ](fg:overlay)\
+$git_status\
+[](fg:gold bg:overlay)\
 $line_break$character"""
 
 palette = 'rose-pine-moon'
@@ -129,8 +115,9 @@ style = "bg:gold"
 format = '[[ $symbol $branch ](fg:overlay bg:gold)]($style)'
 
 [git_status]
-style = "bg:foam"
-format = '[[($all_status$ahead_behind )](fg:iris bg:foam)]($style)'
+# style = "bg:foam"
+style = "bg:gold"
+format = '[[($all_status$ahead_behind )](fg:overlay bg:gold)]($style)'
 
 [nodejs]
 symbol = ""
