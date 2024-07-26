@@ -124,17 +124,17 @@ enable-normalization-flatten-containers = true
 enable-normalization-opposite-orientation-for-nested-containers = true
 
 default-root-container-layout = 'accordion'
-default-root-container-orientation = 'horizontal'
+default-root-container-orientation = 'vertical'
 
 accordion-padding = 0
 
 [gaps]
-inner.horizontal = 5
-inner.vertical =   5
-outer.left =       5
-outer.bottom =     5
-outer.top =       35
-outer.right =      5
+inner.horizontal = 10
+inner.vertical =   10
+outer.left =       10
+outer.bottom =      0
+outer.top =        35
+outer.right =      10 
 
 [mode.main.binding]
 shift-cmd-ctrl-alt-g = ['mode edit', 'exec-and-forget sketchybar --set mode label="edit"']
