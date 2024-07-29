@@ -132,7 +132,7 @@ accordion-padding = 0
 inner.horizontal = 10
 inner.vertical =   10
 outer.left =       10
-outer.bottom =      0
+outer.bottom =     10
 outer.top =        35
 outer.right =      10 
 
@@ -140,7 +140,7 @@ outer.right =      10
 shift-cmd-ctrl-alt-g = ['mode edit', 'exec-and-forget sketchybar --set mode label="edit"']
 
 [mode.edit.binding]
-r = ['flatten-workspace-tree', 'reload-config', 'layout accordion horizontal', 'mode main', 'exec-and-forget sketchybar --set mode label="normal"']
+r = ['flatten-workspace-tree', 'reload-config', 'layout accordion vertical', 'mode main', 'exec-and-forget sketchybar --set mode label="normal"']
 esc = ['mode main', 'exec-and-forget sketchybar --set mode label="normal"']
 w = 'layout accordion vertical'
 q = 'layout accordion horizontal'
@@ -152,4 +152,4 @@ h = 'move left'
 l = 'move right'
 
 # Reset
-space = ['layout accordion horizontal vertical', 'flatten-workspace-tree']
+space = ['layout accordion vertical', 'flatten-workspace-tree']
