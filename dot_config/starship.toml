@@ -36,8 +36,8 @@ symbol = ""
 format = '[[ $symbol $branch ](fg:text_primary bg:tertiary)]($style)'
 
 [git_status]
-style = "bg:yellow"
-format = '[[($all_status$ahead_behind )](fg:overlay0 bg:yellow)]($style)'
+style = "bg:tertiary"
+format = '[[($all_status$ahead_behind )](fg:text_primary bg:tertiary)]($style)'
 
 [line_break]
 disabled = false
