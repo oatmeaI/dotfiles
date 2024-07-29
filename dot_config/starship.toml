@@ -1,6 +1,5 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
-palette = 'ref'
 
 format = """
 [](primary)\
@@ -8,32 +7,33 @@ $os\
 $username\
 [](bg:secondary fg:primary)\
 $directory\
-[](fg:lavender bg:yellow)\
+[](fg:secondary bg:tertiary)\
 $git_branch\
 $git_status\
-[ ](fg:yellow)\
+[ ](fg:tertiary)\
 $line_break$character"""
+
+palette = 'catppuccin-macchiato-custom'
 
 [os]
 disabled = false
-style = "bg:primary fg:overlay0"
+style = "bg:primary fg:text_primary"
 
 [username]
 show_always = true
-style_user = "bg:primary fg:overlay0"
-style_root = "bg:primary fg:overlay0"
+style_user = "bg:primary fg:text_primary"
+style_root = "bg:primary fg:text_primary"
 format = '[ $user ]($style)'
 
 [directory]
-style = "fg:text bg:lavender"
+style = "fg:text_primary bg:secondary"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = ""
 
 [git_branch]
 symbol = ""
-style = "bg:yellow"
-format = '[[ $symbol $branch ](fg:overlay0 bg:yellow)]($style)'
+format = '[[ $symbol $branch ](fg:text_primary bg:tertiary)]($style)'
 
 [git_status]
 style = "bg:yellow"
@@ -73,21 +73,33 @@ Redhat = "󱄛"
 RedHatEnterprise = "󱄛"
 
 [palettes.ref]
-base = '#232136'
-surface = '#2a273f'
-overlay = '#393552'
-muted = '#6e6a86'
-subtle = '#908caa'
-text = '#e0def4'
-love = '#eb6f92'
 primary = '#ea9a97'
 secondary = '#3e8fb0'
 tertiary = '#f6c177'
-foam = '#9ccfd8'
-iris = '#c4a7e7'
-highlight_low = '#2a283e'
-highlight_med = '#44415a'
-highlight_high = '#56526e'
+text_primary = '#393552'
+# base = '#232136'
+# surface = '#2a273f'
+# muted = '#6e6a86'
+# subtle = '#908caa'
+# text = '#e0def4'
+# love = '#eb6f92'
+# foam = '#9ccfd8'
+# iris = '#c4a7e7'
+# highlight_low = '#2a283e'
+# highlight_med = '#44415a'
+# highlight_high = '#56526e'
+
+[palettes.catppuccin-macchiato-custom]
+primary = '#b7bdf8'      # Catppuccin Lavender
+secondary = '#c6a0f6'    # Catppuccin Mauve
+tertiary = '#f0c6c6'     # Catppuccin Flamingo
+text_primary = "#494d64" # Catppuccin Surface 1
+
+[palettes.rose-pine-moon-custom]
+primary = '#ea9a97'
+secondary = '#3e8fb0'
+tertiary = '#f6c177'
+text_primary = '#393552'
 
 [palettes.rose-pine-moon]
 base = '#232136'
