@@ -26,4 +26,5 @@ brews = [
     "aerospace",
     "starship",
     "borders",
+    "lazygit",
 ]
