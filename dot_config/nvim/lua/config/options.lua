@@ -3,6 +3,7 @@
 -- Add any additional options here
 local opt = vim.opt
 
+opt.shell = "fish" -- use fish
 opt.tabstop = 4 -- 1 tab (\t) = 4 spaces
 opt.softtabstop = 4 -- 1 tab keypress = 4 spaces
 opt.shiftwidth = 4 -- 1 indent = 4 spaces
