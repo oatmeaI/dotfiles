@@ -130,24 +130,34 @@ after-startup-command = [
     # JankyBorders has a built-in detection of already running process,
     # so it won't be run twice on AeroSpace restart
     # TODO: work on these colors
-    'exec-and-forget borders active_color=0xffc6a0f6 inactive_color=0xff24273a width=8.0 hidpi=on'
+    # Catppuccin Machiatto Mauve
+    'exec-and-forget borders active_color=0xffc6a0f6 inactive_color=0xff24273a width=8.0 hidpi=on',
 ]
 
 accordion-padding = 0
 
 [gaps]
 inner.horizontal = 10
-inner.vertical =   10
-outer.left =       10
-outer.bottom =     10
-outer.top =        35
-outer.right =      10 
+inner.vertical = 10
+outer.left = 10
+outer.bottom = 10
+outer.top = 35
+outer.right = 10
 
 [mode.main.binding]
-shift-cmd-ctrl-alt-g = ['mode edit', 'exec-and-forget sketchybar --set mode label="edit"']
+shift-cmd-ctrl-alt-g = [
+    'mode edit',
+    'exec-and-forget sketchybar --set mode label="edit"',
+]
 
 [mode.edit.binding]
-r = ['flatten-workspace-tree', 'reload-config', 'layout accordion vertical', 'mode main', 'exec-and-forget sketchybar --set mode label="normal"']
+r = [
+    'flatten-workspace-tree',
+    'reload-config',
+    'layout accordion vertical',
+    'mode main',
+    'exec-and-forget sketchybar --set mode label="normal"',
+]
 esc = ['mode main', 'exec-and-forget sketchybar --set mode label="normal"']
 w = 'layout accordion vertical'
 q = 'layout accordion horizontal'
