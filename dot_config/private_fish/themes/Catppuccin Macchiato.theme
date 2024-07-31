@@ -10,7 +10,10 @@ fish_color_quote a6da95
 fish_color_redirection f5bde6
 fish_color_end f5a97f
 fish_color_comment 8087a2
+
+# Updated from Catppuccin Red to Catppuccin Mauve
 fish_color_error ee99a0
+
 fish_color_gray 6e738d
 fish_color_selection --background=363a4f
 fish_color_search_match --background=363a4f
