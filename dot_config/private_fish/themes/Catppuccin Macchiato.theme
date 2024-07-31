@@ -11,7 +11,7 @@ fish_color_redirection f5bde6
 fish_color_end f5a97f
 fish_color_comment 8087a2
 
-# Updated from Catppuccin Red to Catppuccin Mauve
+# Updated from Catppuccin Red to Catppuccin Maroon
 fish_color_error ee99a0
 
 fish_color_gray 6e738d
