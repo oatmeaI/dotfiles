@@ -3,7 +3,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin-machiatto",
+      colorscheme = "catppuccin-macchiato",
     },
   },
   { import = "lazyvim.plugins.extras.linting.eslint" },
