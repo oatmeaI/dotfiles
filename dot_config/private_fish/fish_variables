@@ -12,7 +12,7 @@ SETUVAR fish_color_comment:8087a2
 SETUVAR fish_color_cwd:eed49f
 SETUVAR fish_color_cwd_root:red
 SETUVAR fish_color_end:f5a97f
-SETUVAR fish_color_error:ed8796
+SETUVAR fish_color_error:ee99a0
 SETUVAR fish_color_escape:ee99a0
 SETUVAR fish_color_gray:6e738d
 SETUVAR fish_color_history_current:\x2d\x2dbold
