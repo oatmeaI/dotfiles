@@ -1,5 +1,11 @@
 local bufferline = require("bufferline")
 return {
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "catppuccin-machiatto",
+    },
+  },
   { import = "lazyvim.plugins.extras.linting.eslint" },
   { import = "lazyvim.plugins.extras.formatting.prettier" },
   { "0xstepit/flow.nvim" },
