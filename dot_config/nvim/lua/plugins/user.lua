@@ -1,6 +1,13 @@
 local bufferline = require("bufferline")
 return {
   {
+    "neovim/nvim-lspconfig",
+    opts = {
+      inlay_hints = { enabled = false },
+      diagnostics = { virtual_text = false },
+    },
+  },
+  {
     "LazyVim/LazyVim",
     opts = {
       colorscheme = "catppuccin-macchiato",
