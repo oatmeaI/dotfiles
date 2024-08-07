@@ -17,6 +17,10 @@ fi
 
 if ! [ -x "$(command -v chezmoi)" ]; then
     brew install chezmoi
+    chezmoi init --apply oatmeaI
+else
+    chezmoi git pull -- --autostash --rebase
+    chezmoi apply
 fi
 
 check_app() {
@@ -47,5 +51,3 @@ check_app "Obsidian" "https://github.com/obsidianmd/obsidian-releases/releases/d
 check_app "Anki" "https://github.com/ankitects/anki/releases/download/24.06.3/anki-24.06.3-mac-intel-qt6.dmg"
 
 check_app "HEY" "https://hey-desktop.s3.amazonaws.com/HEY-arm64.dmg"
-
-chezmoi init --apply oatmeaI
