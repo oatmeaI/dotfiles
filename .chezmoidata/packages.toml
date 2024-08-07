@@ -27,5 +27,5 @@ brews = [
     "starship",
     "borders",
     "lazygit",
-    "--cask karabiner-elements",
+    "karabiner-elements",
 ]
