@@ -23,6 +23,7 @@ check_app() {
     fi
 }
 
+# TODO: these won't stay up to date...
 check_app "Alfred 5" "https://cachefly.alfredapp.com/Alfred_5.5_2257.dmg"
 
 check_app "Contexts" "https://contexts.co/releases/Contexts-3.9.0.dmg"
