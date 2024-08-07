@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.alfredapp.vitor.windowswitcher</string>
+	<key>connections</key>
+	<dict>
+		<key>4324CC66-57F4-4183-9061-3D94423292FA</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>82CDD910-A6C3-4F66-8394-90150AF91668</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>463DA12A-D0C4-437F-BD05-B512C4FF5DCA</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>B8993D81-AFA3-44C5-9D4C-2C9A9F2ABDD1</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>6ADF26CF-C74E-42F5-9267-FBAF87960576</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>4324CC66-57F4-4183-9061-3D94423292FA</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>82CDD910-A6C3-4F66-8394-90150AF91668</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>BD68FEF5-ECE3-4AAE-8460-2066D5AD1C70</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>C95ACB3C-10F8-4759-909F-525F6F31008A</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>463DA12A-D0C4-437F-BD05-B512C4FF5DCA</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Vítor Galvão</string>
+	<key>description</key>
+	<string>Switch to a specific window of an app in the current Desktop Space</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Window Switcher</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>function envVar(varName) {
+  return $.NSProcessInfo
+    .processInfo
+    .environment
+    .objectForKey(varName).js
+}
+
+function openApp(appPath) {
+  const task = $.NSTask.alloc.init
+  const stdout = $.NSPipe.pipe
+
+  task.executableURL = $.NSURL.alloc.initFileURLWithPath("/usr/bin/env")
+  task.arguments = ["/usr/bin/open", appPath]
+  task.launchAndReturnError(false)
+}
+
+const appName = envVar("app_name")
+const appPath = envVar("app_path")
+const windowName = envVar("window_name")
+const emptyName = envVar("empty_name") === "1"
+
+const systemEvents = Application("System Events")
+const appProcess = systemEvents.processes[appName]
+
+if (!emptyName) {
+  // Bring the window to the front of the app
+  appProcess
+    .windows()
+    .find(window =&gt; window.name() === windowName)
+    .actions["AXRaise"]
+    .perform()
+}
+
+// Bring only the frontmost window above other apps
+openApp(appPath)</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>request-recording</string>
+				<key>type</key>
+				<integer>8</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>BD68FEF5-ECE3-4AAE-8460-2066D5AD1C70</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>2</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>keyword</key>
+				<string>{var:windows_keyword}</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Gathering windows…</string>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>get-windows</string>
+				<key>subtext</key>
+				<string>Switch to a specific window of an app in the current Desktop</string>
+				<key>title</key>
+				<string>Switch Window</string>
+				<key>type</key>
+				<integer>8</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>4324CC66-57F4-4183-9061-3D94423292FA</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>0</integer>
+				<key>hotmod</key>
+				<integer>0</integer>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>6ADF26CF-C74E-42F5-9267-FBAF87960576</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>request_permissions</string>
+						<key>outputlabel</key>
+						<string>Request Permissions</string>
+						<key>uid</key>
+						<string>C95ACB3C-10F8-4759-909F-525F6F31008A</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>Raise Window</string>
+				<key>hideelse</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>82CDD910-A6C3-4F66-8394-90150AF91668</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>raise-window</string>
+				<key>type</key>
+				<integer>8</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>463DA12A-D0C4-437F-BD05-B512C4FF5DCA</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>'{query}', {variables}</string>
+				<key>cleardebuggertext</key>
+				<false/>
+				<key>processoutputs</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.debug</string>
+			<key>uid</key>
+			<string>B8993D81-AFA3-44C5-9D4C-2C9A9F2ABDD1</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>## Usage
+
+Search app windows in the current Desktop Space via the `win` keyword. &lt;kbd&gt;↩&lt;/kbd&gt; to switch to the selection.
+
+![Alfred search for win](images/about/win.png)
+
+Configure the [Hotkey](https://www.alfredapp.com/help/workflows/triggers/hotkey/) for faster triggering.</string>
+	<key>uidata</key>
+	<dict>
+		<key>4324CC66-57F4-4183-9061-3D94423292FA</key>
+		<dict>
+			<key>note</key>
+			<string>Show window selection</string>
+			<key>xpos</key>
+			<real>235</real>
+			<key>ypos</key>
+			<real>40</real>
+		</dict>
+		<key>463DA12A-D0C4-437F-BD05-B512C4FF5DCA</key>
+		<dict>
+			<key>xpos</key>
+			<real>590</real>
+			<key>ypos</key>
+			<real>175</real>
+		</dict>
+		<key>6ADF26CF-C74E-42F5-9267-FBAF87960576</key>
+		<dict>
+			<key>note</key>
+			<string>Optional Hotkey to invoke window selection</string>
+			<key>xpos</key>
+			<real>45</real>
+			<key>ypos</key>
+			<real>40</real>
+		</dict>
+		<key>82CDD910-A6C3-4F66-8394-90150AF91668</key>
+		<dict>
+			<key>xpos</key>
+			<real>410</real>
+			<key>ypos</key>
+			<real>60</real>
+		</dict>
+		<key>B8993D81-AFA3-44C5-9D4C-2C9A9F2ABDD1</key>
+		<dict>
+			<key>xpos</key>
+			<real>875</real>
+			<key>ypos</key>
+			<real>175</real>
+		</dict>
+		<key>BD68FEF5-ECE3-4AAE-8460-2066D5AD1C70</key>
+		<dict>
+			<key>xpos</key>
+			<real>590</real>
+			<key>ypos</key>
+			<real>40</real>
+		</dict>
+	</dict>
+	<key>userconfigurationconfig</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>win</string>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string></string>
+			<key>label</key>
+			<string>Windows Keyword</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>windows_keyword</string>
+		</dict>
+	</array>
+	<key>version</key>
+	<string>2023.8</string>
+	<key>webaddress</key>
+	<string>https://github.com/alfredapp/window-switcher-workflow/</string>
+</dict>
+</plist>

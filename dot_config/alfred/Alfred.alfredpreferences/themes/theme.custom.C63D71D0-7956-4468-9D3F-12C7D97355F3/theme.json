@@ -1,0 +1,65 @@
+{
+  "alfredtheme" : {
+    "result" : {
+      "textSpacing" : 5,
+      "subtext" : {
+        "size" : 8,
+        "colorSelected" : "#FFFFFFC4",
+        "font" : "FiraCode Nerd Font Mono",
+        "color" : "#00000065"
+      },
+      "shortcut" : {
+        "size" : 12,
+        "colorSelected" : "#FFFFFFFF",
+        "font" : "FiraCode Nerd Font Mono",
+        "color" : "#480069FF"
+      },
+      "backgroundSelected" : "#00000065",
+      "text" : {
+        "size" : 15,
+        "colorSelected" : "#FFFFFFFF",
+        "font" : "FiraCode Nerd Font Mono",
+        "color" : "#000000E5"
+      },
+      "iconPaddingHorizontal" : 6,
+      "roundness" : 4,
+      "paddingVertical" : 4,
+      "iconSize" : 20
+    },
+    "search" : {
+      "backgroundSelected" : "#0000007F",
+      "paddingHorizontal" : 8,
+      "spacing" : 8,
+      "text" : {
+        "size" : 18,
+        "colorSelected" : "#FFFFFFFF",
+        "font" : "FiraCode Nerd Font Mono",
+        "color" : "#000000FF"
+      },
+      "background" : "#0000001A",
+      "roundness" : 4,
+      "paddingVertical" : 4
+    },
+    "window" : {
+      "color" : "#FFFFFFDB",
+      "paddingHorizontal" : 8,
+      "width" : 559,
+      "borderPadding" : 0,
+      "borderColor" : "#0000007F",
+      "blur" : 0,
+      "roundness" : 4,
+      "paddingVertical" : 8
+    },
+    "credit" : "me",
+    "visualEffectMode" : 1,
+    "separator" : {
+      "color" : "#CBCBCBF3",
+      "thickness" : 0
+    },
+    "scrollbar" : {
+      "color" : "#0000007F",
+      "thickness" : 2
+    },
+    "name" : "asdf"
+  }
+}

@@ -1,0 +1,143 @@
+About This Mac.app
+Acrobat Distiller.app
+Activity Monitor.app
+Adobe Acrobat.app
+Adobe Creative Cloud Diagnostics.app
+Adobe Photoshop (Beta).app
+Adobe Photoshop 2023.app
+Adobe Photoshop 2024.app
+AirDrop.app
+AirPort Utility.app
+Alfred 5.app
+Amethyst.app
+Amphetamine.app
+App Fair.app
+App Store.app
+Archive Utility.app
+Audio MIDI Setup.app
+Automator.app
+Bluetooth File Exchange.app
+Books.app
+Boot Camp Assistant.app
+CC Troubleshooter.app
+CCXProcess.app
+Calculator.app
+Calendar.app
+Chess.app
+Clock.app
+ColorSync Utility.app
+Computer.app
+Console.app
+Contacts.app
+Contexts.app
+Core Sync.app
+Creative Cloud Desktop App.app
+Creative Cloud Helper.app
+Creative Cloud Installer.app
+Creative Cloud Uninstaller.app
+Creative Cloud.app
+DVD Player.app
+Desk View.app
+Desktop Valet.app
+Dictionary.app
+Digital Color Meter.app
+Directory Utility.app
+Disk Utility.app
+Docs.app
+Email.app
+Expansion Slot Utility.app
+FaceTime.app
+Falcon.app
+Feedback Assistant.app
+FindMy.app
+Firefox.app
+Folder Actions Setup.app
+Font Book.app
+Freeform.app
+GarageBand.app
+GlobalProtect.app
+Gmail.app
+Google Chrome Canary.app
+Google Chrome.app
+Google Drive.app
+Grapher.app
+Home.app
+Image Capture.app
+Karabiner-DriverKit-VirtualHIDDeviceClient.app
+Karabiner-Elements.app
+Karabiner-EventViewer.app
+Keychain Access.app
+Keynote.app
+Kit.app
+Launchpad.app
+MacPrinter.app
+Magnet.app
+Mail.app
+Maps.app
+Messages.app
+Microsoft Excel.app
+Microsoft OneNote.app
+Microsoft Outlook.app
+Microsoft PowerPoint.app
+Microsoft Teams (work or school).app
+Microsoft Word.app
+Migration Assistant.app
+Mission Control.app
+Moom.app
+Music.app
+Network.app
+News.app
+Notes.app
+Numbers.app
+Obsidian.app
+Okta Verify.app
+OneDrive.app
+Pages.app
+Photo Booth.app
+Photos.app
+Planny.app
+Podcasts.app
+Postman.app
+Preview.app
+Print Center.app
+QuickTime Player.app
+Raycast.app
+Recents.app
+Rectangle.app
+Reminders.app
+Screen Sharing.app
+Screenshot.app
+Script Editor.app
+Sheets.app
+Shortcuts.app
+Siri.app
+Slack.app
+Slides.app
+Spark Desktop.app
+Spark.app
+Standard Notes.app
+Stickies.app
+Stocks.app
+Structured.app
+Sublime Text.app
+Synergy.app
+System Information.app
+System Settings.app
+TV.app
+Terminal.app
+TextEdit.app
+Ticket Viewer.app
+Time Machine.app
+Visual Studio Code.app
+VoiceMemos.app
+VoiceOver Utility.app
+WalkMe Extension.app
+Weather.app
+Wireless Diagnostics.app
+Workspace ONE Intelligent Hub.app
+YouTube.app
+iCloud Drive.app
+iMovie.app
+iOS App Installer.app
+kitty.app
+zoom.us.app

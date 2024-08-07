@@ -1,0 +1,169 @@
+
+-
+1,0SlackAbout Slack"slack"about slack
+3
+1,2⌘,SlackSettings…"slack"settings…
+e
+1,3,0SlackSettings & AdministrationManage Apps"slack"settings & administration"manage apps
+m
+1,3,2SlackSettings & AdministrationCustomize Adobe"slack"settings & administration"customize adobe
+a
+1,3,4SlackSettings & Administration	Analytics"slack"settings & administration"	analytics
+U
+1,5,1SlackServicesServices Settings…"slack"services"services settings…
+1
+1,7⌘HSlack
+Hide Slack"slack"
+hide slack
+6
+1,8⌥⌘HSlackHide Others"slack"hide others
+8
+1,11,0SlackSign OutAdobe"slack"sign out"adobe
+2
+1,13⌘QSlack
+Quit Slack"slack"
+quit slack
+1
+2,0⌘NFileNew Message"file"new message
++
+2,1FileNew Channel"file"new channel
+2
+2,2⇧⌘NFile
+New Canvas"file"
+new canvas
+=
+2,4,0⌘1File	WorkspaceAdobe"file"	workspace"adobe
+k
+2,4,2File	WorkspaceSign in to Another Workspace…"file"	workspace"sign in to another workspace…
+U
+2,4,4File	WorkspaceCreate New Workspace"file"	workspace"create new workspace
+/
+2,5FileInvite People"file"invite people
+3
+2,7⌘WFileClose Window"file"close window
+0
+2,8⌥⌘WFile	Close All"file"	close all
+#
+3,0⌘ZEditUndo"edit"undo
+&
+3,1⇧⌘ZEditRedo"edit"redo
+!
+3,3⌘XEditCut"edit"cut
+#
+3,4⌘CEditCopy"edit"copy
+%
+3,5⌘VEditPaste"edit"paste
+H
+3,6⇧⌘VEditPaste and Match Style"edit"paste and match style
+!
+3,7EditDelete"edit"delete
+/
+3,8⌘AEdit
+Select All"edit"
+select all
+(
+3,10⌘GEditSearch"edit"search
+*
+3,12⌘FEditFind…"edit"find…
+_
+3,14,0EditKeyboard NavigationNext Section"edit"keyboard navigation"next section
+j
+3,14,1⇧EditKeyboard NavigationPrevious Section"edit"keyboard navigation"previous section
+@
+3,17🎤EditStart Dictation…"edit"start dictation…
+9
+3,18fnEEditEmoji & Symbols"edit"emoji & symbols
+'
+4,0⌘RViewReload"view"reload
+6
+4,1⇧⌘RViewForce Reload"view"force reload
+B
+4,3⌃⌘FViewToggle Full Screen"view"toggle full screen
+1
+4,7⌘0ViewActual Size"view"actual size
+)
+4,8⌘+ViewZoom In"view"zoom in
++
+4,9⌘-ViewZoom Out"view"zoom out
+9
+5,0⌘KGoSwitch to Channel"go"switch to channel
+0
+5,2⇧⌘AGoAll Unreads"go"all unreads
+(
+5,3⇧⌘TGoThreads"go"threads
+(
+5,4⇧⌘KGoAll DMs"go"all dms
++
+5,5GoDrafts & sent"go"drafts & sent
+*
+5,6⇧⌘MGoActivity"go"activity
+
+5,7GoLater"go"later
+8
+5,9⇧⌘LGoChannel Browser"go"channel browser
+*
+5,10GoFile Browser"go"file browser
+C
+5,11⇧⌘EGoPeople & User Groups"go"people & user groups
+2
+5,12GoWorkflows & Apps"go"workflows & apps
+2
+5,14GoWorkflow Builder"go"workflow builder
+-
+5,16⇧⌘JGo	Downloads"go"	downloads
+ 
+5,18GoProfile"go"profile
+)
+6,0⌘[HistoryBack"history"back
+/
+6,1⌘]HistoryForward"history"forward
+/
+7,0⌘MWindowMinimize"window"minimize
+:
+7,1⌥⌘MWindowMinimize All"window"minimize all
+!
+7,2WindowZoom"window"zoom
+)
+7,3WindowZoom All"window"zoom all
+S
+7,4WindowTile Window to Left of Screen"window"tile window to left of screen
+]
+7,5Window"Move Window to Left Side of Screen"window""move window to left side of screen
+U
+7,6WindowTile Window to Right of Screen"window"tile window to right of screen
+_
+7,7Window#Move Window to Right Side of Screen"window"#move window to right side of screen
+>
+7,12WindowBring All to Front"window"bring all to front
+:
+7,13WindowArrange in Front"window"arrange in front
+\
+7,15Window!Andra Elena Iacov - Adobe - Slack"window"!andra elena iacov - adobe - slack
+9
+8,0HelpKeyboard Shortcuts"help"keyboard shortcuts
+5
+8,1HelpOpen Help Center"help"open help center
+3
+8,2HelpWhat’s New…"help"what’s new…
+/
+8,3HelpRelease Notes"help"release notes
+W
+8,5,0HelpTroubleshootingReport Issue…"help"troubleshooting"report issue…
+�
+8,5,2HelpTroubleshooting)Disable Hardware Acceleration and Restart"help"troubleshooting")disable hardware acceleration and restart
+_
+8,5,3HelpTroubleshootingShow Logs in Finder"help"troubleshooting"show logs in finder
+u
+8,5,4HelpTroubleshootingRestart and Collect Netlogs…"help"troubleshooting"restart and collect netlogs…
+a
+8,5,5HelpTroubleshootingCopy Installation ID"help"troubleshooting"copy installation id
+a
+8,5,7HelpTroubleshootingClear Cache and Exit"help"troubleshooting"clear cache and exit
+[
+8,5,8HelpTroubleshootingReset App Data…"help"troubleshooting"reset app data…
+)
+8,7Help
+Contact Us"help"
+contact us
+/
+8,8HelpGive Feedback"help"give feedback

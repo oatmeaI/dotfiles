@@ -1,0 +1,365 @@
+
+I
+1,0Microsoft OutlookAbout Outlook"microsoft outlook"about outlook
+K
+1,2Microsoft OutlookLegacy Outlook"microsoft outlook"legacy outlook
+K
+1,4⌘,Microsoft OutlookSettings…"microsoft outlook"settings…
+G
+1,6Microsoft OutlookWork Offline"microsoft outlook"work offline
+S
+1,7Microsoft OutlookTurn Off Reminders"microsoft outlook"turn off reminders
+m
+1,9,1Microsoft OutlookServicesServices Settings…"microsoft outlook"services"services settings…
+N
+1,11⌘HMicrosoft OutlookHide Outlook"microsoft outlook"hide outlook
+O
+1,12⌥⌘HMicrosoft OutlookHide Others"microsoft outlook"hide others
+N
+1,15⌘QMicrosoft OutlookQuit Outlook"microsoft outlook"quit outlook
+/
+2,0,0⌘NFileNewMail"file"new"mail
+2
+2,0,2⌥⌘NFileNewMail"file"new"mail
++
+2,0,3FileNewEvent"file"new"event
+/
+2,0,4FileNewContact"file"new"contact
+E
+2,0,6FileNewMail From Template"file"new"mail from template
+6
+2,0,8⇧⌘NFileNewFolder"file"new"folder
+8
+2,0,11FileNewMain Window"file"new"main window
+A
+2,1,0⌘OFileOpenCurrent Item"file"open"current item
+G
+2,1,1FileOpenShared Calendar..."file"open"shared calendar...
+E
+2,1,2FileOpenShared Mailbox..."file"open"shared mailbox...
+;
+2,1,3FileOpenOn My Mac..."file"open"on my mac...
+%
+2,2⌘WFileClose"file"close
+0
+2,3⌥⌘WFile	Close All"file"	close all
+2
+2,6⇧⌘SFile
+Save As..."file"
+save as...
+;
+2,7FileSave As Template..."file"save as template...
+K
+2,9,0⌃GFileFolderGo to Folder..."file"folder"go to folder...
+G
+2,9,1FileFolderAdd to Favorites"file"folder"add to favorites
+0
+2,14FilePage Setup..."file"page setup...
+,
+2,15⌘PFilePrint..."file"print...
+0
+3,12⌘AEdit
+Select All"edit"
+select all
+(
+3,15⌘EditDelete"edit"delete
+C
+3,16⇧⌘EditPermanently Delete"edit"permanently delete
+*
+3,17Edit
+Delete All"edit"
+delete all
+U
+3,19,0⇧⌘FEditFindOutlook Items Search"edit"find"outlook items search
+Q
+3,19,1⌥⌘FEditFindAdvanced Search..."edit"find"advanced search...
+8
+3,19,3⌘FEditFindFind..."edit"find"find...
+@
+3,28🎤EditStart Dictation…"edit"start dictation…
+9
+3,29fnEEditEmoji & Symbols"edit"emoji & symbols
++
+4,0⌃[ViewPrevious"view"previous
+#
+4,1⌃]ViewNext"view"next
+8
+4,3⌃⇧[ViewPrevious Pane"view"previous pane
+0
+4,4⌃⇧]View	Next Pane"view"	next pane
+3
+4,6,0⌘1ViewGo ToMail"view"go to"mail
+;
+4,6,1⌘2ViewGo ToCalendar"view"go to"calendar
+7
+4,6,2⌘3ViewGo ToPeople"view"go to"people
+1
+4,8,0ViewSort ByDate"view"sort by"date
+1
+4,8,1ViewSort ByFrom"view"sort by"from
+1
+4,8,2ViewSort BySize"view"sort by"size
+=
+4,8,3ViewSort By
+Importance"view"sort by"
+importance
+7
+4,8,4ViewSort BySubject"view"sort by"subject
+C
+4,8,6ViewSort ByOldest on Top"view"sort by"oldest on top
+C
+4,8,7ViewSort ByNewest on Top"view"sort by"newest on top
+B
+4,9,0⇧⌘OView	Filter ByUnread"view"	filter by"unread
+R
+4,9,1,0⌥⌘OView	Filter ByFlagFlagged"view"	filter by"flag"flagged
+V
+4,9,1,1⌥⌘0View	Filter ByFlag	Completed"view"	filter by"flag"	completed
+7
+4,9,2View	Filter ByTo Me"view"	filter by"to me
+T
+4,9,3⇧⌘AView	Filter ByHas Attachments"view"	filter by"has attachments
+C
+4,9,4View	Filter ByMentions Me"view"	filter by"mentions me
+H
+4,11,0ViewDisplay DensityCompact"view"display density"compact
+B
+4,11,1ViewDisplay DensityCozy"view"display density"cozy
+D
+4,11,2ViewDisplay DensityRoomy"view"display density"roomy
+@
+4,12ViewShow Message Previews"view"show message previews
+8
+4,13ViewShow Sender Image"view"show sender image
+4
+4,14ViewShow Event RSVP"view"show event rsvp
+:
+4,15ViewShow Group Headers"view"show group headers
+@
+4,16ViewShow as Conversations"view"show as conversations
+@
+4,17ViewTurn on Focused Inbox"view"turn on focused inbox
+=
+4,18⇧⌘.ViewSwitch to Other"view"switch to other
+D
+4,20,0⌘\ViewReading PaneRight"view"reading pane"right
+G
+4,20,1⇧⌘\ViewReading PaneBelow"view"reading pane"below
+I
+4,20,2⌥⌘\ViewReading PaneHidden"view"reading pane"hidden
+>
+4,22ViewCustomize Toolbar..."view"customize toolbar...
+-
+4,23⇧⌘[ViewSidebar"view"sidebar
+1
+4,24⇧⌘]View	Task Pane"view"	task pane
+A
+4,25⌃⌘FViewEnter Full Screen"view"enter full screen
+.
+5,0⌃⌘RMessageReact"message"react
++
+5,1⌘RMessageReply"message"reply
+6
+5,2⇧⌘RMessage	Reply All"message"	reply all
+/
+5,3⌘JMessageForward"message"forward
+N
+5,4⌃⌘JMessageForward as Attachment"message"forward as attachment
+C
+5,7,0MessageCreateAppointment"message"create"appointment
+;
+5,7,1MessageCreateMeeting"message"create"meeting
+5
+5,9MessageToggle Unread"message"toggle unread
+A
+5,10⇧⌘TMessageMark as Unread"message"mark as unread
+E
+5,11⌥⌘TMessageMark All as Read"message"mark all as read
+V
+5,13,0MessageSnoozeLater Today	12:00 PM"message"snooze"later today	12:00 pm
+X
+5,13,1MessageSnoozeThis Evening	06:00 PM"message"snooze"this evening	06:00 pm
+X
+5,13,2MessageSnoozeTomorrow	Wed 08:00 AM"message"snooze"tomorrow	wed 08:00 am
+`
+5,13,3MessageSnoozeThis Weekend	Sat 10:00 AM"message"snooze"this weekend	sat 10:00 am
+Z
+5,13,4MessageSnoozeNext Week	Mon 08:00 AM"message"snooze"next week	mon 08:00 am
+H
+5,13,5MessageSnoozeChoose a Date"message"snooze"choose a date
+b
+5,17,0MessageFind RelatedMessages from Sender"message"find related"messages from sender
+t
+5,17,1MessageFind RelatedMessages in this Conversation"message"find related"messages in this conversation
+H
+5,18MessageAdd Sender to Contacts"message"add sender to contacts
+<
+5,20⌥OMessageMove to Other"message"move to other
+M
+5,21⌥⇧OMessageAlways Move to Other"message"always move to other
+:
+5,24,0⌃1MessageFlagToday"message"flag"today
+@
+5,24,1⌃2MessageFlagTomorrow"message"flag"tomorrow
+B
+5,24,2⌃3MessageFlag	This Week"message"flag"	this week
+B
+5,24,3⌃4MessageFlag	Next Week"message"flag"	next week
+>
+5,24,4⌃5MessageFlagNo Date"message"flag"no date
+J
+5,24,5⌃6MessageFlagChoose a Date"message"flag"choose a date
+H
+5,24,7⌃=MessageFlagAdd Reminder"message"flag"add reminder
+J
+5,24,8⌃0MessageFlagMark Complete"message"flag"mark complete
+G
+5,24,9⌃⌘'MessageFlag
+Clear Flag"message"flag"
+clear flag
+(
+5,25⌃PMessagePin"message"pin
+>
+5,26,0Message
+CategorizeBlue"message"
+categorize"blue
+@
+5,26,1Message
+CategorizeGreen"message"
+categorize"green
+B
+5,26,2Message
+CategorizeOrange"message"
+categorize"orange
+B
+5,26,3Message
+CategorizePurple"message"
+categorize"purple
+<
+5,26,4Message
+CategorizeRed"message"
+categorize"red
+B
+5,26,5Message
+CategorizeYellow"message"
+categorize"yellow
+X
+5,26,8Message
+CategorizeManage Categories"message"
+categorize"manage categories
+M
+5,28,0⇧⌘JMessageReportReport Junk"message"report"report junk
+L
+5,28,1MessageReportReport Phishing"message"report"report phishing
+&
+5,29MessageBlock"message"block
+0
+5,31⌃EMessageArchive"message"archive
+H
+5,32⌃MessageIgnore Conversation"message"ignore conversation
+N
+5,33,0Message	Retention1 Week Delete"message"	retention"1 week delete
+P
+5,33,1Message	Retention1 Month Delete"message"	retention"1 month delete
+P
+5,33,2Message	Retention3 Month Delete"message"	retention"3 month delete
+P
+5,33,3Message	Retention6 Month Delete"message"	retention"6 month delete
+N
+5,33,4Message	Retention1 Year Delete"message"	retention"1 year delete
+N
+5,33,5Message	Retention5 Year Delete"message"	retention"5 year delete
+L
+5,33,6Message	RetentionNever Delete"message"	retention"never delete
+x
+5,33,7Message	Retention"Use Parent Folder Retention Policy"message"	retention""use parent folder retention policy
+b
+5,34,0MessageMoveArchive (villanih@adobe.com)"message"move"archive (villanih@adobe.com)
+S
+5,34,2⇧⌘MMessageMoveChoose Folder..."message"move"choose folder...
+U
+5,34,3⇧⌘CMessageMoveCopy to Folder..."message"move"copy to folder...
+j
+5,35,0MessageRulesMove Messages from Tim Roche…"message"rules"move messages from tim roche…
+h
+5,35,1MessageRulesMove Messages to SF-Regular…"message"rules"move messages to sf-regular…
+�
+5,35,2MessageRules6Move Messages with subject U.S. Winter Break: Remin…"message"rules"6move messages with subject u.s. winter break: remin…
+H
+5,35,4MessageRulesCreate Rule…"message"rules"create rule…
+F
+5,35,5MessageRulesEdit Rules…"message"rules"edit rules…
+C
+6,2⌘+FormatIncrease Font Size"format"increase font size
+C
+6,3⌘-FormatDecrease Font Size"format"decrease font size
+5
+7,0ProfilesAll Accounts"profiles"all accounts
+%
+7,1ProfilesWork"profiles"work
+-
+7,2ProfilesPersonal"profiles"personal
+9
+7,4ProfilesCreate profile"profiles"create profile
+;
+7,5ProfilesManage Profiles"profiles"manage profiles
+(
+8,0⌃⌘KToolsSync"tools"sync
+?
+8,2ToolsAutomatic Replies..."tools"automatic replies...
+'
+8,4ToolsRules..."tools"rules...
+C
+8,5ToolsJunk Email Preferences"tools"junk email preferences
+-
+8,7ToolsAccounts..."tools"accounts...
+-
+8,8ToolsGet Add-ins"tools"get add-ins
+B
+8,10⌘.ToolsKeyboard Shortcuts"tools"keyboard shortcuts
+/
+9,0⌘MWindowMinimize"window"minimize
+:
+9,1⌥⌘MWindowMinimize All"window"minimize all
+!
+9,2WindowZoom"window"zoom
+)
+9,3WindowZoom All"window"zoom all
+S
+9,4WindowTile Window to Left of Screen"window"tile window to left of screen
+]
+9,5Window"Move Window to Left Side of Screen"window""move window to left side of screen
+U
+9,6WindowTile Window to Right of Screen"window"tile window to right of screen
+_
+9,7Window#Move Window to Right Side of Screen"window"#move window to right side of screen
+@
+9,9fnFWindowEnter Full Screen"window"enter full screen
+T
+9,15,0WindowMedia BrowserPhoto Browser"window"media browser"photo browser
+T
+9,15,1WindowMedia BrowserAudio Browser"window"media browser"audio browser
+T
+9,15,2WindowMedia BrowserMovie Browser"window"media browser"movie browser
+R
+9,17WindowInbox • villanih@adobe.com"window"inbox • villanih@adobe.com
+.
+10,1HelpOutlook Help"help"outlook help
+4
+10,2HelpContact Support"help"contact support
+F
+10,3,0HelpFeedbackGive Feedback"help"feedback"give feedback
+N
+10,3,1HelpFeedbackSuggest a Feature"help"feedback"suggest a feature
+L
+10,3,2HelpFeedbackReport a Problem"help"feedback"report a problem
+<
+10,4HelpCollect Diagnostics"help"collect diagnostics
+*
+10,6Help
+What's New"help"
+what's new
+F
+10,7HelpRevert to Legacy Outlook"help"revert to legacy outlook
+B
+10,9HelpClear Application Data"help"clear application data

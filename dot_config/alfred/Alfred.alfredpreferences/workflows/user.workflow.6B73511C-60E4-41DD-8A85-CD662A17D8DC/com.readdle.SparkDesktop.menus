@@ -1,0 +1,125 @@
+
+M
+1,0Spark DesktopAbout Spark Desktop"spark desktop"about spark desktop
+O
+1,1Spark DesktopCheck for Updates…"spark desktop"check for updates…
+U
+1,2Spark DesktopDiagnostics Information"spark desktop"diagnostics information
+C
+1,4⌘,Spark DesktopSettings…"spark desktop"settings…
+7
+1,5Spark DesktopTeams…"spark desktop"teams…
+=
+1,6Spark DesktopAccounts…"spark desktop"accounts…
+C
+1,7Spark DesktopAdd Account…"spark desktop"add account…
+e
+1,9,1Spark DesktopServicesServices Settings…"spark desktop"services"services settings…
+J
+1,11⌘KSpark DesktopCommand Center"spark desktop"command center
+6
+1,12Spark DesktopLog Out"spark desktop"log out
+6
+1,14⌘QSpark DesktopQuit"spark desktop"quit
+&
+2,0CFileCompose"file"compose
+3
+2,1⌘WFileClose Window"file"close window
+#
+3,0⌘ZEditUndo"edit"undo
+!
+3,2⌘XEditCut"edit"cut
+#
+3,3⌘CEditCopy"edit"copy
+%
+3,4⌘VEditPaste"edit"paste
+H
+3,5⇧⌘VEditPaste And Match Style"edit"paste and match style
+!
+3,6EditDelete"edit"delete
+/
+3,7⌘AEdit
+Select All"edit"
+select all
+@
+3,10🎤EditStart Dictation…"edit"start dictation…
+9
+3,11fnEEditEmoji & Symbols"edit"emoji & symbols
+B
+4,0⌃⌘FViewToggle Full Screen"view"toggle full screen
+)
+4,2⌘+ViewZoom In"view"zoom in
++
+4,3⌘-ViewZoom Out"view"zoom out
+=
+5,0⌘RMailboxFetch Messages"mailbox"fetch messages
+>
+5,1⇧⌘UMailboxCreate Folder"mailbox"create folder
++
+6,0⇧RMessageReply"message"reply
+6
+6,1RMessageReply to All"message"reply to all
+,
+6,2FMessageForward"message"forward
+8
+6,3⇧⌘JMessage
+Send again"message"
+send again
+&
+6,5EMessageDone"message"done
+4
+6,6⇧⌘EMessageDone All"message"done all
+0
+6,7GMessage	Set Aside"message"	set aside
+:
+6,8UMessageMark as Unread"message"mark as unread
+>
+6,9IMessageMark as Priority"message"mark as priority
+)
+6,10DMessageUnpin"message"unpin
++
+6,11SMessageSnooze"message"snooze
+:
+6,12⇧1MessageMark as Spam"message"mark as spam
+;
+6,13MessageMove to Trash"message"move to trash
+9
+6,14⇧⌘MMessage
+Move to…"message"
+move to…
+l
+6,16Message(Mark "Sarah Mountjoy" as priority sender"message"(mark "sarah mountjoy" as priority sender
+N
+6,17⌘BMessageBlock "Sarah Mountjoy""message"block "sarah mountjoy"
+7
+6,18⇧⌘BMessage	Block All"message"	block all
+H
+6,19MessageGroup emails by Sender"message"group emails by sender
+X
+6,21MessageChange category to Newsletters"message"change category to newsletters
+Z
+6,22MessageChange category to Notification"message"change category to notification
+>
+6,24MessageSend Message Data"message"send message data
+*
+6,25MessageReparse"message"reparse
+i
+6,27⇧⌘LMessage"Create a link to this conversation"message""create a link to this conversation
+)
+6,28PMessagePrint"message"print
+)
+7,0Help
+What's New"help"
+what's new
+5
+7,2HelpOpen Help Center"help"open help center
+)
+7,3Help
+Contact Us"help"
+contact us
+C
+7,4HelpDiagnostics Information"help"diagnostics information
+1
+7,6HelpPrivacy Policy"help"privacy policy
+5
+7,7HelpTerms of Service"help"terms of service

@@ -1,0 +1,230 @@
+
+5
+1,0PreviewAbout Preview"preview"about preview
+7
+1,2⌘,PreviewSettings…"preview"settings…
+Y
+1,4,1PreviewServicesServices Settings…"preview"services"services settings…
+9
+1,6⌘HPreviewHide Preview"preview"hide preview
+:
+1,7⌥⌘HPreviewHide Others"preview"hide others
+:
+1,10⌘QPreviewQuit Preview"preview"quit preview
+O
+1,11⌥⌘QPreviewQuit and Keep Windows"preview"quit and keep windows
+)
+2,1⌘OFileOpen…"file"open…
+K
+2,2,0FileOpen RecentIMG_5234.heic"file"open recent"img_5234.heic
+e
+2,2,1FileOpen RecentHyper Drive User guide.pdf"file"open recent"hyper drive user guide.pdf
+E
+2,2,3FileOpen Recent
+Clear Menu"file"open recent"
+clear menu
+3
+2,4⌘WFileClose Window"file"close window
+0
+2,5⌥⌘WFile	Close All"file"	close all
+#
+2,7⌘SFileSave"file"save
+5
+2,8
+⌥⇧⌘SFile
+Save As…"file"
+save as…
+0
+2,9⇧⌘SFile	Duplicate"file"	duplicate
+(
+2,10File	Rename…"file"	rename…
+*
+2,11File
+Move To…"file"
+move to…
+Z
+2,12,0File	Revert ToBrowse All Versions…"file"	revert to"browse all versions…
+<
+2,15FileEdit Permissions…"file"edit permissions…
+\
+2,20,0FileTake ScreenshotFrom Selection…"file"take screenshot"from selection…
+V
+2,20,1FileTake ScreenshotFrom Window…"file"take screenshot"from window…
+^
+2,20,2FileTake ScreenshotFrom Entire Screen"file"take screenshot"from entire screen
+(
+2,22File	Export…"file"	export…
+>
+2,24,0FileShareiCloud Drive"file"share"icloud drive
+B
+2,24,1FileShareiCloud Sharing"file"share"icloud sharing
+4
+2,24,3FileShareAirDrop"file"share"airdrop
+6
+2,24,4FileShareMessages"file"share"messages
+0
+2,24,5FileShareNotes"file"share"notes
+6
+2,24,6FileShareFreeform"file"share"freeform
+4
+2,24,8FileShareMore…"file"share"more…
+,
+2,26⌘PFilePrint…"file"print…
+!
+3,3⌘XEditCut"edit"cut
+#
+3,4⌘CEditCopy"edit"copy
+!
+3,6EditDelete"edit"delete
+/
+3,7⌘AEdit
+Select All"edit"
+select all
+J
+3,10,0EditInsertPage from File…"edit"insert"page from file…
+<
+3,10,1EditInsert
+Blank Page"edit"insert"
+blank page
+8
+3,13,0⌘FEditFindFind…"edit"find"find…
+<
+3,13,1⌘GEditFind	Find Next"edit"find"	find next
+G
+3,13,2⇧⌘GEditFindFind Previous"edit"find"find previous
+V
+3,13,3⌘EEditFindUse Selection for Find"edit"find"use selection for find
+|
+3,14,0⌘:EditSpelling and GrammarShow Spelling and Grammar"edit"spelling and grammar"show spelling and grammar
+@
+3,18🎤EditStart Dictation…"edit"start dictation…
+9
+3,19fnEEditEmoji & Symbols"edit"emoji & symbols
+-
+4,0ViewShow Tab Bar"view"show tab bar
+6
+4,3⌥⌘1ViewHide Sidebar"view"hide sidebar
+2
+4,4⌥⌘2View
+Thumbnails"view"
+thumbnails
+@
+4,5⌥⌘3ViewTable of Contents"view"table of contents
+F
+4,6⌥⌘4ViewHighlights and Notes"view"highlights and notes
+0
+4,7⌥⌘5View	Bookmarks"view"	bookmarks
+8
+4,8⌥⌘6ViewContact Sheet"view"contact sheet
+>
+4,10⌘1ViewContinuous Scroll"view"continuous scroll
+2
+4,11⌘2ViewSingle Page"view"single page
+.
+4,12⌘3View	Two Pages"view"	two pages
+2
+4,17⌘0ViewActual Size"view"actual size
+C
+4,18⌥⌘0ViewActual Size on All"view"actual size on all
+=
+4,20⌥⌘9ViewZoom All to Fit"view"zoom all to fit
+*
+4,21⌘+ViewZoom In"view"zoom in
+5
+4,22⌥⌘+ViewZoom All In"view"zoom all in
+,
+4,23⌘-ViewZoom Out"view"zoom out
+7
+4,24⌥⌘-ViewZoom All Out"view"zoom all out
+E
+4,27⇧⌘AViewShow Markup Toolbar"view"show markup toolbar
+7
+4,28⌥⌘TViewHide Toolbar"view"hide toolbar
+>
+4,29ViewCustomize Toolbar…"view"customize toolbar…
+1
+4,31⇧⌘FView	Slideshow"view"	slideshow
+=
+4,32fnFViewEnter Full Screen"view"enter full screen
+
+5,0GoUp"go"up
+
+5,2GoDown"go"down
+3
+5,4⌥GoPrevious Item"go"previous item
++
+5,5⌥Go	Next Item"go"	next item
+4
+5,6⌥⌘GGoGo to Page…"go"go to page…
+
+5,8⌘[GoBack"go"back
+9
+6,0⌘IToolsShow Inspector"tools"show inspector
+6
+6,1`ToolsShow Magnifier"tools"show magnifier
+3
+6,7ToolsText Selection"tools"text selection
+A
+6,8ToolsRectangular Selection"tools"rectangular selection
+#
+6,9ToolsRedact"tools"redact
+S
+6,11,0⌃⌘HToolsAnnotateHighlight Text"tools"annotate"highlight text
+S
+6,11,1⌃⌘UToolsAnnotateUnderline Text"tools"annotate"underline text
+]
+6,11,2⌃⌘SToolsAnnotateStrike Through Text"tools"annotate"strike through text
+I
+6,11,4⌃⌘RToolsAnnotate	Rectangle"tools"annotate"	rectangle
+?
+6,11,5⌃⌘OToolsAnnotateOval"tools"annotate"oval
+?
+6,11,6⌃⌘IToolsAnnotateLine"tools"annotate"line
+A
+6,11,7⌃⌘AToolsAnnotateArrow"tools"annotate"arrow
+<
+6,11,8ToolsAnnotatePolygon"tools"annotate"polygon
+6
+6,11,9ToolsAnnotateStar"tools"annotate"star
+@
+6,11,11⌃⌘TToolsAnnotateText"tools"annotate"text
+I
+6,11,12ToolsAnnotateSpeech Bubble"tools"annotate"speech bubble
+7
+6,11,14ToolsAnnotateMask"tools"annotate"mask
+B
+6,11,15⌃⌘LToolsAnnotateLoupe"tools"annotate"loupe
+@
+6,11,17⌃⌘NToolsAnnotateNote"tools"annotate"note
+o
+	6,11,18,7ToolsAnnotate	SignatureManage Signatures…"tools"annotate"	signature"manage signatures…
+6
+6,13⌘DToolsAdd Bookmark"tools"add bookmark
+4
+6,15⌘LToolsRotate Left"tools"rotate left
+6
+6,16⌘RToolsRotate Right"tools"rotate right
+/
+7,0⌘MWindowMinimize"window"minimize
+:
+7,1⌥⌘MWindowMinimize All"window"minimize all
+!
+7,2WindowZoom"window"zoom
+)
+7,3WindowZoom All"window"zoom all
+S
+7,4WindowTile Window to Left of Screen"window"tile window to left of screen
+]
+7,5Window"Move Window to Left Side of Screen"window""move window to left side of screen
+U
+7,6WindowTile Window to Right of Screen"window"tile window to right of screen
+_
+7,7Window#Move Window to Right Side of Screen"window"#move window to right side of screen
+>
+7,18WindowBring All to Front"window"bring all to front
+:
+7,19WindowArrange in Front"window"arrange in front
+l
+7,21Window)Hyper Drive User guide.pdf (Page 6 of 66)"window")hyper drive user guide.pdf (page 6 of 66)
+-
+8,0HelpPreview Help"help"preview help

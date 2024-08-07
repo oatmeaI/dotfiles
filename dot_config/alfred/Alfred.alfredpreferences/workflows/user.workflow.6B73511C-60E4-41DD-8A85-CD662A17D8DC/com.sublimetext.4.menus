@@ -1,0 +1,953 @@
+
+I
+1,0Sublime TextAbout Sublime Text"sublime text"about sublime text
+M
+1,1Sublime TextCheck for Updates…"sublime text"check for updates…
+=
+1,2Sublime TextChangelog…"sublime text"changelog…
+e
+1,4,0Sublime TextSettings…Browse Packages…"sublime text"settings…"browse packages…
+W
+1,4,2⌘,Sublime TextSettings…Settings"sublime text"settings…"settings
+y
+1,4,3Sublime TextSettings…Settings – Syntax Specific"sublime text"settings…"settings – syntax specific
+{
+1,4,4Sublime TextSettings…Settings – Distraction Free"sublime text"settings…"settings – distraction free
+Y
+1,4,6Sublime TextSettings…Key Bindings"sublime text"settings…"key bindings
+m
+1,4,8Sublime TextSettings…Select Color Scheme…"sublime text"settings…"select color scheme…
+m
+1,4,9Sublime TextSettings…Customize Color Scheme"sublime text"settings…"customize color scheme
+`
+1,4,11Sublime TextSettings…Select Theme…"sublime text"settings…"select theme…
+`
+1,4,12Sublime TextSettings…Customize Theme"sublime text"settings…"customize theme
+b
+1,4,14,0⌘+Sublime TextSettings…FontLarger"sublime text"settings…"font"larger
+d
+1,4,14,1⌘-Sublime TextSettings…FontSmaller"sublime text"settings…"font"smaller
+Z
+1,4,14,3Sublime TextSettings…FontReset"sublime text"settings…"font"reset
+w
+1,6,0Sublime TextServicesAdd to Music as a Spoken Track"sublime text"services"add to music as a spoken track
+o
+1,6,1Sublime TextServicesConvert Text to Full Width"sublime text"services"convert text to full width
+�
+1,6,2⌃⌥⇧⌘CSublime TextServices"Convert Text to Simplified Chinese"sublime text"services""convert text to simplified chinese
+�
+1,6,3
+⌃⇧⌘CSublime TextServices#Convert Text to Traditional Chinese"sublime text"services"#convert text to traditional chinese
+l
+1,6,4⇧⌘YSublime TextServicesMake New Sticky Note"sublime text"services"make new sticky note
+C
+1,6,5Sublime TextServicesOpen"sublime text"services"open
+W
+1,6,6Sublime TextServicesShow in Finder"sublime text"services"show in finder
+a
+1,6,7Sublime TextServicesShow Info in Finder"sublime text"services"show info in finder
+e
+1,6,8Sublime TextServicesLook Up in Dictionary"sublime text"services"look up in dictionary
+_
+1,6,9Sublime TextServicesSearch With Google"sublime text"services"search with google
+d
+1,6,10Sublime TextServicesServices Settings…"sublime text"services"services settings…
+M
+1,8⌘HSublime TextHide Sublime Text"sublime text"hide sublime text
+D
+1,9⌥⌘HSublime TextHide Others"sublime text"hide others
+N
+1,12⌘QSublime TextQuit Sublime Text"sublime text"quit sublime text
+P
+1,13Sublime TextQuit and Keep Windows"sublime text"quit and keep windows
++
+2,0⌘NFileNew File"file"new file
+)
+2,1⌘OFileOpen…"file"open…
+^
+2,2,0⇧⌘TFileOpen RecentReopen Closed File"file"open recent"reopen closed file
+�
+2,2,2FileOpen Recent,~/Downloads/learnmodeexperience.cfm.gql.json"file"open recent",~/downloads/learnmodeexperience.cfm.gql.json
+�
+2,2,3FileOpen RecentJ~/Downloads/deeplink-poc-8a075371-8924-4f51-bea9-66f14a8a88d7/src/index.js"file"open recent"J~/downloads/deeplink-poc-8a075371-8924-4f51-bea9-66f14a8a88d7/src/index.js
+y
+2,2,4FileOpen Recent$~/code/deeplink-service/dist/main.js"file"open recent"$~/code/deeplink-service/dist/main.js
+S
+2,2,5FileOpen Recent~/Desktop/main.js"file"open recent"~/desktop/main.js
+�
+2,2,6FileOpen Recent)~/code/deeplink-service/docs/swagger.json"file"open recent")~/code/deeplink-service/docs/swagger.json
+S
+2,2,7FileOpen Recent~/Desktop/dp logs"file"open recent"~/desktop/dp logs
+�
+2,2,8FileOpen Recent7~/Desktop/only times where template was recommended.txt"file"open recent"7~/desktop/only times where template was recommended.txt
+�
+2,2,9FileOpen Recentt/Applications/Adobe Photoshop (Beta)/Adobe Photoshop (Beta).app/Contents/Required/UXP/com.adobe.ccx.start/debug.json"file"open recent"t/applications/adobe photoshop (beta)/adobe photoshop (beta).app/contents/required/uxp/com.adobe.ccx.start/debug.json
+�
+2,2,10FileOpen Recento~/code/in-app-system/projects/discover-panel/build/extension/unified-panel/com.adobe.unifiedpanel/manifest.json"file"open recent"o~/code/in-app-system/projects/discover-panel/build/extension/unified-panel/com.adobe.unifiedpanel/manifest.json
+\
+2,2,11FileOpen Recent~/Desktop/untitled.js"file"open recent"~/desktop/untitled.js
+h
+2,2,12FileOpen Recent~/Downloads/VersionInfo.xml"file"open recent"~/downloads/versioninfo.xml
+�
+2,2,14FileOpen Recenta~/code/in-app-system/projects/discover-panel/build/extension/unified-panel/com.adobe.unifiedpanel"file"open recent"a~/code/in-app-system/projects/discover-panel/build/extension/unified-panel/com.adobe.unifiedpanel
+H
+2,2,16FileOpen RecentClear Items"file"open recent"clear items
+)
+2,4File
+Split View"file"
+split view
+#
+2,5⌘SFileSave"file"save
+I
+2,6,0FileSave with EncodingUTF-8"file"save with encoding"utf-8
+[
+2,6,1FileSave with EncodingUTF-8 with BOM"file"save with encoding"utf-8 with bom
+Q
+2,6,2FileSave with Encoding	UTF-16 LE"file"save with encoding"	utf-16 le
+c
+2,6,3FileSave with EncodingUTF-16 LE with BOM"file"save with encoding"utf-16 le with bom
+Q
+2,6,4FileSave with Encoding	UTF-16 BE"file"save with encoding"	utf-16 be
+c
+2,6,5FileSave with EncodingUTF-16 BE with BOM"file"save with encoding"utf-16 be with bom
+e
+2,6,7FileSave with EncodingArabic (ISO 8859-6)"file"save with encoding"arabic (iso 8859-6)
+i
+2,6,8FileSave with EncodingArabic (Windows 1256)"file"save with encoding"arabic (windows 1256)
+e
+2,6,9FileSave with EncodingBaltic (ISO 8859-4)"file"save with encoding"baltic (iso 8859-4)
+j
+2,6,10FileSave with EncodingBaltic (Windows 1257)"file"save with encoding"baltic (windows 1257)
+h
+2,6,11FileSave with EncodingCeltic (ISO 8859-14)"file"save with encoding"celtic (iso 8859-14)
+z
+2,6,12FileSave with EncodingCentral European (ISO 8859-2)"file"save with encoding"central european (iso 8859-2)
+l
+2,6,13FileSave with EncodingCentral European (Mac)"file"save with encoding"central european (mac)
+~
+2,6,14FileSave with EncodingCentral European (Windows 1250)"file"save with encoding"central european (windows 1250)
+b
+2,6,15FileSave with EncodingChinese (GB18030)"file"save with encoding"chinese (gb18030)
+j
+2,6,16FileSave with EncodingCyrillic (ISO 8859-5)"file"save with encoding"cyrillic (iso 8859-5)
+b
+2,6,17FileSave with EncodingCyrillic (KOI8-R)"file"save with encoding"cyrillic (koi8-r)
+b
+2,6,18FileSave with EncodingCyrillic (KOI8-U)"file"save with encoding"cyrillic (koi8-u)
+n
+2,6,19FileSave with EncodingCyrillic (Windows 1251)"file"save with encoding"cyrillic (windows 1251)
+l
+2,6,20FileSave with EncodingCyrillic (Windows 866)"file"save with encoding"cyrillic (windows 866)
+X
+2,6,21FileSave with EncodingDOS (CP 437)"file"save with encoding"dos (cp 437)
+l
+2,6,22FileSave with EncodingEstonian (ISO 8859-13)"file"save with encoding"estonian (iso 8859-13)
+d
+2,6,23FileSave with EncodingGreek (ISO 8859-7)"file"save with encoding"greek (iso 8859-7)
+h
+2,6,24FileSave with EncodingGreek (Windows 1253)"file"save with encoding"greek (windows 1253)
+^
+2,6,25FileSave with EncodingHebrew (CP 862)"file"save with encoding"hebrew (cp 862)
+f
+2,6,26FileSave with EncodingHebrew (ISO 8859-8)"file"save with encoding"hebrew (iso 8859-8)
+j
+2,6,27FileSave with EncodingHebrew (Windows 1255)"file"save with encoding"hebrew (windows 1255)
+h
+2,6,28FileSave with EncodingNordic (ISO 8859-10)"file"save with encoding"nordic (iso 8859-10)
+h
+2,6,29FileSave with EncodingNordic (Windows 865)"file"save with encoding"nordic (windows 865)
+l
+2,6,30FileSave with EncodingRomanian (ISO 8859-16)"file"save with encoding"romanian (iso 8859-16)
+h
+2,6,31FileSave with EncodingTurkish (ISO 8859-9)"file"save with encoding"turkish (iso 8859-9)
+l
+2,6,32FileSave with EncodingTurkish (Windows 1254)"file"save with encoding"turkish (windows 1254)
+r
+2,6,33FileSave with EncodingVietnamese (Windows 1258)"file"save with encoding"vietnamese (windows 1258)
+h
+2,6,34FileSave with EncodingWestern (ISO 8859-1)"file"save with encoding"western (iso 8859-1)
+j
+2,6,35FileSave with EncodingWestern (ISO 8859-15)"file"save with encoding"western (iso 8859-15)
+h
+2,6,36FileSave with EncodingWestern (ISO 8859-3)"file"save with encoding"western (iso 8859-3)
+f
+2,6,37FileSave with EncodingWestern (Mac Roman)"file"save with encoding"western (mac roman)
+l
+2,6,38FileSave with EncodingWestern (Windows 1252)"file"save with encoding"western (windows 1252)
+V
+2,6,40FileSave with EncodingHexadecimal"file"save with encoding"hexadecimal
+2
+2,7⇧⌘SFile
+Save As…"file"
+save as…
+.
+2,8⌥⌘SFileSave All"file"save all
+%
+2,9FilePrint…"file"print…
+3
+2,11⇧⌘NFile
+New Window"file"
+new window
+7
+2,12⇧⌘WFileClose Window"file"close window
+0
+2,14⌘WFile
+Close File"file"
+close file
+4
+2,16FileClose All Files"file"close all files
+;
+3,0⌘ZEditUndo Left Delete"edit"undo left delete
+?
+3,1⌘YEditRepeat Left Delete"edit"repeat left delete
+]
+3,2,0⌘UEditUndo SelectionUndo Left Delete"edit"undo selection"undo left delete
+!
+3,4⌘XEditCut"edit"cut
+#
+3,5⌘CEditCopy"edit"copy
+-
+3,6EditCopy as HTML"edit"copy as html
+%
+3,7⌘VEditPaste"edit"paste
+>
+3,8⇧⌘VEditPaste and Indent"edit"paste and indent
+B
+3,9⌥⌘VEditPaste from History"edit"paste from history
+6
+3,11,0⌘]EditLineIndent"edit"line"indent
+:
+3,11,1⌘[EditLineUnindent"edit"line"unindent
+4
+3,11,2EditLineReindent"edit"line"reindent
+G
+3,11,3	⌃⌘EditLineSwap Line Up"edit"line"swap line up
+K
+3,11,4	⌃⌘EditLineSwap Line Down"edit"line"swap line down
+I
+3,11,5⇧⌘DEditLineDuplicate Line"edit"line"duplicate line
+C
+3,11,6⌃⇧KEditLineDelete Line"edit"line"delete line
+A
+3,11,7⇧⌘JEditLine
+Join Lines"edit"line"
+join lines
+L
+3,12,0⌘/EditCommentToggle Comment"edit"comment"toggle comment
+[
+3,12,1⌥⌘/EditCommentToggle Block Comment"edit"comment"toggle block comment
+P
+3,13,0EditTextRevert Hunk	⌘K, ⌘Z"edit"text"revert hunk	⌘k, ⌘z
+f
+3,13,1EditText!Revert Modification	⌘K, ⇧⌘Z"edit"text"!revert modification	⌘k, ⇧⌘z
+Z
+3,13,2EditTextToggle Diff Hunk	⌘K, ⌘/"edit"text"toggle diff hunk	⌘k, ⌘/
+\
+3,13,4EditTextInsert Line Before	⇧⌘↩"edit"text"insert line before	⇧⌘↩
+N
+3,13,5EditTextInsert Line After	↩"edit"text"insert line after	↩
+J
+3,13,7EditTextDelete Word Forward"edit"text"delete word forward
+L
+3,13,8EditTextDelete Word Backward"edit"text"delete word backward
+J
+3,13,9EditTextDelete Line	⌃⇧K"edit"text"delete line	⌃⇧k
+I
+3,13,10EditTextDelete to End	⌃K"edit"text"delete to end	⌃k
+e
+3,13,11EditText Delete to Beginning	⌘Backspace"edit"text" delete to beginning	⌘backspace
+A
+3,13,13EditTextTranspose	⌃T"edit"text"transpose	⌃t
+=
+3,14,0⌥⌘.EditTag	Close Tag"edit"tag"	close tag
+Y
+3,14,1⇧⌘AEditTagExpand Selection to Tag"edit"tag"expand selection to tag
+Y
+3,14,2⌃⇧WEditTagWrap Selection With Tag"edit"tag"wrap selection with tag
+J
+3,15,0EditMarkSet Mark	⌘K, ⌘M"edit"mark"set mark	⌘k, ⌘m
+V
+3,15,1EditMarkSelect to Mark	⌘K, ⌘A"edit"mark"select to mark	⌘k, ⌘a
+V
+3,15,2EditMarkDelete to Mark	⌘K, ⌘W"edit"mark"delete to mark	⌘k, ⌘w
+V
+3,15,3EditMarkSwap with Mark	⌘K, ⌘X"edit"mark"swap with mark	⌘k, ⌘x
+N
+3,15,4EditMarkClear Mark	⌘K, ⌘G"edit"mark"clear mark	⌘k, ⌘g
+L
+3,16,0EditCode FoldingFold	⌥⌘["edit"code folding"fold	⌥⌘[
+Z
+3,16,4EditCode FoldingFold All	⌘K, ⌘1"edit"code folding"fold all	⌘k, ⌘1
+b
+3,16,5EditCode FoldingFold Level 2	⌘K, ⌘2"edit"code folding"fold level 2	⌘k, ⌘2
+b
+3,16,6EditCode FoldingFold Level 3	⌘K, ⌘3"edit"code folding"fold level 3	⌘k, ⌘3
+b
+3,16,7EditCode FoldingFold Level 4	⌘K, ⌘4"edit"code folding"fold level 4	⌘k, ⌘4
+b
+3,16,8EditCode FoldingFold Level 5	⌘K, ⌘5"edit"code folding"fold level 5	⌘k, ⌘5
+b
+3,16,9EditCode FoldingFold Level 6	⌘K, ⌘6"edit"code folding"fold level 6	⌘k, ⌘6
+c
+3,16,10EditCode FoldingFold Level 7	⌘K, ⌘7"edit"code folding"fold level 7	⌘k, ⌘7
+c
+3,16,11EditCode FoldingFold Level 8	⌘K, ⌘8"edit"code folding"fold level 8	⌘k, ⌘8
+c
+3,16,12EditCode FoldingFold Level 9	⌘K, ⌘9"edit"code folding"fold level 9	⌘k, ⌘9
+q
+3,16,14EditCode FoldingFold Tag Attributes	⌘K, ⌘T"edit"code folding"fold tag attributes	⌘k, ⌘t
+H
+3,17,0EditConvert Case
+Title Case"edit"convert case"
+title case
+^
+3,17,1EditConvert CaseUpper Case	⌘K, ⌘U"edit"convert case"upper case	⌘k, ⌘u
+^
+3,17,2EditConvert CaseLower Case	⌘K, ⌘L"edit"convert case"lower case	⌘k, ⌘l
+F
+3,17,3EditConvert Case	Swap Case"edit"convert case"	swap case
+P
+3,17,4EditConvert CaselowerCamelCase"edit"convert case"lowercamelcase
+P
+3,17,5EditConvert CaseUpperCamelCase"edit"convert case"uppercamelcase
+H
+3,17,6EditConvert Case
+snake_case"edit"convert case"
+snake_case
+H
+3,17,7EditConvert Case
+kebab-case"edit"convert case"
+kebab-case
+[
+3,18,0⌥⌘QEditWrapWrap Paragraph at Ruler"edit"wrap"wrap paragraph at ruler
+b
+3,18,1EditWrapWrap paragraph at 70 characters"edit"wrap"wrap paragraph at 70 characters
+b
+3,18,2EditWrapWrap paragraph at 72 characters"edit"wrap"wrap paragraph at 72 characters
+b
+3,18,3EditWrapWrap paragraph at 78 characters"edit"wrap"wrap paragraph at 78 characters
+b
+3,18,4EditWrapWrap paragraph at 80 characters"edit"wrap"wrap paragraph at 80 characters
+d
+3,18,5EditWrap Wrap paragraph at 100 characters"edit"wrap" wrap paragraph at 100 characters
+d
+3,18,6EditWrap Wrap paragraph at 120 characters"edit"wrap" wrap paragraph at 120 characters
+<
+3,19⌃ EditShow Completions"edit"show completions
+/
+3,21Edit
+Sort Lines"edit"
+sort lines
+T
+3,22⌃EditSort Lines (Case Sensitive)"edit"sort lines (case sensitive)
+D
+3,23,0EditPermute LinesReverse"edit"permute lines"reverse
+B
+3,23,1EditPermute LinesUnique"edit"permute lines"unique
+D
+3,23,2EditPermute LinesShuffle"edit"permute lines"shuffle
+=
+3,26⌃⌘ EditEmoji & Symbols"edit"emoji & symbols
+H
+4,0⇧⌘L	SelectionSplit into Lines"	selection"split into lines
+B
+4,1	SelectionSingle Selection"	selection"single selection
+9
+4,3⌘A	Selection
+Select All"	selection"
+select all
+H
+4,4⇧⌘A	SelectionExpand Selection"	selection"expand selection
+U
+4,5⌘L	SelectionExpand Selection to Line"	selection"expand selection to line
+f
+4,6⌥⌘L	SelectionExpand Selection to Line Upward"	selection"expand selection to line upward
+U
+4,7⌘D	SelectionExpand Selection to Word"	selection"expand selection to word
+Q
+4,8	SelectionExpand Selection to Block"	selection"expand selection to block
+Y
+4,9	SelectionExpand Selection to Paragraph"	selection"expand selection to paragraph
+[
+4,10⇧⌘ 	SelectionExpand Selection to Scope"	selection"expand selection to scope
+a
+4,11⌃⇧M	SelectionExpand Selection to Brackets"	selection"expand selection to brackets
+^
+4,12	SelectionExpand Selection to Indentation"	selection"expand selection to indentation
+M
+4,14	⌃⇧	SelectionAdd Previous Line"	selection"add previous line
+E
+4,15	⌃⇧	SelectionAdd Next Line"	selection"add next line
+|
+4,17,4	SelectionTab SelectionSelect to Left	⌘J, ⇧⌘←"	selection"tab selection"select to left	⌘j, ⇧⌘←
+)
+5,0⌘FFindFind…"find"find…
+-
+5,1⌘GFind	Find Next"find"	find next
+8
+5,2⇧⌘GFindFind Previous"find"find previous
+;
+5,3⌘IFindIncremental Find"find"incremental find
+2
+5,5⌥⌘FFind
+Replace…"find"
+replace…
+6
+5,6⌥⌘EFindReplace Next"find"replace next
+2
+5,8⌥⌘GFind
+Quick Find"find"
+quick find
+:
+5,9⌃⌘GFindQuick Find All"find"quick find all
+8
+5,10⌘DFindQuick Add Next"find"quick add next
+H
+5,12⌘EFindUse Selection for Find"find"use selection for find
+Q
+5,13⇧⌘EFindUse Selection for Replace"find"use selection for replace
+?
+5,15⇧⌘FFindFind in Files…"find"find in files…
+X
+5,16,0FindFind ResultsShow Results Panel"find"find results"show results panel
+I
+6,0,2ViewSide BarShow Open Files"view"side bar"show open files
+-
+6,1ViewHide Minimap"view"hide minimap
+'
+6,2View	Hide Tabs"view"	hide tabs
+3
+6,3ViewHide Status Bar"view"hide status bar
+3
+6,4⌃`ViewShow Console"view"show console
+@
+6,6⌃⌘FViewEnter Full Screen"view"enter full screen
+W
+6,7
+⌃⇧⌘FViewEnter Distraction Free Mode"view"enter distraction free mode
+<
+6,9,0⌥⌘1ViewLayoutSingle"view"layout"single
+D
+6,9,1⌥⌘2ViewLayout
+Columns: 2"view"layout"
+columns: 2
+D
+6,9,2⌥⌘3ViewLayout
+Columns: 3"view"layout"
+columns: 3
+D
+6,9,3⌥⌘4ViewLayout
+Columns: 4"view"layout"
+columns: 4
+A
+6,9,4
+⌥⇧⌘2ViewLayoutRows: 2"view"layout"rows: 2
+A
+6,9,5
+⌥⇧⌘3ViewLayoutRows: 3"view"layout"rows: 3
+>
+6,9,6⌥⌘5ViewLayoutGrid: 4"view"layout"grid: 4
+n
+6,10,0ViewGroups#Move File to New Group	⌘K, ⌘↑"view"groups"#move file to new group	⌘k, ⌘↑
+Z
+6,10,1ViewGroupsNew Group	⌘K, ⇧⌘↑"view"groups"new group	⌘k, ⇧⌘↑
+X
+6,10,2ViewGroupsClose Group	⌘K, ⌘↓"view"groups"close group	⌘k, ⌘↓
+D
+6,10,4ViewGroupsMax Columns: 1"view"groups"max columns: 1
+D
+6,10,5ViewGroupsMax Columns: 2"view"groups"max columns: 2
+D
+6,10,6ViewGroupsMax Columns: 3"view"groups"max columns: 3
+D
+6,10,7ViewGroupsMax Columns: 4"view"groups"max columns: 4
+D
+6,10,8ViewGroupsMax Columns: 5"view"groups"max columns: 5
+T
+6,11,0ViewFocus GroupNext	⌘K, ⌘→"view"focus group"next	⌘k, ⌘→
+\
+6,11,1ViewFocus GroupPrevious	⌘K, ⌘←"view"focus group"previous	⌘k, ⌘←
+J
+6,11,3ViewFocus GroupGroup 1	⌃1"view"focus group"group 1	⌃1
+h
+6,12,0ViewMove File to GroupNext	⌘K, ⇧⌘→"view"move file to group"next	⌘k, ⇧⌘→
+p
+6,12,1ViewMove File to GroupPrevious	⌘K, ⇧⌘←"view"move file to group"previous	⌘k, ⇧⌘←
+^
+6,12,3ViewMove File to GroupGroup 1	⌃⇧1"view"move file to group"group 1	⌃⇧1
+@
+6,14,2ViewSyntaxActionScript"view"syntax"actionscript
+>
+6,14,3ViewSyntaxAppleScript"view"syntax"applescript
+:
+6,14,4,0ViewSyntaxASPASP"view"syntax"asp"asp
+H
+6,14,4,1ViewSyntaxASP
+HTML (ASP)"view"syntax"asp"
+html (asp)
+0
+6,14,5ViewSyntaxBash"view"syntax"bash
+<
+6,14,6ViewSyntax
+Batch File"view"syntax"
+batch file
+*
+6,14,7ViewSyntaxC"view"syntax"c
+6
+6,14,8,0ViewSyntaxC#C#"view"syntax"c#"c#
+P
+6,14,8,1ViewSyntaxC#NAnt Build File"view"syntax"c#"nant build file
+.
+6,14,9ViewSyntaxC++"view"syntax"c++
+K
+	6,14,10,0ViewSyntaxClojureClojure"view"syntax"clojure"clojure
+W
+	6,14,10,1ViewSyntaxClojureClojureScript"view"syntax"clojure"clojurescript
+/
+6,14,11ViewSyntaxCSS"view"syntax"css
++
+6,14,12ViewSyntaxD"view"syntax"d
+1
+6,14,13ViewSyntaxDiff"view"syntax"diff
+/
+6,14,14ViewSyntaxDTD"view"syntax"dtd
+G
+	6,14,15,0ViewSyntaxErlangErlang"view"syntax"erlang"erlang
+U
+	6,14,15,1ViewSyntaxErlangHTML (Erlang)"view"syntax"erlang"html (erlang)
+a
+	6,14,16,0ViewSyntaxGit FormatsGit Attributes"view"syntax"git formats"git attributes
+c
+	6,14,16,1ViewSyntaxGit FormatsGit Code Owners"view"syntax"git formats"git code owners
+Y
+	6,14,16,2ViewSyntaxGit Formats
+Git Commit"view"syntax"git formats"
+git commit
+i
+	6,14,16,3ViewSyntaxGit FormatsGit Commit Message"view"syntax"git formats"git commit message
+Y
+	6,14,16,4ViewSyntaxGit Formats
+Git Config"view"syntax"git formats"
+git config
+Y
+	6,14,16,5ViewSyntaxGit Formats
+Git Ignore"view"syntax"git formats"
+git ignore
+U
+	6,14,16,6ViewSyntaxGit FormatsGit Link"view"syntax"git formats"git link
+S
+	6,14,16,7ViewSyntaxGit FormatsGit Log"view"syntax"git formats"git log
+[
+	6,14,16,8ViewSyntaxGit FormatsGit Mailmap"view"syntax"git formats"git mailmap
+c
+	6,14,16,9ViewSyntaxGit FormatsGit Rebase Todo"view"syntax"git formats"git rebase todo
+-
+6,14,17ViewSyntaxGo"view"syntax"go
+E
+6,14,18ViewSyntaxGraphviz (DOT)"view"syntax"graphviz (dot)
+5
+6,14,19ViewSyntaxGroovy"view"syntax"groovy
+K
+	6,14,20,0ViewSyntaxHaskellHaskell"view"syntax"haskell"haskell
+]
+	6,14,20,1ViewSyntaxHaskellLiterate Haskell"view"syntax"haskell"literate haskell
+1
+6,14,21ViewSyntaxHTML"view"syntax"html
+K
+	6,14,22,0ViewSyntaxJava
+HTML (JSP)"view"syntax"java"
+html (jsp)
+?
+	6,14,22,1ViewSyntaxJavaJava"view"syntax"java"java
+U
+	6,14,22,2ViewSyntaxJavaJava Properties"view"syntax"java"java properties
+W
+	6,14,23,0ViewSyntax
+JavaScript
+JavaScript"view"syntax"
+javascript"
+javascript
+I
+	6,14,23,1ViewSyntax
+JavaScriptJSX"view"syntax"
+javascript"jsx
+I
+	6,14,23,2ViewSyntax
+JavaScriptTSX"view"syntax"
+javascript"tsx
+W
+	6,14,23,3ViewSyntax
+JavaScript
+TypeScript"view"syntax"
+javascript"
+typescript
+1
+6,14,24ViewSyntaxJSON"view"syntax"json
+E
+	6,14,25,0ViewSyntaxLaTeXBibTeX"view"syntax"latex"bibtex
+C
+	6,14,25,1ViewSyntaxLaTeXLaTeX"view"syntax"latex"latex
+K
+	6,14,25,2ViewSyntaxLaTeX	LaTeX Log"view"syntax"latex"	latex log
+?
+	6,14,25,3ViewSyntaxLaTeXTeX"view"syntax"latex"tex
+1
+6,14,26ViewSyntaxLisp"view"syntax"lisp
+/
+6,14,27ViewSyntaxLua"view"syntax"lua
+9
+6,14,28ViewSyntaxMakefile"view"syntax"makefile
+O
+	6,14,29,0ViewSyntaxMarkdownMarkdown"view"syntax"markdown"markdown
+Y
+	6,14,29,1ViewSyntaxMarkdownMultiMarkdown"view"syntax"markdown"multimarkdown
+5
+6,14,30ViewSyntaxMATLAB"view"syntax"matlab
+[
+	6,14,31,0ViewSyntaxObjective-CObjective-C"view"syntax"objective-c"objective-c
+_
+	6,14,31,1ViewSyntaxObjective-CObjective-C++"view"syntax"objective-c"objective-c++
+E
+	6,14,32,0ViewSyntaxOCamlcamlp4"view"syntax"ocaml"camlp4
+C
+	6,14,32,1ViewSyntaxOCamlOCaml"view"syntax"ocaml"ocaml
+I
+	6,14,32,2ViewSyntaxOCamlOCamllex"view"syntax"ocaml"ocamllex
+K
+	6,14,32,3ViewSyntaxOCaml	OCamlyacc"view"syntax"ocaml"	ocamlyacc
+5
+6,14,33ViewSyntaxPascal"view"syntax"pascal
+1
+6,14,34ViewSyntaxPerl"view"syntax"perl
+G
+	6,14,35,0ViewSyntaxPHP	CSS (PHP)"view"syntax"php"	css (php)
+U
+	6,14,35,1ViewSyntaxPHPJavaScript (PHP)"view"syntax"php"javascript (php)
+;
+	6,14,35,2ViewSyntaxPHPPHP"view"syntax"php"php
+=
+6,14,36ViewSyntax
+Plain Text"view"syntax"
+plain text
+5
+6,14,37ViewSyntaxPython"view"syntax"python
+3
+	6,14,38,0ViewSyntaxRR"view"syntax"r"r
+C
+	6,14,38,1ViewSyntaxR	R Console"view"syntax"r"	r console
+Y
+	6,14,38,2ViewSyntaxRRd (R Documentation)"view"syntax"r"rd (r documentation)
+O
+	6,14,39,0ViewSyntaxRailsCSS (Rails)"view"syntax"rails"css (rails)
+A
+	6,14,39,1ViewSyntaxRailsHAML"view"syntax"rails"haml
+Q
+	6,14,39,2ViewSyntaxRailsHTML (Rails)"view"syntax"rails"html (rails)
+]
+	6,14,39,3ViewSyntaxRailsJavaScript (Rails)"view"syntax"rails"javascript (rails)
+Q
+	6,14,39,4ViewSyntaxRailsRuby (Rails)"view"syntax"rails"ruby (rails)
+O
+	6,14,39,5ViewSyntaxRailsSQL (Rails)"view"syntax"rails"sql (rails)
+M
+6,14,40ViewSyntaxRegular Expression"view"syntax"regular expression
+I
+6,14,41ViewSyntaxreStructuredText"view"syntax"restructuredtext
+1
+6,14,42ViewSyntaxRuby"view"syntax"ruby
+1
+6,14,43ViewSyntaxRust"view"syntax"rust
+3
+6,14,44ViewSyntaxScala"view"syntax"scala
+/
+6,14,45ViewSyntaxSQL"view"syntax"sql
+I
+	6,14,46,0ViewSyntaxTCL
+HTML (Tcl)"view"syntax"tcl"
+html (tcl)
+;
+	6,14,46,1ViewSyntaxTCLTcl"view"syntax"tcl"tcl
+7
+6,14,47ViewSyntaxTextile"view"syntax"textile
+/
+6,14,48ViewSyntaxXML"view"syntax"xml
+/
+6,14,49ViewSyntaxXSL"view"syntax"xsl
+1
+6,14,50ViewSyntaxYAML"view"syntax"yaml
+X
+6,15,0ViewIndentationIndent Using Spaces"view"indentation"indent using spaces
+J
+6,15,2ViewIndentationTab Width: 1"view"indentation"tab width: 1
+J
+6,15,3ViewIndentationTab Width: 2"view"indentation"tab width: 2
+J
+6,15,4ViewIndentationTab Width: 3"view"indentation"tab width: 3
+J
+6,15,5ViewIndentationTab Width: 4"view"indentation"tab width: 4
+J
+6,15,6ViewIndentationTab Width: 5"view"indentation"tab width: 5
+J
+6,15,7ViewIndentationTab Width: 6"view"indentation"tab width: 6
+J
+6,15,8ViewIndentationTab Width: 7"view"indentation"tab width: 7
+J
+6,15,9ViewIndentationTab Width: 8"view"indentation"tab width: 8
+g
+6,15,11ViewIndentationGuess Settings From Buffer"view"indentation"guess settings from buffer
+m
+6,15,13ViewIndentationConvert Indentation to Spaces"view"indentation"convert indentation to spaces
+i
+6,15,14ViewIndentationConvert Indentation to Tabs"view"indentation"convert indentation to tabs
+B
+6,16,0ViewLine EndingsWindows"view"line endings"windows
+<
+6,16,1ViewLine EndingsUnix"view"line endings"unix
+D
+6,16,2ViewLine EndingsMac OS 9"view"line endings"mac os 9
+(
+6,18View	Word Wrap"view"	word wrap
+N
+6,19,0ViewWord Wrap Column	Automatic"view"word wrap column"	automatic
+@
+6,19,2ViewWord Wrap Column70"view"word wrap column"70
+@
+6,19,3ViewWord Wrap Column72"view"word wrap column"72
+@
+6,19,4ViewWord Wrap Column78"view"word wrap column"78
+@
+6,19,5ViewWord Wrap Column80"view"word wrap column"80
+B
+6,19,6ViewWord Wrap Column100"view"word wrap column"100
+B
+6,19,7ViewWord Wrap Column120"view"word wrap column"120
+.
+6,20,0ViewRulerNone"view"ruler"none
+*
+6,20,2ViewRuler70"view"ruler"70
+*
+6,20,3ViewRuler72"view"ruler"72
+*
+6,20,4ViewRuler78"view"ruler"78
+*
+6,20,5ViewRuler80"view"ruler"80
+,
+6,20,6ViewRuler100"view"ruler"100
+,
+6,20,7ViewRuler120"view"ruler"120
+1
+6,22ViewSpell Check"view"spell check
+:
+6,25,0View
+Dictionaryen_GB"view"
+dictionary"en_gb
+:
+6,25,1View
+Dictionaryen_US"view"
+dictionary"en_us
+;
+7,0⌘PGotoGoto Anything…"goto"goto anything…
+7
+7,2⌘RGotoGoto Symbol…"goto"goto symbol…
+P
+7,3⇧⌘RGotoGoto Symbol in Project…"goto"goto symbol in project…
+D
+7,4	⌥⌘GotoGoto Definition…"goto"goto definition…
+E
+7,5⌥⇧⌘GotoGoto Reference…"goto"goto reference…
+3
+7,6⌃GGotoGoto Line…"goto"goto line…
+=
+7,8⌃.GotoNext Modification"goto"next modification
+E
+7,9⌃,GotoPrevious Modification"goto"previous modification
+.
+7,11⌃-Goto	Jump Back"goto"	jump back
+7
+7,12⌃⇧-GotoJump Forward"goto"jump forward
+L
+7,14,0⌃GotoSwitch File	Next File"goto"switch file"	next file
+T
+7,14,1⌃GotoSwitch FilePrevious File"goto"switch file"previous file
+\
+7,14,3⌃	GotoSwitch FileNext File in Stack"goto"switch file"next file in stack
+g
+7,14,4⌃⇧	GotoSwitch FilePrevious File in Stack"goto"switch file"previous file in stack
+u
+7,14,6	⌥⌘GotoSwitch FileSwitch Header/Implementation"goto"switch file"switch header/implementation
+N
+7,14,8⌘1GotoSwitch Fileproducts.md"goto"switch file"products.md
+�
+7,14,9⌘2GotoSwitch File2{"title":"Creating Smart Lists","subtitle":"Help","goto"switch file"2{"title":"creating smart lists","subtitle":"help",
+T
+7,16,0⌃LGotoScrollScroll to Selection"goto"scroll"scroll to selection
+A
+7,16,1	⌃⌥GotoScrollLine Up"goto"scroll"line up
+E
+7,16,2	⌃⌥GotoScroll	Line Down"goto"scroll"	line down
+U
+7,17,0⌃⇧RGoto	BookmarksToggle Bookmark"goto"	bookmarks"toggle bookmark
+N
+7,17,1⌃RGoto	BookmarksNext Bookmark"goto"	bookmarks"next bookmark
+P
+7,17,2⇧Goto	BookmarksPrev Bookmark"goto"	bookmarks"prev bookmark
+W
+7,17,3	⇧⌘Goto	BookmarksClear Bookmarks"goto"	bookmarks"clear bookmarks
+V
+7,17,4Goto	BookmarksSelect All Bookmarks"goto"	bookmarks"select all bookmarks
+L
+7,19⌃MGotoJump to Matching Bracket"goto"jump to matching bracket
+D
+8,0⇧⌘PToolsCommand Palette…"tools"command palette…
+-
+8,1ToolsSnippets…"tools"snippets…
+G
+8,3,0ToolsBuild System	Automatic"tools"build system"	automatic
+M
+8,3,2ToolsBuild SystemActionScript"tools"build system"actionscript
+;
+8,3,3ToolsBuild SystemAnt"tools"build system"ant
+O
+8,3,4ToolsBuild SystemC Single File"tools"build system"c single file
+S
+8,3,5ToolsBuild SystemC++ Single File"tools"build system"c++ single file
+?
+8,3,6ToolsBuild SystemCargo"tools"build system"cargo
+7
+8,3,7ToolsBuild SystemD"tools"build system"d
+?
+8,3,8ToolsBuild SystemD dub"tools"build system"d dub
+A
+8,3,9ToolsBuild SystemErlang"tools"build system"erlang
+F
+8,3,10ToolsBuild SystemGraphviz"tools"build system"graphviz
+D
+8,3,11ToolsBuild SystemHaskell"tools"build system"haskell
+@
+8,3,12ToolsBuild SystemJavaC"tools"build system"javac
+<
+8,3,13ToolsBuild SystemLua"tools"build system"lua
+>
+8,3,14ToolsBuild SystemMake"tools"build system"make
+>
+8,3,15ToolsBuild SystemPerl"tools"build system"perl
+B
+8,3,16ToolsBuild SystemPython"tools"build system"python
+8
+8,3,17ToolsBuild SystemR"tools"build system"r
+>
+8,3,18ToolsBuild SystemRuby"tools"build system"ruby
+>
+8,3,19ToolsBuild SystemRust"tools"build system"rust
+L
+8,3,20ToolsBuild SystemShellScript"tools"build system"shellscript
+N
+8,3,21ToolsBuild SystemSyntax Tests"tools"build system"syntax tests
+\
+8,3,23ToolsBuild SystemNew Build System…"tools"build system"new build system…
+'
+8,4⌘BToolsBuild"tools"build
+:
+8,5⇧⌘BToolsBuild With…"tools"build with…
+9
+8,8ToolsSave All on Build"tools"save all on build
+6
+8,10⌃QToolsRecord Macro"tools"record macro
+2
+8,12ToolsSave Macro…"tools"save macro…
+H
+8,13,0ToolsMacrosAdd Line Before"tools"macros"add line before
+N
+8,13,1ToolsMacrosAdd Line in Braces"tools"macros"add line in braces
+:
+8,13,2ToolsMacrosAdd Line"tools"macros"add line
+L
+8,13,3ToolsMacrosDelete Left Right"tools"macros"delete left right
+@
+8,13,4ToolsMacrosDelete Line"tools"macros"delete line
+D
+8,13,5ToolsMacrosDelete to BOL"tools"macros"delete to bol
+D
+8,13,6ToolsMacrosDelete to EOL"tools"macros"delete to eol
+N
+8,13,7ToolsMacrosDelete to Hard BOL"tools"macros"delete to hard bol
+N
+8,13,8ToolsMacrosDelete to Hard EOL"tools"macros"delete to hard eol
+J
+8,15,0Tools	DeveloperNew Plugin…"tools"	developer"new plugin…
+L
+8,15,1Tools	DeveloperNew Snippet…"tools"	developer"new snippet…
+J
+8,15,2Tools	DeveloperNew Syntax…"tools"	developer"new syntax…
+�
+8,15,3Tools	Developer(New Syntax from Plain text.tmLanguage…"tools"	developer"(new syntax from plain text.tmlanguage…
+N
+8,15,5Tools	DeveloperProfile Plugins"tools"	developer"profile plugins
+X
+8,15,7Tools	DeveloperView Package File…"tools"	developer"view package file…
+W
+8,15,8⌃⇧PTools	DeveloperShow Scope Name"tools"	developer"show scope name
+L
+8,16ToolsInstall Package Control…"tools"install package control…
+9
+9,0ProjectOpen Project…"project"open project…
+=
+9,1ProjectSwitch Project…"project"switch project…
+R
+9,2⌃⌘PProjectQuick Switch Project…"project"quick switch project…
+M
+9,3,0ProjectOpen RecentClear Items"project"open recent"clear items
+S
+9,3,1ProjectOpen RecentRemove Deleted"project"open recent"remove deleted
+?
+9,5ProjectSave Project As…"project"save project as…
+D
+9,10ProjectSave Workspace As…"project"save workspace as…
+L
+9,12ProjectAdd Folder to Project…"project"add folder to project…
+0
+10,0⌘MWindowMinimize"window"minimize
+;
+10,1⌥⌘MWindowMinimize All"window"minimize all
+"
+10,2WindowZoom"window"zoom
+*
+10,3WindowZoom All"window"zoom all
+T
+10,4WindowTile Window to Left of Screen"window"tile window to left of screen
+^
+10,5Window"Move Window to Left Side of Screen"window""move window to left side of screen
+V
+10,6WindowTile Window to Right of Screen"window"tile window to right of screen
+`
+10,7Window#Move Window to Right Side of Screen"window"#move window to right side of screen
+5
+10,12
+⌥⇧⌘NWindowNew Tab"window"new tab
+I
+10,13
+⌃⌥⇧	WindowShow Previous Tab"window"show previous tab
+>
+10,14⌃⌥	WindowShow Next Tab"window"show next tab
+G
+10,15WindowMove Tab to New Window"window"move tab to new window
+?
+10,18WindowBring All to Front"window"bring all to front
+;
+10,19WindowArrange in Front"window"arrange in front
+q
+10,21Window+"GenFill-Step1_with_Extendde_Action_Script""window"+"genfill-step1_with_extendde_action_script"
+
+10,22Window2{"title":"Creating Smart Lists","subtitle":"Help","window"2{"title":"creating smart lists","subtitle":"help",
+0
+11,1HelpDocumentation"help"documentation
+.
+11,2HelpReport a Bug"help"report a bug
+$
+11,3HelpTwitter"help"twitter
+:
+11,5HelpIndexing Status…"help"indexing status…
+6
+11,7HelpPurchase License"help"purchase license
+0
+11,8HelpEnter License"help"enter license

@@ -1,0 +1,55 @@
+
+o
+1,0,2Alfred PreferencesServicesServices Settings…"alfred preferences"services"services settings…
+e
+1,2⌘HAlfred PreferencesHide Alfred Preferences"alfred preferences"hide alfred preferences
+P
+1,3⌥⌘HAlfred PreferencesHide Others"alfred preferences"hide others
+e
+1,6⌘QAlfred PreferencesQuit Alfred Preferences"alfred preferences"quit alfred preferences
+d
+1,7⌥⌘QAlfred PreferencesQuit and Keep Windows"alfred preferences"quit and keep windows
+%
+2,0⌘WFileClose"file"close
+0
+2,1⌥⌘WFile	Close All"file"	close all
+@
+3,11🎤EditStart Dictation…"edit"start dictation…
+9
+3,12fnEEditEmoji & Symbols"edit"emoji & symbols
+A
+4,0,0⌘TFormatFont
+Show Fonts"format"font"
+show fonts
+F
+4,0,5⇧⌘CFormatFontShow Colors"format"font"show colors
+C
+5,0⌘FSearchSearch Preferences"search"search preferences
+B
+5,2⇧⌘FSearchFilter Workflows"search"filter workflows
+<
+6,5fnFViewEnter Full Screen"view"enter full screen
+/
+7,0⌘MWindowMinimize"window"minimize
+:
+7,1⌥⌘MWindowMinimize All"window"minimize all
+!
+7,2WindowZoom"window"zoom
+)
+7,3WindowZoom All"window"zoom all
+S
+7,4WindowTile Window to Left of Screen"window"tile window to left of screen
+]
+7,5Window"Move Window to Left Side of Screen"window""move window to left side of screen
+U
+7,6WindowTile Window to Right of Screen"window"tile window to right of screen
+_
+7,7Window#Move Window to Right Side of Screen"window"#move window to right side of screen
+>
+7,12WindowBring All to Front"window"bring all to front
+:
+7,13WindowArrange in Front"window"arrange in front
+>
+7,15WindowAlfred Preferences"window"alfred preferences
+;
+8,0HelpAlfred Support Site"help"alfred support site

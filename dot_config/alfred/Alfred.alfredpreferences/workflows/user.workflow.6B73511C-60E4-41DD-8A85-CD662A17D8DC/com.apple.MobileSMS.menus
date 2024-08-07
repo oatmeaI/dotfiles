@@ -1,0 +1,134 @@
+
+9
+1,0MessagesAbout Messages"messages"about messages
+9
+1,2⌘,MessagesSettings…"messages"settings…
+[
+1,5,2MessagesServicesServices Settings…"messages"services"services settings…
+=
+1,7⌘HMessagesHide Messages"messages"hide messages
+<
+1,8⌥⌘HMessagesHide Others"messages"hide others
+>
+1,11⌘QMessagesQuit Messages"messages"quit messages
+Q
+1,12⌥⌘QMessagesQuit and Keep Windows"messages"quit and keep windows
+1
+2,2⌘NFileNew Message"file"new message
+3
+2,6⌘WFileClose Window"file"close window
+0
+2,7⌥⌘WFile	Close All"file"	close all
+S
+2,8FileOpen Conversation in New Window"file"open conversation in new window
+,
+2,10⌘PFilePrint…"file"print…
+%
+3,5⌘VEditPaste"edit"paste
+K
+3,6
+⌥⇧⌘VEditPaste and Match Style"edit"paste and match style
+*
+3,10⌘FEditFind…"edit"find…
+|
+3,14,0⌘:EditSpelling and GrammarShow Spelling and Grammar"edit"spelling and grammar"show spelling and grammar
+n
+3,14,1⌘;EditSpelling and GrammarCheck Document Now"edit"spelling and grammar"check document now
+�
+3,14,3EditSpelling and GrammarCorrect Spelling Automatically"edit"spelling and grammar"correct spelling automatically
+z
+3,14,4EditSpelling and GrammarCheck Spelling While Typing"edit"spelling and grammar"check spelling while typing
+�
+3,14,5EditSpelling and Grammar"Capitalize Sentences Automatically"edit"spelling and grammar""capitalize sentences automatically
+Z
+3,15,0EditSubstitutionsShow Substitutions"edit"substitutions"show substitutions
+N
+3,15,2EditSubstitutionsSmart Quotes"edit"substitutions"smart quotes
+N
+3,15,3EditSubstitutionsSmart Dashes"edit"substitutions"smart dashes
+\
+3,15,4EditSubstitutionsSmart Insert/Delete"edit"substitutions"smart insert/delete
+X
+3,15,5EditSubstitutionsEmoji Replacement"edit"substitutions"emoji replacement
+D
+3,16,0EditSpeechStart Speaking"edit"speech"start speaking
+4
+3,18⌘EditSend Message"edit"send message
+L
+3,19⌘REditReply to Last Message…"edit"reply to last message…
+K
+3,20⇧⌘REditContinue Last Reply…"edit"continue last reply…
+J
+3,21⌘TEditTapback Last Message…"edit"tapback last message…
+D
+3,22⌘EEditEdit Last Message…"edit"edit last message…
+@
+3,25🎤EditStart Dictation…"edit"start dictation…
+9
+3,26fnEEditEmoji & Symbols"edit"emoji & symbols
+;
+4,3⌘+ViewMake Text Bigger"view"make text bigger
+=
+4,5⌘-ViewMake Text Smaller"view"make text smaller
+R
+4,7⌃⌘1View‎All Messages (1 Unread)"view"‎all messages (1 unread)
+>
+4,8⌃⌘2View‎Known Senders"view"‎known senders
+X
+4,9⌃⌘3View‎Unknown Senders (1 Unread)"view"‎unknown senders (1 unread)
+Y
+4,10⌃⌘4View‎Unread Messages (1 Unread)"view"‎unread messages (1 unread)
+E
+4,11⌃⌘5View‎Recently Deleted"view"‎recently deleted
+=
+4,14fnFViewEnter Full Screen"view"enter full screen
+C
+5,0⌘IConversationShow Details"conversation"show details
+P
+5,1⌥⌘BConversationShow Contact Card"conversation"show contact card
+J
+5,3⇧⌘UConversationMark as Unread"conversation"mark as unread
+D
+5,4⌥⌘MConversationHide Alerts"conversation"hide alerts
+C
+5,6ConversationBlock Person…"conversation"block person…
+Q
+5,7ConversationDelete Conversation…"conversation"delete conversation…
+H
+5,9⌥⌘EConversationSend Email…"conversation"send email…
+>
+5,10ConversationSend File…"conversation"send file…
+B
+5,15ConversationFaceTime Video"conversation"facetime video
+B
+5,16ConversationFaceTime Audio"conversation"facetime audio
+x
+5,18Conversation)Call (858) 204-0316 Using iPhone   mobile"conversation")call (858) 204-0316 using iphone   mobile
+/
+6,0⌘MWindowMinimize"window"minimize
+1
+6,1WindowMinimize All"window"minimize all
+!
+6,2WindowZoom"window"zoom
+)
+6,3WindowZoom All"window"zoom all
+S
+6,4WindowTile Window to Left of Screen"window"tile window to left of screen
+]
+6,5Window"Move Window to Left Side of Screen"window""move window to left side of screen
+U
+6,6WindowTile Window to Right of Screen"window"tile window to right of screen
+_
+6,7Window#Move Window to Right Side of Screen"window"#move window to right side of screen
+>
+6,18WindowBring All to Front"window"bring all to front
+:
+6,19WindowArrange in Front"window"arrange in front
+N
+6,21⌃	WindowGo to Next Conversation"window"go to next conversation
+Y
+6,22⌃⇧	WindowGo to Previous Conversation"window"go to previous conversation
+0
+6,24⌘0WindowMessages"window"messages
+/
+7,0HelpMessages Help"help"messages help

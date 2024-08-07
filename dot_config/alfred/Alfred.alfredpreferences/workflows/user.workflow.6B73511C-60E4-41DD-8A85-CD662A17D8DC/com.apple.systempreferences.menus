@@ -1,0 +1,137 @@
+
+U
+1,0System SettingsAbout System Settings"system settings"about system settings
+i
+1,2,1System SettingsServicesServices Settings…"system settings"services"services settings…
+Y
+1,4⌘HSystem SettingsHide System Settings"system settings"hide system settings
+J
+1,5⌥⌘HSystem SettingsHide Others"system settings"hide others
+Y
+1,8⌘QSystem SettingsQuit System Settings"system settings"quit system settings
+^
+1,9⌥⌘QSystem SettingsQuit and Keep Windows"system settings"quit and keep windows
+%
+2,1⌘WFileClose"file"close
+0
+2,2⌥⌘WFile	Close All"file"	close all
+@
+3,10🎤EditStart Dictation…"edit"start dictation…
+9
+3,11fnEEditEmoji & Symbols"edit"emoji & symbols
+#
+4,0⌘[ViewBack"view"back
+)
+4,1⌘]ViewForward"view"forward
+'
+4,2⌘FViewSearch"view"search
+
+4,4ViewAbout"view"about
+/
+4,5ViewAccessibility"view"accessibility
+7
+4,6ViewAirDrop & Handoff"view"airdrop & handoff
+)
+4,7View
+Appearance"view"
+appearance
+%
+4,8ViewApple ID"view"apple id
+#
+4,9ViewBattery"view"battery
+(
+4,10View	Bluetooth"view"	bluetooth
+2
+4,11ViewControl Center"view"control center
+,
+4,12ViewDate & Time"view"date & time
+2
+4,13ViewDesktop & Dock"view"desktop & dock
+&
+4,14ViewDisplays"view"displays
+*
+4,15View
+Extensions"view"
+extensions
+"
+4,16ViewFamily"view"family
+ 
+4,17ViewFocus"view"focus
+,
+4,18ViewGame Center"view"game center
+8
+4,19ViewInternet Accounts"view"internet accounts
+&
+4,20ViewKeyboard"view"keyboard
+8
+4,21ViewLanguage & Region"view"language & region
+,
+4,22ViewLock Screen"view"lock screen
+,
+4,23ViewLogin Items"view"login items
+$
+4,24ViewNetwork"view"network
+0
+4,25ViewNotifications"view"notifications
+(
+4,26View	Passwords"view"	passwords
+<
+4,27ViewPrinters & Scanners"view"printers & scanners
+:
+4,28ViewPrivacy & Security"view"privacy & security
+&
+4,29ViewProfiles"view"profiles
+.
+4,30ViewScreen Saver"view"screen saver
+,
+4,31ViewScreen Time"view"screen time
+$
+4,32ViewSharing"view"sharing
+6
+4,33ViewSiri & Spotlight"view"siri & spotlight
+4
+4,34ViewSoftware Update"view"software update
+ 
+4,35ViewSound"view"sound
+.
+4,36ViewStartup Disk"view"startup disk
+$
+4,37ViewStorage"view"storage
+.
+4,38ViewTime Machine"view"time machine
+<
+4,39ViewTouch ID & Password"view"touch id & password
+&
+4,40ViewTrackpad"view"trackpad
+8
+4,41ViewTransfer or Reset"view"transfer or reset
+/
+5,0⌘MWindowMinimize"window"minimize
+:
+5,1⌥⌘MWindowMinimize All"window"minimize all
+!
+5,2WindowZoom"window"zoom
+)
+5,3WindowZoom All"window"zoom all
+]
+5,4Window"Move Window to Left Side of Screen"window""move window to left side of screen
+_
+5,5Window#Move Window to Right Side of Screen"window"#move window to right side of screen
+>
+5,11WindowBring All to Front"window"bring all to front
+:
+5,12WindowArrange in Front"window"arrange in front
+C
+6,0⌘?HelpSystem Settings Help"help"system settings help
+)
+6,1Help
+macOS Help"help"
+macos help
++
+6,2HelpUser Manual"help"user manual
+/
+6,3HelpmacOS Support"help"macos support
+I
+6,5HelpMacBook Pro Specifications"help"macbook pro specifications
+5
+6,6HelpHardware Support"help"hardware support
