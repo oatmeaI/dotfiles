@@ -13,9 +13,14 @@ brew upgrade
 brew tap {{ . | quote }}
 {{ end -}}
 
-brew_list="$(brew list)"
+brewList="$(brew list)"
+
 {{ range .brews -}}
-if ! [ "$(echo $brew_list | grep .)" ]; then
+if ! [[ "$(echo $brewList | grep {{ . | quote }})" || -d "/Applications/{{ . }}.app" || -x "$(command -v {{ . }})" ]]; then
+    echo "‼️ {{ . }} not installed, installing via brew..."
     brew install {{ . | quote }}
+else
+    echo "✅ {{ . }} is already installed."
 fi
+
 {{ end -}}
