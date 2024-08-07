@@ -1,7 +1,7 @@
 taps = ["FelixKratz/formulae", "nikitabobko/tap"]
 
 brews = [
-    "exa",
+    "eza",
     "btop",
     "fzf",
     "neovim",
