@@ -1,6 +1,10 @@
 local bufferline = require("bufferline")
 return {
   {
+    "folke/flash.nvim",
+    continue = false,
+  },
+  {
     "neovim/nvim-lspconfig",
     opts = {
       inlay_hints = { enabled = false },

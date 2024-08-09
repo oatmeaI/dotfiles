@@ -53,4 +53,6 @@ map("n", "<space>h", ":Neotree position=current source=buffers<cr>", { desc = "S
 map("n", "<space>e", ":FzfLua resume<cr>", { desc = "Resume previous search" })
 
 -- Jump using flash via Enter
-map("n", "<cr>", ":lua require('flash').jump()<cr>", { desc = "Flash" })
+map("n", "<cr>", function()
+  require("flash").jump({ continue = false })
+end, { desc = "Flash" })
