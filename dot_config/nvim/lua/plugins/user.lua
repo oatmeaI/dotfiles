@@ -1,5 +1,19 @@
-local bufferline = require("bufferline")
 return {
+  {
+    "akinsho/bufferline.nvim",
+    enabled = false,
+  },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      incremental_selection = {
+        keymaps = {
+          init_selection = "\\",
+          node_incremental = "\\",
+        },
+      },
+    },
+  },
   {
     "folke/flash.nvim",
     continue = false,
@@ -44,11 +58,10 @@ return {
     },
   },
   {
-    "akinsho/bufferline.nvim",
-    enabled = false,
-  },
-  {
     "nvim-neo-tree/neo-tree.nvim",
+    keys = {
+      { "<leader>e", false },
+    },
     opts = {
       window = {
         mappings = {

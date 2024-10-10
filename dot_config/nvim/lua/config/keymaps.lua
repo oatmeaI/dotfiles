@@ -5,6 +5,10 @@
 local vim = vim
 local map = vim.keymap.set
 
+-- vim.keymap.del("n", "<space>e")
+vim.keymap.del("n", "<space>xx")
+vim.keymap.del("n", "<space>xX")
+
 -- Shift + J/K to scroll fast
 map("n", "<down>", "10j")
 map("n", "<up>", "10k")
@@ -56,3 +60,18 @@ map("n", "<space>e", ":FzfLua resume<cr>", { desc = "Resume previous search" })
 map("n", "<cr>", function()
   require("flash").jump({ continue = false })
 end, { desc = "Flash" })
+
+-- LSP Hover
+map("n", "<space>ci", function()
+  vim.lsp.buf.hover()
+end, { desc = "Show LSP hover" })
+
+map("n", "<space>xx", "<cmd>Trouble diagnostics toggle filter.buf=0<cr>", { desc = "Buffer Diagnostics (Trouble)" })
+map("n", "<space>xX", "<cmd>Trouble diagnostics toggle<cr>", { desc = "Diagnostics (Trouble)" })
+
+map(
+  "n",
+  "gds",
+  "<cmd>vs<cr><cmd>FzfLua lsp_definitions jump_to_single_result=true ignore_current_line=true<cr>",
+  { desc = "Go to def in new split" }
+)
