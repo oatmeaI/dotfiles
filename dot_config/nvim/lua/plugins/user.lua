@@ -4,6 +4,11 @@ return {
     enabled = false,
   },
   {
+    "chrisgrieser/nvim-early-retirement",
+    config = true,
+    event = "VeryLazy",
+  },
+  {
     "nvim-treesitter/nvim-treesitter",
     opts = {
       incremental_selection = {
