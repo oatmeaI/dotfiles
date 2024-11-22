@@ -19,6 +19,7 @@ return {
   },
   {
     "folke/snacks.nvim",
+    lazy = false,
     init = function()
       Snacks.config.style("terminal", {
         bo = {
