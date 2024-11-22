@@ -26,6 +26,26 @@ map("n", "<tab>", "<c-w>l", { desc = "Focus east window" })
 map("n", "<space>k", ":w<cr>", { desc = "Write buffer" })
 
 -- Floating terminal
+Snacks.config.style("terminal", {
+  bo = {
+    filetype = "snacks_terminal",
+  },
+  wo = {},
+  keys = {
+    q = "hide",
+    gf = function(self)
+      local f = vim.fn.findfile(vim.fn.expand("<cfile>"), "**")
+      if f == "" then
+        Snacks.notify.warn("No file under cursor")
+      else
+        self:hide()
+        vim.schedule(function()
+          vim.cmd("e " .. f)
+        end)
+      end
+    end,
+  },
+})
 map("n", "<space>l", function()
   Snacks.terminal.toggle(nil, {
     win = { position = "float" },
