@@ -27,7 +27,7 @@ map("n", "<space>k", ":w<cr>", { desc = "Write buffer" })
 
 -- Floating terminal
 map("n", "<space>l", function()
-  LazyVim.terminal()
+  Snacks.terminal()
 end, { desc = "Terminal (cwd)" })
 map("t", "<esc>", "<cmd>close<cr>", { desc = "Hide Terminal" })
 
