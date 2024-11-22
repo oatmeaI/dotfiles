@@ -27,10 +27,10 @@ map("n", "<space>k", ":w<cr>", { desc = "Write buffer" })
 
 -- Floating terminal
 map("n", "<space>l", function()
-  Snacks.terminal.toggle("fish", { win = "float" })
+  Snacks.terminal.toggle(nil, { win = { position = "float" } })
 end, { desc = "Terminal (cwd)" })
 map("t", "<esc>", function()
-  Snacks.terminal.toggle("fish", { win = "float" })
+  Snacks.terminal.toggle(nil, { win = { position = "float" } })
 end, { desc = "Hide Terminal" })
 
 -- Ctrl+P goes forward
