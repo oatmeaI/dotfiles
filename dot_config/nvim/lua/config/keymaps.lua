@@ -30,7 +30,7 @@ map("n", "<space>l", function()
   Snacks.terminal.toggle(nil, { win = { position = "float" } })
 end, { desc = "Terminal (cwd)" })
 map("t", "<esc>", function()
-  Snacks.terminal.toggle(nil, { win = { position = "float" } })
+  vim.cmd("hide")
 end, { desc = "Hide Terminal" })
 
 -- Ctrl+P goes forward
