@@ -30,6 +30,7 @@ map("n", "<space>l", function()
   Snacks.terminal.toggle(nil, { win = { position = "float" } })
 end, { desc = "Terminal (cwd)" })
 map("t", "<esc>", function()
+  vim.cmd("stopinsert")
   vim.cmd("hide")
 end, { desc = "Hide Terminal" })
 
