@@ -27,7 +27,24 @@ map("n", "<space>k", ":w<cr>", { desc = "Write buffer" })
 
 -- Floating terminal
 map("n", "<space>l", function()
-  Snacks.terminal.toggle(nil, { win = { position = "float" } })
+  Snacks.terminal.toggle(nil, {
+    win = { position = "float" },
+    keys = {
+      term_normal = {
+        "<esc>",
+        function()
+          local in_terminal = vim.bo.buftype == "terminal"
+          if in_terminal then
+            vim.cmd("stopinsert")
+            vim.cmd("hide")
+          end
+        end,
+        mode = "t",
+        expr = true,
+        desc = "close term",
+      },
+    },
+  })
 end, { desc = "Terminal (cwd)" })
 
 map("t", "<esc>", function()
