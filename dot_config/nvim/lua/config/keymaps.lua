@@ -29,11 +29,15 @@ map("n", "<space>k", ":w<cr>", { desc = "Write buffer" })
 map("n", "<space>l", function()
   Snacks.terminal.toggle(nil, { win = { position = "float" } })
 end, { desc = "Terminal (cwd)" })
+
 map("t", "<esc>", function()
   local in_terminal = vim.bo.buftype == "terminal"
-  vim.cmd("stopinsert")
-  vim.cmd("hide")
+  if in_terminal then
+    vim.cmd("stopinsert")
+    vim.cmd("hide")
+  end
 end, { desc = "Hide Terminal" })
+
 map("n", "<esc>", function()
   local in_terminal = vim.bo.buftype == "terminal"
   if in_terminal then

@@ -18,6 +18,10 @@ return {
     },
   },
   {
+    "folke/snacks.nvim",
+    keys = { term_normal = {} },
+  },
+  {
     "akinsho/bufferline.nvim",
     enabled = false,
   },
