@@ -27,9 +27,11 @@ map("n", "<space>k", ":w<cr>", { desc = "Write buffer" })
 
 -- Floating terminal
 map("n", "<space>l", function()
-  Snacks.terminal()
+  Snacks.terminal.toggle("fish", { win = "float" })
 end, { desc = "Terminal (cwd)" })
-map("t", "<esc>", "<cmd>close<cr>", { desc = "Hide Terminal" })
+map("t", "<esc>", function()
+  Snacks.terminal.toggle("fish", { win = "float" })
+end, { desc = "Hide Terminal" })
 
 -- Ctrl+P goes forward
 map("n", "<c-p>", "<c-i>", { desc = "Jump forward" })
