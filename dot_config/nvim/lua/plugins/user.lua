@@ -19,7 +19,21 @@ return {
   },
   {
     "folke/snacks.nvim",
-    keys = { term_normal = {} },
+    keys = {
+      term_normal = {
+        "<esc>",
+        function()
+          local in_terminal = vim.bo.buftype == "terminal"
+          if in_terminal then
+            vim.cmd("stopinsert")
+            vim.cmd("hide")
+          end
+        end,
+        mode = "t",
+        expr = true,
+        desc = "close term",
+      },
+    },
   },
   {
     "akinsho/bufferline.nvim",
