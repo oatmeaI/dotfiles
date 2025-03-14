@@ -5,6 +5,10 @@
 local vim = vim
 local map = vim.keymap.set
 
+-- vim.keymap.del("n", "<space>e")
+vim.keymap.del("n", "<space>xx")
+vim.keymap.del("n", "<space>xX")
+
 -- Shift + J/K to scroll fast
 map("n", "<down>", "10j")
 map("n", "<up>", "10k")
@@ -23,9 +27,41 @@ map("n", "<space>k", ":w<cr>", { desc = "Write buffer" })
 
 -- Floating terminal
 map("n", "<space>l", function()
-  LazyVim.terminal()
+  Snacks.terminal.toggle(nil, {
+    win = { position = "float" },
+    keys = {
+      term_normal = {
+        "<esc>",
+        function()
+          local in_terminal = vim.bo.buftype == "terminal"
+          if in_terminal then
+            vim.cmd("stopinsert")
+            vim.cmd("hide")
+          end
+        end,
+        mode = "t",
+        expr = true,
+        desc = "close term",
+      },
+    },
+  })
 end, { desc = "Terminal (cwd)" })
-map("t", "<esc>", "<cmd>close<cr>", { desc = "Hide Terminal" })
+
+map("t", "<esc>", function()
+  local in_terminal = vim.bo.buftype == "terminal"
+  if in_terminal then
+    vim.cmd("stopinsert")
+    vim.cmd("hide")
+  end
+end, { desc = "Hide Terminal" })
+
+map("n", "<esc>", function()
+  local in_terminal = vim.bo.buftype == "terminal"
+  if in_terminal then
+    vim.cmd("stopinsert")
+    vim.cmd("hide")
+  end
+end, { desc = "Hide Terminal" })
 
 -- Ctrl+P goes forward
 map("n", "<c-p>", "<c-i>", { desc = "Jump forward" })
@@ -53,4 +89,21 @@ map("n", "<space>h", ":Neotree position=current source=buffers<cr>", { desc = "S
 map("n", "<space>e", ":FzfLua resume<cr>", { desc = "Resume previous search" })
 
 -- Jump using flash via Enter
-map("n", "<cr>", ":lua require('flash').jump()<cr>", { desc = "Flash" })
+map("n", "<cr>", function()
+  require("flash").jump({ continue = false })
+end, { desc = "Flash" })
+
+-- LSP Hover
+map("n", "<space>ci", function()
+  vim.lsp.buf.hover()
+end, { desc = "Show LSP hover" })
+
+map("n", "<space>xx", "<cmd>Trouble diagnostics toggle filter.buf=0<cr>", { desc = "Buffer Diagnostics (Trouble)" })
+map("n", "<space>xX", "<cmd>Trouble diagnostics toggle<cr>", { desc = "Diagnostics (Trouble)" })
+
+map(
+  "n",
+  "gds",
+  "<cmd>vs<cr><cmd>FzfLua lsp_definitions jump_to_single_result=true ignore_current_line=true<cr>",
+  { desc = "Go to def in new split" }
+)
