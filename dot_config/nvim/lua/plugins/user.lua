@@ -1,5 +1,10 @@
-local bufferline = require("bufferline")
 return {
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "catppuccin-macchiato",
+    },
+  },
   {
     "neovim/nvim-lspconfig",
     opts = {
@@ -8,23 +13,10 @@ return {
       diagnostics = { virtual_text = false },
     },
   },
-  {
-    "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "catppuccin-macchiato",
-    },
-  },
-  { import = "lazyvim.plugins.extras.linting.eslint" },
-  { import = "lazyvim.plugins.extras.formatting.prettier" },
   { "0xstepit/flow.nvim" },
   { "rose-pine/neovim" },
   { "xvzc/chezmoi.nvim", dependencies = { "nvim-lua/plenary.nvim" } },
-  {
-    "folke/which-key.nvim",
-    opts = {
-      preset = "modern",
-    },
-  },
+  {},
   {
     "nvim-lualine/lualine.nvim",
     opts = {
@@ -64,4 +56,19 @@ return {
     dependencies = { "kana/vim-textobj-user" },
   },
   { "willothy/flatten.nvim" },
+  {
+    "linux-cultist/venv-selector.nvim",
+    dependencies = {
+      "neovim/nvim-lspconfig",
+      { "nvim-telescope/telescope.nvim", branch = "0.1.x", dependencies = { "nvim-lua/plenary.nvim" } },
+    },
+    lazy = false,
+    branch = "regexp", -- This is the regexp branch, use this for the new version
+    config = function()
+      require("venv-selector").setup()
+    end,
+    keys = {
+      { ",v", "<cmd>VenvSelect<cr>" },
+    },
+  },
 }
