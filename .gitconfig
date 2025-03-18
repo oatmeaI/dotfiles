@@ -1,5 +1,7 @@
 [user]
 	name = Keenan Villani-Holland
+[include]
+    path = ~/.gitconfig-email
 [alias]
 	mad = reset --hard HEAD
 	paid = push
