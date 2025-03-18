@@ -10,5 +10,6 @@ subject to breaking changes constantly
 - [brew](https://brew.sh)
 - [yadm](https://yadm.io)
 - [karabiner](https://karabiner-elements.pqrs.org)
+- [sketchybar](https://github.com/FelixKratz/SketchyBar)
 
   ...and more...
