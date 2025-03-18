@@ -1,0 +1,26 @@
+[user]
+	name = Keenan Villani-Holland
+[alias]
+	mad = reset --hard HEAD
+	paid = push
+	co = checkout
+[push]
+	autoSetupRemote = true
+	default = simple
+[pull]
+	rebase = false
+[column]
+	ui = auto
+[branch]
+	sort = -committerdate
+[tag]
+	sort = version:refname
+[init]
+	defaultBranch = main
+[diff]
+	algorithm = histogram
+	colorMoved = plain
+	mnemonicPrefix = true
+	renames = true
+[help]
+	autocorrect = prompt
