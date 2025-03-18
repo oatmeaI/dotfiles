@@ -1,0 +1,5 @@
+#! /opt/homebrew/bin/fish
+
+brew bundle dump --global
+yadm add ~/.Brewfile
+yadm commit -m "Update Brewfile"
