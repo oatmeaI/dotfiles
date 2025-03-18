@@ -2,4 +2,4 @@
 
 brew bundle dump --global -f
 yadm add ~/.Brewfile
-yadm commit -m "Update Brewfile"
+yadm commit --allow-empty -m "Update Brewfile"
