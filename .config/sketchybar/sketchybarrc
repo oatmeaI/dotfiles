@@ -68,9 +68,6 @@ sketchybar --set cpu script="$CPU_SCRIPT"
 sketchybar --add item ram left
 sketchybar --set ram script="$RAM_SCRIPT"
 
-# ------- AeroSpace Mode ----------
-sketchybar --add item mode left
-sketchybar --set mode label="normal"
 
 # ------- Time ----------
 sketchybar --add item time right
