@@ -69,6 +69,11 @@ sketchybar --add item ram left
 sketchybar --set ram script="$RAM_SCRIPT"
 
 
+# ------- Today's Priority ----------
+sketchybar --add item today center
+sketchybar --set today label="TODAY: "
+
+
 # ------- Time ----------
 sketchybar --add item time right
 sketchybar --set time script="$TIME_SCRIPT"
