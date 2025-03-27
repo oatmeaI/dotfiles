@@ -1,274 +1,0 @@
-
-1
-1,0FinderAbout Finder"finder"about finder
-5
-1,2⌘,FinderSettings…"finder"settings…
-]
-1,7,0FinderServicesFolder Actions Setup…"finder"services"folder actions setup…
-S
-1,7,1FinderServicesNew kitty Tab Here"finder"services"new kitty tab here
-Y
-1,7,2FinderServicesNew kitty Window Here"finder"services"new kitty window here
-M
-1,7,3FinderServicesOpen with kitty"finder"services"open with kitty
-[
-1,7,4FinderServicesNew Terminal at Folder"finder"services"new terminal at folder
-c
-1,7,5FinderServicesNew Terminal Tab at Folder"finder"services"new terminal tab at folder
-W
-1,7,6FinderServicesServices Settings…"finder"services"services settings…
-5
-1,9⌘HFinderHide Finder"finder"hide finder
-9
-1,10⌥⌘HFinderHide Others"finder"hide others
-@
-2,0⌥⌘NFileNew Finder Window"file"new finder window
-2
-2,1⇧⌘NFile
-New Folder"file"
-new folder
-r
-2,2⌃⌘NFile*New Folder with “Adobe Photoshop 2024”"file"*new folder with “adobe photoshop 2024”
-5
-2,3FileNew Smart Folder"file"new smart folder
-)
-2,4⌘TFileNew Tab"file"new tab
-#
-2,5⌘OFileOpen"file"open
-<
-2,6⌃⌘OFileOpen in New Tab"file"open in new tab
-P
-2,7⌥⌘OFileOpen in New Tab and Close"file"open in new tab and close
-7
-2,10⇧⌘WFileClose Window"file"close window
-4
-2,11
-⌥⇧⌘WFile	Close All"file"	close all
-.
-2,12⌘WFile	Close Tab"file"	close tab
-?
-2,13⌥⌘WFileClose Other Tabs"file"close other tabs
-,
-2,15⌘IFileGet Info"file"get info
-;
-2,16⌥⌘IFileShow Inspector"file"show inspector
-?
-2,17⌃⌘IFileGet Summary Info"file"get summary info
-"
-2,18FileRename"file"rename
-&
-2,19FileCompress"file"compress
-\
-2,20File#Compress “Adobe Photoshop 2024”"file"#compress “adobe photoshop 2024”
-.
-2,21⌘DFile	Duplicate"file"	duplicate
-D
-2,22
-⌥⇧⌘DFileDuplicate Exactly"file"duplicate exactly
-3
-2,23⌃⌘AFile
-Make Alias"file"
-make alias
-0
-2,24⌘YFile
-Quick Look"file"
-quick look
-g
-2,25⌥⌘YFile$Slideshow “Adobe Photoshop 2024”"file"$slideshow “adobe photoshop 2024”
-&
-2,28FileShare…"file"share…
-;
-2,31⌃⌘TFileAdd to Sidebar"file"add to sidebar
-8
-2,32
-⌃⇧⌘TFileAdd to Dock"file"add to dock
-6
-2,34⌘FileMove to Trash"file"move to trash
-I
-2,35⌥⌘FileDelete Immediately…"file"delete immediately…
-$
-2,42⌘FFileFind"file"find
-@
-2,43
-⌃⇧⌘FFileFind by Name…"file"find by name…
-C
-3,0⌘ZEditUndo Copy of 3 Items"edit"undo copy of 3 items
-Y
-3,4⌘CEditCopy “Adobe Photoshop 2024”"edit"copy “adobe photoshop 2024”
-t
-3,5⌥⌘CEdit+Copy “Adobe Photoshop 2024” as Pathname"edit"+copy “adobe photoshop 2024” as pathname
-0
-3,10⌘AEdit
-Select All"edit"
-select all
-2
-3,13EditShow Clipboard"edit"show clipboard
-@
-3,16🎤EditStart Dictation…"edit"start dictation…
-9
-3,17fnEEditEmoji & Symbols"edit"emoji & symbols
-+
-4,0⌘1Viewas Icons"view"as icons
-)
-4,1⌘2Viewas List"view"as list
-/
-4,2⌘3View
-as Columns"view"
-as columns
-/
-4,3⌘4View
-as Gallery"view"
-as gallery
-2
-4,5⌃⌘0View
-Use Groups"view"
-use groups
-=
-4,6,0
-⌃⌥⌘1ViewSort ByName"view"sort by"name
-=
-4,6,1
-⌃⌥⌘2ViewSort ByKind"view"sort by"kind
-U
-4,6,2
-⌃⌥⌘3ViewSort ByDate Last Opened"view"sort by"date last opened
-I
-4,6,3
-⌃⌥⌘4ViewSort By
-Date Added"view"sort by"
-date added
-O
-4,6,4
-⌃⌥⌘5ViewSort ByDate Modified"view"sort by"date modified
-A
-4,6,5ViewSort ByDate Created"view"sort by"date created
-=
-4,6,6
-⌃⌥⌘6ViewSort BySize"view"sort by"size
-=
-4,6,7
-⌃⌥⌘7ViewSort ByTags"view"sort by"tags
-9
-4,12⇧⌘\ViewShow All Tabs"view"show all tabs
-7
-4,14⌃⌘SViewHide Sidebar"view"hide sidebar
-7
-4,15⇧⌘PViewHide Preview"view"hide preview
-9
-4,18⌥⌘PViewShow Path Bar"view"show path bar
-:
-4,19⌘/ViewShow Status Bar"view"show status bar
->
-4,21ViewCustomize Toolbar…"view"customize toolbar…
->
-4,23⌘JViewShow View Options"view"show view options
-=
-4,26fnFViewEnter Full Screen"view"enter full screen
-
-5,0⌘[GoBack"go"back
-9
-5,2⌘GoEnclosing Folder"go"enclosing folder
-<
-5,3	⌥⌘GoEnclosing Folder"go"enclosing folder
-X
-5,4	⌃⌘GoEnclosing Folder in New Window"go"enclosing folder in new window
-B
-5,5	⇧⌘GoSelect Startup Disk"go"select startup disk
-(
-5,7⇧⌘FGoRecents"go"recents
-,
-5,8⇧⌘OGo	Documents"go"	documents
-(
-5,9⇧⌘DGoDesktop"go"desktop
--
-5,10⌥⌘LGo	Downloads"go"	downloads
-#
-5,11⇧⌘HGoHome"go"home
- 
-5,12GoLibrary"go"library
-+
-5,13⇧⌘CGoComputer"go"computer
-)
-5,14⇧⌘RGoAirDrop"go"airdrop
-)
-5,15⇧⌘KGoNetwork"go"network
-3
-5,16⇧⌘IGoiCloud Drive"go"icloud drive
-'
-5,17⇧⌘SGoShared"go"shared
-3
-5,18⇧⌘AGoApplications"go"applications
--
-5,19⇧⌘UGo	Utilities"go"	utilities
-"
-5,20GoOneDrive"go"onedrive
->
-5,22,0GoRecent Folders.kenv"go"recent folders".kenv
-\
-5,22,1GoRecent FoldersAdobe Photoshop 2024"go"recent folders"adobe photoshop 2024
-L
-5,22,2GoRecent FoldersApplications"go"recent folders"applications
-D
-5,22,3GoRecent FoldersContents"go"recent folders"contents
-H
-5,22,4GoRecent Folders
-Frameworks"go"recent folders"
-frameworks
->
-5,22,5GoRecent FoldersMacOS"go"recent folders"macos
-T
-5,22,6GoRecent FoldersMantle.framework"go"recent folders"mantle.framework
-F
-5,22,7GoRecent Folders	Resources"go"recent folders"	resources
-D
-5,22,8GoRecent FoldersVersions"go"recent folders"versions
-D
-5,22,9GoRecent Foldersvillanih"go"recent folders"villanih
-I
-5,22,11GoRecent Folders
-Clear Menu"go"recent folders"
-clear menu
-9
-5,24⇧⌘GGoGo to Folder…"go"go to folder…
-@
-5,25⌘KGoConnect to Server…"go"connect to server…
-/
-6,0⌘MWindowMinimize"window"minimize
-:
-6,1⌥⌘MWindowMinimize All"window"minimize all
-!
-6,2WindowZoom"window"zoom
-)
-6,3WindowZoom All"window"zoom all
-S
-6,4WindowTile Window to Left of Screen"window"tile window to left of screen
-]
-6,5Window"Move Window to Left Side of Screen"window""move window to left side of screen
-U
-6,6WindowTile Window to Right of Screen"window"tile window to right of screen
-_
-6,7Window#Move Window to Right Side of Screen"window"#move window to right side of screen
-J
-6,11⌘`WindowCycle Through Windows"window"cycle through windows
-F
-6,16WindowMove Tab to New Window"window"move tab to new window
->
-6,20WindowBring All to Front"window"bring all to front
-:
-6,21WindowArrange in Front"window"arrange in front
-B
-6,23WindowAdobe Photoshop 2024"window"adobe photoshop 2024
-.
-6,24Window
-Frameworks"window"
-frameworks
-~
-6,25Window2user.workflow.6B73511C-60E4-41DD-8A85-CD662A17D8DC"window"2user.workflow.6b73511c-60e4-41dd-8a85-cd662a17d8dc
-*
-6,26Windowvillanih"window"villanih
-7
-7,1HelpTips for Your Mac"help"tips for your mac
-)
-7,2Help
-macOS Help"help"
-macos help

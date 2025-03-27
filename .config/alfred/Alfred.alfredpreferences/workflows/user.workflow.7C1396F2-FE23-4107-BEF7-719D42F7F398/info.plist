@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.vitorgalvao.alfred.calmnotifications</string>
+	<key>connections</key>
+	<dict>
+		<key>3E435725-836B-4634-BF9F-B8DBADDDEABF</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>691C6DBC-41AA-4F22-81C2-8B61B8CB96A4</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>691C6DBC-41AA-4F22-81C2-8B61B8CB96A4</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>E401EEF4-8CBC-46C1-A171-B3F07F5A99BC</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>10800F7B-3F08-4143-BE36-26AA026B629D</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>7F5F20EB-6D1D-44D4-9FB7-46BA2514837C</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>CCD42A98-2018-4BC4-9B3A-90AA2B0AEB3A</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>691C6DBC-41AA-4F22-81C2-8B61B8CB96A4</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Vítor Galvão</string>
+	<key>description</key>
+	<string>Toggle Do Not Disturb Focus Mode</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Calm Notifications</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>openwith</key>
+				<string></string>
+				<key>sourcefile</key>
+				<string>Calm Notifications.shortcut</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openfile</string>
+			<key>uid</key>
+			<string>E401EEF4-8CBC-46C1-A171-B3F07F5A99BC</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>availableviaurlhandler</key>
+				<false/>
+				<key>triggerid</key>
+				<string>dnd</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.external</string>
+			<key>uid</key>
+			<string>CCD42A98-2018-4BC4-9B3A-90AA2B0AEB3A</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>install</string>
+						<key>outputlabel</key>
+						<string>Install Shortcut</string>
+						<key>uid</key>
+						<string>10800F7B-3F08-4143-BE36-26AA026B629D</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>Run Shortcut</string>
+				<key>hideelse</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>691C6DBC-41AA-4F22-81C2-8B61B8CB96A4</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>{var:dnd_keyword}</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>2</integer>
+				<key>runningsubtext</key>
+				<string>Getting status…</string>
+				<key>script</key>
+				<string>function sfItem(itemObj) {
+  return JSON.stringify({
+    rerun: 0.5,
+    items: [itemObj]
+  })
+}
+
+function run(argv) {
+  // Check if shortcut is installed and grab curent Focus
+  try {
+    const currentFocus = Application("Shortcuts Events")
+      .shortcuts
+      .byName("Calm Notifications")
+      .run({ withInput: "status" })
+
+    // Focus enabled
+    if (currentFocus.length &gt; 0) {
+      return sfItem({
+        title: `Turn Off ${currentFocus} Focus`,
+        arg: "off"
+      })
+    }
+  } catch {
+    return sfItem({
+      title: "Missing Calm Notifications Shortcut",
+      subtitle: "Press ↩ to install it",
+      arg: "install"
+    })
+  }
+
+  // Focus disabled
+  const givenTimeout = argv[0]
+
+  // Any given value must start with a digit
+  if (givenTimeout === undefined || !givenTimeout.match(/^\d/)) {
+    return sfItem({
+      title: "Turn On Do Not Distub",
+      arg: "on",
+      icon: { path: "icon_alt.png" }
+    })
+  }
+
+  // Calculate timeout
+  const timeoutMinutes = givenTimeout.match(/\d\s*h/) ?
+    parseInt(parseFloat(givenTimeout) * 60) :
+    parseInt(givenTimeout)
+
+  const plurality = timeoutMinutes === 1 ? "minute" : "minutes"
+
+  // Calculate clock
+  const date = new Date() // Current time
+  date.setMinutes(date.getMinutes() + timeoutMinutes)
+  const clock = date.toTimeString().slice(0, 5)
+
+  return sfItem({
+    title: `Turn On Do Not Disturb for ${timeoutMinutes} ${plurality}`,
+    subtitle: `Enable until ${clock}`,
+    arg: timeoutMinutes,
+    icon: { path: "icon_alt.png" }
+  })
+}</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Toggle Do Not Disturb Focus Mode</string>
+				<key>title</key>
+				<string>{const:alfred_workflow_name}</string>
+				<key>type</key>
+				<integer>7</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>3E435725-836B-4634-BF9F-B8DBADDDEABF</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputmode</key>
+				<integer>0</integer>
+				<key>outputmode</key>
+				<integer>0</integer>
+				<key>shortcut</key>
+				<string>Calm Notifications</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.automation.runshortcut</string>
+			<key>uid</key>
+			<string>7F5F20EB-6D1D-44D4-9FB7-46BA2514837C</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>## Usage
+
+Toggle your Focus Mode via the `dnd` keyword. Optionally give a number when enabling to activate it for that amount of minutes, or hours if an `h` is appended.
+
+![Alfred search for dnd, turn on](images/about/dnd_on.png)
+
+![Alfred search for dnd 1.5h](images/about/dnd_1.5h.png)
+
+![Alfred search for dnd, turn off](images/about/dnd_off.png)</string>
+	<key>uidata</key>
+	<dict>
+		<key>3E435725-836B-4634-BF9F-B8DBADDDEABF</key>
+		<dict>
+			<key>xpos</key>
+			<real>50</real>
+			<key>ypos</key>
+			<real>155</real>
+		</dict>
+		<key>691C6DBC-41AA-4F22-81C2-8B61B8CB96A4</key>
+		<dict>
+			<key>xpos</key>
+			<real>230</real>
+			<key>ypos</key>
+			<real>115</real>
+		</dict>
+		<key>7F5F20EB-6D1D-44D4-9FB7-46BA2514837C</key>
+		<dict>
+			<key>xpos</key>
+			<real>395</real>
+			<key>ypos</key>
+			<real>155</real>
+		</dict>
+		<key>CCD42A98-2018-4BC4-9B3A-90AA2B0AEB3A</key>
+		<dict>
+			<key>xpos</key>
+			<real>50</real>
+			<key>ypos</key>
+			<real>35</real>
+		</dict>
+		<key>E401EEF4-8CBC-46C1-A171-B3F07F5A99BC</key>
+		<dict>
+			<key>xpos</key>
+			<real>395</real>
+			<key>ypos</key>
+			<real>35</real>
+		</dict>
+	</dict>
+	<key>userconfigurationconfig</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>dnd</string>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string></string>
+			<key>label</key>
+			<string>Do Not Disturb Keyword</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>dnd_keyword</string>
+		</dict>
+	</array>
+	<key>version</key>
+	<string>2023.5</string>
+	<key>webaddress</key>
+	<string>https://github.com/vitorgalvao/calm-notifications-workflow/</string>
+</dict>
+</plist>

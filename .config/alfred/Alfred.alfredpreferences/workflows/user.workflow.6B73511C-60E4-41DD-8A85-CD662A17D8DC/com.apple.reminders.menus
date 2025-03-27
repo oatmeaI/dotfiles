@@ -1,125 +1,0 @@
-
-=
-1,0	RemindersAbout Reminders"	reminders"about reminders
-;
-1,2⌘,	RemindersSettings…"	reminders"settings…
-]
-1,4,1	RemindersServicesServices Settings…"	reminders"services"services settings…
-A
-1,6⌘H	RemindersHide Reminders"	reminders"hide reminders
->
-1,7⌥⌘H	RemindersHide Others"	reminders"hide others
-B
-1,10⌘Q	RemindersQuit Reminders"	reminders"quit reminders
-S
-1,11⌥⌘Q	RemindersQuit and Keep Windows"	reminders"quit and keep windows
-3
-2,0⌘NFileNew Reminder"file"new reminder
-.
-2,1⇧⌘NFileNew List"file"new list
-'
-2,2File	New Group"file"	new group
-4
-2,4⌥⌘NFileNew Section"file"new section
-d
-2,5⌃⌘NFile#New Section with Selection (1 item)"file"#new section with selection (1 item)
-5
-2,6FileEdit Sections…"file"edit sections…
-%
-2,9FilePin List"file"pin list
-*
-2,11File
-Share List"file"
-share list
-@
-2,13FileConvert to Smart List"file"convert to smart list
-2
-2,16FileView Templates"file"view templates
-<
-2,17FileSave as Template…"file"save as template…
-&
-2,19⌘WFileClose"file"close
-1
-2,20⌥⌘WFile	Close All"file"	close all
-,
-2,22⌘PFilePrint…"file"print…
-G
-3,0⌘ZEditUndo Completion Change"edit"undo completion change
-/
-3,7⌘AEdit
-Select All"edit"
-select all
-v
-3,9,7⌃⌘TEditMark Due Date AsMark All Overdue to Today"edit"mark due date as"mark all overdue to today
-$
-3,17⌘FEditFind"edit"find
-|
-3,18,0⌘:EditSpelling and GrammarShow Spelling and Grammar"edit"spelling and grammar"show spelling and grammar
-@
-3,24🎤EditStart Dictation…"edit"start dictation…
-9
-3,25fnEEditEmoji & Symbols"edit"emoji & symbols
-#
-4,0Viewas List"view"as list
-)
-4,1View
-as Columns"view"
-as columns
-5
-4,3,0ViewSort ByManual"view"sort by"manual
-9
-4,3,1ViewSort ByDue Date"view"sort by"due date
-C
-4,3,2ViewSort ByCreation Date"view"sort by"creation date
-9
-4,3,3ViewSort ByPriority"view"sort by"priority
-3
-4,3,4ViewSort ByTitle"view"sort by"title
-C
-4,6,0ViewShow Smart ListToday"view"show smart list"today
-K
-4,6,1ViewShow Smart List	Scheduled"view"show smart list"	scheduled
-?
-4,6,2ViewShow Smart ListAll"view"show smart list"all
-G
-4,6,3ViewShow Smart ListFlagged"view"show smart list"flagged
-I
-4,6,4ViewShow Smart ListAssigned"view"show smart list"assigned
-K
-4,6,5ViewShow Smart List	Completed"view"show smart list"	completed
-;
-4,10⇧⌘HViewShow Completed"view"show completed
-7
-4,17⌥⌘SViewHide Sidebar"view"hide sidebar
-=
-4,18fnFViewEnter Full Screen"view"enter full screen
-/
-5,0⌘MWindowMinimize"window"minimize
-:
-5,1⌥⌘MWindowMinimize All"window"minimize all
-!
-5,2WindowZoom"window"zoom
-)
-5,3WindowZoom All"window"zoom all
-S
-5,4WindowTile Window to Left of Screen"window"tile window to left of screen
-]
-5,5Window"Move Window to Left Side of Screen"window""move window to left side of screen
-U
-5,6WindowTile Window to Right of Screen"window"tile window to right of screen
-_
-5,7Window#Move Window to Right Side of Screen"window"#move window to right side of screen
-2
-5,12⌘0Window	Reminders"window"	reminders
->
-5,14WindowBring All to Front"window"bring all to front
-:
-5,15WindowArrange in Front"window"arrange in front
-1
-6,1HelpReminders Help"help"reminders help
-)
-6,3Help
-Using Tags"help"
-using tags
-=
-6,4HelpCreating Smart Lists"help"creating smart lists

@@ -1,1117 +1,0 @@
-
-]
-1,0Adobe Photoshop (Beta)About Photoshop..."adobe photoshop (beta)"about photoshop...
-s
-1,1,0Adobe Photoshop (Beta)About PluginsCamera Raw..."adobe photoshop (beta)"about plugins"camera raw...
-o
-1,2,0⌘KAdobe Photoshop (Beta)Settings…
-General..."adobe photoshop (beta)"settings…"
-general...
-m
-1,2,2Adobe Photoshop (Beta)Settings…Interface..."adobe photoshop (beta)"settings…"interface...
-m
-1,2,3Adobe Photoshop (Beta)Settings…Workspace..."adobe photoshop (beta)"settings…"workspace...
-e
-1,2,4Adobe Photoshop (Beta)Settings…Tools..."adobe photoshop (beta)"settings…"tools...
-�
-1,2,5Adobe Photoshop (Beta)Settings… History & Content Credentials..."adobe photoshop (beta)"settings…" history & content credentials...
-u
-1,2,6Adobe Photoshop (Beta)Settings…File Handling..."adobe photoshop (beta)"settings…"file handling...
-g
-1,2,7Adobe Photoshop (Beta)Settings…	Export..."adobe photoshop (beta)"settings…"	export...
-q
-1,2,8Adobe Photoshop (Beta)Settings…Performance..."adobe photoshop (beta)"settings…"performance...
-{
-1,2,9Adobe Photoshop (Beta)Settings…Image Processing..."adobe photoshop (beta)"settings…"image processing...
-v
-1,2,10Adobe Photoshop (Beta)Settings…Scratch Disks..."adobe photoshop (beta)"settings…"scratch disks...
-j
-1,2,11Adobe Photoshop (Beta)Settings…
-Cursors..."adobe photoshop (beta)"settings…"
-cursors...
-�
-1,2,12Adobe Photoshop (Beta)Settings…Transparency & Gamut..."adobe photoshop (beta)"settings…"transparency & gamut...
-x
-1,2,13Adobe Photoshop (Beta)Settings…Units & Rulers..."adobe photoshop (beta)"settings…"units & rulers...
-�
-1,2,14Adobe Photoshop (Beta)Settings…Guides, Grid & Slices..."adobe photoshop (beta)"settings…"guides, grid & slices...
-j
-1,2,15Adobe Photoshop (Beta)Settings…
-Plugins..."adobe photoshop (beta)"settings…"
-plugins...
-d
-1,2,16Adobe Photoshop (Beta)Settings…Type..."adobe photoshop (beta)"settings…"type...
-`
-1,2,17Adobe Photoshop (Beta)Settings…3D..."adobe photoshop (beta)"settings…"3d...
-~
-1,2,18Adobe Photoshop (Beta)Settings…Enhanced Controls..."adobe photoshop (beta)"settings…"enhanced controls...
-�
-1,2,19Adobe Photoshop (Beta)Settings…Technology Previews..."adobe photoshop (beta)"settings…"technology previews...
-t
-1,2,20Adobe Photoshop (Beta)Settings…Early Access..."adobe photoshop (beta)"settings…"early access...
-p
-1,2,22Adobe Photoshop (Beta)Settings…Camera Raw..."adobe photoshop (beta)"settings…"camera raw...
-w
-1,4,1Adobe Photoshop (Beta)ServicesServices Settings…"adobe photoshop (beta)"services"services settings…
-^
-1,6⌃⌘HAdobe Photoshop (Beta)Hide Photoshop"adobe photoshop (beta)"hide photoshop
-X
-1,7⌥⌘HAdobe Photoshop (Beta)Hide Others"adobe photoshop (beta)"hide others
-\
-1,10⌘QAdobe Photoshop (Beta)Quit Photoshop"adobe photoshop (beta)"quit photoshop
-'
-2,0⌘NFileNew..."file"new...
-)
-2,1⌘OFileOpen..."file"open...
-D
-2,2⌥⌘OFileBrowse in Bridge..."file"browse in bridge...
-C
-2,3FileOpen as Smart Object..."file"open as smart object...
-%
-2,6⌘WFileClose"file"close
-0
-2,7⌥⌘WFile	Close All"file"	close all
-6
-2,8⌥⌘PFileClose Others"file"close others
-P
-2,9⇧⌘WFileClose and Go to Bridge..."file"close and go to bridge...
-$
-2,10⌘SFileSave"file"save
-3
-2,11⇧⌘SFile
-Save As..."file"
-save as...
-;
-2,12⌥⌘SFileSave a Copy..."file"save a copy...
-8
-2,15FileInvite to Edit..."file"invite to edit...
-D
-2,16FileShare for Review NEW..."file"share for review new...
-N
-2,17,0FileExportQuick Export as PNG"file"export"quick export as png
-L
-2,17,1
-⌥⇧⌘WFileExportExport As..."file"export"export as...
-R
-2,17,3FileExportExport Preferences..."file"export"export preferences...
-d
-2,17,5
-⌥⇧⌘SFileExportSave for Web (Legacy)..."file"export"save for web (legacy)...
-M
-2,17,11FileExportLayers to Files..."file"export"layers to files...
-U
-2,17,12FileExportColor Lookup Tables..."file"export"color lookup tables...
-W
-2,17,15FileExportPaths to Illustrator..."file"export"paths to illustrator...
-G
-2,17,16FileExportRender Video..."file"export"render video...
-D
-2,18,0FileGenerateImage Assets"file"generate"image assets
-@
-2,20FileSearch Adobe Stock..."file"search adobe stock...
-X
-2,21File!Search Adobe Express Templates..."file"!search adobe express templates...
-8
-2,22FilePlace Embedded..."file"place embedded...
-4
-2,23FilePlace Linked..."file"place linked...
-<
-2,26,0FileAutomateBatch..."file"automate"batch...
-R
-2,26,1FileAutomatePDF Presentation..."file"automate"pdf presentation...
-N
-2,26,2FileAutomateCreate Droplet..."file"automate"create droplet...
-`
-2,26,4FileAutomateCrop and Straighten Photos"file"automate"crop and straighten photos
-R
-2,26,6FileAutomateContact Sheet II..."file"automate"contact sheet ii...
-`
-2,26,8FileAutomateConditional Mode Change..."file"automate"conditional mode change...
-D
-2,26,9FileAutomateFit Image..."file"automate"fit image...
-Q
-2,26,10FileAutomateLens Correction..."file"automate"lens correction...
-S
-2,26,11FileAutomateMerge to HDR Pro..."file"automate"merge to hdr pro...
-G
-2,26,12FileAutomatePhotomerge..."file"automate"photomerge...
-N
-2,27,0FileScriptsImage Processor..."file"scripts"image processor...
-X
-2,27,2FileScriptsDelete All Empty Layers"file"scripts"delete all empty layers
-\
-2,27,4FileScriptsFlatten All Layer Effects"file"scripts"flatten all layer effects
-L
-2,27,5FileScriptsFlatten All Masks"file"scripts"flatten all masks
-Z
-2,27,7FileScriptsScript Events Manager..."file"scripts"script events manager...
-Z
-2,27,9FileScriptsLoad Files into Stack..."file"scripts"load files into stack...
-c
-2,27,10FileScriptsLoad Multiple DICOM Files..."file"scripts"load multiple dicom files...
-E
-2,27,11FileScriptsStatistics..."file"scripts"statistics...
-=
-2,27,13FileScripts	Browse..."file"scripts"	browse...
-Z
-2,28,1FileImportVideo Frames to Layers..."file"import"video frames to layers...
-R
-2,28,2FileImportImages from Device..."file"import"images from device...
-8
-2,28,3FileImportNotes..."file"import"notes...
-T
-2,29,1FileImport from iPhone
-Take Photo"file"import from iphone"
-take photo
-\
-2,29,2FileImport from iPhoneScan Documents"file"import from iphone"scan documents
-T
-2,29,3FileImport from iPhone
-Add Sketch"file"import from iphone"
-add sketch
-:
-2,31
-⌥⇧⌘IFileFile Info..."file"file info...
-4
-2,32FileVersion History"file"version history
-,
-2,34⌘PFilePrint..."file"print...
->
-2,35
-⌥⇧⌘PFilePrint One Copy"file"print one copy
-5
-3,0⌘ZEditUndo Deselect"edit"undo deselect
-@
-3,2⌥⌘ZEditToggle Last State"edit"toggle last state
-#
-3,7⌘CEditCopy"edit"copy
-(
-3,13⌘FEditSearch"edit"search
-8
-3,14EditCheck Spelling..."edit"check spelling...
-F
-3,15EditFind and Replace Text..."edit"find and replace text...
-,
-3,17⇧EditFill..."edit"fill...
-(
-3,18Edit	Stroke..."edit"	stroke...
-H
-3,22
-⌥⇧⌘CEditContent-Aware Scale"edit"content-aware scale
-,
-3,23EditPuppet Warp"edit"puppet warp
-6
-3,24EditPerspective Warp"edit"perspective warp
-8
-3,25⌘TEditFree Transform"edit"free transform
-8
-3,26,2Edit	TransformScale"edit"	transform"scale
-:
-3,26,3Edit	TransformRotate"edit"	transform"rotate
-6
-3,26,4Edit	TransformSkew"edit"	transform"skew
-<
-3,26,5Edit	TransformDistort"edit"	transform"distort
-D
-3,26,6Edit	TransformPerspective"edit"	transform"perspective
-6
-3,26,8Edit	TransformWarp"edit"	transform"warp
-G
-3,26,18Edit	TransformRotate 180°"edit"	transform"rotate 180°
-Y
-3,26,19Edit	TransformRotate 90° Clockwise"edit"	transform"rotate 90° clockwise
-i
-3,26,20Edit	TransformRotate 90° Counter Clockwise"edit"	transform"rotate 90° counter clockwise
-M
-3,26,22Edit	TransformFlip Horizontal"edit"	transform"flip horizontal
-I
-3,26,23Edit	TransformFlip Vertical"edit"	transform"flip vertical
-:
-3,29EditSky Replacement..."edit"sky replacement...
-B
-3,31EditDefine Brush Preset..."edit"define brush preset...
-8
-3,32EditDefine Pattern..."edit"define pattern...
-8
-3,35,1EditPurge	Histories"edit"purge"	histories
-,
-3,35,2EditPurgeAll"edit"purge"all
-<
-3,35,4EditPurgeVideo Cache"edit"purge"video cache
->
-3,37EditAdobe PDF Presets..."edit"adobe pdf presets...
-L
-3,38,0EditPresetsPreset Manager..."edit"presets"preset manager...
-Z
-3,38,2EditPresetsExport/Import Presets..."edit"presets"export/import presets...
-@
-3,39EditRemote Connections..."edit"remote connections...
-A
-3,41⇧⌘KEditColor Settings..."edit"color settings...
-8
-3,42EditAssign Profile..."edit"assign profile...
-@
-3,43EditConvert to Profile..."edit"convert to profile...
-L
-3,45
-⌥⇧⌘KEditKeyboard Shortcuts..."edit"keyboard shortcuts...
-2
-3,46
-⌥⇧⌘MEditMenus..."edit"menus...
-*
-3,47Edit
-Toolbar..."edit"
-toolbar...
-@
-3,50🎤EditStart Dictation…"edit"start dictation…
-7
-4,0,1ImageMode	Grayscale"image"mode"	grayscale
-E
-4,0,3ImageModeIndexed Color..."image"mode"indexed color...
-7
-4,0,4ImageMode	RGB Color"image"mode"	rgb color
-9
-4,0,5ImageMode
-CMYK Color"image"mode"
-cmyk color
-7
-4,0,6ImageMode	Lab Color"image"mode"	lab color
-=
-4,0,7ImageModeMultichannel"image"mode"multichannel
-A
-4,0,9ImageMode8 Bits/Channel"image"mode"8 bits/channel
-D
-4,0,10ImageMode16 Bits/Channel"image"mode"16 bits/channel
-D
-4,0,11ImageMode32 Bits/Channel"image"mode"32 bits/channel
-_
-4,2,0ImageAdjustmentsBrightness/Contrast..."image"adjustments"brightness/contrast...
-K
-4,2,1⌘LImageAdjustments	Levels..."image"adjustments"	levels...
-K
-4,2,2⌘MImageAdjustments	Curves..."image"adjustments"	curves...
-I
-4,2,3ImageAdjustmentsExposure..."image"adjustments"exposure...
-I
-4,2,5ImageAdjustmentsVibrance..."image"adjustments"vibrance...
-[
-4,2,6⌘UImageAdjustmentsHue/Saturation..."image"adjustments"hue/saturation...
-Y
-4,2,7⌘BImageAdjustmentsColor Balance..."image"adjustments"color balance...
-_
-4,2,8
-⌥⇧⌘BImageAdjustmentsBlack & White..."image"adjustments"black & white...
-Q
-4,2,9ImageAdjustmentsPhoto Filter..."image"adjustments"photo filter...
-T
-4,2,10ImageAdjustmentsChannel Mixer..."image"adjustments"channel mixer...
-R
-4,2,11ImageAdjustmentsColor Lookup..."image"adjustments"color lookup...
-F
-4,2,13⌘IImageAdjustmentsInvert"image"adjustments"invert
-L
-4,2,14ImageAdjustmentsPosterize..."image"adjustments"posterize...
-L
-4,2,15ImageAdjustmentsThreshold..."image"adjustments"threshold...
-R
-4,2,16ImageAdjustmentsGradient Map..."image"adjustments"gradient map...
-X
-4,2,17ImageAdjustmentsSelective Color..."image"adjustments"selective color...
-^
-4,2,19ImageAdjustmentsShadows/Highlights..."image"adjustments"shadows/highlights...
-N
-4,2,20ImageAdjustmentsHDR Toning..."image"adjustments"hdr toning...
-Q
-4,2,22⇧⌘UImageAdjustments
-Desaturate"image"adjustments"
-desaturate
-P
-4,2,23ImageAdjustmentsMatch Color..."image"adjustments"match color...
-T
-4,2,24ImageAdjustmentsReplace Color..."image"adjustments"replace color...
-D
-4,2,25ImageAdjustmentsEqualize"image"adjustments"equalize
-2
-4,4⇧⌘LImage	Auto Tone"image"	auto tone
-=
-4,5
-⌥⇧⌘LImageAuto Contrast"image"auto contrast
-4
-4,6⇧⌘BImage
-Auto Color"image"
-auto color
-:
-4,8⌥⌘IImageImage Size..."image"image size...
-<
-4,9⌥⌘CImageCanvas Size..."image"canvas size...
-D
-4,10,0ImageImage Rotation180°"image"image rotation"180°
-V
-4,10,1ImageImage Rotation90° Clockwise"image"image rotation"90° clockwise
-f
-4,10,2ImageImage Rotation90° Counter Clockwise"image"image rotation"90° counter clockwise
-R
-4,10,3ImageImage RotationArbitrary..."image"image rotation"arbitrary...
-f
-4,10,5ImageImage RotationFlip Canvas Horizontal"image"image rotation"flip canvas horizontal
-b
-4,10,6ImageImage RotationFlip Canvas Vertical"image"image rotation"flip canvas vertical
-&
-4,12ImageTrim..."image"trim...
-,
-4,13Image
-Reveal All"image"
-reveal all
-0
-4,15ImageDuplicate..."image"duplicate...
-4
-4,16ImageApply Image..."image"apply image...
-6
-4,17ImageCalculations..."image"calculations...
-B
-4,19,0Image	Variables	Define..."image"	variables"	define...
-l
-4,24,0,0ImageAnalysisSet Measurement ScaleDefault"image"analysis"set measurement scale"default
-p
-4,24,0,1ImageAnalysisSet Measurement Scale	Custom..."image"analysis"set measurement scale"	custom...
-j
-4,24,1,0ImageAnalysisSelect Data Points	Custom..."image"analysis"select data points"	custom...
-B
-4,24,4ImageAnalysis
-Ruler Tool"image"analysis"
-ruler tool
-B
-4,24,5ImageAnalysis
-Count Tool"image"analysis"
-count tool
-X
-4,24,7ImageAnalysisPlace Scale Marker..."image"analysis"place scale marker...
-<
-5,0,0⇧⌘NLayerNewLayer..."layer"new"layer...
-M
-5,0,1LayerNewBackground from Layer"layer"new"background from layer
-3
-5,0,2LayerNewGroup..."layer"new"group...
-K
-5,0,3LayerNewGroup from Layers..."layer"new"group from layers...
-9
-5,0,4LayerNewArtboard..."layer"new"artboard...
-Q
-5,0,6LayerNewArtboard from Layers..."layer"new"artboard from layers...
-K
-5,0,7LayerNewFrame from Layers..."layer"new"frame from layers...
-F
-5,0,10⌘JLayerNewLayer Via Copy"layer"new"layer via copy
-'
-5,1LayerCopy CSS"layer"copy css
-'
-5,2LayerCopy SVG"layer"copy svg
-;
-5,3LayerDuplicate Layer..."layer"duplicate layer...
-F
-5,6⇧⌘'LayerQuick Export as PNG"layer"quick export as png
-;
-5,7
-⌥⇧⌘'LayerExport As..."layer"export as...
-5
-5,9LayerRename Layer..."layer"rename layer...
-Z
-5,10,0LayerLayer StyleBlending Options..."layer"layer style"blending options...
-V
-5,10,2LayerLayer StyleBevel & Emboss..."layer"layer style"bevel & emboss...
-F
-5,10,3LayerLayer Style	Stroke..."layer"layer style"	stroke...
-R
-5,10,4LayerLayer StyleInner Shadow..."layer"layer style"inner shadow...
-N
-5,10,5LayerLayer StyleInner Glow..."layer"layer style"inner glow...
-D
-5,10,6LayerLayer StyleSatin..."layer"layer style"satin...
-T
-5,10,7LayerLayer StyleColor Overlay..."layer"layer style"color overlay...
-Z
-5,10,8LayerLayer StyleGradient Overlay..."layer"layer style"gradient overlay...
-X
-5,10,9LayerLayer StylePattern Overlay..."layer"layer style"pattern overlay...
-O
-5,10,10LayerLayer StyleOuter Glow..."layer"layer style"outer glow...
-Q
-5,10,11LayerLayer StyleDrop Shadow..."layer"layer style"drop shadow...
-S
-5,10,17LayerLayer StyleGlobal Light..."layer"layer style"global light...
-U
-5,10,19LayerLayer StyleHide All Effects"layer"layer style"hide all effects
-V
-5,13,0LayerNew Fill LayerSolid Color..."layer"new fill layer"solid color...
-P
-5,13,1LayerNew Fill LayerGradient..."layer"new fill layer"gradient...
-N
-5,13,2LayerNew Fill Layer
-Pattern..."layer"new fill layer"
-pattern...
-r
-5,14,0LayerNew Adjustment LayerBrightness/Contrast..."layer"new adjustment layer"brightness/contrast...
-X
-5,14,1LayerNew Adjustment Layer	Levels..."layer"new adjustment layer"	levels...
-X
-5,14,2LayerNew Adjustment Layer	Curves..."layer"new adjustment layer"	curves...
-\
-5,14,3LayerNew Adjustment LayerExposure..."layer"new adjustment layer"exposure...
-\
-5,14,5LayerNew Adjustment LayerVibrance..."layer"new adjustment layer"vibrance...
-h
-5,14,6LayerNew Adjustment LayerHue/Saturation..."layer"new adjustment layer"hue/saturation...
-f
-5,14,7LayerNew Adjustment LayerColor Balance..."layer"new adjustment layer"color balance...
-f
-5,14,8LayerNew Adjustment LayerBlack & White..."layer"new adjustment layer"black & white...
-d
-5,14,9LayerNew Adjustment LayerPhoto Filter..."layer"new adjustment layer"photo filter...
-g
-5,14,10LayerNew Adjustment LayerChannel Mixer..."layer"new adjustment layer"channel mixer...
-e
-5,14,11LayerNew Adjustment LayerColor Lookup..."layer"new adjustment layer"color lookup...
-Y
-5,14,13LayerNew Adjustment Layer	Invert..."layer"new adjustment layer"	invert...
-_
-5,14,14LayerNew Adjustment LayerPosterize..."layer"new adjustment layer"posterize...
-_
-5,14,15LayerNew Adjustment LayerThreshold..."layer"new adjustment layer"threshold...
-e
-5,14,16LayerNew Adjustment LayerGradient Map..."layer"new adjustment layer"gradient map...
-k
-5,14,17LayerNew Adjustment LayerSelective Color..."layer"new adjustment layer"selective color...
-F
-5,17,0Layer
-Layer Mask
-Reveal All"layer"
-layer mask"
-reveal all
-B
-5,17,1Layer
-Layer MaskHide All"layer"
-layer mask"hide all
-T
-5,17,4Layer
-Layer MaskFrom Transparency"layer"
-layer mask"from transparency
-H
-5,18,0LayerVector Mask
-Reveal All"layer"vector mask"
-reveal all
-D
-5,18,1LayerVector MaskHide All"layer"vector mask"hide all
-8
-5,20LayerMask All Objects"layer"mask all objects
-f
-5,22,0LayerSmart ObjectsConvert to Smart Object"layer"smart objects"convert to smart object
-n
-5,22,6LayerSmart ObjectsUpdate All Modified Content"layer"smart objects"update all modified content
-Y
-5,22,16LayerSmart ObjectsEmbed All Linked"layer"smart objects"embed all linked
-a
-5,22,17LayerSmart ObjectsConvert to Linked..."layer"smart objects"convert to linked...
-n
-5,23,0LayerVideo LayersNew Video Layer from File..."layer"video layers"new video layer from file...
-`
-5,23,2LayerVideo LayersNew Blank Video Layer"layer"video layers"new blank video layer
-B
-5,26LayerNew Layer Based Slice"layer"new layer based slice
-6
-5,28⌘GLayerGroup Layers"layer"group layers
-4
-5,30⌘,LayerHide Layers"layer"hide layers
-:
-5,38⌘/LayerLock Layers..."layer"lock layers...
-2
-5,45LayerFlatten Image"layer"flatten image
-B
-5,47,1LayerMattingDefringe..."layer"matting"defringe...
-P
-5,47,2LayerMattingRemove Black Matte"layer"matting"remove black matte
-P
-5,47,3LayerMattingRemove White Matte"layer"matting"remove white matte
-E
-6,0TypeMore from Adobe Fonts..."type"more from adobe fonts...
-E
-6,2,0TypePanelsCharacter Panel"type"panels"character panel
-E
-6,2,1TypePanelsParagraph Panel"type"panels"paragraph panel
-?
-6,2,3TypePanelsGlyphs Panel"type"panels"glyphs panel
-S
-6,2,5TypePanelsCharacter Styles Panel"type"panels"character styles panel
-S
-6,2,6TypePanelsParagraph Styles Panel"type"panels"paragraph styles panel
-0
-6,17TypeMatch Font..."type"match font...
-F
-6,19,0TypeFont Preview SizeNone"type"font preview size"none
-H
-6,19,1TypeFont Preview SizeSmall"type"font preview size"small
-J
-6,19,2TypeFont Preview SizeMedium"type"font preview size"medium
-H
-6,19,3TypeFont Preview SizeLarge"type"font preview size"large
-T
-6,19,4TypeFont Preview SizeExtra Large"type"font preview size"extra large
-F
-6,19,5TypeFont Preview SizeHuge"type"font preview size"huge
-\
-6,21,0TypeLanguage OptionsDefault Features"type"language options"default features
-b
-6,21,1TypeLanguage OptionsEast Asian Features"type"language options"east asian features
-j
-6,21,2TypeLanguage OptionsMiddle Eastern Features"type"language options"middle eastern features
-B
-6,23TypeUpdate All Text Layers"type"update all text layers
->
-6,24TypeManage Missing Fonts"type"manage missing fonts
-F
-6,28TypeLoad Default Type Styles"type"load default type styles
-F
-6,29TypeSave Default Type Styles"type"save default type styles
-%
-7,0⌘ASelectAll"select"all
-2
-7,2⇧⌘DSelectReselect"select"reselect
-6
-7,5⌥⌘ASelect
-All Layers"select"
-all layers
-7
-7,6SelectDeselect Layers"select"deselect layers
-;
-7,7
-⌥⇧⌘FSelectFind Layers"select"find layers
-5
-7,8SelectIsolate Layers"select"isolate layers
-6
-7,10SelectColor Range..."select"color range...
-4
-7,11SelectFocus Area..."select"focus area...
-(
-7,12SelectSubject"select"subject
- 
-7,13SelectSky"select"sky
-G
-7,15⌥⌘RSelectSelect and Mask..."select"select and mask...
-H
-7,23SelectEdit in Quick Mask Mode"select"edit in quick mask mode
-<
-7,25SelectLoad Selection..."select"load selection...
-K
-8,2FilterConvert for Smart Filters"filter"convert for smart filters
-;
-8,4FilterNeural Filters..."filter"neural filters...
-;
-8,6FilterFilter Gallery..."filter"filter gallery...
-Q
-8,7
-⌥⇧⌘AFilterAdaptive Wide Angle..."filter"adaptive wide angle...
-J
-8,8⇧⌘AFilterCamera Raw Filter..."filter"camera raw filter...
-F
-8,9⇧⌘RFilterLens Correction..."filter"lens correction...
-7
-8,10⇧⌘XFilter
-Liquify..."filter"
-liquify...
-G
-8,11⌥⌘VFilterVanishing Point..."filter"vanishing point...
-^
-8,13,0Filter3DGenerate Bump (Height) Map..."filter"3d"generate bump (height) map...
-P
-8,13,1Filter3DGenerate Normal Map..."filter"3d"generate normal map...
-6
-8,14,0FilterBlurAverage"filter"blur"average
-0
-8,14,1FilterBlurBlur"filter"blur"blur
-:
-8,14,2FilterBlur	Blur More"filter"blur"	blur more
->
-8,14,3FilterBlurBox Blur..."filter"blur"box blur...
-R
-8,14,4FilterBlurLive Gaussian Blur..."filter"blur"live gaussian blur...
-H
-8,14,5FilterBlurGaussian Blur..."filter"blur"gaussian blur...
-@
-8,14,6FilterBlurLens Blur..."filter"blur"lens blur...
-D
-8,14,7FilterBlurMotion Blur..."filter"blur"motion blur...
-D
-8,14,8FilterBlurRadial Blur..."filter"blur"radial blur...
-B
-8,14,9FilterBlurShape Blur..."filter"blur"shape blur...
-C
-8,14,10FilterBlurSmart Blur..."filter"blur"smart blur...
-G
-8,14,11FilterBlurSurface Blur..."filter"blur"surface blur...
-R
-8,15,0FilterBlur GalleryField Blur..."filter"blur gallery"field blur...
-P
-8,15,1FilterBlur GalleryIris Blur..."filter"blur gallery"iris blur...
-R
-8,15,2FilterBlur GalleryTilt-Shift..."filter"blur gallery"tilt-shift...
-P
-8,15,3FilterBlur GalleryPath Blur..."filter"blur gallery"path blur...
-P
-8,15,4FilterBlur GallerySpin Blur..."filter"blur gallery"spin blur...
-D
-8,16,0FilterDistortDisplace..."filter"distort"displace...
->
-8,16,1FilterDistortPinch..."filter"distort"pinch...
-V
-8,16,2FilterDistortPolar Coordinates..."filter"distort"polar coordinates...
-@
-8,16,3FilterDistort	Ripple..."filter"distort"	ripple...
->
-8,16,4FilterDistortShear..."filter"distort"shear...
-D
-8,16,5FilterDistortSpherize..."filter"distort"spherize...
->
-8,16,6FilterDistortTwirl..."filter"distort"twirl...
-<
-8,16,7FilterDistortWave..."filter"distort"wave...
-@
-8,16,8FilterDistort	ZigZag..."filter"distort"	zigzag...
-B
-8,17,0FilterNoiseAdd Noise..."filter"noise"add noise...
-<
-8,17,1FilterNoise	Despeckle"filter"noise"	despeckle
-P
-8,17,2FilterNoiseDust & Scratches..."filter"noise"dust & scratches...
-<
-8,17,3FilterNoise	Median..."filter"noise"	median...
-H
-8,17,4FilterNoiseReduce Noise..."filter"noise"reduce noise...
-R
-8,18,0FilterPixelateColor Halftone..."filter"pixelate"color halftone...
-L
-8,18,1FilterPixelateCrystallize..."filter"pixelate"crystallize...
-:
-8,18,2FilterPixelateFacet"filter"pixelate"facet
-@
-8,18,3FilterPixelateFragment"filter"pixelate"fragment
-H
-8,18,4FilterPixelateMezzotint..."filter"pixelate"mezzotint...
-B
-8,18,5FilterPixelate	Mosaic..."filter"pixelate"	mosaic...
-L
-8,18,6FilterPixelatePointillize..."filter"pixelate"pointillize...
-<
-8,19,0FilterRenderFlame..."filter"render"flame...
-L
-8,19,1FilterRenderPicture Frame..."filter"render"picture frame...
-:
-8,19,2FilterRenderTree..."filter"render"tree...
-8
-8,19,4FilterRenderClouds"filter"render"clouds
-N
-8,19,5FilterRenderDifference Clouds"filter"render"difference clouds
->
-8,19,6FilterRender	Fibers..."filter"render"	fibers...
-F
-8,19,7FilterRenderLens Flare..."filter"render"lens flare...
-R
-8,19,8FilterRenderLighting Effects..."filter"render"lighting effects...
-<
-8,20,0FilterSharpenSharpen"filter"sharpen"sharpen
-H
-8,20,1FilterSharpenSharpen Edges"filter"sharpen"sharpen edges
-F
-8,20,2FilterSharpenSharpen More"filter"sharpen"sharpen more
-N
-8,20,3FilterSharpenSmart Sharpen..."filter"sharpen"smart sharpen...
-L
-8,20,4FilterSharpenUnsharp Mask..."filter"sharpen"unsharp mask...
-B
-8,21,0FilterStylize
-Diffuse..."filter"stylize"
-diffuse...
-@
-8,21,1FilterStylize	Emboss..."filter"stylize"	emboss...
-B
-8,21,2FilterStylize
-Extrude..."filter"stylize"
-extrude...
-B
-8,21,3FilterStylize
-Find Edges"filter"stylize"
-find edges
-F
-8,21,4FilterStylizeOil Paint..."filter"stylize"oil paint...
->
-8,21,5FilterStylizeSolarize"filter"stylize"solarize
->
-8,21,6FilterStylizeTiles..."filter"stylize"tiles...
-N
-8,21,7FilterStylizeTrace Contour..."filter"stylize"trace contour...
-<
-8,21,8FilterStylizeWind..."filter"stylize"wind...
-H
-8,22,0FilterVideoDe-Interlace..."filter"video"de-interlace...
-@
-8,22,1FilterVideoNTSC Colors"filter"video"ntsc colors
-<
-8,23,0FilterOther	Custom..."filter"other"	custom...
-B
-8,23,1FilterOtherHigh Pass..."filter"other"high pass...
-8
-8,23,2FilterOtherHSB/HSL"filter"other"hsb/hsl
->
-8,23,3FilterOther
-Maximum..."filter"other"
-maximum...
->
-8,23,4FilterOther
-Minimum..."filter"other"
-minimum...
-<
-8,23,5FilterOther	Offset..."filter"other"	offset...
-C
-9,03DNew 3D Layer from File..."3d"new 3d layer from file...
-_
-9,3,03DSpherical PanoramaImport Panorama..."3d"spherical panorama"import panorama...
-�
-9,3,13DSpherical Panorama)New Panorama Layer From Selected Layer(s)"3d"spherical panorama")new panorama layer from selected layer(s)
-7
-9,53DGet More Content..."3d"get more content...
-Y
-9,73D$New 3D Extrusion from Selected Layer"3d"$new 3d extrusion from selected layer
-N
-9,10,03DNew Mesh from LayerPostcard"3d"new mesh from layer"postcard
-b
-9,10,1,03DNew Mesh from LayerMesh PresetCone"3d"new mesh from layer"mesh preset"cone
-l
-9,10,1,13DNew Mesh from LayerMesh Preset	Cube Wrap"3d"new mesh from layer"mesh preset"	cube wrap
-b
-9,10,1,23DNew Mesh from LayerMesh PresetCube"3d"new mesh from layer"mesh preset"cube
-j
-9,10,1,33DNew Mesh from LayerMesh PresetCylinder"3d"new mesh from layer"mesh preset"cylinder
-d
-9,10,1,43DNew Mesh from LayerMesh PresetDonut"3d"new mesh from layer"mesh preset"donut
-`
-9,10,1,53DNew Mesh from LayerMesh PresetHat"3d"new mesh from layer"mesh preset"hat
-h
-9,10,1,63DNew Mesh from LayerMesh PresetPyramid"3d"new mesh from layer"mesh preset"pyramid
-b
-9,10,1,73DNew Mesh from LayerMesh PresetRing"3d"new mesh from layer"mesh preset"ring
-b
-9,10,1,83DNew Mesh from LayerMesh PresetSoda"3d"new mesh from layer"mesh preset"soda
-f
-9,10,1,93DNew Mesh from LayerMesh PresetSphere"3d"new mesh from layer"mesh preset"sphere
-q
-	9,10,1,103DNew Mesh from LayerMesh PresetWine Bottle"3d"new mesh from layer"mesh preset"wine bottle
-f
-9,10,2,03DNew Mesh from LayerDepth Map toPlane"3d"new mesh from layer"depth map to"plane
-z
-9,10,2,13DNew Mesh from LayerDepth Map toTwo-Sided Plane"3d"new mesh from layer"depth map to"two-sided plane
-z
-9,10,2,23DNew Mesh from LayerDepth Map toSolid Extrusion"3d"new mesh from layer"depth map to"solid extrusion
-�
-9,10,2,33DNew Mesh from LayerDepth Map toTwo-Sided Solid Extrusion"3d"new mesh from layer"depth map to"two-sided solid extrusion
-l
-9,10,2,43DNew Mesh from LayerDepth Map toCylinder"3d"new mesh from layer"depth map to"cylinder
-h
-9,10,2,53DNew Mesh from LayerDepth Map toSphere"3d"new mesh from layer"depth map to"sphere
-L
-9,173DNew Tiled Painting from Layer"3d"new tiled painting from layer
-D
-10,0,0ViewProof Setup	Custom..."view"proof setup"	custom...
-J
-10,0,2ViewProof SetupWorking CMYK"view"proof setup"working cmyk
-V
-10,0,3ViewProof SetupWorking Cyan Plate"view"proof setup"working cyan plate
-\
-10,0,4ViewProof SetupWorking Magenta Plate"view"proof setup"working magenta plate
-Z
-10,0,5ViewProof SetupWorking Yellow Plate"view"proof setup"working yellow plate
-X
-10,0,6ViewProof SetupWorking Black Plate"view"proof setup"working black plate
-V
-10,0,7ViewProof SetupWorking CMY Plates"view"proof setup"working cmy plates
-r
-10,0,9ViewProof Setup Legacy Macintosh RGB (Gamma 1.8)"view"proof setup" legacy macintosh rgb (gamma 1.8)
-k
-10,0,10ViewProof SetupInternet Standard RGB (sRGB)"view"proof setup"internet standard rgb (srgb)
-I
-10,0,11ViewProof SetupMonitor RGB"view"proof setup"monitor rgb
-u
-10,0,13ViewProof Setup!Color Blindness - Protanopia-type"view"proof setup"!color blindness - protanopia-type
-y
-10,0,14ViewProof Setup#Color Blindness - Deuteranopia-type"view"proof setup"#color blindness - deuteranopia-type
-4
-10,1⌘YViewProof Colors"view"proof colors
-9
-10,2⇧⌘YViewGamut Warning"view"gamut warning
-x
-10,3,0ViewPixel Aspect RatioCustom Pixel Aspect Ratio..."view"pixel aspect ratio"custom pixel aspect ratio...
-x
-10,3,1ViewPixel Aspect RatioDelete Pixel Aspect Ratio..."view"pixel aspect ratio"delete pixel aspect ratio...
-x
-10,3,2ViewPixel Aspect RatioReset Pixel Aspect Ratios..."view"pixel aspect ratio"reset pixel aspect ratios...
-L
-10,3,4ViewPixel Aspect RatioSquare"view"pixel aspect ratio"square
-b
-10,3,5ViewPixel Aspect RatioD1/DV NTSC (0.91)"view"pixel aspect ratio"d1/dv ntsc (0.91)
-`
-10,3,6ViewPixel Aspect RatioD1/DV PAL (1.09)"view"pixel aspect ratio"d1/dv pal (1.09)
-x
-10,3,7ViewPixel Aspect RatioD1/DV NTSC Widescreen (1.21)"view"pixel aspect ratio"d1/dv ntsc widescreen (1.21)
-z
-10,3,8ViewPixel Aspect RatioHDV 1080/DVCPRO HD 720 (1.33)"view"pixel aspect ratio"hdv 1080/dvcpro hd 720 (1.33)
-v
-10,3,9ViewPixel Aspect RatioD1/DV PAL Widescreen (1.46)"view"pixel aspect ratio"d1/dv pal widescreen (1.46)
-e
-10,3,10ViewPixel Aspect RatioAnamorphic 2:1 (2)"view"pixel aspect ratio"anamorphic 2:1 (2)
-i
-10,3,11ViewPixel Aspect RatioDVCPRO HD 1080 (1.5)"view"pixel aspect ratio"dvcpro hd 1080 (1.5)
-*
-10,7⌘+ViewZoom In"view"zoom in
-,
-10,8⌘-ViewZoom Out"view"zoom out
-6
-10,9⌘0ViewFit on Screen"view"fit on screen
-C
-10,10ViewFit Layer(s) on Screen"view"fit layer(s) on screen
-%
-10,12⌘1View100%"view"100%
-
-10,13View200%"view"200%
-+
-10,14View
-Print Size"view"
-print size
--
-10,15ViewActual Size"view"actual size
-5
-10,16ViewFlip Horizontal"view"flip horizontal
-5
-10,17ViewPattern Preview"view"pattern preview
-[
-10,19,0ViewScreen ModeStandard Screen Mode"view"screen mode"standard screen mode
-o
-10,19,1ViewScreen ModeFull Screen Mode With Menu Bar"view"screen mode"full screen mode with menu bar
-S
-10,19,2ViewScreen ModeFull Screen Mode"view"screen mode"full screen mode
-)
-10,21⌘HViewExtras"view"extras
-;
-10,22,0ViewShowLayer Edges"view"show"layer edges
-3
-10,22,3⌘'ViewShowGrid"view"show"grid
-=
-10,22,9ViewShowSmart Guides"view"show"smart guides
-2
-10,22,10ViewShowSlices"view"show"slices
-:
-10,22,12ViewShow
-Pixel Grid"view"show"
-pixel grid
-:
-10,22,19ViewShow
-UV Overlay"view"show"
-uv overlay
-,
-10,22,25ViewShowAll"view"show"all
-.
-10,22,26ViewShowNone"view"show"none
-R
-10,22,28ViewShowShow Extras Options..."view"show"show extras options...
-)
-10,24⌘RViewRulers"view"rulers
-(
-10,26⇧⌘;ViewSnap"view"snap
-7
-10,27,0ViewSnap ToGuides"view"snap to"guides
-7
-10,27,2ViewSnap ToLayers"view"snap to"layers
-I
-10,27,4ViewSnap ToDocument Bounds"view"snap to"document bounds
-3
-10,27,7ViewSnap ToNone"view"snap to"none
-H
-10,29,1⌥⌘;ViewGuidesLock Guides"view"guides"lock guides
-A
-10,29,6ViewGuidesNew Guide..."view"guides"new guide...
-O
-10,29,7ViewGuidesNew Guide Layout..."view"guides"new guide layout...
-S
-10,29,8ViewGuidesNew Guides From Shape"view"guides"new guides from shape
--
-10,31ViewLock Slices"view"lock slices
-6
-11,0PluginsPlugins Panel"plugins"plugins panel
->
-11,1PluginsBrowse Plugins..."plugins"browse plugins...
->
-11,2PluginsManage Plugins..."plugins"manage plugins...
-T
-12,0,0WindowArrangeTile All Vertically"window"arrange"tile all vertically
-X
-12,0,1WindowArrangeTile All Horizontally"window"arrange"tile all horizontally
-L
-12,0,2WindowArrange2-up Horizontal"window"arrange"2-up horizontal
-H
-12,0,3WindowArrange2-up Vertical"window"arrange"2-up vertical
-L
-12,0,4WindowArrange3-up Horizontal"window"arrange"3-up horizontal
-H
-12,0,5WindowArrange3-up Vertical"window"arrange"3-up vertical
-F
-12,0,6WindowArrange3-up Stacked"window"arrange"3-up stacked
-6
-12,0,7WindowArrange4-up"window"arrange"4-up
-6
-12,0,8WindowArrange6-up"window"arrange"6-up
-\
-12,0,9WindowArrangeConsolidate All to Tabs"window"arrange"consolidate all to tabs
-7
-12,0,12WindowArrangeTile"window"arrange"tile
-M
-12,0,13WindowArrangeFloat in Window"window"arrange"float in window
-W
-12,0,14WindowArrangeFloat All in Windows"window"arrange"float all in windows
-C
-12,0,16WindowArrange
-Match Zoom"window"arrange"
-match zoom
-K
-12,0,17WindowArrangeMatch Location"window"arrange"match location
-K
-12,0,18WindowArrangeMatch Rotation"window"arrange"match rotation
-A
-12,0,19WindowArrange	Match All"window"arrange"	match all
-a
-12,0,21WindowArrangeNew Window for Untitled-9"window"arrange"new window for untitled-9
-H
-12,0,23⌃⌘MWindowArrangeMinimize"window"arrange"minimize
-S
-12,0,24WindowArrangeBring All to Front"window"arrange"bring all to front
-Z
-12,1,0Window	WorkspaceEssentials (Default)"window"	workspace"essentials (default)
-6
-12,1,1Window	Workspace3D"window"	workspace"3d
->
-12,1,2Window	WorkspaceMotion"window"	workspace"motion
-B
-12,1,3Window	WorkspacePainting"window"	workspace"painting
-H
-12,1,4Window	WorkspacePhotography"window"	workspace"photography
-P
-12,1,5Window	WorkspaceGraphic and Web"window"	workspace"graphic and web
-R
-12,1,7Window	WorkspaceReset Essentials"window"	workspace"reset essentials
-R
-12,1,8Window	WorkspaceNew Workspace..."window"	workspace"new workspace...
-X
-12,1,9Window	WorkspaceDelete Workspace..."window"	workspace"delete workspace...
-m
-12,1,11Window	WorkspaceKeyboard Shortcuts & Menus..."window"	workspace"keyboard shortcuts & menus...
-O
-12,1,12Window	WorkspaceLock Workspace"window"	workspace"lock workspace
-
-12,3Window3D"window"3d
-0
-12,4⌥WindowActions"window"actions
-0
-12,5WindowAdjustments"window"adjustments
-4
-12,6WindowBeta Feedback"window"beta feedback
-;
-12,7WindowBrush Settings"window"brush settings
-(
-12,8WindowBrushes"window"brushes
-*
-12,9WindowChannels"window"channels
--
-12,10Window	Character"window"	character
-;
-12,11WindowCharacter Styles"window"character styles
-3
-12,12WindowClone Source"window"clone source
-*
-12,13WindowColor"window"color
-+
-12,14WindowComments"window"comments
-O
-12,15WindowContent Credentials (Beta)"window"content credentials (beta)
-'
-12,16WindowGlyphs"window"glyphs
--
-12,17Window	Gradients"window"	gradients
--
-12,18Window	Histogram"window"	histogram
-)
-12,19WindowHistory"window"history
-(
-12,20WindowInfo"window"info
-1
-12,21WindowLayer Comps"window"layer comps
-,
-12,22WindowLayers"window"layers
--
-12,23Window	Libraries"window"	libraries
--
-12,24Window	Materials"window"	materials
-9
-12,25WindowMeasurement Log"window"measurement log
--
-12,26Window	Navigator"window"	navigator
-%
-12,27WindowNotes"window"notes
--
-12,28Window	Paragraph"window"	paragraph
-;
-12,29WindowParagraph Styles"window"paragraph styles
-%
-12,30WindowPaths"window"paths
-+
-12,31WindowPatterns"window"patterns
-/
-12,32Window
-Properties"window"
-properties
-'
-12,33WindowShapes"window"shapes
-'
-12,34WindowStyles"window"styles
-+
-12,35WindowSwatches"window"swatches
-+
-12,36WindowTimeline"window"timeline
-3
-12,37WindowTool Presets"window"tool presets
-9
-12,38WindowVersion History"window"version history
-=
-12,40WindowApplication Frame"window"application frame
-)
-12,41WindowOptions"window"options
-%
-12,42WindowTools"window"tools
-A
-12,43WindowContextual Task Bar"window"contextual task bar
-/
-12,45Window
-Untitled-1"window"
-untitled-1
-8
-13,1HelpPhotoshop Help..."help"photoshop help...
-@
-13,2HelpHands-on Tutorials..."help"hands-on tutorials...
-0
-13,3HelpWhat's New..."help"what's new...
-2
-13,5HelpSystem Info..."help"system info...
->
-13,6HelpGPU Compatibility..."help"gpu compatibility...
->
-13,8HelpManage My Account..."help"manage my account...
-V
-13,9Help Sign Out... (villanih@adobe.com)"help" sign out... (villanih@adobe.com)
-+
-13,10Help
-Updates..."help"
-updates...

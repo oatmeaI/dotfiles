@@ -1,187 +1,0 @@
-
-9
-1,0ObsidianAbout Obsidian"obsidian"about obsidian
-9
-1,2⌘,ObsidianSettings…"obsidian"settings…
-[
-1,4,1ObsidianServicesServices Settings…"obsidian"services"services settings…
-=
-1,6⌘HObsidianHide Obsidian"obsidian"hide obsidian
-<
-1,7⌥⌘HObsidianHide Others"obsidian"hide others
->
-1,10⌘QObsidianQuit Obsidian"obsidian"quit obsidian
-+
-2,0⌘NFileNew Note"file"new note
-H
-2,1⇧⌘NFileNew Note to the Right"file"new note to the right
-9
-2,3⌘OFileOpen Quickly…"file"open quickly…
-/
-2,5FileOpen Vault…"file"open vault…
-?
-2,6,0FileOpen Recentoatmeal"file"open recent"oatmeal
-I
-2,6,2FileOpen RecentClear Recent"file"open recent"clear recent
--
-2,8⌘WFile	Close Tab"file"	close tab
-6
-2,9⇧⌘WFileClose Window"file"close window
-4
-2,11,0FileShareAirDrop"file"share"airdrop
-6
-2,11,1FileShareMessages"file"share"messages
-0
-2,11,2FileShareNotes"file"share"notes
-6
-2,11,3FileShareFreeform"file"share"freeform
-6
-2,12FileExport To PDF…"file"export to pdf…
-#
-3,0⌘ZEditUndo"edit"undo
-&
-3,1⇧⌘ZEditRedo"edit"redo
-!
-3,3⌘XEditCut"edit"cut
-#
-3,4⌘CEditCopy"edit"copy
-%
-3,5⌘VEditPaste"edit"paste
-H
-3,6⇧⌘VEditPaste and Match Style"edit"paste and match style
-!
-3,7EditDelete"edit"delete
-/
-3,8⌘AEdit
-Select All"edit"
-select all
-$
-3,10⌘FEditFind"edit"find
--
-3,11⌥⌘FEditReplace"edit"replace
-D
-3,13,0EditSpeechStart Speaking"edit"speech"start speaking
-@
-3,16🎤EditStart Dictation…"edit"start dictation…
-9
-3,17fnEEditEmoji & Symbols"edit"emoji & symbols
-!
-4,0InsertLink"insert"link
-9
-4,1⌘KInsertMarkdown Link"insert"markdown link
-'
-4,2InsertCallout"insert"callout
--
-4,4Insert
-Code Block"insert"
-code block
-8
-4,6⇧⌘LInsertBullet List"insert"bullet list
-3
-4,7InsertNumbered List"insert"numbered list
-1
-4,8⌘LInsert	Task List"insert"	task list
-B
-4,10InsertInsert Attachment…"insert"insert attachment…
->
-4,12,0InsertFoldingFold All"insert"folding"fold all
-B
-4,12,1InsertFolding
-Unfold All"insert"folding"
-unfold all
-@
-4,12,3InsertFolding	Fold More"insert"folding"	fold more
-@
-4,12,4InsertFolding	Fold Less"insert"folding"	fold less
-+
-5,0Format	Heading 1"format"	heading 1
-+
-5,1Format	Heading 2"format"	heading 2
-+
-5,2Format	Heading 3"format"	heading 3
-+
-5,3Format	Heading 4"format"	heading 4
-+
-5,4Format	Heading 5"format"	heading 5
-+
-5,5Format	Heading 6"format"	heading 6
--
-5,6Format
-No Heading"format"
-no heading
-'
-5,8⌘BFormatBold"format"bold
--
-5,9⌘IFormatItalics"format"italics
-"
-5,10FormatCode"format"code
-,
-5,11Format	Highlight"format"	highlight
-4
-5,12FormatStrikethrough"format"strikethrough
-.
-5,13⌘/FormatComment"format"comment
-"
-5,14FormatMath"format"math
-3
-6,0⌘EViewReading View"view"reading view
-+
-6,1ViewSource Mode"view"source mode
-J
-6,3⌃⌥⇧⌘GViewToggle Left Sidebar"view"toggle left sidebar
-=
-6,4ViewToggle Right Sidebar"view"toggle right sidebar
-+
-6,6ViewSplit Right"view"split right
-)
-6,7View
-Split Down"view"
-split down
-:
-6,9	⌥⌘ViewNavigate Back"view"navigate back
-A
-6,10	⌥⌘ViewNavigate Forward"view"navigate forward
-2
-6,12⌘0ViewActual Size"view"actual size
-*
-6,13⌘=ViewZoom In"view"zoom in
-,
-6,14⌘-ViewZoom Out"view"zoom out
-.
-6,16ViewForce Reload"view"force reload
-K
-6,17⌥⌘IViewToggle Developer Tools"view"toggle developer tools
-?
-6,19fnFViewToggle Full Screen"view"toggle full screen
-S
-7,0WindowTile Window to Left of Screen"window"tile window to left of screen
-]
-7,1Window"Move Window to Left Side of Screen"window""move window to left side of screen
-U
-7,2WindowTile Window to Right of Screen"window"tile window to right of screen
-_
-7,3Window#Move Window to Right Side of Screen"window"#move window to right side of screen
-/
-7,7⌘MWindowMinimize"window"minimize
-:
-7,8⌥⌘MWindowMinimize All"window"minimize all
-=
-7,9WindowBring All to Front"window"bring all to front
-:
-7,10WindowArrange in Front"window"arrange in front
-j
-7,14Window(Arch Summit - oatmeal - Obsidian v1.4.16"window"(arch summit - oatmeal - obsidian v1.4.16
-'
-8,0Help	Open Help"help"	open help
-/
-8,1HelpRelease Notes"help"release notes
-%
-8,3HelpHomepage"help"homepage
-'
-8,4Help	Community"help"	community
-+
-8,5HelpHelp Center"help"help center
-3
-8,7HelpShow Debug Info"help"show debug info
-9
-8,8HelpOpen Sandbox Vault"help"open sandbox vault

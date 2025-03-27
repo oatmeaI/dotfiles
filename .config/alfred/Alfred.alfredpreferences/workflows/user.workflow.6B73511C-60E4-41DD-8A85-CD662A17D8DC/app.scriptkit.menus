@@ -1,80 +1,0 @@
-
-%
-1,0Kit	About Kit"kit"	about kit
-Q
-1,2,1KitServicesServices Settings…"kit"services"services settings…
-)
-1,4⌘HKitHide Kit"kit"hide kit
-2
-1,5⌥⌘HKitHide Others"kit"hide others
-)
-1,8⌘QKitQuit Kit"kit"quit kit
-F
-1,9⌥⌘QKitQuit and Keep Windows"kit"quit and keep windows
-0
-2,1⌥⌘WFile	Close All"file"	close all
-#
-3,0⌘ZEditUndo"edit"undo
-&
-3,1⇧⌘ZEditRedo"edit"redo
-!
-3,3⌘XEditCut"edit"cut
-#
-3,4⌘CEditCopy"edit"copy
-%
-3,5⌘VEditPaste"edit"paste
-K
-3,6
-⌥⇧⌘VEditPaste and Match Style"edit"paste and match style
-!
-3,7EditDelete"edit"delete
-/
-3,8⌘AEdit
-Select All"edit"
-select all
-Z
-3,10,0EditSubstitutionsShow Substitutions"edit"substitutions"show substitutions
-V
-3,10,4EditSubstitutionsText Replacement"edit"substitutions"text replacement
-D
-3,11,0EditSpeechStart Speaking"edit"speech"start speaking
-@
-3,14🎤EditStart Dictation…"edit"start dictation…
-9
-3,15fnEEditEmoji & Symbols"edit"emoji & symbols
-'
-4,0⌘RViewReload"view"reload
-6
-4,1⇧⌘RViewForce Reload"view"force reload
-J
-4,2⌥⌘IViewToggle Developer Tools"view"toggle developer tools
-1
-4,4⌘0ViewActual Size"view"actual size
-)
-4,5⌘+ViewZoom In"view"zoom in
-+
-4,6⌘-ViewZoom Out"view"zoom out
->
-4,8fnFViewToggle Full Screen"view"toggle full screen
-/
-5,0⌘MWindowMinimize"window"minimize
-:
-5,1⌥⌘MWindowMinimize All"window"minimize all
-!
-5,2WindowZoom"window"zoom
-)
-5,3WindowZoom All"window"zoom all
-S
-5,4WindowTile Window to Left of Screen"window"tile window to left of screen
-]
-5,5Window"Move Window to Left Side of Screen"window""move window to left side of screen
-U
-5,6WindowTile Window to Right of Screen"window"tile window to right of screen
-_
-5,7Window#Move Window to Right Side of Screen"window"#move window to right side of screen
->
-5,12WindowBring All to Front"window"bring all to front
-:
-5,13WindowArrange in Front"window"arrange in front
- 
-5,15WindowKit"window"kit

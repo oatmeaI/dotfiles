@@ -1,609 +1,0 @@
-
-5
-1,0FirefoxAbout Firefox"firefox"about firefox
-7
-1,2⌘,FirefoxSettings…"firefox"settings…
-Y
-1,4,1FirefoxServicesServices Settings…"firefox"services"services settings…
-9
-1,6⌘HFirefoxHide Firefox"firefox"hide firefox
-:
-1,7⌥⌘HFirefoxHide Others"firefox"hide others
-+
-1,8FirefoxShow All"firefox"show all
-:
-1,10⌘QFirefoxQuit Firefox"firefox"quit firefox
-)
-2,0⌘TFileNew Tab"file"new tab
-/
-2,1⌘NFile
-New Window"file"
-new window
-B
-2,2⇧⌘PFileNew Private Window"file"new private window
-3
-2,3⌘OFileOpen File…"file"open file…
--
-2,4⌘WFile	Close Tab"file"	close tab
-6
-2,5⇧⌘WFileClose Window"file"close window
-9
-2,7⌘SFileSave Page As…"file"save page as…
-3
-2,8,0FileShareAirDrop"file"share"airdrop
--
-2,8,1FileShareMail"file"share"mail
-5
-2,8,2FileShareMessages"file"share"messages
-/
-2,8,3FileShareNotes"file"share"notes
-=
-2,8,4FileShareOpen in News"file"share"open in news
-5
-2,8,5FileShareFreeform"file"share"freeform
-7
-2,8,6FileShare	Reminders"file"share"	reminders
-3
-2,8,8FileShareMore…"file"share"more…
-,
-2,10⌘PFilePrint…"file"print…
-R
-2,12FileImport From Another Browser…"file"import from another browser…
-.
-2,14FileWork Offline"file"work offline
-!
-3,3⌘XEditCut"edit"cut
-#
-3,4⌘CEditCopy"edit"copy
-%
-3,5⌘VEditPaste"edit"paste
-/
-3,8⌘AEdit
-Select All"edit"
-select all
-:
-3,10⌘FEditFind in Page…"edit"find in page…
-0
-3,11⌘GEdit
-Find Again"edit"
-find again
-@
-3,14🎤EditStart Dictation…"edit"start dictation…
-9
-3,15fnEEditEmoji & Symbols"edit"emoji & symbols
-S
-4,0,2ViewToolbarsCustomize Toolbar…"view"toolbars"customize toolbar…
-A
-4,1,0⌘BViewSidebar	Bookmarks"view"sidebar"	bookmarks
-@
-4,1,1⇧⌘HViewSidebarHistory"view"sidebar"history
-?
-4,1,2ViewSidebarSynced Tabs"view"sidebar"synced tabs
-L
-4,1,3⌥⇧YViewSidebarBitwarden [1]"view"sidebar"bitwarden [1]
-7
-4,3,0⌘+ViewZoomZoom In"view"zoom"zoom in
-9
-4,3,1⌘-ViewZoomZoom Out"view"zoom"zoom out
-?
-4,3,5ViewZoomZoom Text Only"view"zoom"zoom text only
-?
-4,4,0View
-Page StyleNo Style"view"
-page style"no style
-O
-4,4,1View
-Page StyleBasic Page Style"view"
-page style"basic page style
-@
-4,7⌃⌘FViewEnter Full Screen"view"enter full screen
-A
-5,0⌘YHistoryShow All History"history"show all history
-T
-5,1	⇧⌘HistoryClear Recent History…"history"clear recent history…
-1
-5,3HistorySynced Tabs"history"synced tabs
-7
-5,4HistorySearch History"history"search history
-�
-5,5,0HistoryRecently Closed Tabs.swift ui list scrol to selection - Kagi Search"history"recently closed tabs".swift ui list scrol to selection - kagi search
-�
-5,5,1HistoryRecently Closed Tabs>Is there a way to shows detail tex… | Apple Developer Forums"history"recently closed tabs">is there a way to shows detail tex… | apple developer forums
-�
-5,5,2HistoryRecently Closed TabsKswipeActions(edge:allowsFullSwipe:content:) | Apple Developer Documentation"history"recently closed tabs"Kswipeactions(edge:allowsfullswipe:content:) | apple developer documentation
-�
-5,5,3HistoryRecently Closed Tabs?scrollRowToVisible(_:inColumn:) | Apple Developer Documentation"history"recently closed tabs"?scrollrowtovisible(_:incolumn:) | apple developer documentation
-�
-5,5,4HistoryRecently Closed Tabs0ScrollViewReader | Apple Developer Documentation"history"recently closed tabs"0scrollviewreader | apple developer documentation
-�
-5,5,5HistoryRecently Closed Tabs�SOLVED: Have a button outside of ScrollViewReader be able to scroll the ScrollView to a position? – SwiftUI – Hacking with Swift forums"history"recently closed tabs"�solved: have a button outside of scrollviewreader be able to scroll the scrollview to a position? – swiftui – hacking with swift forums
-�
-5,5,6HistoryRecently Closed Tabs%macos run script on key - Kagi Search"history"recently closed tabs"%macos run script on key - kagi search
-�
-5,5,7HistoryRecently Closed Tabs'folivora.ai - Great Tools for your Mac!"history"recently closed tabs"'folivora.ai - great tools for your mac!
-�
-5,5,8HistoryRecently Closed Tabs$resistance band squats - Kagi Search"history"recently closed tabs"$resistance band squats - kagi search
-�
-5,5,9HistoryRecently Closed TabsHHow To Squat With Resistance Bands: 9 Effective Variations - SET FOR SET"history"recently closed tabs"Hhow to squat with resistance bands: 9 effective variations - set for set
-�
-5,5,10HistoryRecently Closed TabsBmacOS: Run a script from any app via custom hotkey - DEV Community"history"recently closed tabs"Bmacos: run a script from any app via custom hotkey - dev community
-�
-5,5,11HistoryRecently Closed TabsYMenu-Bar-Search/menu/Sources/menu/MenuItem.proto at master · BenziAhamed/Menu-Bar-Search"history"recently closed tabs"Ymenu-bar-search/menu/sources/menu/menuitem.proto at master · benziahamed/menu-bar-search
-�
-5,5,12HistoryRecently Closed TabseAlfred_Moom_Interface/Moom Window Layouts.alfredworkflow at master · SteliosHa/Alfred_Moom_Interface"history"recently closed tabs"ealfred_moom_interface/moom window layouts.alfredworkflow at master · steliosha/alfred_moom_interface
-�
-5,5,13HistoryRecently Closed Tabs~typicode/hotel: 🏩 A simple process manager for developers. Start apps from your browser and access them using local domains"history"recently closed tabs"~typicode/hotel: 🏩 a simple process manager for developers. start apps from your browser and access them using local domains
-�
-5,5,14HistoryRecently Closed Tabsalfred-workflow-nodejs - npm"history"recently closed tabs"alfred-workflow-nodejs - npm
-^
-5,5,15HistoryRecently Closed Tabs
-alfy - npm"history"recently closed tabs"
-alfy - npm
-�
-5,5,16HistoryRecently Closed TabsIHow does one start a node.js server as a daemon process? - Stack Overflow"history"recently closed tabs"Ihow does one start a node.js server as a daemon process? - stack overflow
-�
-5,5,17HistoryRecently Closed Tabs7choose/SDAppDelegate.m at master · chipsenkbeil/choose"history"recently closed tabs"7choose/sdappdelegate.m at master · chipsenkbeil/choose
-�
-5,5,18HistoryRecently Closed Tabs'kit/API.md at main · johnlindquist/kit"history"recently closed tabs"'kit/api.md at main · johnlindquist/kit
-�
-5,5,19HistoryRecently Closed Tabs-AXUIElement.h | Apple Developer Documentation"history"recently closed tabs"-axuielement.h | apple developer documentation
-�
-5,5,20HistoryRecently Closed Tabs-Accessibility | Apple Developer Documentation"history"recently closed tabs"-accessibility | apple developer documentation
-�
-5,5,21HistoryRecently Closed Tabs(NSWindow | Apple Developer Documentation"history"recently closed tabs"(nswindow | apple developer documentation
-�
-5,5,22HistoryRecently Closed Tabs5Sample Apps Tutorials | Apple Developer Documentation"history"recently closed tabs"5sample apps tutorials | apple developer documentation
-�
-5,5,23HistoryRecently Closed Tabs9We’re building the best chat app on Earth - Beeper Blog"history"recently closed tabs"9we’re building the best chat app on earth - beeper blog
-�
-5,5,24HistoryRecently Closed Tabs=Menu-Bar-Search/menu at master · BenziAhamed/Menu-Bar-Search"history"recently closed tabs"=menu-bar-search/menu at master · benziahamed/menu-bar-search
-�
-5,5,25HistoryRecently Closed Tabs\Menu-Bar-Search/menu/Sources/menu/MenuItem.pb.swift at master · BenziAhamed/Menu-Bar-Search"history"recently closed tabs"\menu-bar-search/menu/sources/menu/menuitem.pb.swift at master · benziahamed/menu-bar-search
-�
-5,5,26HistoryRecently Closed TabsSMenu-Bar-Search/menu/Sources/menu/AX.swift at master · BenziAhamed/Menu-Bar-Search"history"recently closed tabs"Smenu-bar-search/menu/sources/menu/ax.swift at master · benziahamed/menu-bar-search
-�
-5,5,27HistoryRecently Closed TabsdAlfredSwitchWindows/EnumWindows/ProcessNameProtocol.swift at master · mandrigin/AlfredSwitchWindows"history"recently closed tabs"dalfredswitchwindows/enumwindows/processnameprotocol.swift at master · mandrigin/alfredswitchwindows
-�
-5,5,28HistoryRecently Closed TabsSBuilding lists and navigation — SwiftUI Tutorials | Apple Developer Documentation"history"recently closed tabs"Sbuilding lists and navigation — swiftui tutorials | apple developer documentation
-�
-5,5,29HistoryRecently Closed Tabs&swift ui list onkeypress - Kagi Search"history"recently closed tabs"&swift ui list onkeypress - kagi search
-�
-5,5,30HistoryRecently Closed TabsRHow to detect and respond to key press events - a free SwiftUI by Example tutorial"history"recently closed tabs"Rhow to detect and respond to key press events - a free swiftui by example tutorial
-�
-5,5,31HistoryRecently Closed Tabs$last | Apple Developer Documentation"history"recently closed tabs"$last | apple developer documentation
-�
-5,5,32HistoryRecently Closed TabsOCan you execute an Applescript script from a Swift Application - Stack Overflow"history"recently closed tabs"Ocan you execute an applescript script from a swift application - stack overflow
-�
-5,5,33HistoryRecently Closed Tabs2swift escape double quotes in string - Kagi Search"history"recently closed tabs"2swift escape double quotes in string - kagi search
-�
-5,5,34HistoryRecently Closed TabsXHow to include .swift file from other .swift file in an immediate mode? - Stack Overflow"history"recently closed tabs"Xhow to include .swift file from other .swift file in an immediate mode? - stack overflow
-�
-5,5,35HistoryRecently Closed TabsfHow can I minimize/maximize windows in macOS with the Cocoa API from a Python script? - Stack Overflow"history"recently closed tabs"fhow can i minimize/maximize windows in macos with the cocoa api from a python script? - stack overflow
-�
-5,5,36HistoryRecently Closed Tabs?My first experiences are a bit disappointing : r/ResistanceBand"history"recently closed tabs"?my first experiences are a bit disappointing : r/resistanceband
-�
-5,5,37HistoryRecently Closed Tabs5How to expand the storage of the Nintendo Switch OLED"history"recently closed tabs"5how to expand the storage of the nintendo switch oled
-l
-5,5,38HistoryRecently Closed TabsAmazon Thanks You"history"recently closed tabs"amazon thanks you
-�
-5,5,39HistoryRecently Closed TabscBuy Apple Watch Ultra 2 GPS + Cellular, 49mm Titanium Case with Blue/Black Trail Loop - M/L - Apple"history"recently closed tabs"cbuy apple watch ultra 2 gps + cellular, 49mm titanium case with blue/black trail loop - m/l - apple
-�
-5,5,40HistoryRecently Closed TabsBands – Serious Steel Fitness"history"recently closed tabs"bands – serious steel fitness
-�
-5,6,0⇧⌘NHistoryRecently Closed Windows%first | Apple Developer Documentation"history"recently closed windows"%first | apple developer documentation
-�
-5,6,1HistoryRecently Closed Windows0swift accesibility activate window - Kagi Search"history"recently closed windows"0swift accesibility activate window - kagi search
-�
-5,6,2HistoryRecently Closed Windows\bash - How do I run a terminal command in a Swift script? (e.g. xcodebuild) - Stack Overflow"history"recently closed windows"\bash - how do i run a terminal command in a swift script? (e.g. xcodebuild) - stack overflow
-s
-5,6,4HistoryRecently Closed WindowsReopen All Windows"history"recently closed windows"reopen all windows
-m
-5,8History)swift convert string to int - Kagi Search"history")swift convert string to int - kagi search
-�
-5,9HistoryXMenu-Bar-Search/menu/Sources/menu/MenuBar.swift at master · BenziAhamed/Menu-Bar-Search"history"Xmenu-bar-search/menu/sources/menu/menubar.swift at master · benziahamed/menu-bar-search
-Z
-5,10HistoryRuntimeArgs swift - Kagi Search"history"runtimeargs swift - kagi search
-Z
-5,11HistoryRuntimeArgs swift - Kagi Search"history"runtimeargs swift - kagi search
-�
-5,12HistorySMenu-Bar-Search/menu/Sources/menu/AX.swift at master · BenziAhamed/Menu-Bar-Search"history"Smenu-bar-search/menu/sources/menu/ax.swift at master · benziahamed/menu-bar-search
-�
-5,13HistoryUMenu-Bar-Search/menu/Sources/menu/main.swift at master · BenziAhamed/Menu-Bar-Search"history"Umenu-bar-search/menu/sources/menu/main.swift at master · benziahamed/menu-bar-search
-�
-5,14HistoryKMenu-Bar-Search/menu/Package.swift at master · BenziAhamed/Menu-Bar-Search"history"Kmenu-bar-search/menu/package.swift at master · benziahamed/menu-bar-search
-�
-5,15History=Menu-Bar-Search/menu at master · BenziAhamed/Menu-Bar-Search"history"=menu-bar-search/menu at master · benziahamed/menu-bar-search
-�
-5,16HistorypBenziAhamed/Menu-Bar-Search: Quickly search through menu options of the front-most application - Alfred Workflow"history"pbenziahamed/menu-bar-search: quickly search through menu options of the front-most application - alfred workflow
-N
-5,17HistoryRepository search results"history"repository search results
-N
-5,18HistoryRepository search results"history"repository search results
-(
-5,19HistoryGitHub"history"github
-�
-5,20History610 Best Cookie Baking Tools - Sally's Baking Addiction"history"610 best cookie baking tools - sally's baking addiction
-�
-5,21History@Best Baking Tools for Any Skill Level - Sally's Baking Addiction"history"@best baking tools for any skill level - sally's baking addiction
-X
-5,22Historybaking equipment - Kagi Search"history"baking equipment - kagi search
-H
-6,0⇧⌘O	BookmarksManage Bookmarks"	bookmarks"manage bookmarks
-S
-6,2⌘D	BookmarksBookmark Current Tab…"	bookmarks"bookmark current tab…
-?
-6,3	BookmarksSearch Bookmarks"	bookmarks"search bookmarks
-P
-6,4⇧⌘D	BookmarksBookmark All Tabs…"	bookmarks"bookmark all tabs…
-e
-6,6,0	BookmarksBookmarks ToolbarGetting Started"	bookmarks"bookmarks toolbar"getting started
-W
-6,6,1	BookmarksBookmarks ToolbarBackname"	bookmarks"bookmarks toolbar"backname
-e
-6,6,2	BookmarksBookmarks ToolbarPointer Pointer"	bookmarks"bookmarks toolbar"pointer pointer
-�
-6,6,3	BookmarksBookmarks Toolbar/Get your work recognized: write a brag document"	bookmarks"bookmarks toolbar"/get your work recognized: write a brag document
-O
-6,8,0	BookmarksMobile BookmarksFlood"	bookmarks"mobile bookmarks"flood
-a
-6,8,1	BookmarksMobile BookmarksHome Syncthing"	bookmarks"mobile bookmarks"home syncthing
-[
-6,8,2	BookmarksMobile BookmarksHome Sonarr"	bookmarks"mobile bookmarks"home sonarr
-[
-6,8,3	BookmarksMobile BookmarksHome Radarr"	bookmarks"mobile bookmarks"home radarr
-T
-6,10,0	BookmarksMozilla FirefoxGet Help"	bookmarks"mozilla firefox"get help
-f
-6,10,1	BookmarksMozilla FirefoxCustomize Firefox"	bookmarks"mozilla firefox"customize firefox
-\
-6,10,2	BookmarksMozilla FirefoxGet Involved"	bookmarks"mozilla firefox"get involved
-T
-6,10,3	BookmarksMozilla FirefoxAbout Us"	bookmarks"mozilla firefox"about us
-d
-6,10,5	BookmarksMozilla FirefoxOpen All in Tabs"	bookmarks"mozilla firefox"open all in tabs
-�
-6,11,0	BookmarksRecently Bookmarked/Get your work recognized: write a brag document"	bookmarks"recently bookmarked"/get your work recognized: write a brag document
-j
-6,11,1	BookmarksRecently BookmarkedPointer Pointer"	bookmarks"recently bookmarked"pointer pointer
-\
-6,11,2	BookmarksRecently BookmarkedBackname"	bookmarks"recently bookmarked"backname
-j
-6,11,3	BookmarksRecently BookmarkedGetting Started"	bookmarks"recently bookmarked"getting started
-d
-6,11,4	BookmarksRecently BookmarkedGet Involved"	bookmarks"recently bookmarked"get involved
-\
-6,11,5	BookmarksRecently BookmarkedGet Help"	bookmarks"recently bookmarked"get help
-n
-6,11,6	BookmarksRecently BookmarkedCustomize Firefox"	bookmarks"recently bookmarked"customize firefox
-\
-6,11,7	BookmarksRecently BookmarkedAbout Us"	bookmarks"recently bookmarked"about us
-�
-6,11,8	BookmarksRecently Bookmarked<GET ON TOP 🎮 - Play this Game Online for Free Now! | Poki"	bookmarks"recently bookmarked"<get on top 🎮 - play this game online for free now! | poki
-�
-6,11,9	BookmarksRecently Bookmarked�creativenull/efmls-configs-nvim: An unofficial collection of linters and formatters configured for efm-langserver to work with the builtin nvim-lsp"	bookmarks"recently bookmarked"�creativenull/efmls-configs-nvim: an unofficial collection of linters and formatters configured for efm-langserver to work with the builtin nvim-lsp
-m
-6,11,11	BookmarksRecently BookmarkedOpen All in Tabs"	bookmarks"recently bookmarked"open all in tabs
-�
-6,12,0,0	BookmarksRecent Tags
-wallpapers!Awesome Wallpapers - wallhaven.cc"	bookmarks"recent tags"
-wallpapers"!awesome wallpapers - wallhaven.cc
-�
-6,12,1,0	BookmarksRecent Tagsjapanese青空文庫　Aozora Bunko"	bookmarks"recent tags"japanese"青空文庫　aozora bunko
-�
-6,12,1,1	BookmarksRecent Tagsjapanese<Japanesetest4you.com – Free online Japanese practice tests"	bookmarks"recent tags"japanese"<japanesetest4you.com – free online japanese practice tests
-Z
-6,12,1,2	BookmarksRecent TagsjapaneseNANA"	bookmarks"recent tags"japanese"nana
-~
-6,12,1,3	BookmarksRecent TagsjapaneseTerrace House Series 1"	bookmarks"recent tags"japanese"terrace house series 1
-n
-6,12,1,4	BookmarksRecent TagsjapaneseYamanote Style"	bookmarks"recent tags"japanese"yamanote style
-�
-6,12,1,5	BookmarksRecent Tagsjapanese9ナショナルジオグラフィック日本版サイト"	bookmarks"recent tags"japanese"9ナショナルジオグラフィック日本版サイト
-|
-6,12,1,6	BookmarksRecent Tagsjapanese上級へのとびら"	bookmarks"recent tags"japanese"上級へのとびら
-�
-6,12,1,7	BookmarksRecent Tagsjapanese1日本語能力試験４級の模擬試験 漢字"	bookmarks"recent tags"japanese"1日本語能力試験４級の模擬試験 漢字
-�
-6,12,1,8	BookmarksRecent Tagsjapanese8ITの今が見える、明日が分かる - ITmedia NEWS"	bookmarks"recent tags"japanese"8itの今が見える、明日が分かる - itmedia news
-s
-	6,12,1,10	BookmarksRecent TagsjapaneseOpen All in Tabs"	bookmarks"recent tags"japanese"open all in tabs
-�
-6,12,2,0	BookmarksRecent TagscookingAbout – Five Spice Cafe"	bookmarks"recent tags"cooking"about – five spice cafe
-�
-6,12,2,1	BookmarksRecent Tagscooking%Cocktail Generator - Make My Cocktail"	bookmarks"recent tags"cooking"%cocktail generator - make my cocktail
-�
-6,12,2,2	BookmarksRecent Tagscooking1Flatbread Pizza Crust - NO YEAST | Midwest Foodie"	bookmarks"recent tags"cooking"1flatbread pizza crust - no yeast | midwest foodie
-�
-6,12,2,3	BookmarksRecent TagscookingBThe Best Banana Bread Recipe | Food Network Kitchen | Food Network"	bookmarks"recent tags"cooking"Bthe best banana bread recipe | food network kitchen | food network
-�
-6,12,2,4	BookmarksRecent Tagscooking)Vegetarian Meal Prep Ideas | Budget Bytes"	bookmarks"recent tags"cooking")vegetarian meal prep ideas | budget bytes
-p
-6,12,2,6	BookmarksRecent TagscookingOpen All in Tabs"	bookmarks"recent tags"cooking"open all in tabs
-`
-6,12,4,0	BookmarksRecent Tagsgames
-Dicethrone"	bookmarks"recent tags"games"
-dicethrone
-v
-6,12,4,1	BookmarksRecent TagsgamesMarble Blast Gold Web"	bookmarks"recent tags"games"marble blast gold web
-l
-6,12,4,3	BookmarksRecent TagsgamesOpen All in Tabs"	bookmarks"recent tags"games"open all in tabs
-�
-6,12,5,0	BookmarksRecent Tagscli;dylanaraps/fff: 📁 A simple file manager written in bash."	bookmarks"recent tags"cli";dylanaraps/fff: 📁 a simple file manager written in bash.
-�
-6,12,6,0	BookmarksRecent TagssoftwaremTaDaa/vimade: An eye friendly plugin that fades your inactive buffers and preserves your syntax highlighting!"	bookmarks"recent tags"software"mtadaa/vimade: an eye friendly plugin that fades your inactive buffers and preserves your syntax highlighting!
-�
-6,12,6,1	BookmarksRecent TagssoftwareHawesome-piracy/readme.md at master · Igglybuff/awesome-piracy · GitHub"	bookmarks"recent tags"software"Hawesome-piracy/readme.md at master · igglybuff/awesome-piracy · github
-�
-6,12,6,2	BookmarksRecent Tagssoftware;dylanaraps/fff: 📁 A simple file manager written in bash."	bookmarks"recent tags"software";dylanaraps/fff: 📁 a simple file manager written in bash.
-�
-6,12,6,3	BookmarksRecent TagssoftwarePGitHub - juftin/browsr: browsr 🗂️ a pleasant file explorer in your terminal"	bookmarks"recent tags"software"Pgithub - juftin/browsr: browsr 🗂️ a pleasant file explorer in your terminal
-�
-6,12,6,4	BookmarksRecent TagssoftwareIGitHub - rockerBOO/awesome-neovim: Collections of awesome neovim plugins."	bookmarks"recent tags"software"Igithub - rockerboo/awesome-neovim: collections of awesome neovim plugins.
-�
-6,12,6,5	BookmarksRecent TagssoftwarecGitHub - samim23/polymath: Convert any music library into a music production sample-library with ML"	bookmarks"recent tags"software"cgithub - samim23/polymath: convert any music library into a music production sample-library with ml
-�
-6,12,6,6	BookmarksRecent Tagssoftware9GitHub - simnalamburt/vim-mundo: Vim undo tree visualizer"	bookmarks"recent tags"software"9github - simnalamburt/vim-mundo: vim undo tree visualizer
-n
-6,12,6,7	BookmarksRecent TagssoftwareOne Thing Well"	bookmarks"recent tags"software"one thing well
-�
-6,12,6,8	BookmarksRecent Tagssoftware,stevearc/profile.nvim: lua profiler for nvim"	bookmarks"recent tags"software",stevearc/profile.nvim: lua profiler for nvim
-�
-6,12,6,9	BookmarksRecent Tagssoftware�aunefyren/wrapperr: Website based application and API that collects Plex statistics using Tautulli and displays it in a nice format. Similar to the Spotify Wrapped concept."	bookmarks"recent tags"software"�aunefyren/wrapperr: website based application and api that collects plex statistics using tautulli and displays it in a nice format. similar to the spotify wrapped concept.
-s
-	6,12,6,11	BookmarksRecent TagssoftwareOpen All in Tabs"	bookmarks"recent tags"software"open all in tabs
-b
-6,12,7,0	BookmarksRecent Tags	nostalgia2007 <3"	bookmarks"recent tags"	nostalgia"2007 <3
-�
-6,12,7,1	BookmarksRecent Tags	nostalgia1John Campbell's Pictures for Sad Children - Imgur"	bookmarks"recent tags"	nostalgia"1john campbell's pictures for sad children - imgur
-~
-6,12,7,2	BookmarksRecent Tags	nostalgiaMarble Blast Gold Web"	bookmarks"recent tags"	nostalgia"marble blast gold web
-p
-6,12,7,3	BookmarksRecent Tags	nostalgiaYamanote Style"	bookmarks"recent tags"	nostalgia"yamanote style
-t
-6,12,7,5	BookmarksRecent Tags	nostalgiaOpen All in Tabs"	bookmarks"recent tags"	nostalgia"open all in tabs
-�
-6,12,8,0	BookmarksRecent Tagsdesign.Feather – Simply beautiful open source icons"	bookmarks"recent tags"design".feather – simply beautiful open source icons
-�
-6,12,8,1	BookmarksRecent Tagsdesign(Nodesign.dev | Design less develop more."	bookmarks"recent tags"design"(nodesign.dev | design less develop more.
-�
-6,12,8,2	BookmarksRecent TagsdesignEXP.css - A design system for building faithful recreations of old UIs"	bookmarks"recent tags"design"Exp.css - a design system for building faithful recreations of old uis
-n
-6,12,8,4	BookmarksRecent TagsdesignOpen All in Tabs"	bookmarks"recent tags"design"open all in tabs
-�
-6,12,9,0	BookmarksRecent Tagsprogramming.Feather – Simply beautiful open source icons"	bookmarks"recent tags"programming".feather – simply beautiful open source icons
-�
-6,12,9,1	BookmarksRecent Tagsprogramming(Nodesign.dev | Design less develop more."	bookmarks"recent tags"programming"(nodesign.dev | design less develop more.
-�
-6,12,9,2	BookmarksRecent TagsprogrammingEXP.css - A design system for building faithful recreations of old UIs"	bookmarks"recent tags"programming"Exp.css - a design system for building faithful recreations of old uis
-x
-6,12,9,4	BookmarksRecent TagsprogrammingOpen All in Tabs"	bookmarks"recent tags"programming"open all in tabs
-�
-6,13,0	BookmarksMost Visited!↓ 152 MB/s ↑ 168 kB/s - Flood"	bookmarks"most visited"!↓ 152 mb/s ↑ 168 kb/s - flood
-J
-6,13,1	BookmarksMost VisitedRadarr"	bookmarks"most visited"radarr
-J
-6,13,2	BookmarksMost VisitedSonarr"	bookmarks"most visited"sonarr
-T
-6,13,3	BookmarksMost VisitedHacker News"	bookmarks"most visited"hacker news
-T
-6,13,4	BookmarksMost VisitedHacker News"	bookmarks"most visited"hacker news
-�
-6,13,5	BookmarksMost VisitedBNew name for the OpenTF project · Issue #296 · opentofu/opentofu"	bookmarks"most visited"Bnew name for the opentf project · issue #296 · opentofu/opentofu
-F
-6,13,6	BookmarksMost VisitedPlex"	bookmarks"most visited"plex
-�
-6,13,7	BookmarksMost Visited#Amazon.com. Spend less. Smile more."	bookmarks"most visited"#amazon.com. spend less. smile more.
-F
-6,13,8	BookmarksMost VisitedPlex"	bookmarks"most visited"plex
-�
-6,13,9	BookmarksMost Visited4Speedtest by Ookla - The Global Broadband Speed Test"	bookmarks"most visited"4speedtest by ookla - the global broadband speed test
-_
-6,13,11	BookmarksMost VisitedOpen All in Tabs"	bookmarks"most visited"open all in tabs
-v
-6,14,0	BookmarksReading!Marginalia Search - browse:random"	bookmarks"reading"!marginalia search - browse:random
-P
-6,14,1	BookmarksReadingOne Thing Well"	bookmarks"reading"one thing well
-^
-6,14,2	BookmarksReadingWe Make Money Not Art"	bookmarks"reading"we make money not art
-@
-6,14,3	BookmarksReadingDevlog"	bookmarks"reading"devlog
-T
-6,14,4	BookmarksReadingHey, I’m Marc."	bookmarks"reading"hey, i’m marc.
-T
-6,14,6	BookmarksReadingOpen All in Tabs"	bookmarks"reading"open all in tabs
-�
-6,15	BookmarksHawesome-piracy/readme.md at master · Igglybuff/awesome-piracy · GitHub"	bookmarks"Hawesome-piracy/readme.md at master · igglybuff/awesome-piracy · github
-b
-6,16	Bookmarks!Awesome Wallpapers - wallhaven.cc"	bookmarks"!awesome wallpapers - wallhaven.cc
-�
-6,17	Bookmarks1日本語能力試験４級の模擬試験 漢字"	bookmarks"1日本語能力試験４級の模擬試験 漢字
-r
-6,18	Bookmarks)Vegetarian Meal Prep Ideas | Budget Bytes"	bookmarks")vegetarian meal prep ideas | budget bytes
-4
-6,19	Bookmarks
-Dicethrone"	bookmarks"
-dicethrone
-�
-6,20	Bookmarks;dylanaraps/fff: 📁 A simple file manager written in bash."	bookmarks";dylanaraps/fff: 📁 a simple file manager written in bash.
-l
-6,21	Bookmarks&Javascript D&D 3.5 Character Generator"	bookmarks"&javascript d&d 3.5 character generator
-v
-6,22	Bookmarks+Third Edition (3.5) D&D Character Generator"	bookmarks"+third edition (3.5) d&d character generator
-J
-6,23	BookmarksMarble Blast Gold Web"	bookmarks"marble blast gold web
-h
-6,24	Bookmarks$NPC Generator for D&D - Myth-Weavers"	bookmarks"$npc generator for d&d - myth-weavers
-p
-6,25	Bookmarks(Nodesign.dev | Design less develop more."	bookmarks"(nodesign.dev | design less develop more.
-�
-6,26	BookmarksEXP.css - A design system for building faithful recreations of old UIs"	bookmarks"Exp.css - a design system for building faithful recreations of old uis
-�
-6,27	Bookmarks1Flatbread Pizza Crust - NO YEAST | Midwest Foodie"	bookmarks"1flatbread pizza crust - no yeast | midwest foodie
-j
-6,28	Bookmarks%Cocktail Generator - Make My Cocktail"	bookmarks"%cocktail generator - make my cocktail
-L
-6,29	BookmarksTerrace House Series 1"	bookmarks"terrace house series 1
-�
-6,30	Bookmarks1John Campbell's Pictures for Sad Children - Imgur"	bookmarks"1john campbell's pictures for sad children - imgur
-.
-6,31	Bookmarks2007 <3"	bookmarks"2007 <3
-<
-6,32	BookmarksYamanote Style"	bookmarks"yamanote style
-(
-6,33	BookmarksNANA"	bookmarks"nana
->
-6,34	BookmarksMap - PurpleAir"	bookmarks"map - purpleair
-H
-6,35	BookmarksHow to Hang Sweaters"	bookmarks"how to hang sweaters
-�
-6,36	Bookmarks<Japanesetest4you.com – Free online Japanese practice tests"	bookmarks"<japanesetest4you.com – free online japanese practice tests
-J
-6,37	BookmarksSplit Scrobble Finder"	bookmarks"split scrobble finder
-2
-6,38	Bookmarks	Musicorum"	bookmarks"	musicorum
-x
-6,39	Bookmarks,Easy to use Plex hosting - Bytesized Hosting"	bookmarks",easy to use plex hosting - bytesized hosting
-~
-6,40	Bookmarks/Premium apps hosting that just works | Ultra.cc"	bookmarks"/premium apps hosting that just works | ultra.cc
-2
-6,41	Bookmarks	JaneLi.Co"	bookmarks"	janeli.co
-�
-6,42	BookmarksMMario Kart 8 Deluxe Fastest Kart - How To Build The Best Kart | Nintendo Life"	bookmarks"Mmario kart 8 deluxe fastest kart - how to build the best kart | nintendo life
-V
-6,43	Bookmarks青空文庫　Aozora Bunko"	bookmarks"青空文庫　aozora bunko
-�
-6,44	Bookmarks�aunefyren/wrapperr: Website based application and API that collects Plex statistics using Tautulli and displays it in a nice format. Similar to the Spotify Wrapped concept."	bookmarks"�aunefyren/wrapperr: website based application and api that collects plex statistics using tautulli and displays it in a nice format. similar to the spotify wrapped concept.
-�
-6,45	Bookmarks8ITの今が見える、明日が分かる - ITmedia NEWS"	bookmarks"8itの今が見える、明日が分かる - itmedia news
-J
-6,46	Bookmarks上級へのとびら"	bookmarks"上級へのとびら
-�
-6,47	Bookmarks9ナショナルジオグラフィック日本版サイト"	bookmarks"9ナショナルジオグラフィック日本版サイト
-l
-6,48	Bookmarks&YouTube to Mp3 Music Converter - YTMP3"	bookmarks"&youtube to mp3 music converter - ytmp3
-�
-6,49,0	Bookmarks	vim stuffOsimeji/winresizer: very simple vim plugin for easy resizing of your vim windows"	bookmarks"	vim stuff"Osimeji/winresizer: very simple vim plugin for easy resizing of your vim windows
-�
-6,49,1	Bookmarks	vim stuff7whiteinge/diffconflicts: A better Vimdiff Git mergetool"	bookmarks"	vim stuff"7whiteinge/diffconflicts: a better vimdiff git mergetool
-�
-6,49,2	Bookmarks	vim stuff:windwp/nvim-autopairs: autopairs for neovim written by lua"	bookmarks"	vim stuff":windwp/nvim-autopairs: autopairs for neovim written by lua
-�
-6,49,3	Bookmarks	vim stuffAdundalek/lazy-lsp.nvim: Neovim plugin to auto install LSP servers"	bookmarks"	vim stuff"Adundalek/lazy-lsp.nvim: neovim plugin to auto install lsp servers
-�
-6,49,4	Bookmarks	vim stuff�GitHub - axkirillov/easypick.nvim: A neovim plugin that lets you easily create Telescope pickers from arbitrary console commands"	bookmarks"	vim stuff"�github - axkirillov/easypick.nvim: a neovim plugin that lets you easily create telescope pickers from arbitrary console commands
-�
-6,49,5	Bookmarks	vim stuff�GitHub - folke/neodev.nvim: 💻 Neovim setup for init.lua and plugin development with full signature help, docs and completion for the nvim lua API."	bookmarks"	vim stuff"�github - folke/neodev.nvim: 💻 neovim setup for init.lua and plugin development with full signature help, docs and completion for the nvim lua api.
-�
-6,49,6	Bookmarks	vim stuff�GitHub - ziontee113/SelectEase: SelectEase selects matching nodes near the cursor using Treesitter queries with Vim's Select Mode."	bookmarks"	vim stuff"�github - ziontee113/selectease: selectease selects matching nodes near the cursor using treesitter queries with vim's select mode.
-�
-6,49,7	Bookmarks	vim stuffmGitHub - ThePrimeagen/vim-be-good: vim-be-good is a nvim plugin designed to make you better at Vim Movements."	bookmarks"	vim stuff"mgithub - theprimeagen/vim-be-good: vim-be-good is a nvim plugin designed to make you better at vim movements.
-�
-6,49,8	Bookmarks	vim stuffQGitHub - LukasPietzschmann/telescope-tabs: Fly through your tabs in neovim ✈️"	bookmarks"	vim stuff"Qgithub - lukaspietzschmann/telescope-tabs: fly through your tabs in neovim ✈️
-�
-6,49,9	Bookmarks	vim stuffPGitHub - cbochs/portal.nvim: Neovim plugin for improved location list navigation"	bookmarks"	vim stuff"Pgithub - cbochs/portal.nvim: neovim plugin for improved location list navigation
-�
-6,49,10	Bookmarks	vim stuff,stevearc/profile.nvim: lua profiler for nvim"	bookmarks"	vim stuff",stevearc/profile.nvim: lua profiler for nvim
-�
-6,49,11	Bookmarks	vim stuffmTaDaa/vimade: An eye friendly plugin that fades your inactive buffers and preserves your syntax highlighting!"	bookmarks"	vim stuff"mtadaa/vimade: an eye friendly plugin that fades your inactive buffers and preserves your syntax highlighting!
-�
-6,49,12	Bookmarks	vim stuffIGitHub - rockerBOO/awesome-neovim: Collections of awesome neovim plugins."	bookmarks"	vim stuff"Igithub - rockerboo/awesome-neovim: collections of awesome neovim plugins.
-�
-6,49,13	Bookmarks	vim stuff9GitHub - simnalamburt/vim-mundo: Vim undo tree visualizer"	bookmarks"	vim stuff"9github - simnalamburt/vim-mundo: vim undo tree visualizer
-�
-6,49,14	Bookmarks	vim stuff>cbochs/grapple.nvim: Neovim plugin for tagging important files"	bookmarks"	vim stuff">cbochs/grapple.nvim: neovim plugin for tagging important files
-�
-6,49,15	Bookmarks	vim stuffRchrisgrieser/nvim-genghis: Convenience file operations for neovim, written in lua."	bookmarks"	vim stuff"Rchrisgrieser/nvim-genghis: convenience file operations for neovim, written in lua.
-�
-6,49,16	Bookmarks	vim stuffBchrisgrieser/nvim-recorder: Enhance the usage of macros in Neovim."	bookmarks"	vim stuff"Bchrisgrieser/nvim-recorder: enhance the usage of macros in neovim.
-�
-6,49,17	Bookmarks	vim stuffAepwalsh/obsidian.nvim: Neovim plugin for Obsidian, written in Lua"	bookmarks"	vim stuff"Aepwalsh/obsidian.nvim: neovim plugin for obsidian, written in lua
-�
-6,49,18	Bookmarks	vim stuffogbprod/substitute.nvim: Neovim plugin introducing a new operators motions to quickly replace and exchange text."	bookmarks"	vim stuff"ogbprod/substitute.nvim: neovim plugin introducing a new operators motions to quickly replace and exchange text.
-�
-6,49,19	Bookmarks	vim stuff�LeonHeidelbach/trailblazer.nvim: TrailBlazer enables you to seemlessly move through important project marks as quickly and efficiently as possible to make your workflow blazingly fast ™."	bookmarks"	vim stuff"�leonheidelbach/trailblazer.nvim: trailblazer enables you to seemlessly move through important project marks as quickly and efficiently as possible to make your workflow blazingly fast ™.
-�
-6,49,20	Bookmarks	vim stuff�nanozuki/tabby.nvim: A declarative, highly configurable, and neovim style tabline plugin. Use your nvim tabs as a workspace multiplexer!"	bookmarks"	vim stuff"�nanozuki/tabby.nvim: a declarative, highly configurable, and neovim style tabline plugin. use your nvim tabs as a workspace multiplexer!
-�
-6,49,21	Bookmarks	vim stuffMPocco81/abbrev-man.nvim: 🍍 A NeoVim plugin for managing vim abbreviations."	bookmarks"	vim stuff"Mpocco81/abbrev-man.nvim: 🍍 a neovim plugin for managing vim abbreviations.
-�
-6,49,22	Bookmarks	vim stuff�ray-x/navigator.lua: Code analysis & navigation plugin for Neovim. Navigate codes like a breeze🎐 Exploring LSP and 🌲Treesitter symbols a piece of 🍰 Take control like a boss 🦍"	bookmarks"	vim stuff"�ray-x/navigator.lua: code analysis & navigation plugin for neovim. navigate codes like a breeze🎐 exploring lsp and 🌲treesitter symbols a piece of 🍰 take control like a boss 🦍
-�
-6,49,23	Bookmarks	vim stuffsrebelot/kanagawa.nvim: NeoVim dark colorscheme inspired by the colors of the famous painting by Katsushika Hokusai."	bookmarks"	vim stuff"srebelot/kanagawa.nvim: neovim dark colorscheme inspired by the colors of the famous painting by katsushika hokusai.
-�
-6,49,24	Bookmarks	vim stuffKstevearc/oil.nvim: Neovim file explorer: edit your filesystem like a buffer"	bookmarks"	vim stuff"Kstevearc/oil.nvim: neovim file explorer: edit your filesystem like a buffer
-�
-6,49,25	Bookmarks	vim stuff7utilyre/barbecue.nvim: A VS Code like winbar for Neovim"	bookmarks"	vim stuff"7utilyre/barbecue.nvim: a vs code like winbar for neovim
-�
-6,49,26	Bookmarks	vim stuffZWeissle/easy-action: A Neovim plugin allows you to perform an action on where you can see."	bookmarks"	vim stuff"Zweissle/easy-action: a neovim plugin allows you to perform an action on where you can see.
-�
-6,49,27	Bookmarks	vim stuff?zdcthomas/yop.nvim: make you some user operators for great good"	bookmarks"	vim stuff"?zdcthomas/yop.nvim: make you some user operators for great good
-Y
-6,49,29	Bookmarks	vim stuffOpen All in Tabs"	bookmarks"	vim stuff"open all in tabs
-,
-6,50	BookmarksRadarr"	bookmarks"radarr
-,
-6,51	BookmarksSonarr"	bookmarks"sonarr
-T
-6,52	BookmarksGitHub - anatosun/plex2mix"	bookmarks"github - anatosun/plex2mix
-/
-7,0⌘JTools	Downloads"tools"	downloads
-D
-7,1⇧⌘AToolsAdd-ons and Themes"tools"add-ons and themes
-'
-7,2ToolsSync Now"tools"sync now
-/
-7,3ToolsFirefox View"tools"firefox view
-f
-7,5,0⌥⌘IToolsBrowser ToolsWeb Developer Tools"tools"browser tools"web developer tools
-O
-7,5,1ToolsBrowser ToolsTask Manager"tools"browser tools"task manager
-W
-7,5,2ToolsBrowser ToolsRemote Debugging"tools"browser tools"remote debugging
-^
-7,5,3⇧⌘JToolsBrowser ToolsBrowser Console"tools"browser tools"browser console
-l
-7,5,4⌥⌘MToolsBrowser ToolsResponsive Design Mode"tools"browser tools"responsive design mode
-K
-7,5,5ToolsBrowser Tools
-Eyedropper"tools"browser tools"
-eyedropper
-S
-7,5,6⌘UToolsBrowser ToolsPage Source"tools"browser tools"page source
-i
-7,5,7ToolsBrowser ToolsExtensions for Developers"tools"browser tools"extensions for developers
-/
-7,6⌘ITools	Page Info"tools"	page info
-S
-8,0WindowTile Window to Left of Screen"window"tile window to left of screen
-]
-8,1Window"Move Window to Left Side of Screen"window""move window to left side of screen
-U
-8,2WindowTile Window to Right of Screen"window"tile window to right of screen
-_
-8,3Window#Move Window to Right Side of Screen"window"#move window to right side of screen
-A
-8,4WindowReplace Tiled Window"window"replace tiled window
-E
-8,6WindowRemove Window from Set"window"remove window from set
-/
-8,8⌘MWindowMinimize"window"minimize
-!
-8,9WindowZoom"window"zoom
-�
-8,11Window�I use resistance bands to build power and strength endurance but, if I pick up a barbell how much weight can I put on it : r/ResistanceBand"window"�i use resistance bands to build power and strength endurance but, if i pick up a barbell how much weight can i put on it : r/resistanceband
-V
-8,12WindowSQLite Forum: JSONB has landed"window"sqlite forum: jsonb has landed
-l
-8,13Window)swift convert string to int - Kagi Search"window")swift convert string to int - kagi search
-+
-9,1⌘?HelpGet Help"help"get help
-K
-9,2HelpShare Ideas and Feedback…"help"share ideas and feedback…
-=
-9,3HelpTroubleshoot Mode…"help"troubleshoot mode…
-U
-9,4Help More Troubleshooting Information"help" more troubleshooting information
-E
-9,5HelpReport Deceptive Site…"help"report deceptive site…
-G
-9,6HelpSwitching to a New Device"help"switching to a new device

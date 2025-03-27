@@ -1,393 +1,0 @@
-
-M
-1,0Google ChromeAbout Google Chrome"google chrome"about google chrome
-C
-1,2⌘,Google ChromeSettings…"google chrome"settings…
-\
-1,4⇧⌘Google ChromeClear Browsing Data…"google chrome"clear browsing data…
-g
-1,5Google Chrome Import Bookmarks and Settings…"google chrome" import bookmarks and settings…
-e
-1,7,1Google ChromeServicesServices Settings…"google chrome"services"services settings…
-Q
-1,9⌘HGoogle ChromeHide Google Chrome"google chrome"hide google chrome
-G
-1,10⌥⌘HGoogle ChromeHide Others"google chrome"hide others
-^
-1,13Google ChromeWarn Before Quitting (⌘Q)"google chrome"warn before quitting (⌘q)
-R
-1,15⌘QGoogle ChromeQuit Google Chrome"google chrome"quit google chrome
-[
-1,16⌥⌘QGoogle ChromeQuit and Keep Windows"google chrome"quit and keep windows
-)
-2,0⌘TFileNew Tab"file"new tab
-/
-2,1⌘NFile
-New Window"file"
-new window
-F
-2,2⇧⌘NFileNew Incognito Window"file"new incognito window
-@
-2,3⇧⌘TFileReopen Closed Tab"file"reopen closed tab
-3
-2,4⌘OFileOpen File…"file"open file…
-;
-2,5⌘LFileOpen Location…"file"open location…
-6
-2,7⇧⌘WFileClose Window"file"close window
-0
-2,8⌥⌘WFile	Close All"file"	close all
--
-2,9⌘WFile	Close Tab"file"	close tab
-:
-2,10⌘SFileSave Page As…"file"save page as…
-4
-2,12,0FileShareAirDrop"file"share"airdrop
-C
-2,12,1⇧⌘IFileShare
-Email Link"file"share"
-email link
-6
-2,12,2FileShareMessages"file"share"messages
-0
-2,12,3FileShareNotes"file"share"notes
->
-2,12,4FileShareOpen in News"file"share"open in news
-6
-2,12,5FileShareFreeform"file"share"freeform
-8
-2,12,6FileShare	Reminders"file"share"	reminders
-4
-2,12,7FileShareMore…"file"share"more…
-,
-2,14⌘PFilePrint…"file"print…
-W
-2,15⌥⌘PFilePrint Using System Dialog…"file"print using system dialog…
-#
-3,0⌘ZEditUndo"edit"undo
-&
-3,1⇧⌘ZEditRedo"edit"redo
-!
-3,3⌘XEditCut"edit"cut
-#
-3,4⌘CEditCopy"edit"copy
-%
-3,5⌘VEditPaste"edit"paste
-H
-3,6⇧⌘VEditPaste and Match Style"edit"paste and match style
-K
-3,7
-⌥⇧⌘VEditPaste and Match Style"edit"paste and match style
-!
-3,8EditDelete"edit"delete
-/
-3,9⌘AEdit
-Select All"edit"
-select all
-O
-3,11,0⌥⌘FEditFindSearch the Web…"edit"find"search the web…
-8
-3,11,2⌘FEditFindFind…"edit"find"find…
-<
-3,11,3⌘GEditFind	Find Next"edit"find"	find next
-G
-3,11,4⇧⌘GEditFindFind Previous"edit"find"find previous
-V
-3,11,5⌘EEditFindUse Selection for Find"edit"find"use selection for find
-L
-3,11,6⌘JEditFindJump to Selection"edit"find"jump to selection
-|
-3,12,0⌘:EditSpelling and GrammarShow Spelling and Grammar"edit"spelling and grammar"show spelling and grammar
-n
-3,12,1⌘;EditSpelling and GrammarCheck Document Now"edit"spelling and grammar"check document now
-z
-3,12,2EditSpelling and GrammarCheck Spelling While Typing"edit"spelling and grammar"check spelling while typing
-Z
-3,13,0EditSubstitutionsShow Substitutions"edit"substitutions"show substitutions
-N
-3,13,2EditSubstitutionsSmart Quotes"edit"substitutions"smart quotes
-N
-3,13,3EditSubstitutionsSmart Dashes"edit"substitutions"smart dashes
-V
-3,13,4EditSubstitutionsText Replacement"edit"substitutions"text replacement
-V
-3,14,0EditTransformationsMake Uppercase"edit"transformations"make uppercase
-V
-3,14,1EditTransformationsMake Lowercase"edit"transformations"make lowercase
-N
-3,14,2EditTransformations
-Capitalize"edit"transformations"
-capitalize
-D
-3,15,0EditSpeechStart Speaking"edit"speech"start speaking
-@
-3,18🎤EditStart Dictation…"edit"start dictation…
-9
-3,19fnEEditEmoji & Symbols"edit"emoji & symbols
-P
-4,0⇧⌘BViewAlways Show Bookmarks Bar"view"always show bookmarks bar
-b
-4,1⇧⌘FView"Always Show Toolbar in Full Screen"view""always show toolbar in full screen
-?
-4,2ViewAlways Show Full URLs"view"always show full urls
-;
-4,5⌘RViewReload This Page"view"reload this page
-J
-4,6⇧⌘RViewForce Reload This Page"view"force reload this page
-<
-4,8fnFViewEnter Full Screen"view"enter full screen
-<
-4,9fnFViewEnter Full Screen"view"enter full screen
-*
-4,11⌘+ViewZoom In"view"zoom in
-,
-4,12⌘-ViewZoom Out"view"zoom out
-$
-4,14ViewCast…"view"cast…
-M
-4,16,0⌥⌘UView	DeveloperView Source"view"	developer"view source
-U
-4,16,1⌥⌘IView	DeveloperDeveloper Tools"view"	developer"developer tools
-W
-4,16,2⌥⌘CView	DeveloperInspect Elements"view"	developer"inspect elements
-[
-4,16,3⌥⌘JView	DeveloperJavaScript Console"view"	developer"javascript console
-r
-4,16,4View	Developer"Allow JavaScript from Apple Events"view"	developer""allow javascript from apple events
-,
-5,0⇧⌘HHistoryHome"history"home
-)
-5,1⌘[HistoryBack"history"back
-�
-5,5HistorywGTM Strategy and Operations Manager in San Jose, California, United States of America | Finance and Operations at Adobe"history"wgtm strategy and operations manager in san jose, california, united states of america | finance and operations at adobe
-�
-5,6History�Senior Manager - Product Delivery - Revenue Operations in San Jose, California, United States of America | Finance and Operations at Adobe"history"�senior manager - product delivery - revenue operations in san jose, california, united states of america | finance and operations at adobe
-�
-5,7HistoryxSr Community Operations Manager in San Francisco, California, United States of America | Finance and Operations at Adobe"history"xsr community operations manager in san francisco, california, united states of america | finance and operations at adobe
-�
-5,8HistorysSenior Program Manager, Finance in San Jose, California, United States of America | Finance and Operations at Adobe"history"ssenior program manager, finance in san jose, california, united states of america | finance and operations at adobe
-C
-5,9HistoryBudget | Main | YNAB"history"budget | main | ynab
-V
-5,10HistoryTransactions - Knowledge Base"history"transactions - knowledge base
-H
-5,11HistoryAccounts - Lunch Money"history"accounts - lunch money
-H
-5,12HistoryFeatures | Lunch Money"history"features | lunch money
-�
-5,13History>Lunch Money | Delightfully simple personal finance & budgeting"history">lunch money | delightfully simple personal finance & budgeting
-F
-5,14HistoryPricing | Lunch Money"history"pricing | lunch money
-�
-5,17HistorywGTM Strategy and Operations Manager in San Jose, California, United States of America | Finance and Operations at Adobe"history"wgtm strategy and operations manager in san jose, california, united states of america | finance and operations at adobe
-�
-5,18HistoryxSr Community Operations Manager in San Francisco, California, United States of America | Finance and Operations at Adobe"history"xsr community operations manager in san francisco, california, united states of america | finance and operations at adobe
-�
-5,19History�Senior Manager - Product Delivery - Revenue Operations in San Jose, California, United States of America | Finance and Operations at Adobe"history"�senior manager - product delivery - revenue operations in san jose, california, united states of america | finance and operations at adobe
-�
-5,20HistorysSenior Program Manager, Finance in San Jose, California, United States of America | Finance and Operations at Adobe"history"ssenior program manager, finance in san jose, california, united states of america | finance and operations at adobe
-R
-5,21HistoryRefer a Candidate - Workday"history"refer a candidate - workday
-8
-5,22HistoryHome - Workday"history"home - workday
-z
-5,23History/https://wd5.myworkday.com/adobe/login-saml.flex"history"/https://wd5.myworkday.com/adobe/login-saml.flex
-N
-5,24HistoryAdobe Inc - Signing in..."history"adobe inc - signing in...
-B
-5,25HistoryAdobe Inc - Sign In"history"adobe inc - sign in
-�
-5,26History>https://wd5.myworkday.com/wday/authgwy/adobe/login-saml2.htmld"history">https://wd5.myworkday.com/wday/authgwy/adobe/login-saml2.htmld
-Z
-5,27HistoryKnowledge Base - Support Center"history"knowledge base - support center
-N
-5,28HistoryAdobe Inc - Signing in..."history"adobe inc - signing in...
-B
-5,29HistoryAdobe Inc - Sign In"history"adobe inc - sign in
-8
-5,30HistorySearch Results"history"search results
-8
-5,31HistorySearch Results"history"search results
-D
-5,33⌘YHistoryShow Full History"history"show full history
-H
-6,0⌥⌘B	BookmarksBookmark Manager"	bookmarks"bookmark manager
-M
-6,1⌘D	BookmarksBookmark This Tab…"	bookmarks"bookmark this tab…
-P
-6,2⇧⌘D	BookmarksBookmark All Tabs…"	bookmarks"bookmark all tabs…
-9
-6,4,0	Bookmarksgithubsias"	bookmarks"githubs"ias
-C
-6,4,1	Bookmarksgithubsdeeplink"	bookmarks"githubs"deeplink
-=
-6,4,2	Bookmarksgithubspsweb"	bookmarks"githubs"psweb
-E
-6,4,3	Bookmarksgithubs	CCX/jsart"	bookmarks"githubs"	ccx/jsart
-[
-6,4,4	Bookmarksgithubsps batchplay secrets"	bookmarks"githubs"ps batchplay secrets
-?
-6,4,5	BookmarksgithubsDP Gen"	bookmarks"githubs"dp gen
-=
-6,5,0	Bookmarkswikisup wiki"	bookmarks"wikis"up wiki
-�
-6,5,1	BookmarkswikisIDiscover Panel Release Pipeline - CC Experience & Engagement - Adobe Wiki"	bookmarks"wikis"Idiscover panel release pipeline - cc experience & engagement - adobe wiki
-a
-6,5,2,0	Bookmarkswikis	UtilitiesStage for CCD"	bookmarks"wikis"	utilities"stage for ccd
-�
-6,5,2,1	Bookmarkswikis	Utilities-Unquarantine Utility - Photoshop - Adobe Wiki"	bookmarks"wikis"	utilities"-unquarantine utility - photoshop - adobe wiki
-=
-6,6,0	Bookmarksadobesinside"	bookmarks"adobes"inside
-C
-6,6,1	Bookmarksadobes	passwords"	bookmarks"adobes"	passwords
-;
-6,6,2	Bookmarksadobesmoney"	bookmarks"adobes"money
-?
-6,6,3	Bookmarksadobesgoodies"	bookmarks"adobes"goodies
-9
-6,6,4	Bookmarksadobesswag"	bookmarks"adobes"swag
-A
-6,6,5	Bookmarksadobescalendar"	bookmarks"adobes"calendar
-A
-6,6,6	Bookmarksadobesbenefits"	bookmarks"adobes"benefits
-?
-6,6,7	Bookmarksadobescommute"	bookmarks"adobes"commute
-E
-6,6,8	Bookmarksadobes
-buy adobes"	bookmarks"adobes"
-buy adobes
-9
-6,6,9	Bookmarksadobeswifi"	bookmarks"adobes"wifi
-I
-6,7,0	Bookmarksadobey codeyscodex"	bookmarks"adobey codeys"codex
-[
-6,7,1	Bookmarksadobey codeysreact spectrum"	bookmarks"adobey codeys"react spectrum
-O
-6,7,2	Bookmarksadobey codeysspectrum"	bookmarks"adobey codeys"spectrum
-K
-6,7,3	Bookmarksadobey codeyssophia"	bookmarks"adobey codeys"sophia
-G
-6,7,4	Bookmarksadobey codeysimss"	bookmarks"adobey codeys"imss
-Q
-6,7,5	Bookmarksadobey codeys	up builds"	bookmarks"adobey codeys"	up builds
-G
-6,7,6	Bookmarksadobey codeysKLAM"	bookmarks"adobey codeys"klam
-E
-6,7,7	Bookmarksadobey codeysAEM"	bookmarks"adobey codeys"aem
-[
-6,7,8	Bookmarksadobey codeysdeeplinkwebapp"	bookmarks"adobey codeys"deeplinkwebapp
-;
-6,8	Bookmarksmagic accounts"	bookmarks"magic accounts
-/
-6,9	Bookmarksdp jenks"	bookmarks"dp jenks
-B
-6,10	Bookmarksdeeplink dev jenk"	bookmarks"deeplink dev jenk
-F
-6,11	Bookmarksdeeplink stage jenk"	bookmarks"deeplink stage jenk
-<
-6,12	Bookmarksinterview code"	bookmarks"interview code
-2
-6,13	Bookmarks	Transform"	bookmarks"	transform
-J
-6,14	BookmarksSearch | Splunk 9.0.4"	bookmarks"search | splunk 9.0.4
-T
-6,15	BookmarksGuest Wi-Fi Sponsor Portal"	bookmarks"guest wi-fi sponsor portal
-�
-6,16	Bookmarks5fill your quickfix window with lint - Today I Learned"	bookmarks"5fill your quickfix window with lint - today i learned
-8
-6,17	BookmarksGenfill JSON"	bookmarks"genfill json
-�
-6,18	Bookmarks2Useful Stuff - Keenan Villani-holland - Adobe Wiki"	bookmarks"2useful stuff - keenan villani-holland - adobe wiki
-8
-6,19	BookmarksAdobe IO Dev"	bookmarks"adobe io dev
-<
-6,20	BookmarksAdobe IO Stage"	bookmarks"adobe io stage
->
-6,21	BookmarksEvents Calendar"	bookmarks"events calendar
-)
-7,0ProfilesKeenan"profiles"keenan
-+
-7,2ProfilesEdit…"profiles"edit…
-9
-7,4ProfilesAdd Profile…"profiles"add profile…
-;
-8,0TabNew Tab to the Right"tab"new tab to the right
-7
-8,1⌃	TabSelect Next Tab"tab"select next tab
-B
-8,2⌃⇧	TabSelect Previous Tab"tab"select previous tab
--
-8,3TabDuplicate Tab"tab"duplicate tab
-%
-8,5Tab	Mute Site"tab"	mute site
-!
-8,7TabPin Tab"tab"pin tab
-%
-8,9Tab	Group Tab"tab"	group tab
-4
-8,11TabClose Other Tabs"tab"close other tabs
-@
-8,13TabMove Tab to New Window"tab"move tab to new window
-9
-8,14⇧⌘ATabSearch Tabs…"tab"search tabs…
-.
-8,16TabNotifications"tab"notifications
-.
-8,17TabPull Requests"tab"pull requests
-b
-8,18Tab'[My open issues] Issue Navigator - Jira"tab"'[my open issues] issue navigator - jira
-Z
-8,19Tab#Inspect with Chrome Developer Tools"tab"#inspect with chrome developer tools
-L
-8,20TabDiscover Panel Standup Notes"tab"discover panel standup notes
-t
-8,21Tab0Brainstorm - DP, Visual Workspace for Innovation"tab"0brainstorm - dp, visual workspace for innovation
-j
-8,22Tab+SF City Rents Tour Requests // DRE 02187202"tab"+sf city rents tour requests // dre 02187202
-�
-8,23Tab<DP Sprint Schedule - CC Experience & Engagement - Adobe Wiki"tab"<dp sprint schedule - cc experience & engagement - adobe wiki
-0
-8,24TabSearch Results"tab"search results
-8
-8,25TabEmployee Referrals"tab"employee referrals
-R
-8,26TabKnowledge Base - Support Center"tab"knowledge base - support center
-J
-8,27TabRefer a Candidate - Workday"tab"refer a candidate - workday
-/
-9,0⌘MWindowMinimize"window"minimize
-:
-9,1⌥⌘MWindowMinimize All"window"minimize all
-!
-9,2WindowZoom"window"zoom
-)
-9,3WindowZoom All"window"zoom all
-S
-9,4WindowTile Window to Left of Screen"window"tile window to left of screen
-]
-9,5Window"Move Window to Left Side of Screen"window""move window to left side of screen
-U
-9,6WindowTile Window to Right of Screen"window"tile window to right of screen
-_
-9,7Window#Move Window to Right Side of Screen"window"#move window to right side of screen
-6
-9,12WindowName Window…"window"name window…
-5
-9,14⇧⌘JWindow	Downloads"window"	downloads
-.
-9,15Window
-Extensions"window"
-extensions
-2
-9,16WindowTask Manager"window"task manager
->
-9,18WindowBring All to Front"window"bring all to front
-:
-9,19WindowArrange in Front"window"arrange in front
-P
-9,21WindowRefer a Candidate - Workday"window"refer a candidate - workday
-F
-10,1
-⌥⇧⌘IHelpReport an Issue…"help"report an issue…
-:
-10,2HelpGoogle Chrome Help"help"google chrome help
