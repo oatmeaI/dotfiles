@@ -1,18 +1,85 @@
--- bootstrap lazy.nvim, LazyVim and your plugins
-require("config.lazy")
+-- This file just bootstraps mini.deps & loads the `util` module.
+-- Everything else is auto-loaded (in alphabetical order) from the `plugin` directory.
+require("bootstrap")
+require("util")
 
--- LATER / MAYBE
--- - can I make the command prompt not show when saving etc?
--- - neotree synmbols??
--- - try to hook up DAP
--- - start sessions in folder automatically
-
--- NOTES
--- <space>/ to grep project
--- s/S to replace Pounce
--- K to get LSP hover
--- <space>sr for find/replace
--- <bs> / <c-space> for dec/inc treesitter select
--- gsa / gsd / gsr to add / delete / replace surrounding characters
--- look here https://www.lazyvim.org/keymaps#yankynvim for yank/put shortcuts
--- <c-x>/<c-a> increment decrement
+---------------------------------------------------
+-- TODO: autocomplete shouldnt need to scroll before hitting enter
+-- TODO: gd should use a picker if more than one available
+-- TODO: config clue / which-key correctly
+-- TODO: look through minimax for other good keymaps
+-- TODO: reconsider mini.basics (lots of stuff is done in options.lua now)
+-- TODO: Move treewalker commands to Util
+-- TODO: shift+p pastes above
+-- TODO: mini-align
+-- TODO: mini-keys for complex keybinds
+-- TODO: mini-diff?
+-- TODO: laters on other mini modules
+--
+-- TODO: Session save + load doesn't work right(?)
+-- TODO: highlight todo comments
+-- TODO: scrolling is kinda janky
+-- TODO: cute symbols in gutter instead of just letters
+-- TODO: replace miniclue with which-key?
+-- TODO: config dashboard
+-- TODO: lots more picker stuff that could be useful
+-- TODO: quick / auto way to run MiniDeps.update
+-- TODO: no horizontal scroll, force wrap?
+--
+-- Yes
+-- ● nvim-lint - linter runner; not sure if I need this
+-- ● nvim-treesitter-context - yes
+-- ● nvim-treesitter-textobjects - yes
+-- ● todo-comments.nvim - highlight & list todos
+-- ● which-key.nvim - key hinter
+---- { preset = "modern" }
+-- ○ grug-far.nvim - find & replace
+--
+-- Maybe
+-- ● LuaSnip - snippets provider
+-- ● gitsigns.nvim - not sure if I care; this might be where the git blame comes from
+-- ● friendly-snippets - prebuilt snippets; not sure if I care
+-- ● yanky.nvim - seems useful, but I never do use it.
+-- ● ts-comments.nvim - unclear what this does
+-- ○ dial.nvim - inc / dec, I think I like it
+-- ○ harpoon - marks on steroids, I never use it
+-- ○ inc-rename.nvim - probably do need this one
+-- ○ markdown-preview.nvim - not sure I care
+-- ○ render-markdown.nvim - what's the difference between these two?
+--
+--
+--
+-- return {
+--     {
+--         "Saghen/blink.cmp",
+--         opts = {
+--             completion = {
+--                 menu = {
+--                     border = "rounded",
+--                     draw = { gap = 2 },
+--                     winhighlight = "Normal:Normal,FloatBorder:FloatBorder,CursorLine:BlinkCmpMenuSelection,Search:None",
+--                 },
+--             },
+--         },
+--     },
+--     {
+--         "nvim-neo-tree/neo-tree.nvim",
+--         keys = {
+--             { "<leader>e", false },
+--         },
+--         opts = {
+--             window = {
+--                 mappings = {
+--                     ["-"] = "navigate_up",
+--                 },
+--             },
+--             filesystem = {
+--                 hijack_netrw_behavior = "open_current",
+--                 filtered_items = {
+--                     visible = true,
+--                 },
+--             },
+--         },
+--     },
+-- }
+-- map("n", "<leader>j", ":Neotree position=current toggle=true reveal=true<cr>", { desc = "Show file explorer" })

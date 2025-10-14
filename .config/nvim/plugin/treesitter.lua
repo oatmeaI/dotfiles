@@ -1,0 +1,46 @@
+-- Treesitter setup. Provides syntax aware highlighting, indenting, folding, etc...
+
+Pack({
+    source = "nvim-treesitter/nvim-treesitter",
+    name = "nvim-treesitter.configs",
+    setup = true,
+    config = {
+        ensure_installed = {
+            "bash",
+            "c",
+            "css",
+            "diff",
+            "html",
+            "javascript",
+            "jsdoc",
+            "json",
+            "jsonc",
+            "lua",
+            "luadoc",
+            "luap",
+            "markdown",
+            "markdown_inline",
+            "printf",
+            "python",
+            "query",
+            "regex",
+            "toml",
+            "tsx",
+            "typescript",
+            "vim",
+            "vimdoc",
+            "xml",
+            "yaml",
+        },
+        indent = { enable = true },
+        highlight = { enable = true },
+        folds = { enable = true },
+        incremental_selection = {
+            enable = true,
+            keymaps = {
+                init_selection = "\\",
+                node_incremental = "\\",
+            },
+        },
+    },
+})

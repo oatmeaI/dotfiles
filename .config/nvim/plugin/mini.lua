@@ -1,0 +1,17 @@
+local now, later = MiniDeps.now, MiniDeps.later
+
+-- stylua: ignore start
+now(function() require("mini.basics").setup() end)
+now(function() require("mini.icons").setup() end)
+now(function() require("mini.notify").setup() end)
+
+later(function() require("mini.extra").setup() end)
+later(function() require("mini.ai").setup() end)
+later(function() require("mini.completion").setup() end)
+later(function() require("mini.pick").setup() end)
+later(function() require("mini.animate").setup() end)
+later(function() require('mini.align').setup() end)
+later(function() require('mini.indentscope').setup() end)
+
+later(MiniIcons.mock_nvim_web_devicons)
+later(MiniIcons.tweak_lsp_kind)
