@@ -5,6 +5,16 @@ Pack({
     name = "nvim-treesitter.configs",
     setup = true,
     config = {
+        indent = { enable = true },
+        highlight = { enable = true },
+        folds = { enable = true },
+        incremental_selection = {
+            enable = true,
+            keymaps = {
+                init_selection = "\\",
+                node_incremental = "\\",
+            },
+        },
         ensure_installed = {
             "bash",
             "c",
@@ -31,16 +41,6 @@ Pack({
             "vimdoc",
             "xml",
             "yaml",
-        },
-        indent = { enable = true },
-        highlight = { enable = true },
-        folds = { enable = true },
-        incremental_selection = {
-            enable = true,
-            keymaps = {
-                init_selection = "\\",
-                node_incremental = "\\",
-            },
         },
     },
 })

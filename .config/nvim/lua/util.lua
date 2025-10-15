@@ -1,12 +1,19 @@
 -- Helper functions + plugin abstractions, so that if I decided to change picker plugins (for exmaple)
 -- I only need to make changes here.
 
+local vim = vim
 local pick = require("mini.pick")
 local extra = require("mini.extra")
 local deps = require("mini.deps")
 
 function AutoCmd(trigger, opts)
     vim.api.nvim_create_autocmd(trigger, opts)
+end
+
+function Walk(dir)
+    return function()
+        vim.cmd("Treewalker " .. dir)
+    end
 end
 
 function Pack(opts)
@@ -49,8 +56,34 @@ function PickReferences()
     PickLSP({ scope = "references" })
 end
 
+function PickDefinition()
+    PickLSP({ scope = "definition" })
+end
+
+function LspDefinition()
+    vim.lsp.buf.definition({
+        on_list = function(options)
+            if #options.items > 1 then
+                PickDefinition()
+            else
+                -- TODO: this is dumb, but I couldn't figure out how to do the jump
+                -- if there's only one option. I'm sure there's a way.
+                vim.lsp.buf.definition()
+            end
+        end,
+    })
+end
+
 function PickFiles(opts)
     pick.builtin.files(opts)
+end
+
+function PickBranches()
+    extra.pickers.git_branches()
+end
+
+function PickRegisters()
+    extra.pickers.registers()
 end
 
 function PickGrep(opts)
@@ -77,28 +110,14 @@ function Jump()
     require("flash").jump()
 end
 
-function WriteSession()
-    local name = vim.fn.getcwd():gsub("[\\/:]+", "-"):sub(2)
-    require("mini.sessions").write(name)
+function PickSession()
+    require("persistence").select()
+end
+
+function OpenDirSession()
+    require("persistence").load()
 end
 
 function ToggleTerminal()
-    Snacks.terminal.toggle(nil, {
-        win = { position = "float" },
-        keys = {
-            term_normal = {
-                "<esc>",
-                function()
-                    local in_terminal = vim.bo.buftype == "terminal"
-                    if in_terminal then
-                        vim.cmd("stopinsert")
-                        vim.cmd("hide")
-                    end
-                end,
-                mode = "t",
-                expr = true,
-                desc = "close term",
-            },
-        },
-    })
+    vim.cmd("ToggleTerm")
 end

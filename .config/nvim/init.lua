@@ -4,40 +4,34 @@ require("bootstrap")
 require("util")
 
 ---------------------------------------------------
--- TODO: autocomplete shouldnt need to scroll before hitting enter
--- TODO: gd should use a picker if more than one available
--- TODO: config clue / which-key correctly
+-- Immediate problems
+-- TODO: fix Git so that I can push dotfiles
+-- TODO: don't try to open explorer on files directory if we're on the start screen
 -- TODO: look through minimax for other good keymaps
 -- TODO: reconsider mini.basics (lots of stuff is done in options.lua now)
--- TODO: Move treewalker commands to Util
--- TODO: shift+p pastes above
--- TODO: mini-align
--- TODO: mini-keys for complex keybinds
--- TODO: mini-diff?
--- TODO: laters on other mini modules
---
--- TODO: Session save + load doesn't work right(?)
--- TODO: highlight todo comments
--- TODO: scrolling is kinda janky
 -- TODO: cute symbols in gutter instead of just letters
--- TODO: replace miniclue with which-key?
--- TODO: config dashboard
--- TODO: lots more picker stuff that could be useful
+--
+-- Cool stuff for later / maybe
+-- TODO: scrolling is kinda janky
 -- TODO: quick / auto way to run MiniDeps.update
--- TODO: no horizontal scroll, force wrap?
+-- TODO: how to make visual block + shift + I more usable?
+-- TODO: MiniGit
+-- TODO: some way to delete sessions from picker
+-- TODO: dial.nvim
+-- TODO: minimisc.zoom
+-- TODO: replace miniclue with which-key?
+-- TODO: mini-diff?
+-- TODO: mini-keymap might be cool
+-- TODO: lots more picker stuff that could be useful
 --
 -- Yes
 -- ● nvim-lint - linter runner; not sure if I need this
 -- ● nvim-treesitter-context - yes
 -- ● nvim-treesitter-textobjects - yes
--- ● todo-comments.nvim - highlight & list todos
--- ● which-key.nvim - key hinter
----- { preset = "modern" }
 -- ○ grug-far.nvim - find & replace
 --
 -- Maybe
 -- ● LuaSnip - snippets provider
--- ● gitsigns.nvim - not sure if I care; this might be where the git blame comes from
 -- ● friendly-snippets - prebuilt snippets; not sure if I care
 -- ● yanky.nvim - seems useful, but I never do use it.
 -- ● ts-comments.nvim - unclear what this does
