@@ -4,24 +4,26 @@ local vim = vim
 -- vim.o.pumborder = "rounded"
 
 -- stylua: ignore start
-vim.g.mapleader         = " "           -- Use <space> as leader key
-vim.o.shell             = "fish"        -- use fish
-vim.o.tabstop           = 4             -- 1 tab (\t) = 4 spaces
-vim.o.softtabstop       = 4             -- 1 tab keypress = 4 spaces
-vim.o.shiftwidth        = 4             -- 1 indent = 4 spaces
-vim.o.sidescrolloff     = 0             -- Don't scroll sideways
-vim.o.timeoutlen        = 250           -- Quicker timeout for which-key etc
-vim.o.updatetime        = 250           -- Quicker timeout during key combos etc
-vim.o.showtabline       = 2             -- Always show the tabline
-vim.o.foldmethod        = "expr"        -- This + line below: use Treesitter for folding
+vim.g.mapleader         = " "                       -- Use <space> as leader key
+vim.o.shell             = "fish"                    -- use fish
+vim.o.tabstop           = 4                         -- 1 tab (\t) = 4 spaces
+vim.o.softtabstop       = 4                         -- 1 tab keypress = 4 spaces
+vim.o.shiftwidth        = 4                         -- 1 indent = 4 spaces
+vim.o.sidescrolloff     = 0                         -- Don't scroll sideways
+vim.o.timeoutlen        = 250                       -- Quicker timeout for which-key etc
+vim.o.updatetime        = 250                       -- Quicker timeout during key combos etc
+vim.o.showtabline       = 2                         -- Always show the tabline
+vim.o.foldmethod        = "expr"                    -- This + line below: use Treesitter for folding
 vim.o.foldexpr          = "v:lua.vim.treesitter.foldexpr()"
-vim.o.foldlevel         = 999           -- Folds start open
-vim.o.winborder         = "rounded"     -- Rounded borders everywhere
-vim.o.switchbuf         = 'usetab'      -- Use already open buffers when switching
-vim.o.undofile          = true          -- Persisent undo
-vim.o.mouse             = 'a'           -- Enable mouse
-vim.o.number            = true          -- Show line numbers
-vim.o.relativenumber    = true          -- Use relative line numbers. With `number` above, we get "hybrid" numbers
+vim.o.foldlevel         = 999                       -- Folds start open
+vim.o.winborder         = "rounded"                 -- Rounded borders everywhere
+vim.o.switchbuf         = 'usetab'                  -- Use already open buffers when switching
+vim.o.undofile          = true                      -- Persisent undo
+vim.o.mouse             = 'a'                       -- Enable mouse
+vim.o.number            = true                      -- Show line numbers
+vim.o.relativenumber    = true                      -- Use relative line numbers. With `number` above, we get "hybrid" numbers
+vim.o.formatoptions     = 'tcrqnj'                  -- Improve some editing stuff. See :h fo-table 
+vim.o.textwidth         = 90                        -- Max line width
 
 -- From here on is lifted from MiniMax
 vim.o.breakindent       = true                      -- Indent wrapped lines to match line start
@@ -39,7 +41,6 @@ vim.o.splitkeep         = 'screen'                  -- Reduce scroll during wind
 vim.o.splitright        = true                      -- Vertical splits will be to the right
 vim.o.autoindent        = true                      -- Use auto indent
 vim.o.expandtab         = true                      -- Convert tabs to spaces
-vim.o.formatoptions     = 'rqn1j'                   -- Improve comment editing
 vim.o.ignorecase        = true                      -- Ignore case during search
 vim.o.incsearch         = true                      -- Show search matches while typing
 vim.o.infercase         = true                      -- Infer case in built-in completion
@@ -61,3 +62,24 @@ vim.o.formatlistpat     = [[^\s*[0-9\-\+\*]\+[\.\)]*\s\+]]
 -- Built-in completion
 vim.o.complete          = '.,w,b,kspell'                  -- Use less sources
 vim.o.completeopt       = 'menuone,noselect,fuzzy,nosort' -- Use custom behavior
+
+-- stylua: ignore end
+-- Configure LSP diagnostics. Mostly for the icons; I'll probably play around with the other settings a bit
+-- See :h vim.diagnostic.opts
+vim.diagnostic.config({
+    virtual_text = false,
+    update_in_insert = false,
+    underline = true,
+    severity_sort = true,
+    float = {
+        border = "rounded",
+    },
+    signs = {
+        text = {
+            [vim.diagnostic.severity.ERROR] = "",
+            [vim.diagnostic.severity.WARN] = "",
+            [vim.diagnostic.severity.HINT] = "",
+            [vim.diagnostic.severity.INFO] = "",
+        },
+    },
+})

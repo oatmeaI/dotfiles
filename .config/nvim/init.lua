@@ -4,14 +4,12 @@ require("bootstrap")
 require("util")
 
 ---------------------------------------------------
--- Immediate problems
--- TODO: fix Git so that I can push dotfiles
--- TODO: don't try to open explorer on files directory if we're on the start screen
--- TODO: look through minimax for other good keymaps
--- TODO: reconsider mini.basics (lots of stuff is done in options.lua now)
--- TODO: cute symbols in gutter instead of just letters
---
 -- Cool stuff for later / maybe
+-- TODO: reconsider mini.basics (lots of stuff is done in options.lua now)
+-- TODO: look through minimax for other good keymaps
+-- TODO: find & replace solution
+-- TODO: don't try to open explorer on files dir if we're on the start screen / other non-file places
+-- TODO: not sure if the eslint lsp is working
 -- TODO: scrolling is kinda janky
 -- TODO: quick / auto way to run MiniDeps.update
 -- TODO: how to make visual block + shift + I more usable?
@@ -19,61 +17,8 @@ require("util")
 -- TODO: some way to delete sessions from picker
 -- TODO: dial.nvim
 -- TODO: minimisc.zoom
+-- TODO: nvim-treesitter-context - yes
 -- TODO: replace miniclue with which-key?
 -- TODO: mini-diff?
 -- TODO: mini-keymap might be cool
 -- TODO: lots more picker stuff that could be useful
---
--- Yes
--- ● nvim-lint - linter runner; not sure if I need this
--- ● nvim-treesitter-context - yes
--- ● nvim-treesitter-textobjects - yes
--- ○ grug-far.nvim - find & replace
---
--- Maybe
--- ● LuaSnip - snippets provider
--- ● friendly-snippets - prebuilt snippets; not sure if I care
--- ● yanky.nvim - seems useful, but I never do use it.
--- ● ts-comments.nvim - unclear what this does
--- ○ dial.nvim - inc / dec, I think I like it
--- ○ harpoon - marks on steroids, I never use it
--- ○ inc-rename.nvim - probably do need this one
--- ○ markdown-preview.nvim - not sure I care
--- ○ render-markdown.nvim - what's the difference between these two?
---
---
---
--- return {
---     {
---         "Saghen/blink.cmp",
---         opts = {
---             completion = {
---                 menu = {
---                     border = "rounded",
---                     draw = { gap = 2 },
---                     winhighlight = "Normal:Normal,FloatBorder:FloatBorder,CursorLine:BlinkCmpMenuSelection,Search:None",
---                 },
---             },
---         },
---     },
---     {
---         "nvim-neo-tree/neo-tree.nvim",
---         keys = {
---             { "<leader>e", false },
---         },
---         opts = {
---             window = {
---                 mappings = {
---                     ["-"] = "navigate_up",
---                 },
---             },
---             filesystem = {
---                 hijack_netrw_behavior = "open_current",
---                 filtered_items = {
---                     visible = true,
---                 },
---             },
---         },
---     },
--- }
--- map("n", "<leader>j", ":Neotree position=current toggle=true reveal=true<cr>", { desc = "Show file explorer" })

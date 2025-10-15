@@ -57,7 +57,7 @@ nmap("¬",       "<c-w>l",           "Focus east window")    -- Alt-l
 nmap("<cr>",    Jump,               "Jump to location")
 
 nmap("gr",      PickReferences,     "Pick references")
-nmap("gd",      LspDefinition,     "Go to definition")
+nmap("gd",      LspDefinition,      "Go to definition")
 
 nmap("<c-j>",   Walk("Down"),       "Treewalker down",  { silent = true })
 nmap("<c-k>",   Walk("Up"),         "Treewalker up",    { silent = true })
@@ -65,31 +65,39 @@ nmap("<c-h>",   Walk("Left"),       "Treewalker left",  { silent = true })
 nmap("<c-l>",   Walk("Right"),      "Treewalker right", { silent = true })
 
 --> Leader Maps <--
+-- Basics
 lmap("k",       ":w<cr>",           "Write buffer")
 lmap("K",       ":noa w<cr>",       "Write buffer without running autocommands")
 lmap("j",       ToggleExplorer,     "Toggle file explorer")
 lmap("l",       ToggleTerminal,     "Toggle floating terminal")
 
+-- Searching
 lmap("<space>", PickFiles,          "Pick files")
-lmap("s",       PickSymbols,        "Pick document symbols")
-lmap("x",       PickDiagnostic,     "Pick buffer diagnostics")
 lmap("/",       PickGrep,           "Grep in project")
 lmap("e",       PickResume,         "Resume previous picker")
 
-lmap("qo",      OpenDirSession,     "Load session for current dir")
-lmap("ql",      PickSession,        "Pick session to load")
+-- Sessions
+lmap("so",      OpenDirSession,     "Load session for current dir")
+lmap("sl",      PickSession,        "Pick session to load")
 
+-- Windows
 lmap("wd",      "<c-w>c",           "Close current window")
 lmap("ws",      "<cmd>sp<cr>",      "Split window horizontally")
 lmap("wv",      "<cmd>vs<cr>",      "Split window vertically")
 
+-- Tabs
 lmap("td",      "<cmd>tabc<cr>",    "Close current tab")
 lmap("tn",      "<cmd>tabnew<cr>",  "Open new tab")
 
+-- Registers
 lmap("rs",      PickRegisters,      "Pick register contents")
 
+-- Git
 lmap("gb",      PickBranches,       "Pick git branches")
 
-lmap("cd",      diag.open_float,    "Line Diagnostics")
-lmap("ca",      lsp.code_action,    "Code Action")
+-- Code
+lmap("cx",      PickDiagnostic,     "Pick buffer diagnostics")
+lmap("cs",      PickSymbols,        "Pick buffer symbols")
+lmap("ca",      lsp.code_action,    "Pick code action")
+lmap("cd",      diag.open_float,    "Show line diagnostics")
 lmap("ci",      lsp.hover,          "Show LSP hover")
