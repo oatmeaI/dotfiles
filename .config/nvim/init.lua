@@ -5,16 +5,16 @@ require("util")
 
 ---------------------------------------------------
 -- Cool stuff for later / maybe
--- TODO: <esc> during completion dismisses autocomplete
--- TODO: work on mini.clue setup
--- TODO: do I need to do the mini.completion omnifunc thing?
--- TODO: understand mini.ai better
--- TODO: organize options.lua into sections
--- TODO: clue hints on text objects
 -- TODO: show file path somewhere
 -- TODO: find & replace solution
 -- TODO: don't try to open explorer on files dir if we're on the start screen / other non-file places
+--
 -- TODO: not sure if the eslint lsp is working
+-- TODO: do I need to do the mini.completion omnifunc thing?
+-- TODO: work on mini.clue setup
+-- TODO: understand mini.ai better
+-- TODO: organize options.lua into sections
+-- TODO: clue hints on text objects
 -- TODO: mouse scrolling is kinda janky
 -- TODO: quick / auto way to run MiniDeps.update
 -- TODO: how to make visual block + shift + I more usable?

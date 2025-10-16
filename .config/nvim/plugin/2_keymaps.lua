@@ -32,6 +32,7 @@ imap_expr("<CR>", function()
     -- next line with `return MiniPairs.cr()`
     return "\r"
 end)
+imap_expr("<esc>", [[pumvisible() ? "\<C-e>" : "\<esc>"]]) -- <esc> closes completion menu
 
 -- stylua: ignore start
 -- Delete some builtin LSP mappings; we'll remap them later
