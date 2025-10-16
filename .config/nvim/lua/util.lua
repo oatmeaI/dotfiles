@@ -106,6 +106,10 @@ function PickDiagnostic(opts)
     extra.pickers.diagnostic(opts)
 end
 
+function PickHelp()
+    pick.builtin.help()
+end
+
 function Jump()
     require("flash").jump()
 end

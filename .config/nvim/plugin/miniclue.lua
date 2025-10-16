@@ -48,11 +48,10 @@ miniclue.setup({
         miniclue.gen_clues.windows(),
         miniclue.gen_clues.z(),
         { mode = "n", keys = "<Leader>c", desc = "+code" },
-        { mode = "n", keys = "<Leader>q", desc = "+sessions" },
+        { mode = "n", keys = "<Leader>s", desc = "+sessions" },
         { mode = "n", keys = "<Leader>w", desc = "+windows" },
         { mode = "n", keys = "<Leader>t", desc = "+tabs" },
-        { mode = "n", keys = "<Leader>g", desc = "+git" },
-        { mode = "n", keys = "<Leader>r", desc = "+registers" },
+        { mode = "n", keys = "<Leader>f", desc = "+find" },
     },
     window = {
         config = { width = "auto" },

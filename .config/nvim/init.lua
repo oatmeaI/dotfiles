@@ -5,20 +5,31 @@ require("util")
 
 ---------------------------------------------------
 -- Cool stuff for later / maybe
--- TODO: reconsider mini.basics (lots of stuff is done in options.lua now)
--- TODO: look through minimax for other good keymaps
+-- TODO: <esc> during completion dismisses autocomplete
+-- TODO: work on mini.clue setup
+-- TODO: do I need to do the mini.completion omnifunc thing?
+-- TODO: understand mini.ai better
+-- TODO: organize options.lua into sections
+-- TODO: clue hints on text objects
+-- TODO: show file path somewhere
 -- TODO: find & replace solution
 -- TODO: don't try to open explorer on files dir if we're on the start screen / other non-file places
 -- TODO: not sure if the eslint lsp is working
--- TODO: scrolling is kinda janky
+-- TODO: mouse scrolling is kinda janky
 -- TODO: quick / auto way to run MiniDeps.update
 -- TODO: how to make visual block + shift + I more usable?
--- TODO: MiniGit
+-- TODO: mini-git
 -- TODO: some way to delete sessions from picker
 -- TODO: dial.nvim
--- TODO: minimisc.zoom
--- TODO: nvim-treesitter-context - yes
--- TODO: replace miniclue with which-key?
--- TODO: mini-diff?
+-- TODO: mini.operators might be useful
+-- TODO: mini.surround is probably useful
+-- TODO: mini.trailspace is not huge but could be nice
+-- TODO: mini.misc.zoom
+-- TODO: nvim-treesitter-context
+-- TODO: treesitter-textobjects
+-- TODO: mini-diff
 -- TODO: mini-keymap might be cool
--- TODO: lots more picker stuff that could be useful
+-- TODO: better typing / completing experience in commandline
+-- TODO: lots more picker stuff that could be useful:
+-- -- -- `colorschemes`, `commands`, `explorer`, `hipatterns`, `keymaps`, `marks`,
+-- -- -- `list scope=quickfix|jump|location|change`, `oldfiles`, `options`

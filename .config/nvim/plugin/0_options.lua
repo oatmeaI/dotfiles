@@ -4,67 +4,59 @@ local vim = vim
 -- vim.o.pumborder = "rounded"
 
 -- stylua: ignore start
+vim.cmd("filetype plugin indent on")                -- Enable filetype detection + filetype specific plugins + filetype specific indentation.
+vim.cmd("packadd nohlsearch")                       -- Plugin that automatically turns off hlsearch (highlighting last search term) after `updatetime`
+
 vim.g.mapleader         = " "                       -- Use <space> as leader key
 vim.o.shell             = "fish"                    -- use fish
 vim.o.tabstop           = 4                         -- 1 tab (\t) = 4 spaces
 vim.o.softtabstop       = 4                         -- 1 tab keypress = 4 spaces
 vim.o.shiftwidth        = 4                         -- 1 indent = 4 spaces
-vim.o.sidescrolloff     = 0                         -- Don't scroll sideways
-vim.o.timeoutlen        = 250                       -- Quicker timeout for which-key etc
-vim.o.updatetime        = 250                       -- Quicker timeout during key combos etc
+vim.o.expandtab         = true                      -- Convert tabs to spaces
+vim.o.wrap              = false                     -- Don't wrap long lines
+vim.o.sidescrolloff     = 10                        -- Keeps the cursor near the horizontal center of the screen on long lines
+vim.o.scrolloff         = 999                       -- Keeps the cursor from hitting the bottom or top of the screen
+vim.o.timeoutlen        = 250                       -- Quicker timeout for key combos
+vim.o.updatetime        = 250                       -- Quicker timeout for everything else (ie. hlsearch getting turned off)
 vim.o.showtabline       = 2                         -- Always show the tabline
 vim.o.foldmethod        = "expr"                    -- This + line below: use Treesitter for folding
 vim.o.foldexpr          = "v:lua.vim.treesitter.foldexpr()"
 vim.o.foldlevel         = 999                       -- Folds start open
 vim.o.winborder         = "rounded"                 -- Rounded borders everywhere
 vim.o.switchbuf         = 'usetab'                  -- Use already open buffers when switching
-vim.o.undofile          = true                      -- Persisent undo
-vim.o.mouse             = 'a'                       -- Enable mouse
+vim.o.undofile          = true                      -- Persisent undo history across sessions
+vim.o.mouse             = 'a'                       -- Enable mouse in all modes
 vim.o.number            = true                      -- Show line numbers
 vim.o.relativenumber    = true                      -- Use relative line numbers. With `number` above, we get "hybrid" numbers
 vim.o.formatoptions     = 'tcrqnj'                  -- Improve some editing stuff. See :h fo-table 
-vim.o.textwidth         = 90                        -- Max line width
-
--- From here on is lifted from MiniMax
-vim.o.breakindent       = true                      -- Indent wrapped lines to match line start
-vim.o.breakindentopt    = 'list:-1'                 -- Add padding for lists (if 'wrap' is set)
-vim.o.cursorline        = true                      -- Enable current line highlighting
-vim.o.linebreak         = true                      -- Wrap lines at 'breakat' (if 'wrap' is set)
-vim.o.list              = true                      -- Show helpful text indicators
-vim.o.pumheight         = 10                        -- Make popup menu smaller
-vim.o.ruler             = false                     -- Don't show cursor coordinates
+vim.o.textwidth         = 90                        -- Set max line width
+vim.o.autoindent        = true                      -- When adding a new line, match indent of line above
+vim.o.breakindent       = true                      -- Same as above, but for when a line breaks automatically (ie, we're past the `textwidth`)
+vim.o.cursorline        = true                      -- Highlight the line the cursor is on
+vim.o.virtualedit       = 'block'                   -- Allow going past end of line in Visual block mode
+vim.o.pumheight         = 20                        -- Configure popupmenu height - if left unset, it'll take the whole screen
+vim.o.pumblend          = 5                         -- Make the popupmenu a little bit transparent
+vim.o.winblend          = 5                         -- Make floating windows a little bit transparent
 vim.o.shortmess         = 'CFOWaoA'                 -- Disable some built-in messages. See :h shortmess
 vim.o.showmode          = false                     -- Don't show mode in command line
-vim.o.signcolumn        = 'yes'                     -- Always show signcolumn (less flicker)
-vim.o.splitbelow        = true                      -- Horizontal splits will be below
-vim.o.splitkeep         = 'screen'                  -- Reduce scroll during window split
-vim.o.splitright        = true                      -- Vertical splits will be to the right
-vim.o.autoindent        = true                      -- Use auto indent
-vim.o.expandtab         = true                      -- Convert tabs to spaces
-vim.o.ignorecase        = true                      -- Ignore case during search
-vim.o.incsearch         = true                      -- Show search matches while typing
-vim.o.infercase         = true                      -- Infer case in built-in completion
-vim.o.smartcase         = true                      -- Respect case if search pattern has upper case
-vim.o.smartindent       = true                      -- Make indenting smart
-vim.o.spelloptions      = 'camel'                   -- Treat camelCase word parts as separate words
-vim.o.virtualedit       = 'block'                   -- Allow going past end of line in blockwise mode
-vim.o.iskeyword         = '@,48-57,_,192-255,-'     -- Treat dash as `word` textobject part
-
--- Special UI symbols. More is set via 'mini.basics' later.
-vim.o.fillchars         = 'eob: ,fold:╌'
+vim.o.signcolumn        = 'yes'                     -- Always show signcolumn for less flicker
+vim.o.splitbelow        = true                      -- Horizontal splits open below current window
+vim.o.splitright        = true                      -- Vertical splits open to the right of current window
+vim.o.ignorecase        = true                      -- Ignore case in search string
+vim.o.smartcase         = true                      -- Override `ignorecase` if the search string has uppercase characters
+vim.o.smartindent       = true                      -- Syntax-aware auto-indentation (ie. for the next line after if () {)
+vim.o.incsearch         = true                      -- Show search matches while typing the search pattern
+vim.o.infercase         = true                      -- Try to infer case during built-in completion
+vim.o.fillchars         = 'eob: '                   -- Special characters; currently just replaces the end of buffer with empty spaces. See :h fillchars for more - might want to add stuff in the future.
+vim.o.complete          = '.,w,b,kspell'            -- Sources to use for built-in completion; see :h complete
+vim.o.list              = true                      -- Shows text indicators defined below; see :h listchars. For example, '...' when text is truncated.
 vim.o.listchars         = 'extends:…,nbsp:␣,precedes:…,tab:> '
-
--- Pattern for a start of numbered list (used in `gw`). This reads as
--- "Start of list item is: at least one special character (digit, -, +, *)
--- possibly followed by punctuation (. or `)`) followed by at least one space".
-vim.o.formatlistpat     = [[^\s*[0-9\-\+\*]\+[\.\)]*\s\+]]
-
--- Built-in completion
-vim.o.complete          = '.,w,b,kspell'                  -- Use less sources
-vim.o.completeopt       = 'menuone,noselect,fuzzy,nosort' -- Use custom behavior
+vim.o.completeopt       = 'menuone,noselect,fuzzy,nosort'   -- Configure auto-complete behavior; see :h completeopts 
+vim.o.formatlistpat     = [[^\s*[0-9\-\+\*]\+[\.\)]*\s\+]]  -- Consider any of digit, -, +, *, maybe followed by punctuation, followed by space, as the start of a list
 
 -- stylua: ignore end
--- Configure LSP diagnostics. Mostly for the icons; I'll probably play around with the other settings a bit
+-- Configure LSP diagnostics. Mostly for the icons.
+-- I'll probably play around with the other settings a bit.
 -- See :h vim.diagnostic.opts
 vim.diagnostic.config({
     virtual_text = false,
@@ -78,7 +70,7 @@ vim.diagnostic.config({
         text = {
             [vim.diagnostic.severity.ERROR] = "",
             [vim.diagnostic.severity.WARN] = "",
-            [vim.diagnostic.severity.HINT] = "",
+            [vim.diagnostic.severity.HINT] = "",
             [vim.diagnostic.severity.INFO] = "",
         },
     },

@@ -42,62 +42,64 @@ del("n", "grr")
 del("n", "grt")
 
 --> Basic Nav Etc <-- 
-map({ "n", "v" },   "<down>",   "10j",          { desc = "Skip down" })
-map({ "n", "v" },   "<up>",     "10k",          { desc = "Skip up" })
-map("t",            "<esc>",    HideTerminal,   { desc = "Hide Terminal" })
+map({ "n", "v" },   "<down>",   "10j",          { desc = "skip down" })
+map({ "n", "v" },   "<up>",     "10k",          { desc = "skip up" })
+map("t",            "<esc>",    HideTerminal,   { desc = "hide Terminal" })
 
-nmap("qq",      ":qa!<cr>",         "Quit")
-nmap("<s-tab>", "<c-w>h",           "Focus west window")
-nmap("<tab>",   "<c-w>l",           "Focus east window")
-nmap("<c-p>",   "<c-i>",            "Jump forward")
-nmap("∆",       "<c-w>j",           "Focus south window")   -- Alt-j
-nmap("˙",       "<c-w>h",           "Focus west window")    -- Alt-h
-nmap("˚",       "<c-w>k",           "Focus north window")   -- Alt-k
-nmap("¬",       "<c-w>l",           "Focus east window")    -- Alt-l
-nmap("<cr>",    Jump,               "Jump to location")
+nmap("qq",      ":qa!<cr>",         "quit")
+nmap("<s-tab>", "<c-w>h",           "focus west window")
+nmap("<tab>",   "<c-w>l",           "focus east window")
+nmap("<c-p>",   "<c-i>",            "jump forward")
+nmap("∆",       "<c-w>j",           "focus south window")   -- Alt-j
+nmap("˙",       "<c-w>h",           "focus west window")    -- Alt-h
+nmap("˚",       "<c-w>k",           "focus north window")   -- Alt-k
+nmap("¬",       "<c-w>l",           "focus east window")    -- Alt-l
+nmap("<cr>",    Jump,               "jump to location")
 
-nmap("gr",      PickReferences,     "Pick references")
-nmap("gd",      LspDefinition,      "Go to definition")
+nmap("gr",      PickReferences,     "pick references")
+nmap("gd",      LspDefinition,      "go to definition")
 
-nmap("<c-j>",   Walk("Down"),       "Treewalker down",  { silent = true })
-nmap("<c-k>",   Walk("Up"),         "Treewalker up",    { silent = true })
-nmap("<c-h>",   Walk("Left"),       "Treewalker left",  { silent = true })
-nmap("<c-l>",   Walk("Right"),      "Treewalker right", { silent = true })
+nmap("gy",      "+y",               "yank to system clipboard")
+nmap("gp",      "+p",               "paste from system clipboard")
+
+nmap("<c-j>",   Walk("Down"),       "treewalker down",  { silent = true })
+nmap("<c-k>",   Walk("Up"),         "treewalker up",    { silent = true })
+nmap("<c-h>",   Walk("Left"),       "treewalker left",  { silent = true })
+nmap("<c-l>",   Walk("Right"),      "treewalker right", { silent = true })
 
 --> Leader Maps <--
 -- Basics
-lmap("k",       ":w<cr>",           "Write buffer")
-lmap("K",       ":noa w<cr>",       "Write buffer without running autocommands")
-lmap("j",       ToggleExplorer,     "Toggle file explorer")
-lmap("l",       ToggleTerminal,     "Toggle floating terminal")
+lmap("k",       ":w<cr>",           "write buffer")
+lmap("K",       ":noa w<cr>",       "write buffer without running autocommands")
+lmap("j",       ToggleExplorer,     "toggle file explorer")
+lmap("l",       ToggleTerminal,     "toggle floating terminal")
 
 -- Searching
-lmap("<space>", PickFiles,          "Pick files")
-lmap("/",       PickGrep,           "Grep in project")
-lmap("e",       PickResume,         "Resume previous picker")
+lmap("<space>", PickFiles,          "pick files")
+lmap("/",       PickGrep,           "grep in project")
+lmap("e",       PickResume,         "resume previous picker")
+
+lmap("fh",      PickHelp,           "pick help tags")
+lmap("fr",      PickRegisters,      "pick register contents")
+lmap("fb",      PickBranches,       "pick git branches")
 
 -- Sessions
-lmap("so",      OpenDirSession,     "Load session for current dir")
-lmap("sl",      PickSession,        "Pick session to load")
+lmap("so",      OpenDirSession,     "load session for current dir")
+lmap("sl",      PickSession,        "pick session to load")
 
 -- Windows
-lmap("wd",      "<c-w>c",           "Close current window")
-lmap("ws",      "<cmd>sp<cr>",      "Split window horizontally")
-lmap("wv",      "<cmd>vs<cr>",      "Split window vertically")
+lmap("wd",      "<c-w>c",           "close current window")
+lmap("ws",      "<cmd>sp<cr>",      "split window horizontally")
+lmap("wv",      "<cmd>vs<cr>",      "split window vertically")
 
 -- Tabs
-lmap("td",      "<cmd>tabc<cr>",    "Close current tab")
-lmap("tn",      "<cmd>tabnew<cr>",  "Open new tab")
-
--- Registers
-lmap("rs",      PickRegisters,      "Pick register contents")
-
--- Git
-lmap("gb",      PickBranches,       "Pick git branches")
+lmap("td",      "<cmd>tabc<cr>",    "close current tab")
+lmap("tn",      "<cmd>tabnew<cr>",  "open new tab")
 
 -- Code
-lmap("cx",      PickDiagnostic,     "Pick buffer diagnostics")
-lmap("cs",      PickSymbols,        "Pick buffer symbols")
-lmap("ca",      lsp.code_action,    "Pick code action")
-lmap("cd",      diag.open_float,    "Show line diagnostics")
-lmap("ci",      lsp.hover,          "Show LSP hover")
+lmap("cx",      PickDiagnostic,     "pick buffer diagnostics")
+lmap("cs",      PickSymbols,        "pick buffer symbols")
+lmap("ca",      lsp.code_action,    "pick code action")
+lmap("cd",      diag.open_float,    "show line diagnostics")
+lmap("ci",      lsp.hover,          "show LSP hover")
+lmap("cr",      lsp.rename,         "rename")
