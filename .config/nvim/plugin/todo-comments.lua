@@ -1,0 +1,5 @@
+Pack({
+    source = "folke/todo-comments.nvim",
+    setup = true,
+    depends = { "nvim-lua/plenary.nvim" },
+})
