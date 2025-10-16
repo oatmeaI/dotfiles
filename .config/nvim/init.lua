@@ -9,6 +9,7 @@ require("util")
 -- TODO: find & replace solution
 -- TODO: don't try to open explorer on files dir if we're on the start screen / other non-file places
 --
+-- TODO: replace todo-comment with mini
 -- TODO: not sure if the eslint lsp is working
 -- TODO: do I need to do the mini.completion omnifunc thing?
 -- TODO: work on mini.clue setup
@@ -28,8 +29,25 @@ require("util")
 -- TODO: nvim-treesitter-context
 -- TODO: treesitter-textobjects
 -- TODO: mini-diff
+-- TODO: set up DAP?
+-- TODO: what kind of stuff can be done without a plugin?
 -- TODO: mini-keymap might be cool
 -- TODO: better typing / completing experience in commandline
 -- TODO: lots more picker stuff that could be useful:
 -- -- -- `colorschemes`, `commands`, `explorer`, `hipatterns`, `keymaps`, `marks`,
 -- -- -- `list scope=quickfix|jump|location|change`, `oldfiles`, `options`
+
+-- Detect tabstop and shiftwidth automatically
+-- NMAC427/guess-indent.nvim
+
+-- vim api autocomplete etc
+-- folke/lazydev.nvim
+
+-- different picker, symbols nav, etc
+-- bassamsdata/namu.nvim
+
+-- find & replace
+-- thomasschafer/scooter
+
+-- Useful status updates for LSP.
+-- j-hui/fidget.nvim

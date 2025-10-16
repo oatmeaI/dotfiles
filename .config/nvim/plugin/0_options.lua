@@ -19,6 +19,7 @@ vim.o.scrolloff         = 999                       -- Keeps the cursor from hit
 vim.o.timeoutlen        = 250                       -- Quicker timeout for key combos
 vim.o.updatetime        = 250                       -- Quicker timeout for everything else (ie. hlsearch getting turned off)
 vim.o.showtabline       = 2                         -- Always show the tabline
+vim.o.confirm           = true                      -- Show confirmation dialog instead of failing if (for example) `q` is run with unsaved files.
 vim.o.foldmethod        = "expr"                    -- This + line below: use Treesitter for folding
 vim.o.foldexpr          = "v:lua.vim.treesitter.foldexpr()"
 vim.o.foldlevel         = 999                       -- Folds start open
