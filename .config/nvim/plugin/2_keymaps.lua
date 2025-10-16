@@ -42,9 +42,9 @@ del("n", "grr")
 del("n", "grt")
 
 --> Basic Nav Etc <-- 
-map({ "n", "v" },   "<down>",   "10j",          { desc = "skip down" })
-map({ "n", "v" },   "<up>",     "10k",          { desc = "skip up" })
-map("t",            "<esc>",    HideTerminal,   { desc = "hide Terminal" })
+map({ "n", "v" },   "<down>",       "10j",              { desc = "skip down" })
+map({ "n", "v" },   "<up>",         "10k",              { desc = "skip up" })
+map("t",            "<esc>",        HideTerminal,       { desc = "hide Terminal" })
 
 nmap("qq",      ":qa!<cr>",         "quit")
 nmap("<s-tab>", "<c-w>h",           "focus west window")
