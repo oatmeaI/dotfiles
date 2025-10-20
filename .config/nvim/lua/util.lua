@@ -14,6 +14,10 @@ function Walk(dir)
     end
 end
 
+function Zoom()
+    MiniMisc.zoom()
+end
+
 function Pack(opts)
     if type(opts) == "string" then
         deps.add(opts)
@@ -56,11 +60,20 @@ function LspDefinition()
     })
 end
 
+function string.starts(String, Start)
+    return string.sub(String, 1, string.len(Start)) == Start
+end
+
 function ToggleExplorer()
     local files = require("mini.files")
     if not files.close() then
         -- Open explorer in dir of current file
-        files.open(vim.api.nvim_buf_get_name(0), false)
+        local path = vim.api.nvim_buf_get_name(0)
+        if string.starts(path, "/") then
+            files.open(vim.api.nvim_buf_get_name(0), false)
+        else
+            files.open()
+        end
     end
 end
 

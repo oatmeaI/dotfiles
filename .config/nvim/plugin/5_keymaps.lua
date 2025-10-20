@@ -10,6 +10,12 @@ local nmap = function(trigger, effect, description, options)
     vim.keymap.set("n", trigger, effect, options)
 end
 
+local vmap = function(trigger, effect, description, options)
+    local options = options or {}
+    options.desc = description
+    vim.keymap.set("v", trigger, effect, options)
+end
+
 -- Map in normal mode with leader key
 local lmap = function(trigger, effect, description)
     vim.keymap.set("n", "<leader>" .. trigger, effect, { desc = description })
@@ -20,8 +26,6 @@ local imap_expr = function(lhs, rhs)
 end
 
 -- Better tab + enter behavior with autocomplete - lifted from Mini
-imap_expr("<Tab>", [[pumvisible() ? "\<C-n>" : "\<Tab>"]])
-imap_expr("<S-Tab>", [[pumvisible() ? "\<C-p>" : "\<S-Tab>"]])
 imap_expr("<CR>", function()
     -- If there is selected item in popup, accept it with <C-y>
     if vim.fn.complete_info()["selected"] ~= -1 then
@@ -32,19 +36,25 @@ imap_expr("<CR>", function()
     -- next line with `return MiniPairs.cr()`
     return "\r"
 end)
-imap_expr("<esc>", [[pumvisible() ? "\<C-e>" : "\<esc>"]]) -- <esc> closes completion menu
+
+-- Removed these - just use caps+j/k to navigate completion menu
+-- imap_expr("<Tab>", [[pumvisible() ? "\<C-n>" : "\<Tab>"]])
+-- imap_expr("<S-Tab>", [[pumvisible() ? "\<C-p>" : "\<S-Tab>"]])
+
+-- Removed this because <esc> not leaving insert keeps messing me up
+-- imap_expr("<esc>", [[pumvisible() ? "\<C-e>" : "\<esc>"]]) -- <esc> closes completion menu
 
 -- stylua: ignore start
 -- Delete some builtin LSP mappings; we'll remap them later
-del("n", "gra")
-del("n", "gri")
-del("n", "grn")
-del("n", "grr")
-del("n", "grt")
+-- del("n", "gra")
+-- del("n", "gri")
+-- del("n", "grn")
+-- del("n", "grr")
+-- del("n", "grt")
 
 --> Basic Nav Etc <-- 
-map({ "n", "v" },   "<down>",       "10j",              { desc = "skip down" })
-map({ "n", "v" },   "<up>",         "10k",              { desc = "skip up" })
+map({ "n", "x" },   "<down>",       "10j",              { desc = "skip down" })
+map({ "n", "x" },   "<up>",         "10k",              { desc = "skip up" })
 map("t",            "<esc>",        HideTerminal,       { desc = "hide Terminal" })
 
 nmap("qq",      ":qa!<cr>",         "quit")
@@ -61,6 +71,7 @@ nmap("gr",      Pickers.References, "pick references")
 nmap("gd",      LspDefinition,      "go to definition")
 
 nmap("gy",      "+y",               "yank to system clipboard")
+vmap("gy",      "+y",               "yank to system clipboard")
 nmap("gp",      "+p",               "paste from system clipboard")
 
 nmap("<c-j>",   Walk("Down"),       "treewalker down",  { silent = true })
@@ -94,6 +105,7 @@ lmap("sl",      Pickers.Session,    "pick session to load")
 lmap("wd",      "<c-w>c",           "close current window")
 lmap("ws",      "<cmd>sp<cr>",      "split window horizontally")
 lmap("wv",      "<cmd>vs<cr>",      "split window vertically")
+lmap("wz",      Zoom,               "toggle window zoom")
 
 -- Tabs
 lmap("td",      "<cmd>tabc<cr>",    "close current tab")

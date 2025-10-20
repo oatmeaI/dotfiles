@@ -7,7 +7,7 @@ now(function() require("mini.notify").setup() end)
 later(function() require("mini.extra").setup() end)
 later(function() require("mini.surround").setup() end)
 later(function() require("mini.ai").setup() end)
-later(function() require("mini.completion").setup() end)
+later(function() require("mini.misc").setup() end)
 later(function() require('mini.indentscope').setup({ symbol = '│' }) end)
 
 later(MiniIcons.mock_nvim_web_devicons)

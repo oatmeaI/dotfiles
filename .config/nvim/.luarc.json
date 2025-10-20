@@ -3,6 +3,8 @@
         "MiniIcons",
         "MiniDeps",
         "vim",
-        "FzfLua"
+        "FzfLua",
+        "MiniCompletion",
+        "MiniMisc"
     ]
 }

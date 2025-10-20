@@ -1,47 +1,30 @@
 -- This file just bootstraps mini.deps & loads the `util` module.
--- Everything else is auto-loaded (in alphabetical order) from the `plugin` directory.
+-- Everything else is auto-loaded from the `plugin` directory.
+-- Autoloading happens in alphabetical order, which is why some filenames start with a number
 require("bootstrap")
 require("util")
 
 ---------------------------------------------------
 -- Cool stuff for later / maybe
--- TODO: show file path somewhere
+---------------------------------------------------
 -- TODO: find & replace solution
--- TODO: don't try to open explorer on files dir if we're on the start screen / other non-file places
--- TODO: I don't like the red underline highlight
--- TODO: something annoying about esc not exiting insert when complete is happening
--- TODO: do I need to do the mini.completion omnifunc thing?
--- TODO: setup neoscroll
---
---
--- TODO: FzfLua colors
--- TODO: when yanking a block and putting it, put it below
--- TODO: replace todo-comment with mini
--- TODO: not sure if the eslint lsp is working
--- TODO: work on mini.clue setup
--- TODO: understand mini.ai better
--- TODO: organize options.lua into sections
--- TODO: clue hints on text objects
--- TODO: mouse scrolling is kinda janky
--- TODO: quick / auto way to run MiniDeps.update
--- TODO: how to make visual block + shift + I more usable?
--- TODO: mini-git
--- TODO: some way to delete sessions from picker
+-- TODO: mini.git
+-- TODO: vmap doesn't seem to work to map keys in visual mode
+-- TODO: mapping utils should overwrite existing mappings, clean up in general
 -- TODO: dial.nvim
--- TODO: mini.operators might be useful
--- TODO: mini.surround is probably useful
--- TODO: mini.trailspace is not huge but could be nice
--- TODO: mini.misc.zoom
--- TODO: nvim-treesitter-context
--- TODO: treesitter-textobjects
--- TODO: mini-diff
--- TODO: set up DAP?
--- TODO: what kind of stuff can be done without a plugin?
--- TODO: mini-keymap might be cool
+-- TODO: mini.diff
 -- TODO: better typing / completing experience in commandline
--- TODO: lots more picker stuff that could be useful:
--- -- -- `colorschemes`, `commands`, `explorer`, `hipatterns`, `keymaps`, `marks`,
--- -- -- `list scope=quickfix|jump|location|change`, `oldfiles`, `options`
+-- LATER: mini.operators might be useful (sort, eval)
+-- LATER: set up DAP?
+-- LATER: I don't like the red underline highlight
+-- LATER: what kind of stuff can be done without a plugin?
+-- LATER: how to make visual block + shift + I more usable?
+-- LATER: organize options.lua into sections
+-- LATER: quick / auto way to run MiniDeps.update (`DepsUpdate`)
+-- LATER: some way to delete sessions from picker
+-- LATER: setup neoscroll
+-- LATER: mini-keymap might be cool
+-- LATER: Key hints on textobjects - can't do this with clue, maybe switch to which-key
 
 -- Detect tabstop and shiftwidth automatically
 -- NMAC427/guess-indent.nvim
