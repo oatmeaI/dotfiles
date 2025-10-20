@@ -8,10 +8,16 @@ require("util")
 -- TODO: show file path somewhere
 -- TODO: find & replace solution
 -- TODO: don't try to open explorer on files dir if we're on the start screen / other non-file places
+-- TODO: I don't like the red underline highlight
+-- TODO: something annoying about esc not exiting insert when complete is happening
+-- TODO: do I need to do the mini.completion omnifunc thing?
+-- TODO: setup neoscroll
 --
+--
+-- TODO: FzfLua colors
+-- TODO: when yanking a block and putting it, put it below
 -- TODO: replace todo-comment with mini
 -- TODO: not sure if the eslint lsp is working
--- TODO: do I need to do the mini.completion omnifunc thing?
 -- TODO: work on mini.clue setup
 -- TODO: understand mini.ai better
 -- TODO: organize options.lua into sections

@@ -14,3 +14,4 @@ end
 
 # Created by `pipx` on 2025-04-02 20:30:38
 set PATH $PATH /Users/oatmeal/.local/bin
+fish_add_path $HOME/.local/bin

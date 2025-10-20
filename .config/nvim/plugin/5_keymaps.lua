@@ -57,7 +57,7 @@ nmap("˚",       "<c-w>k",           "focus north window")   -- Alt-k
 nmap("¬",       "<c-w>l",           "focus east window")    -- Alt-l
 nmap("<cr>",    Jump,               "jump to location")
 
-nmap("gr",      PickReferences,     "pick references")
+nmap("gr",      Pickers.References, "pick references")
 nmap("gd",      LspDefinition,      "go to definition")
 
 nmap("gy",      "+y",               "yank to system clipboard")
@@ -76,17 +76,19 @@ lmap("j",       ToggleExplorer,     "toggle file explorer")
 lmap("l",       ToggleTerminal,     "toggle floating terminal")
 
 -- Searching
-lmap("<space>", PickFiles,          "pick files")
-lmap("/",       PickGrep,           "grep in project")
-lmap("e",       PickResume,         "resume previous picker")
+lmap("<space>", Pickers.Files,      "pick files")
+lmap("/",       Pickers.Grep,       "grep in project")
+lmap("e",       Pickers.Resume,     "resume previous picker")
 
-lmap("fh",      PickHelp,           "pick help tags")
-lmap("fr",      PickRegisters,      "pick register contents")
-lmap("fb",      PickBranches,       "pick git branches")
+lmap("fh",      Pickers.Help,       "pick help tags")
+lmap("fr",      Pickers.Registers,  "pick register contents")
+lmap("fb",      Pickers.Branches,   "pick git branches")
+
+lmap(",c",      Pickers.Colors,     "pick colorscheme")
 
 -- Sessions
 lmap("so",      OpenDirSession,     "load session for current dir")
-lmap("sl",      PickSession,        "pick session to load")
+lmap("sl",      Pickers.Session,    "pick session to load")
 
 -- Windows
 lmap("wd",      "<c-w>c",           "close current window")
@@ -98,8 +100,9 @@ lmap("td",      "<cmd>tabc<cr>",    "close current tab")
 lmap("tn",      "<cmd>tabnew<cr>",  "open new tab")
 
 -- Code
-lmap("cx",      PickDiagnostic,     "pick buffer diagnostics")
-lmap("cs",      PickSymbols,        "pick buffer symbols")
+lmap("cx",      Pickers.Diagnostics,"pick buffer diagnostics")
+lmap("cs",      Pickers.Symbols,    "pick buffer symbols")
+lmap("cb",      Pickers.Blame,      "git blame")
 lmap("ca",      lsp.code_action,    "pick code action")
 lmap("cd",      diag.open_float,    "show line diagnostics")
 lmap("ci",      lsp.hover,          "show LSP hover")

@@ -1,9 +1,7 @@
--- Helper functions + plugin abstractions, so that if I decided to change picker plugins (for exmaple)
+-- Helper functions + plugin abstractions, so that if I decided to change plugins
 -- I only need to make changes here.
 
 local vim = vim
-local pick = require("mini.pick")
-local extra = require("mini.extra")
 local deps = require("mini.deps")
 
 function AutoCmd(trigger, opts)
@@ -44,27 +42,11 @@ function HideTerminal()
     end
 end
 
-function PickLSP(opts)
-    extra.pickers.lsp(opts)
-end
-
-function PickSymbols()
-    PickLSP({ scope = "document_symbol" })
-end
-
-function PickReferences()
-    PickLSP({ scope = "references" })
-end
-
-function PickDefinition()
-    PickLSP({ scope = "definition" })
-end
-
 function LspDefinition()
     vim.lsp.buf.definition({
         on_list = function(options)
             if #options.items > 1 then
-                PickDefinition()
+                Pickers.Definition()
             else
                 -- TODO: this is dumb, but I couldn't figure out how to do the jump
                 -- if there's only one option. I'm sure there's a way.
@@ -72,26 +54,6 @@ function LspDefinition()
             end
         end,
     })
-end
-
-function PickFiles(opts)
-    pick.builtin.files(opts)
-end
-
-function PickBranches()
-    extra.pickers.git_branches()
-end
-
-function PickRegisters()
-    extra.pickers.registers()
-end
-
-function PickGrep(opts)
-    pick.builtin.grep_live(opts)
-end
-
-function PickResume(opts)
-    pick.builtin.resume(opts)
 end
 
 function ToggleExplorer()
@@ -102,20 +64,8 @@ function ToggleExplorer()
     end
 end
 
-function PickDiagnostic(opts)
-    extra.pickers.diagnostic(opts)
-end
-
-function PickHelp()
-    pick.builtin.help()
-end
-
 function Jump()
     require("flash").jump()
-end
-
-function PickSession()
-    require("persistence").select()
 end
 
 function OpenDirSession()
