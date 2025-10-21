@@ -52,6 +52,7 @@ miniclue.setup({
         { mode = "n", keys = "<Leader>w", desc = "+windows" },
         { mode = "n", keys = "<Leader>t", desc = "+tabs" },
         { mode = "n", keys = "<Leader>f", desc = "+find" },
+        { mode = "n", keys = "<Leader>,", desc = "+preferencs" },
     },
     window = {
         config = { width = "auto" },

@@ -1,9 +1,7 @@
--- Helper functions + plugin abstractions, so that if I decided to change picker plugins (for exmaple)
+-- Helper functions + plugin abstractions, so that if I decided to change plugins
 -- I only need to make changes here.
 
 local vim = vim
-local pick = require("mini.pick")
-local extra = require("mini.extra")
 local deps = require("mini.deps")
 
 function AutoCmd(trigger, opts)
@@ -14,6 +12,10 @@ function Walk(dir)
     return function()
         vim.cmd("Treewalker " .. dir)
     end
+end
+
+function Zoom()
+    MiniMisc.zoom()
 end
 
 function Pack(opts)
@@ -44,27 +46,11 @@ function HideTerminal()
     end
 end
 
-function PickLSP(opts)
-    extra.pickers.lsp(opts)
-end
-
-function PickSymbols()
-    PickLSP({ scope = "document_symbol" })
-end
-
-function PickReferences()
-    PickLSP({ scope = "references" })
-end
-
-function PickDefinition()
-    PickLSP({ scope = "definition" })
-end
-
 function LspDefinition()
     vim.lsp.buf.definition({
         on_list = function(options)
             if #options.items > 1 then
-                PickDefinition()
+                Pickers.Definition()
             else
                 -- TODO: this is dumb, but I couldn't figure out how to do the jump
                 -- if there's only one option. I'm sure there's a way.
@@ -74,48 +60,25 @@ function LspDefinition()
     })
 end
 
-function PickFiles(opts)
-    pick.builtin.files(opts)
-end
-
-function PickBranches()
-    extra.pickers.git_branches()
-end
-
-function PickRegisters()
-    extra.pickers.registers()
-end
-
-function PickGrep(opts)
-    pick.builtin.grep_live(opts)
-end
-
-function PickResume(opts)
-    pick.builtin.resume(opts)
+function string.starts(String, Start)
+    return string.sub(String, 1, string.len(Start)) == Start
 end
 
 function ToggleExplorer()
     local files = require("mini.files")
     if not files.close() then
         -- Open explorer in dir of current file
-        files.open(vim.api.nvim_buf_get_name(0), false)
+        local path = vim.api.nvim_buf_get_name(0)
+        if string.starts(path, "/") then
+            files.open(vim.api.nvim_buf_get_name(0), false)
+        else
+            files.open()
+        end
     end
-end
-
-function PickDiagnostic(opts)
-    extra.pickers.diagnostic(opts)
-end
-
-function PickHelp()
-    pick.builtin.help()
 end
 
 function Jump()
     require("flash").jump()
-end
-
-function PickSession()
-    require("persistence").select()
 end
 
 function OpenDirSession()

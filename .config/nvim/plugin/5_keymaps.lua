@@ -10,6 +10,12 @@ local nmap = function(trigger, effect, description, options)
     vim.keymap.set("n", trigger, effect, options)
 end
 
+local vmap = function(trigger, effect, description, options)
+    local options = options or {}
+    options.desc = description
+    vim.keymap.set("v", trigger, effect, options)
+end
+
 -- Map in normal mode with leader key
 local lmap = function(trigger, effect, description)
     vim.keymap.set("n", "<leader>" .. trigger, effect, { desc = description })
@@ -20,8 +26,6 @@ local imap_expr = function(lhs, rhs)
 end
 
 -- Better tab + enter behavior with autocomplete - lifted from Mini
-imap_expr("<Tab>", [[pumvisible() ? "\<C-n>" : "\<Tab>"]])
-imap_expr("<S-Tab>", [[pumvisible() ? "\<C-p>" : "\<S-Tab>"]])
 imap_expr("<CR>", function()
     -- If there is selected item in popup, accept it with <C-y>
     if vim.fn.complete_info()["selected"] ~= -1 then
@@ -32,19 +36,25 @@ imap_expr("<CR>", function()
     -- next line with `return MiniPairs.cr()`
     return "\r"
 end)
-imap_expr("<esc>", [[pumvisible() ? "\<C-e>" : "\<esc>"]]) -- <esc> closes completion menu
+
+-- Removed these - just use caps+j/k to navigate completion menu
+-- imap_expr("<Tab>", [[pumvisible() ? "\<C-n>" : "\<Tab>"]])
+-- imap_expr("<S-Tab>", [[pumvisible() ? "\<C-p>" : "\<S-Tab>"]])
+
+-- Removed this because <esc> not leaving insert keeps messing me up
+-- imap_expr("<esc>", [[pumvisible() ? "\<C-e>" : "\<esc>"]]) -- <esc> closes completion menu
 
 -- stylua: ignore start
 -- Delete some builtin LSP mappings; we'll remap them later
-del("n", "gra")
-del("n", "gri")
-del("n", "grn")
-del("n", "grr")
-del("n", "grt")
+-- del("n", "gra")
+-- del("n", "gri")
+-- del("n", "grn")
+-- del("n", "grr")
+-- del("n", "grt")
 
 --> Basic Nav Etc <-- 
-map({ "n", "v" },   "<down>",       "10j",              { desc = "skip down" })
-map({ "n", "v" },   "<up>",         "10k",              { desc = "skip up" })
+map({ "n", "x" },   "<down>",       "10j",              { desc = "skip down" })
+map({ "n", "x" },   "<up>",         "10k",              { desc = "skip up" })
 map("t",            "<esc>",        HideTerminal,       { desc = "hide Terminal" })
 
 nmap("qq",      ":qa!<cr>",         "quit")
@@ -57,10 +67,11 @@ nmap("˚",       "<c-w>k",           "focus north window")   -- Alt-k
 nmap("¬",       "<c-w>l",           "focus east window")    -- Alt-l
 nmap("<cr>",    Jump,               "jump to location")
 
-nmap("gr",      PickReferences,     "pick references")
+nmap("gr",      Pickers.References, "pick references")
 nmap("gd",      LspDefinition,      "go to definition")
 
 nmap("gy",      "+y",               "yank to system clipboard")
+vmap("gy",      "+y",               "yank to system clipboard")
 nmap("gp",      "+p",               "paste from system clipboard")
 
 nmap("<c-j>",   Walk("Down"),       "treewalker down",  { silent = true })
@@ -76,30 +87,34 @@ lmap("j",       ToggleExplorer,     "toggle file explorer")
 lmap("l",       ToggleTerminal,     "toggle floating terminal")
 
 -- Searching
-lmap("<space>", PickFiles,          "pick files")
-lmap("/",       PickGrep,           "grep in project")
-lmap("e",       PickResume,         "resume previous picker")
+lmap("<space>", Pickers.Files,      "pick files")
+lmap("/",       Pickers.Grep,       "grep in project")
+lmap("e",       Pickers.Resume,     "resume previous picker")
 
-lmap("fh",      PickHelp,           "pick help tags")
-lmap("fr",      PickRegisters,      "pick register contents")
-lmap("fb",      PickBranches,       "pick git branches")
+lmap("fh",      Pickers.Help,       "pick help tags")
+lmap("fr",      Pickers.Registers,  "pick register contents")
+lmap("fb",      Pickers.Branches,   "pick git branches")
+
+lmap(",c",      Pickers.Colors,     "pick colorscheme")
 
 -- Sessions
 lmap("so",      OpenDirSession,     "load session for current dir")
-lmap("sl",      PickSession,        "pick session to load")
+lmap("sl",      Pickers.Session,    "pick session to load")
 
 -- Windows
 lmap("wd",      "<c-w>c",           "close current window")
 lmap("ws",      "<cmd>sp<cr>",      "split window horizontally")
 lmap("wv",      "<cmd>vs<cr>",      "split window vertically")
+lmap("wz",      Zoom,               "toggle window zoom")
 
 -- Tabs
 lmap("td",      "<cmd>tabc<cr>",    "close current tab")
 lmap("tn",      "<cmd>tabnew<cr>",  "open new tab")
 
 -- Code
-lmap("cx",      PickDiagnostic,     "pick buffer diagnostics")
-lmap("cs",      PickSymbols,        "pick buffer symbols")
+lmap("cx",      Pickers.Diagnostics,"pick buffer diagnostics")
+lmap("cs",      Pickers.Symbols,    "pick buffer symbols")
+lmap("cb",      Pickers.Blame,      "git blame")
 lmap("ca",      lsp.code_action,    "pick code action")
 lmap("cd",      diag.open_float,    "show line diagnostics")
 lmap("ci",      lsp.hover,          "show LSP hover")

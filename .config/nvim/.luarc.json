@@ -2,6 +2,9 @@
     "diagnostics.globals": [
         "MiniIcons",
         "MiniDeps",
-        "vim"
+        "vim",
+        "FzfLua",
+        "MiniCompletion",
+        "MiniMisc"
     ]
 }
