@@ -15,5 +15,4 @@ Pickers = {
     Help            = p.helptags,
     Colors          = p.colorschemes,
     Blame           = p.git_blame,
-    Session         = require("persistence").select
 }

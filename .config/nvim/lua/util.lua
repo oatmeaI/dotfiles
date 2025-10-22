@@ -1,90 +1,33 @@
--- Helper functions + plugin abstractions, so that if I decided to change plugins
--- I only need to make changes here.
+-- Helper functions used in various config files
+U = {}
 
-local vim = vim
-local deps = require("mini.deps")
-
-function AutoCmd(trigger, opts)
-    vim.api.nvim_create_autocmd(trigger, opts)
+local map = function(mode, trigger, effect, description, _options)
+    local options = _options or {}
+    options.desc = description
+    vim.keymap.set(mode, trigger, effect, options)
 end
 
-function Walk(dir)
-    return function()
-        vim.cmd("Treewalker " .. dir)
-    end
+-- Map in normal mode
+U.nmap = function(trigger, effect, description, options)
+    map("n", trigger, effect, description, options)
+end
+--
+-- Map in terminal mode
+U.tmap = function(trigger, effect, description, options)
+    map("t", trigger, effect, description, options)
 end
 
-function Zoom()
-    MiniMisc.zoom()
+-- Map to normal and visual
+U.vmap = function(trigger, effect, description, options)
+    map({ "n", "x" }, trigger, effect, description, options)
 end
 
-function Pack(opts)
-    if type(opts) == "string" then
-        deps.add(opts)
-        return
-    end
-
-    local name = opts.name or vim.fn.fnamemodify(opts.source, ":t:r")
-    opts.name = name
-
-    deps.add(opts)
-
-    if opts.setup == true then
-        require(name).setup(opts.config)
-    end
-
-    if opts.callback then
-        opts.callback()
-    end
+-- Map in normal mode with leader key
+U.lmap = function(trigger, effect, description, options)
+    map("n", "<leader>" .. trigger, effect, description, options)
 end
 
-function HideTerminal()
-    local in_terminal = vim.bo.buftype == "terminal"
-    if in_terminal then
-        vim.cmd("stopinsert")
-        vim.cmd("hide")
-    end
-end
-
-function LspDefinition()
-    vim.lsp.buf.definition({
-        on_list = function(options)
-            if #options.items > 1 then
-                Pickers.Definition()
-            else
-                -- TODO: this is dumb, but I couldn't figure out how to do the jump
-                -- if there's only one option. I'm sure there's a way.
-                vim.lsp.buf.definition()
-            end
-        end,
-    })
-end
-
-function string.starts(String, Start)
-    return string.sub(String, 1, string.len(Start)) == Start
-end
-
-function ToggleExplorer()
-    local files = require("mini.files")
-    if not files.close() then
-        -- Open explorer in dir of current file
-        local path = vim.api.nvim_buf_get_name(0)
-        if string.starts(path, "/") then
-            files.open(vim.api.nvim_buf_get_name(0), false)
-        else
-            files.open()
-        end
-    end
-end
-
-function Jump()
-    require("flash").jump()
-end
-
-function OpenDirSession()
-    require("persistence").load()
-end
-
-function ToggleTerminal()
-    vim.cmd("ToggleTerm")
+-- Map in insert mode as expression
+U.imap_expr = function(trigger, effect)
+    map("i", trigger, effect, "", { expr = true })
 end

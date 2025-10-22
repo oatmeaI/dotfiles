@@ -2,18 +2,15 @@
 -- Everything else is auto-loaded from the `plugin` directory.
 -- Autoloading happens in alphabetical order, which is why some filenames start with a number
 require("bootstrap")
-require("util")
+require("lib")
 
 ---------------------------------------------------
 -- Cool stuff for later / maybe
 ---------------------------------------------------
 -- TODO: find & replace solution
--- TODO: mini.git
--- TODO: vmap doesn't seem to work to map keys in visual mode
--- TODO: mapping utils should overwrite existing mappings, clean up in general
 -- TODO: dial.nvim
 -- TODO: mini.diff
--- TODO: better typing / completing experience in commandline
+-- LATER: better typing / completing experience in commandline
 -- LATER: mini.operators might be useful (sort, eval)
 -- LATER: set up DAP?
 -- LATER: I don't like the red underline highlight
@@ -21,7 +18,7 @@ require("util")
 -- LATER: how to make visual block + shift + I more usable?
 -- LATER: organize options.lua into sections
 -- LATER: quick / auto way to run MiniDeps.update (`DepsUpdate`)
--- LATER: some way to delete sessions from picker
+-- LATER: some way to delete sessions
 -- LATER: setup neoscroll
 -- LATER: mini-keymap might be cool
 -- LATER: Key hints on textobjects - can't do this with clue, maybe switch to which-key
