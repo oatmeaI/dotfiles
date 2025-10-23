@@ -2,7 +2,6 @@
 -- I only need to make changes here.
 
 local vim = vim
-local uv = vim.uv or vim.loop
 local deps = require("mini.deps")
 
 function AutoCmd(trigger, opts)
@@ -88,6 +87,42 @@ end
 
 function PickSession()
     require("nvim-possession").list()
+end
+
+function SaveSession()
+    -- TODO: kinda annoying to pass these config values here, probably a better way
+    require("nvim-possession.utils").autosave({
+        sessions = { sessions_variable = "session", sessions_path = vim.fn.stdpath("data") .. "/sessions/" },
+    })
+end
+
+function ListSessions()
+    -- TODO: config values live somewhere else
+    local sessions_path = vim.fn.stdpath("data") .. "/sessions/"
+
+    local sessions = {}
+
+    for name, type in vim.fs.dir(sessions_path) do
+        if type == "file" then
+            local path = sessions_path .. name
+            local stat = vim.uv.fs_stat(path)
+            if stat then
+                table.insert(sessions, { name = name, mtime = stat.mtime, path = path })
+            end
+        end
+    end
+
+    table.sort(sessions, function(a, b)
+        if a.mtime.sec ~= b.mtime.sec then
+            return a.mtime.sec > b.mtime.sec
+        end
+        if a.mtime.nsec ~= b.mtime.nsec then
+            return a.mtime.nsec > b.mtime.nsec
+        end
+        return a.name < b.name
+    end)
+
+    return sessions
 end
 
 function ToggleTerminal()

@@ -17,10 +17,17 @@ Pack({
         sections = {
             lualine_a = { "mode" },
             lualine_b = { { "filename", path = 1 } },
-            lualine_c = {},
-            lualine_x = { "branch" },
-            lualine_y = { "filetype" },
-            lualine_z = {},
+            lualine_c = { "filetype" },
+            lualine_x = {},
+            lualine_y = { "branch" },
+            lualine_z = {
+                {
+                    require("nvim-possession").status,
+                    cond = function()
+                        return require("nvim-possession").status() ~= nil
+                    end,
+                },
+            },
         },
     },
 })
