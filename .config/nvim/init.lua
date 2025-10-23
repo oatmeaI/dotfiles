@@ -8,7 +8,6 @@ require("lib")
 -- Cool stuff for later / maybe
 ---------------------------------------------------
 -- TODO: find & replace solution
--- TODO: dial.nvim
 -- TODO: mini.diff
 -- LATER: better typing / completing experience in commandline
 -- LATER: mini.operators might be useful (sort, eval)
@@ -19,9 +18,9 @@ require("lib")
 -- LATER: organize options.lua into sections
 -- LATER: quick / auto way to run MiniDeps.update (`DepsUpdate`)
 -- LATER: some way to delete sessions
--- LATER: setup neoscroll
 -- LATER: mini-keymap might be cool
 -- LATER: Key hints on textobjects - can't do this with clue, maybe switch to which-key
+-- LATER: I'm not even using much of persistence.nvim; maybe just rewrite the whole thing myself
 
 -- Detect tabstop and shiftwidth automatically
 -- NMAC427/guess-indent.nvim
