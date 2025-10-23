@@ -91,9 +91,10 @@ end
 
 function SaveSession()
     -- TODO: kinda annoying to pass these config values here, probably a better way
-    require("nvim-possession.utils").autosave({
-        sessions = { sessions_variable = "session", sessions_path = vim.fn.stdpath("data") .. "/sessions/" },
-    })
+    vim.cmd.mksession({ args = { vim.fn.stdpath("data") .. "/sessions/" .. vim.g.sessions }, bang = true })
+    -- require("nvim-possession.utils").autosave({
+    --     sessions = { sessions_variable = "session", sessions_path = vim.fn.stdpath("data") .. "/sessions/" },
+    -- })
 end
 
 function ListSessions()

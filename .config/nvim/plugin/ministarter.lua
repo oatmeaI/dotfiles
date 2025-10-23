@@ -14,6 +14,7 @@ starter.setup({
                     section = "sessions",
                     action = function()
                         vim.cmd.source(sess.path)
+                        vim.g.sessions = vim.fs.basename(sess.path)
                     end,
                 })
             end
