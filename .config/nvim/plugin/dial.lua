@@ -21,6 +21,21 @@ Pack({
                     word = true, -- if false, "sand" is incremented into "sor", "doctor" into "doctand", etc.
                     cyclic = true, -- "or" is incremented into "and".
                 }),
+                augend.constant.new({
+                    elements = { "top", "bottom" },
+                    word = true,
+                    cyclic = true,
+                }),
+                augend.constant.new({
+                    elements = { "left", "right" },
+                    word = true,
+                    cyclic = true,
+                }),
+                augend.constant.new({
+                    elements = { "start", "end" },
+                    word = true,
+                    cyclic = true,
+                }),
             },
         })
         vim.keymap.set("n", "<C-a>", function()
