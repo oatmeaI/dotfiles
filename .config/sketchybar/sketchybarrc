@@ -74,13 +74,13 @@ sketchybar --set uptime script="$UPTIME_SCRIPT"
 # sketchybar --add item today center
 # sketchybar --set today label="TODAY: "
 
+# ------- Date ----------
+sketchybar --add item date right
+sketchybar --set date script="$DATE_SCRIPT"
 
 # ------- Time ----------
 sketchybar --add item time right
 sketchybar --set time script="$TIME_SCRIPT"
 #sketchybar --set time background.padding_right=0
 
-# ------- Date ----------
-sketchybar --add item date right
-sketchybar --set date script="$DATE_SCRIPT"
 
