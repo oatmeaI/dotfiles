@@ -23,12 +23,12 @@ sketchybar --bar color=0x00000000
 sketchybar --bar display=all
 sketchybar --bar position=bottom
 sketchybar --bar height=26
-sketchybar --bar margin=6
-sketchybar --bar blur_radius=100
+sketchybar --bar margin=-17
+# sketchybar --bar blur_radius=100
 sketchybar --bar shadow=off
 sketchybar --bar topmost=window
-sketchybar --bar y_offset=2
-sketchybar --bar corner_radius=5
+sketchybar --bar y_offset=1
+# sketchybar --bar corner_radius=25
 
 # ------- Item Defaults ----------
 PADDING=20
@@ -40,12 +40,12 @@ default=(
   label.font="$TEXT_FONT"
   padding_left=5
   padding_right=5
-  label.padding_left=5
-  label.padding_right=5
-  background.color=0xFF24273A
-  background.padding_right=12
-  background.padding_left=12
-  background.corner_radius=5
+  label.padding_left=8
+  label.padding_right=12
+  background.color=0xCC24273A
+  # background.padding_right=10
+  # background.padding_left=10
+  background.corner_radius=10
   update_freq=1
 )
 
@@ -54,8 +54,7 @@ sketchybar --default "${default[@]}"
 # ------- BATT Usage ----------
 sketchybar --add item batt left
 sketchybar --set batt script="$BATT_SCRIPT"
-
-
+sketchybar --set batt padding_left=0
 
 # ------- CPU Usage ----------
 sketchybar --add item cpu left
@@ -77,6 +76,7 @@ sketchybar --set uptime script="$UPTIME_SCRIPT"
 # ------- Date ----------
 sketchybar --add item date right
 sketchybar --set date script="$DATE_SCRIPT"
+ketchybar --set date padding_right=0
 
 # ------- Time ----------
 sketchybar --add item time right

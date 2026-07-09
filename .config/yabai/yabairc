@@ -1,0 +1,8 @@
+yabai -m config top_padding     3 
+yabai -m config bottom_padding  30
+yabai -m config right_padding   3
+yabai -m config left_padding    3
+yabai -m config window_gap      5
+
+yabai -m config layout stack
+yabai -m config mouse_drop_action stack
