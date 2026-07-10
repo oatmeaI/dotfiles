@@ -1,0 +1,7 @@
+.config/fish/fish_variables
+.DS_Store
+.adobe*
+btop.log
+configstore/
+yarn/
+
