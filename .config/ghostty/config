@@ -1,0 +1,15 @@
+theme = catppuccin-macchiato.conf
+command = /opt/homebrew/bin/fish
+cursor-style = block
+window-inherit-working-directory = true
+macos-titlebar-style = tabs
+macos-titlebar-proxy-icon = hidden
+macos-option-as-alt = false
+macos-icon = xray
+window-new-tab-position = end
+background-opacity = 0.95
+background-blur = true 
+keybind = global:cmd+shift+alt+ctrl+p=toggle_quick_terminal
+keybind = cmd+[=move_tab:-1
+keybind = cmd+]=move_tab:1
+
