@@ -1,5 +1,6 @@
 [user]
 	name = Keenan Villani-Holland
+	email = keenan@oatmeal.monster
 [include]
     path = ~/.gitconfig-email
 [alias]
