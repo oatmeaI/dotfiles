@@ -9,11 +9,11 @@ require("lib")
 ---------------------------------------------------
 -- TODO: find & replace solution
 -- TODO: mini.diff
+-- TODO: create sessions dir if not present
 -- LATER: better typing / completing experience in commandline
 -- LATER: mini.operators might be useful (sort, eval)
 -- LATER: set up DAP?
 -- LATER: I don't like the red underline highlight
--- LATER: what kind of stuff can be done without a plugin?
 -- LATER: how to make visual block + shift + I more usable?
 -- LATER: organize options.lua into sections
 -- LATER: quick / auto way to run MiniDeps.update (`DepsUpdate`)
