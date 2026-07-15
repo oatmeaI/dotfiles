@@ -1,0 +1,9 @@
+"use strict";var w=Object.create;var r=Object.defineProperty;var y=Object.getOwnPropertyDescriptor;var S=Object.getOwnPropertyNames;var g=Object.getPrototypeOf,x=Object.prototype.hasOwnProperty;var I=(t,e)=>{for(var n in e)r(t,n,{get:e[n],enumerable:!0})},m=(t,e,n,s)=>{if(e&&typeof e=="object"||typeof e=="function")for(let o of S(e))!x.call(t,o)&&o!==n&&r(t,o,{get:()=>e[o],enumerable:!(s=y(e,o))||s.enumerable});return t};var E=(t,e,n)=>(n=t!=null?w(g(t)):{},m(e||!t||!t.__esModule?r(n,"default",{value:t,enumerable:!0}):n,t)),D=t=>m(r({},"__esModule",{value:!0}),t);var v={};I(v,{default:()=>A});module.exports=D(v);var i=require("@raycast/api");var c=E(require("node:process"),1),l=require("node:util"),a=require("node:child_process"),O=(0,l.promisify)(a.execFile);async function p(t,{humanReadableOutput:e=!0,signal:n}={}){if(c.default.platform!=="darwin")throw new Error("macOS only");let s=e?[]:["-ss"],o={};n&&(o.signal=n);let{stdout:h}=await O("osascript",["-e",t,s],o);return h.trim()}var u=require("@raycast/api");async function d(){return!!(await(0,u.getApplications)()).find(n=>n.bundleId==="com.if.Amphetamine")}var f="https://apps.apple.com/br/app/amphetamine/id937984704";async function A(){let t=new i.Toast({title:"Ending current session...",style:i.Toast.Style.Animated});if(t.show(),!await d()){t.title="Amphetamine is no installed",t.message="Press Command + D to download",t.primaryAction={title:"Download",shortcut:{modifiers:["cmd"],key:"d"},onAction:async()=>await(0,i.open)(f)},t.style=i.Toast.Style.Failure;return}if(await p(`
+    tell application "Amphetamine"
+        return session is active
+    end tell
+  `)==="false"){t.title="No Amphetamine session is running.",t.style=i.Toast.Style.Failure;return}await p(`
+    tell application "Amphetamine"
+        end session
+    end tell
+  `),await(0,i.showHUD)("Ended current session.")}
