@@ -1,7 +1,5 @@
 tap "asmvik/formulae", trusted: true
 tap "felixkratz/formulae", "https://github.com/FelixKratz/homebrew-formulae", trusted: true
-# Command-line fuzzy finder written in Go
-brew "fzf"
 # Powerful, enterprise-ready, open source web server with automatic HTTPS
 brew "caddy"
 # Core application library for C
@@ -24,6 +22,8 @@ brew "ffmpeg"
 brew "fish"
 # Terminal JSON viewer
 brew "fx"
+# Command-line fuzzy finder written in Go
+brew "fzf"
 # GNU multiple precision arithmetic library
 brew "gmp"
 # GNU implementation of the famous stream editor
