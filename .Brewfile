@@ -30,6 +30,8 @@ brew "gmp"
 brew "gnu-sed"
 # OpenType text shaping engine
 brew "harfbuzz"
+# Extremely fast Python package installer and resolver, written in Rust
+brew "uv"
 # Modern, extensible Python project management
 brew "hatch"
 # User-friendly cURL replacement (command-line HTTP client)
@@ -112,7 +114,7 @@ cask "bitwarden"
 cask "docker-desktop"
 cask "font-fira-code-nerd-font"
 cask "font-iosevka"
-# Keyboard customiser
-cask "karabiner-elements"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
+# Keyboard customiser
+cask "karabiner-elements"
