@@ -1,21 +1,13 @@
-tap "asmvik/formulae"
+tap "asmvik/formulae", trusted: true
 tap "felixkratz/formulae", "https://github.com/FelixKratz/homebrew-formulae", trusted: true
 # Command-line fuzzy finder written in Go
 brew "fzf"
-# Clock, timer, time manager and ASCII+ text-art viewer for the terminal
-brew "arttime"
-# Open source, extensible AI agent that goes beyond code suggestions
-brew "block-goose-cli"
-# Resource monitor. C++ version and continuation of bashtop and bpytop
-brew "btop"
 # Powerful, enterprise-ready, open source web server with automatic HTTPS
 brew "caddy"
 # Core application library for C
 brew "glib"
 # Vector graphics library with cross-device output support
 brew "cairo"
-# Statistics utility to count lines of code
-brew "cloc"
 # Cross-platform make
 brew "cmake"
 # Cryptography and SSL/TLS Toolkit
@@ -58,8 +50,6 @@ brew "jq"
 brew "lazygit"
 # Image processing and image analysis library
 brew "leptonica"
-# LLM inference in C/C++
-brew "llama.cpp"
 # Find what models run on your hardware
 brew "llmfit"
 # Just-In-Time Compiler (JIT) for the Lua programming language
@@ -126,9 +116,3 @@ cask "font-iosevka"
 cask "karabiner-elements"
 # GPU-based terminal emulator
 cask "kitty"
-uv "-"
-uv "-"
-uv "-"
-uv "vllm-mlx", source: "git+https://github.com/waybarrios/vllm-mlx.git"
-npm "@mariozechner/pi-coding-agent"
-npm "pseuplex"

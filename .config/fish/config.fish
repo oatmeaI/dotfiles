@@ -4,6 +4,8 @@ starship init fish | source
 set -gx EDITOR nvim
 set -gx XDG_CONFIG_HOME "$HOME/.config"
 
+alias og_brew=/opt/homebrew/bin/brew
+
 if test -f ~/secretvars.fish
     source ~/secretvars.fish
 end
