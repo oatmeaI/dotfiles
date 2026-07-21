@@ -1,0 +1,8 @@
+{
+  "trustedformulae": [
+    "asmvik/formulae/yabai"
+  ],
+  "trustedtaps": [
+    "felixkratz/formulae"
+  ]
+}
