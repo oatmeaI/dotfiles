@@ -1,0 +1,1431 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "todoist",
+  "title": "Todoist",
+  "description": "Check your Todoist tasks and quickly create new ones",
+  "icon": "todoist.png",
+  "author": "thomaslombart",
+  "owner": "doist",
+  "access": "public",
+  "license": "MIT",
+  "categories": [
+    "Productivity"
+  ],
+  "contributors": [
+    "AnishDe12020",
+    "kud",
+    "gerardcs",
+    "prince_yadav",
+    "stelo",
+    "ridemountainpig",
+    "kcole93",
+    "Rob",
+    "jagadeesh_k",
+    "scottlovegrove",
+    "henningmu",
+    "FlohGro",
+    "dedalusj",
+    "william_sault",
+    "aditya_pethkar",
+    "alanwill",
+    "erayack",
+    "chialiyun",
+    "jakoss",
+    "yashpatel21",
+    "alexi.build",
+    "0xdhrv"
+  ],
+  "platforms": [
+    "macOS",
+    "Windows"
+  ],
+  "commands": [
+    {
+      "name": "home",
+      "title": "My Tasks",
+      "subtitle": "Todoist",
+      "description": "Show your Todoist tasks and views (inbox, today, upcoming, completed, projects, labels).",
+      "mode": "view",
+      "preferences": [
+        {
+          "name": "view",
+          "type": "dropdown",
+          "data": [
+            {
+              "title": "Inbox",
+              "value": "inbox"
+            },
+            {
+              "title": "Today",
+              "value": "today"
+            },
+            {
+              "title": "Upcoming",
+              "value": "upcoming"
+            },
+            {
+              "title": "Completed",
+              "value": "completed"
+            }
+          ],
+          "default": "today",
+          "required": false,
+          "title": "View",
+          "description": "Indicates which view you want to see in the command."
+        }
+      ],
+      "keywords": [
+        "home",
+        "inbox",
+        "today",
+        "today tasks",
+        "upcoming",
+        "upcoming tasks",
+        "completed",
+        "completed tasks"
+      ]
+    },
+    {
+      "name": "search",
+      "title": "Search",
+      "subtitle": "Todoist",
+      "description": "Search your Todoist tasks, projects, labels, and comments.",
+      "mode": "view"
+    },
+    {
+      "name": "create-task",
+      "title": "Create Task",
+      "subtitle": "Todoist",
+      "description": "Create a Todoist task.",
+      "mode": "view",
+      "preferences": [
+        {
+          "name": "shouldCloseMainWindow",
+          "type": "checkbox",
+          "label": "Close window immediately",
+          "description": "When enabled, the Raycast window is closed immediately, allowing you to carry on with other work.",
+          "default": false,
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "quick-add-task",
+      "title": "Quick Add Task",
+      "subtitle": "Todoist",
+      "description": "Quickly add a new task in Todoist.",
+      "mode": "no-view",
+      "preferences": [
+        {
+          "name": "shouldCloseMainWindow",
+          "type": "checkbox",
+          "label": "Close window immediately",
+          "description": "When enabled, the Raycast window is closed immediately, allowing you to carry on with other work.",
+          "default": false,
+          "required": false
+        },
+        {
+          "name": "autoCreateLabels",
+          "type": "checkbox",
+          "label": "Create labels automatically",
+          "description": "When enabled Raycast will parse labels and create them automatically.",
+          "default": false,
+          "required": false
+        }
+      ],
+      "arguments": [
+        {
+          "name": "text",
+          "placeholder": "Text (today 5pm p2)",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "description",
+          "placeholder": "Description",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "name": "create-project",
+      "title": "Create Project",
+      "subtitle": "Todoist",
+      "description": "Create a Todoist project.",
+      "mode": "view",
+      "disabledByDefault": true
+    },
+    {
+      "name": "menu-bar",
+      "title": "Menu Bar Tasks",
+      "subtitle": "Todoist",
+      "description": "Show your Todoist tasks and views in your menu bar.",
+      "mode": "menu-bar",
+      "preferences": [
+        {
+          "name": "hideMenuBarCount",
+          "type": "checkbox",
+          "label": "Hide menu bar count",
+          "description": "When enabled, the number of tasks in the menu bar won't be shown.",
+          "default": false,
+          "required": false
+        },
+        {
+          "name": "showNextTask",
+          "type": "checkbox",
+          "label": "Show next task as title",
+          "description": "When enabled and no task is focused, displays your next upcoming task in the menu bar title",
+          "default": false,
+          "required": false
+        },
+        {
+          "name": "sortByPriority",
+          "type": "checkbox",
+          "label": "Sort tasks by priority",
+          "description": "When enabled, tasks are sorted by priority (highest first), then by their default order.",
+          "default": true,
+          "required": false
+        },
+        {
+          "name": "view",
+          "type": "dropdown",
+          "data": [
+            {
+              "title": "Inbox",
+              "value": "inbox"
+            },
+            {
+              "title": "Today",
+              "value": "today"
+            },
+            {
+              "title": "Filter",
+              "value": "filter"
+            },
+            {
+              "title": "Upcoming",
+              "value": "upcoming"
+            }
+          ],
+          "default": "upcoming",
+          "required": false,
+          "title": "View",
+          "description": "Indicates which view you want to see in your menu bar."
+        },
+        {
+          "name": "upcomingDays",
+          "type": "textfield",
+          "default": "7",
+          "required": false,
+          "title": "Number of Days for Upcoming View",
+          "description": "Indicates the number of days you want in the upcoming view."
+        },
+        {
+          "default": "",
+          "description": "Task filter for the filter view. Use Todoist filter syntax, e.g. today & (#Work | @next).",
+          "name": "filter",
+          "required": false,
+          "title": "Filter Query",
+          "type": "textfield"
+        },
+        {
+          "name": "taskWidth",
+          "type": "textfield",
+          "required": false,
+          "default": "40",
+          "title": "Maximum Width of Menu Bar's Tasks",
+          "description": "Maximum width of all menu bar task's text."
+        }
+      ],
+      "interval": "10m"
+    },
+    {
+      "name": "show-projects",
+      "title": "Show Projects",
+      "subtitle": "Todoist",
+      "description": "Show your Todoist projects.",
+      "mode": "view",
+      "preferences": [
+        {
+          "name": "showTaskCount",
+          "type": "checkbox",
+          "label": "Show the task count besides the project",
+          "description": "When enabled, you can see the task count besides your project.",
+          "default": false,
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "show-labels",
+      "title": "Show Labels",
+      "subtitle": "Todoist",
+      "description": "Show your Todoist labels.",
+      "mode": "view"
+    },
+    {
+      "name": "show-filters",
+      "title": "Show Filters",
+      "description": "Show your Todoist filters.",
+      "mode": "view"
+    },
+    {
+      "name": "unfocus-current-task",
+      "title": "Unfocus Current Task",
+      "subtitle": "Todoist",
+      "description": "Unfocus the current task in the menu bar.",
+      "mode": "no-view",
+      "disabledByDefault": true
+    },
+    {
+      "name": "open-focused-task",
+      "title": "Open Focus Task",
+      "subtitle": "Todoist",
+      "description": "When a task is chosen as the focused one, you can open it directly using this command.",
+      "mode": "no-view",
+      "disabledByDefault": true
+    }
+  ],
+  "tools": [
+    {
+      "name": "get-other-data",
+      "title": "Get Other Data",
+      "description": "Retrieves other data from Todoist (e.g. filter, labels, reminders, locations, user, etc.)",
+      "input": {
+        "type": "object",
+        "properties": {
+          "resource_types": {
+            "type": "string",
+            "description": "JSON array of resource types to retrieve (e.g. [\"projects\", \"items\"] or [\"all\", \"-notes\"]).\nSupported values include labels, projects, items, notes, sections, filters, reminders, user, and all.\nPrefix a value with a dash to exclude it."
+          }
+        },
+        "required": [
+          "resource_types"
+        ]
+      },
+      "confirmation": false
+    },
+    {
+      "name": "get-tasks",
+      "title": "Get Tasks",
+      "description": "Retrieves tasks from Todoist",
+      "input": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "Filter tasks by any supported filter. Supports advanced filtering with various operators and keywords.\n\nBASIC OPERATORS:\n- | (OR): \"today | overdue\"\n- & (AND): \"today & p1\"\n- ! (NOT): \"!subtask\"\n- () (Grouping): \"(today | overdue) & #Work\"\n- , (Separate lists): \"date: yesterday, today\"\n- \\ (Escape special chars): \"#One \\& Two\"\n\nDATE FILTERS:\n- Specific dates:\n  \"date: Jan 3\" - Tasks for January 3rd\n  \"date before: May 5\" - Tasks before May 5th\n  \"date after: May 5\" - Tasks after May 5th\n- Relative dates:\n  \"date before: +4 hours\" - Tasks due within next 4 hours plus overdue\n  \"5 days\" or \"next 5 days\" - Tasks in next 5 days\n- Special date filters:\n  \"no date\" - Tasks without dates\n  \"!no time\" - Tasks with specific times\n  \"recurring\" - Recurring tasks\n\nPRIORITY FILTERS:\n- \"p1\" - Priority 1 (highest)\n- \"p2\" - Priority 2\n- \"p3\" - Priority 3\n- \"no priority\" - No priority set (p4)\n\nORGANIZATION FILTERS:\nLabels:\n- \"@email\" - Tasks with email label\n- \"no labels\" - Tasks without any labels\n- \"@home*\" - Tasks with labels starting with \"home\"\n\nProjects:\n- \"#Work\" - Tasks in Work project\n- \"##Work\" - Tasks in Work project and its sub-projects\n- \"##School & !#Science\" - School project tasks excluding Science\n\nSections:\n- \"/Meetings\" - Tasks in any Meetings section\n- \"#Work & /Meetings\" - Tasks in Work project's Meetings section\n- \"!/*\" - Tasks not in any section\n\nWorkspaces:\n- \"workspace: My projects\" - Tasks in My Projects workspace\n\nTASK PROPERTIES:\n- Search: \"search: Meeting\"\n- Creation: \"created: today\"\n- Subtasks: \"subtask\" or \"!subtask\"\n\nASSIGNMENT FILTERS:\n- \"assigned to: others\" - Tasks assigned to others\n- \"assigned by: me\" - Tasks you assigned\n- \"shared\" - Tasks in shared projects\n\nCOMPLEX EXAMPLES:\n- \"(today | overdue) & #Work\" - Today's or overdue Work tasks\n- \"7 days &\n\n@waiting \" - Next week's waiting tasks\n- \"#Inbox & no date\" - Undated Inbox tasks\n- \"@urgent* & ##Work\" - Work tasks with urgent-like labels\n\nNote: Multiple filters (using the comma operator) are not supported"
+          },
+          "lang": {
+            "type": "string",
+            "description": "IETF language tag defining what language filter is written in,\nif differs from default English"
+          }
+        },
+        "required": [
+          "query"
+        ]
+      },
+      "confirmation": false
+    },
+    {
+      "name": "get-completed-tasks",
+      "title": "Get Completed Tasks",
+      "description": "Retrieves completed tasks from Todoist's activity log",
+      "confirmation": false
+    },
+    {
+      "name": "create-task",
+      "title": "Create Task",
+      "description": "Creates a new task in Todoist",
+      "input": {
+        "type": "object",
+        "properties": {
+          "content": {
+            "type": "string",
+            "description": "The text of the task. Supports markdown-formatted text and hyperlinks"
+          },
+          "description": {
+            "type": "string",
+            "description": "Optional description for the task. Supports markdown-formatted text and hyperlinks"
+          },
+          "project_id": {
+            "type": "string",
+            "description": "The ID of the project to add the task to. Defaults to user's Inbox project if not specified"
+          },
+          "due": {
+            "type": "object",
+            "properties": {
+              "string": {
+                "type": "string"
+              },
+              "timezone": {
+                "type": "string"
+              },
+              "lang": {
+                "type": "string",
+                "enum": [
+                  "en",
+                  "da",
+                  "pl",
+                  "zh",
+                  "ko",
+                  "de",
+                  "pt",
+                  "ja",
+                  "it",
+                  "fr",
+                  "sv",
+                  "ru",
+                  "es",
+                  "nl",
+                  "fi",
+                  "nb",
+                  "tw"
+                ]
+              },
+              "date": {
+                "type": "string"
+              }
+            },
+            "required": [],
+            "description": "The due date of the task. Recommended to use the `string` property with natural language processing.\n\n@property string - Natural language date string. Todoist's parser understands a wide variety of formats:\n- Simple dates: \"tomorrow\", \"next monday\", \"march 15\"\n- Times: \"tomorrow at 3pm\", \"monday at 12:30\"\n- Recurring: \"every monday\", \"every 2 weeks\", \"every workday\"\n- Relative: \"in 3 days\", \"in 2 weeks\"\n- Combined: \"every monday at 10am\", \"every 1st of month at 12pm\"\n@property timezone - Optional. Include to create a fixed-timezone due date (e.g., \"America/Chicago\")\n@property lang - Optional. Language for parsing the date string. Defaults to user's language setting.\n\nExamples:\n```\n// Simple date\ndue: { string: \"tomorrow\" }\n\n// With time\ndue: { string: \"tomorrow at 3pm\" }\n\n// With timezone\ndue: {\nstring: \"tomorrow at 3pm\",\ntimezone: \"America/Chicago\"\n}\n\n// Recurring\ndue: { string: \"every monday at 10am\" }\n\n// Different language\ndue: {\nstring: \"demain à 15h\",\nlang: \"fr\"\n}\n```\n\nWhile you can use explicit date formats with the `date` property, the string format\nis recommended as it's more intuitive and leverages Todoist's powerful natural language processing."
+          },
+          "deadline": {
+            "type": "object",
+            "properties": {
+              "date": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "date"
+            ],
+            "description": "Optional paid Todoist deadline in the format YYYY-MM-DD (RFC 3339). Omit this field entirely unless the user\nexplicitly asks for a deadline. Use `due` for ordinary due dates."
+          },
+          "duration": {
+            "type": "object",
+            "properties": {
+              "unit": {
+                "type": "string",
+                "enum": [
+                  "minute",
+                  "day"
+                ]
+              },
+              "amount": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "unit",
+              "amount"
+            ],
+            "description": "The duration of the task. Omit unless the user explicitly asks for a Todoist duration.\n\n@property unit - The time unit ('minute' or 'day')\n@property amount - Positive integer representing the amount of time"
+          },
+          "priority": {
+            "type": "number",
+            "description": "The priority of the task (1-4, where 1 is highest priotiy and 4 is the lowest priority)."
+          },
+          "parent_id": {
+            "type": "string",
+            "description": "The ID of the parent task. Set to null for root tasks"
+          },
+          "child_order": {
+            "type": "number",
+            "description": "The order of task. Defines the position among tasks with the same parent"
+          },
+          "section_id": {
+            "type": "string",
+            "description": "The ID of the section. Set to null for tasks not belonging to a section"
+          },
+          "day_order": {
+            "type": "number",
+            "description": "The order of the task inside the Today or Next 7 days view (smaller value = higher position)"
+          },
+          "collapsed": {
+            "type": "boolean",
+            "description": "Whether the task's sub-tasks are collapsed"
+          },
+          "labels": {
+            "type": "string",
+            "description": "JSON array of label names (e.g. [\"work\", \"urgent\"]) or comma-separated label names"
+          },
+          "assigned_by_uid": {
+            "type": "string",
+            "description": "The ID of user who assigns the task. Only relevant for shared projects.\nMust be 0 or a valid user ID from project collaborators"
+          },
+          "responsible_uid": {
+            "type": "string",
+            "description": "The ID of user responsible for the task. Only relevant for shared projects.\nMust be a valid user ID from project collaborators or null/empty to unset"
+          },
+          "auto_reminder": {
+            "type": "boolean",
+            "description": "When enabled, adds default reminder to new items with due date and time"
+          },
+          "auto_parse_labels": {
+            "type": "boolean",
+            "description": "When enabled, parses and adds labels from task content, creating new labels if needed"
+          }
+        },
+        "required": [
+          "content"
+        ]
+      },
+      "confirmation": false
+    },
+    {
+      "name": "update-task",
+      "title": "Update Task",
+      "description": "Updates an existing task in Todoist",
+      "input": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The ID of the task to update"
+          },
+          "content": {
+            "type": "string",
+            "description": "The text of the task. Supports markdown-formatted text and hyperlinks"
+          },
+          "description": {
+            "type": "string",
+            "description": "Optional description for the task. Supports markdown-formatted text and hyperlinks"
+          },
+          "due": {
+            "type": "object",
+            "properties": {
+              "string": {
+                "type": "string"
+              },
+              "timezone": {
+                "type": "string"
+              },
+              "lang": {
+                "type": "string",
+                "enum": [
+                  "en",
+                  "da",
+                  "pl",
+                  "zh",
+                  "ko",
+                  "de",
+                  "pt",
+                  "ja",
+                  "it",
+                  "fr",
+                  "sv",
+                  "ru",
+                  "es",
+                  "nl",
+                  "fi",
+                  "nb",
+                  "tw"
+                ]
+              },
+              "date": {
+                "type": "string"
+              }
+            },
+            "required": [],
+            "description": "The due date of the task. Recommended to use the `string` property with natural language processing.\n\n@property string - Natural language date string. Todoist's parser understands a wide variety of formats:\n- Simple dates: \"tomorrow\", \"next monday\", \"march 15\"\n- Times: \"tomorrow at 3pm\", \"monday at 12:30\"\n- Recurring: \"every monday\", \"every 2 weeks\", \"every workday\"\n- Relative: \"in 3 days\", \"in 2 weeks\"\n- Combined: \"every monday at 10am\", \"every 1st of month at 12pm\"\n@property timezone - Optional. Include to create a fixed-timezone due date (e.g., \"America/Chicago\")\n@property lang - Optional. Language for parsing the date string. Defaults to user's language setting.\n\nExamples:\n```\n// Simple date\ndue: { string: \"tomorrow\" }\n\n// With time\ndue: { string: \"tomorrow at 3pm\" }\n\n// With timezone\ndue: {\nstring: \"tomorrow at 3pm\",\ntimezone: \"America/Chicago\"\n}\n\n// Recurring\ndue: { string: \"every monday at 10am\" }\n\n// Different language\ndue: {\nstring: \"demain à 15h\",\nlang: \"fr\"\n}\n```\n\nWhile you can use explicit date formats with the `date` property, the string format\nis recommended as it's more intuitive and leverages Todoist's powerful natural language processing."
+          },
+          "deadline": {
+            "type": "object",
+            "properties": {
+              "date": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "date"
+            ],
+            "description": "The deadline of the task in the format YYYY-MM-DD (RFC 3339)"
+          },
+          "priority": {
+            "type": "number",
+            "description": "The priority of the task (1-4, where 1 is highest priotiy and 4 is the lowest priority)."
+          },
+          "collapsed": {
+            "type": "boolean",
+            "description": "Whether the task's sub-tasks are collapsed"
+          },
+          "labels": {
+            "type": "string",
+            "description": "JSON array of label names (e.g. [\"work\", \"urgent\"]) or comma-separated label names"
+          },
+          "assigned_by_uid": {
+            "type": "string",
+            "description": "The ID of user who assigns the task. Only relevant for shared projects.\nMust be 0 or a valid user ID from project collaborators"
+          },
+          "responsible_uid": {
+            "type": "string",
+            "description": "The ID of user responsible for the task. Only relevant for shared projects.\nMust be a valid user ID from project collaborators or null/empty to unset"
+          },
+          "day_order": {
+            "type": "number",
+            "description": "The order of the task inside the Today or Next 7 days view (smaller value = higher position)"
+          }
+        },
+        "required": [
+          "id"
+        ]
+      },
+      "confirmation": true
+    },
+    {
+      "name": "move-task",
+      "title": "Move Task",
+      "description": "Moves a task to a different project, section, or parent task",
+      "input": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The ID of the task to move"
+          },
+          "project_id": {
+            "type": "string",
+            "description": "The ID of the project to move the task to"
+          },
+          "section_id": {
+            "type": "string",
+            "description": "The ID of the section to move the task to.\nOnly valid for tasks within the same project."
+          },
+          "parent_id": {
+            "type": "string",
+            "description": "The ID of the parent task to move this task under.\nOnly valid for tasks within the same project."
+          }
+        },
+        "required": [
+          "id"
+        ]
+      },
+      "confirmation": true
+    },
+    {
+      "name": "complete-task",
+      "title": "Complete Task",
+      "description": "Completes an existing task in Todoist",
+      "input": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The ID of the task to complete"
+          }
+        },
+        "required": [
+          "id"
+        ]
+      },
+      "confirmation": false
+    },
+    {
+      "name": "uncomplete-task",
+      "title": "Uncomplete Task",
+      "description": "Reopens a completed task in Todoist",
+      "input": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The ID of the task to uncomplete (reopen)"
+          }
+        },
+        "required": [
+          "id"
+        ]
+      },
+      "confirmation": false
+    },
+    {
+      "name": "delete-task",
+      "title": "Delete Task",
+      "description": "Deletes an existing task in Todoist",
+      "input": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The ID of the task to delete"
+          }
+        },
+        "required": [
+          "id"
+        ]
+      },
+      "confirmation": true
+    },
+    {
+      "name": "get-projects",
+      "title": "Get Projects",
+      "description": "Retrieves all projects from Todoist using REST API",
+      "confirmation": false
+    },
+    {
+      "name": "create-project",
+      "title": "Create Project",
+      "description": "Creates a new project in Todoist",
+      "input": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the project"
+          },
+          "color": {
+            "type": "string",
+            "description": "The color of the project icon. Available colors:\n- berry_red (#B8255F)\n- red (#DC4C3E)\n- orange (#C77100)\n- yellow (#B29104)\n- olive_green (#949C31)\n- lime_green (#65A33A)\n- green (#369307)\n- mint_green (#42A393)\n- teal (#148FAD)\n- sky_blue (#319DC0)\n- light_blue (#6988A4)\n- blue (#4180FF)\n- grape (#692EC2)\n- violet (#CA3FEE)\n- lavender (#A4698C)\n- magenta (#65A33A)\n- salmon (#C9766F)\n- charcoal (#808080)\n- grey (#999999)"
+          },
+          "parent_id": {
+            "type": "string",
+            "description": "The ID of the parent project. Set to null for root projects"
+          },
+          "child_order": {
+            "type": "number",
+            "description": "The order of the project. Defines the position among projects with the same parent_id"
+          },
+          "is_favorite": {
+            "type": "boolean",
+            "description": "Whether the project is marked as favorite"
+          },
+          "view_style": {
+            "type": "string",
+            "description": "Display style of the project in Todoist clients. Can be 'list' or 'board', defaults to 'list'",
+            "enum": [
+              "list",
+              "board"
+            ]
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "confirmation": false
+    },
+    {
+      "name": "update-project",
+      "title": "Update Project",
+      "description": "Updates an existing project in Todoist",
+      "input": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The ID of the project to update"
+          },
+          "name": {
+            "type": "string",
+            "description": "The new name of the project (optional)"
+          },
+          "color": {
+            "type": "string",
+            "description": "The new color of the project icon (optional). Available colors:\n- berry_red (#B8255F)\n- red (#DC4C3E)\n- orange (#C77100)\n- yellow (#B29104)\n- olive_green (#949C31)\n- lime_green (#65A33A)\n- green (#369307)\n- mint_green (#42A393)\n- teal (#148FAD)\n- sky_blue (#319DC0)\n- light_blue (#6988A4)\n- blue (#4180FF)\n- grape (#692EC2)\n- violet (#CA3FEE)\n- lavender (#A4698C)\n- magenta (#65A33A)\n- salmon (#C9766F)\n- charcoal (#808080)\n- grey (#999999)"
+          },
+          "collapsed": {
+            "type": "boolean",
+            "description": "Whether the project is collapsed (optional)"
+          },
+          "is_favorite": {
+            "type": "boolean",
+            "description": "Whether the project is marked as favorite (optional)"
+          },
+          "view_style": {
+            "type": "string",
+            "description": "Display style of the project in Todoist clients (optional). Can be 'list' or 'board'",
+            "enum": [
+              "list",
+              "board"
+            ]
+          }
+        },
+        "required": [
+          "id"
+        ]
+      },
+      "confirmation": true
+    },
+    {
+      "name": "move-project",
+      "title": "Move Project",
+      "description": "Moves a project to a different parent project in Todoist",
+      "input": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The ID of the project to move"
+          },
+          "parent_id": {
+            "type": "string",
+            "description": "The ID of the parent project to move this project to.\nLeave undefined to move to root level."
+          }
+        },
+        "required": [
+          "id"
+        ]
+      },
+      "confirmation": true
+    },
+    {
+      "name": "archive-project",
+      "title": "Archive Project",
+      "description": "Archives an existing project in Todoist",
+      "input": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The ID of the project to archive"
+          }
+        },
+        "required": [
+          "id"
+        ]
+      },
+      "confirmation": true
+    },
+    {
+      "name": "delete-project",
+      "title": "Delete Project",
+      "description": "Delete a Todoist project",
+      "input": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The ID of the project to delete"
+          }
+        },
+        "required": [
+          "id"
+        ]
+      },
+      "confirmation": true
+    },
+    {
+      "name": "create-section",
+      "title": "Create Section",
+      "description": "Creates a new section in a Todoist project",
+      "input": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the section"
+          },
+          "project_id": {
+            "type": "string",
+            "description": "The project to add the section to"
+          },
+          "section_order": {
+            "type": "number",
+            "description": "The order of the section in the project (smaller number = earlier in the project)"
+          }
+        },
+        "required": [
+          "name",
+          "project_id"
+        ]
+      },
+      "confirmation": false
+    },
+    {
+      "name": "update-section",
+      "title": "Update Section",
+      "description": "Updates an existing section in Todoist",
+      "input": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The ID of the section to update"
+          },
+          "name": {
+            "type": "string",
+            "description": "The new name for the section"
+          },
+          "collapsed": {
+            "type": "boolean",
+            "description": "Whether the section is collapsed"
+          }
+        },
+        "required": [
+          "id"
+        ]
+      },
+      "confirmation": true
+    },
+    {
+      "name": "move-section",
+      "title": "Move Section",
+      "description": "Moves a section to a different project in Todoist",
+      "input": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The ID of the section to move"
+          },
+          "project_id": {
+            "type": "string",
+            "description": "The ID of the project to move this section to"
+          }
+        },
+        "required": [
+          "id",
+          "project_id"
+        ]
+      },
+      "confirmation": true
+    },
+    {
+      "name": "delete-section",
+      "title": "Delete Section",
+      "description": "Delete a Todoist section",
+      "input": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The ID of the section to delete"
+          }
+        },
+        "required": [
+          "id"
+        ]
+      },
+      "confirmation": true
+    },
+    {
+      "name": "create-label",
+      "title": "Create Label",
+      "description": "Creates a new label in Todoist",
+      "input": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name for the new label"
+          },
+          "color": {
+            "type": "string",
+            "description": "The color of the label. Available colors:\n- berry_red (#B8255F)\n- red (#DC4C3E)\n- orange (#C77100)\n- yellow (#B29104)\n- olive_green (#949C31)\n- lime_green (#65A33A)\n- green (#369307)\n- mint_green (#42A393)\n- teal (#148FAD)\n- sky_blue (#319DC0)\n- light_blue (#6988A4)\n- blue (#4180FF)\n- grape (#692EC2)\n- violet (#CA3FEE)\n- lavender (#A4698C)\n- magenta (#65A33A)\n- salmon (#C9766F)\n- charcoal (#808080)\n- grey (#999999)"
+          },
+          "item_order": {
+            "type": "number",
+            "description": "The order of the label in lists"
+          },
+          "is_favorite": {
+            "type": "boolean",
+            "description": "Whether the label is marked as favorite"
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "confirmation": false
+    },
+    {
+      "name": "update-label",
+      "title": "Update Label",
+      "description": "Updates an existing label in Todoist",
+      "input": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The ID of the label to update"
+          },
+          "name": {
+            "type": "string",
+            "description": "The new name for the label"
+          },
+          "color": {
+            "type": "string",
+            "description": "The color of the label. Available colors:\n- berry_red (#B8255F)\n- red (#DC4C3E)\n- orange (#C77100)\n- yellow (#B29104)\n- olive_green (#949C31)\n- lime_green (#65A33A)\n- green (#369307)\n- mint_green (#42A393)\n- teal (#148FAD)\n- sky_blue (#319DC0)\n- light_blue (#6988A4)\n- blue (#4180FF)\n- grape (#692EC2)\n- violet (#CA3FEE)\n- lavender (#A4698C)\n- magenta (#65A33A)\n- salmon (#C9766F)\n- charcoal (#808080)\n- grey (#999999)"
+          },
+          "item_order": {
+            "type": "number",
+            "description": "The order of the label in lists"
+          },
+          "is_favorite": {
+            "type": "boolean",
+            "description": "Whether the label is marked as favorite"
+          }
+        },
+        "required": [
+          "id"
+        ]
+      },
+      "confirmation": true
+    },
+    {
+      "name": "delete-label",
+      "title": "Delete Label",
+      "description": "Delete a Todoist label",
+      "input": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The ID of the label to delete"
+          }
+        },
+        "required": [
+          "id"
+        ]
+      },
+      "confirmation": true
+    },
+    {
+      "name": "create-filter",
+      "title": "Create Filter",
+      "description": "Creates a new filter in Todoist",
+      "input": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the filter"
+          },
+          "query": {
+            "type": "string",
+            "description": "The query to search for. Supports advanced filtering with various operators and keywords.\n\nBASIC OPERATORS:\n- | (OR): Combines queries where either can match\n  \"today | overdue\" - Tasks due today or overdue\n- & (AND): Requires both conditions to match\n  \"today & p1\" - Priority 1 tasks due today\n- ! (NOT): Excludes matching tasks\n  \"!subtask\" - Exclude subtasks\n- () (Grouping): Processes queries inside first\n  \"(today | overdue) & #Work\" - Today's or overdue tasks in Work project\n- , (Separate lists): Shows queries in different lists\n  \"date: yesterday, today\" - Yesterday's tasks, followed by today's\n- \\ (Escape special chars): Use special characters literally\n  \"#One \\& Two\" - Project named \"One & Two\"\n\nDATE FILTERS:\n- Specific dates:\n  \"date: Jan 3\" - Tasks for January 3rd\n  \"date before: May 5\" or \"date before: 5/5\" - Tasks before May 5th\n  \"date after: May 5\" - Tasks after May 5th\n- Relative dates:\n  \"date before: +4 hours\" - Tasks due within next 4 hours plus overdue\n  \"5 days\" or \"next 5 days\" - Tasks in next 5 days\n  \"date before: next week\" - Tasks before next week starts\n- Special date filters:\n  \"no date\" - Tasks without dates\n  \"!no date\" - Tasks with any date\n  \"no time\" - Tasks without specific times\n  \"!no time\" - Tasks with specific times\n  \"recurring\" - Recurring tasks\n  \"!recurring\" - Non-recurring tasks\n\nPRIORITY FILTERS:\n- \"p1\" - Priority 1 (highest)\n- \"p2\" - Priority 2\n- \"p3\" - Priority 3\n- \"no priority\" - No priority set (p4)\n- \"(p1 | p2) & 14 days\" - High priority tasks in next 2 weeks\n\nORGANIZATION FILTERS:\nLabels:\n- \"@email\" - Tasks with email label\n- \"no labels\" - Tasks without any labels\n- \"@work |\n\n@office \" - Tasks with either work or office label\n- \"@home*\" - Tasks with labels starting with \"home\"\n\nProjects:\n- \"#Work\" - Tasks in Work project\n- \"##Work\" - Tasks in Work project and its sub-projects\n- \"##School & !#Science\" - School project tasks excluding Science project\n\nSections:\n- \"/Meetings\" - Tasks in any Meetings section\n- \"#Work & /Meetings\" - Tasks in Work project's Meetings section\n- \"!/*\" - Tasks not in any section\n- \"!/* & !#Inbox\" - Tasks not in sections, excluding Inbox\n\nWorkspaces:\n- \"workspace: My projects\" - Tasks in My Projects workspace\n- \"(workspace: Doist | workspace: Halist)\" - Tasks in either workspace\n\nTASK PROPERTIES:\nSearch:\n- \"search: Meeting\" - Tasks containing \"Meeting\"\n- \"search: http\" - Tasks with web links\n\nCreation:\n- \"created: Jan 3 2023\" - Tasks created on specific date\n- \"created before: -365 days\" - Tasks older than a year\n- \"created: today\" - Tasks created today\n\nSubtasks:\n- \"subtask\" - Show only subtasks\n- \"!subtask\" - Show only parent tasks\n\nASSIGNMENT FILTERS:\n- \"assigned to: others\" - Tasks assigned to others\n- \"assigned by: Steve Gray\" - Tasks assigned by Steve\n- \"assigned by: me\" - Tasks you assigned\n- \"assigned\" - All assigned tasks\n- \"shared\" - Tasks in shared projects\n- \"!assigned to: others\" - Tasks not assigned to others\n- \"shared & !assigned\" - Unassigned tasks in shared projects\n\nCOMPLEX EXAMPLES:\n- \"today & !#Work &\n@important \" - Today's important tasks not in Work project\n- \"overdue & !no time, date: today & !no time\" - Overdue tasks with time + today's tasks with time\n- \"#Inbox & no due date, All & !#Inbox & !no due date\" - Undated Inbox tasks + dated non-Inbox tasks\n- \"(P1 | P2) & 14 days & !assigned to: others\" - High priority unassigned tasks in next 2 weeks\n- \"created before: -30 days & no date & !shared\" - Month-old undated tasks in private projects\n- \"@urgent* & ##Work & !subtask\" - Parent tasks in Work project with urgent-like labels"
+          },
+          "color": {
+            "type": "string",
+            "description": "The color of the filter icon. Available colors:\n- berry_red (#B8255F)\n- red (#DC4C3E)\n- orange (#C77100)\n- yellow (#B29104)\n- olive_green (#949C31)\n- lime_green (#65A33A)\n- green (#369307)\n- mint_green (#42A393)\n- teal (#148FAD)\n- sky_blue (#319DC0)\n- light_blue (#6988A4)\n- blue (#4180FF)\n- grape (#692EC2)\n- violet (#CA3FEE)\n- lavender (#A4698C)\n- magenta (#65A33A)\n- salmon (#C9766F)\n- charcoal (#808080)\n- grey (#999999)"
+          },
+          "item_order": {
+            "type": "number",
+            "description": "Filter's order in the filter list (the smallest value should place the filter at the top)"
+          },
+          "is_favorite": {
+            "type": "boolean",
+            "description": "Whether the filter is a favorite"
+          }
+        },
+        "required": [
+          "name",
+          "query"
+        ]
+      },
+      "confirmation": false
+    },
+    {
+      "name": "update-filter",
+      "title": "Update Filter",
+      "description": "Updates an existing filter in Todoist",
+      "input": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The ID of the filter to update"
+          },
+          "name": {
+            "type": "string",
+            "description": "The new name for the filter"
+          },
+          "query": {
+            "type": "string",
+            "description": "The new query for the filter. Supports advanced filtering with various operators and keywords.\n\nBASIC OPERATORS:\n- | (OR): \"today | overdue\"\n- & (AND): \"today & p1\"\n- ! (NOT): \"!subtask\"\n- () (Grouping): \"(today | overdue) & #Work\"\n- , (Separate lists): \"date: yesterday, today\"\n- \\ (Escape special chars): \"#One \\& Two\"\n\nDATE FILTERS:\n- Specific dates:\n  \"date: Jan 3\" - Tasks for January 3rd\n  \"date before: May 5\" - Tasks before May 5th\n  \"date after: May 5\" - Tasks after May 5th\n- Relative dates:\n  \"date before: +4 hours\" - Tasks due within next 4 hours plus overdue\n  \"5 days\" or \"next 5 days\" - Tasks in next 5 days\n- Special date filters:\n  \"no date\" - Tasks without dates\n  \"!no time\" - Tasks with specific times\n  \"recurring\" - Recurring tasks\n\nPRIORITY FILTERS:\n- \"p1\" - Priority 1 (highest)\n- \"p2\" - Priority 2\n- \"p3\" - Priority 3\n- \"no priority\" - No priority set (p4)\n\nORGANIZATION FILTERS:\nLabels:\n- \"@email\" - Tasks with email label\n- \"no labels\" - Tasks without any labels\n- \"@home*\" - Tasks with labels starting with \"home\"\n\nProjects:\n- \"#Work\" - Tasks in Work project\n- \"##Work\" - Tasks in Work project and its sub-projects\n- \"##School & !#Science\" - School project tasks excluding Science\n\nSections:\n- \"/Meetings\" - Tasks in any Meetings section\n- \"#Work & /Meetings\" - Tasks in Work project's Meetings section\n- \"!/*\" - Tasks not in any section\n\nWorkspaces:\n- \"workspace: My projects\" - Tasks in My Projects workspace\n\nTASK PROPERTIES:\n- Search: \"search: Meeting\"\n- Creation: \"created: today\"\n- Subtasks: \"subtask\" or \"!subtask\"\n\nASSIGNMENT FILTERS:\n- \"assigned to: others\" - Tasks assigned to others\n- \"assigned by: me\" - Tasks you assigned\n- \"shared\" - Tasks in shared projects\n\nCOMPLEX EXAMPLES:\n- \"(today | overdue) & #Work\" - Today's or overdue Work tasks\n- \"7 days &\n\n@waiting \" - Next week's waiting tasks\n- \"#Inbox & no date\" - Undated Inbox tasks\n- \"@urgent* & ##Work\" - Work tasks with urgent-like labels"
+          },
+          "color": {
+            "type": "string",
+            "description": "The color of the filter icon. Available colors:\n- berry_red (#B8255F)\n- red (#DC4C3E)\n- orange (#C77100)\n- yellow (#B29104)\n- olive_green (#949C31)\n- lime_green (#65A33A)\n- green (#369307)\n- mint_green (#42A393)\n- teal (#148FAD)\n- sky_blue (#319DC0)\n- light_blue (#6988A4)\n- blue (#4180FF)\n- grape (#692EC2)\n- violet (#CA3FEE)\n- lavender (#A4698C)\n- magenta (#65A33A)\n- salmon (#C9766F)\n- charcoal (#808080)\n- grey (#999999)"
+          },
+          "item_order": {
+            "type": "number",
+            "description": "Filter's order in the filter list (the smallest value should place the filter at the top)"
+          },
+          "is_favorite": {
+            "type": "boolean",
+            "description": "Whether the filter is a favorite"
+          }
+        },
+        "required": [
+          "id"
+        ]
+      },
+      "confirmation": true
+    },
+    {
+      "name": "delete-filter",
+      "title": "Delete Filter",
+      "description": "Delete a Todoist filter",
+      "input": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The ID of the filter to delete"
+          }
+        },
+        "required": [
+          "id"
+        ]
+      },
+      "confirmation": true
+    },
+    {
+      "name": "get-comments",
+      "title": "Get Comments",
+      "description": "Retrieves comments for a task or project from Todoist",
+      "input": {
+        "type": "object",
+        "properties": {
+          "task_id": {
+            "type": "string",
+            "description": "ID of the task used to filter comments\nNote: Either task_id or project_id must be provided"
+          },
+          "project_id": {
+            "type": "string",
+            "description": "ID of the project used to filter comments\nNote: Either task_id or project_id must be provided"
+          }
+        },
+        "required": []
+      },
+      "confirmation": false
+    },
+    {
+      "name": "add-comment",
+      "title": "Add Comment",
+      "description": "Adds a comment to a Todoist task",
+      "input": {
+        "type": "object",
+        "properties": {
+          "item_id": {
+            "type": "string",
+            "description": "The ID of the task to add the comment to"
+          },
+          "content": {
+            "type": "string",
+            "description": "The content of the comment. Supports markdown-formatted text and hyperlinks"
+          },
+          "uids_to_notify": {
+            "type": "string",
+            "description": "Optional JSON array of user IDs to notify (e.g. [\"123\", \"456\"]) or comma-separated user IDs"
+          }
+        },
+        "required": [
+          "item_id",
+          "content"
+        ]
+      },
+      "confirmation": false
+    },
+    {
+      "name": "update-comment",
+      "title": "Update Comment",
+      "description": "Updates an existing comment in Todoist",
+      "input": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The ID of the comment to update"
+          },
+          "content": {
+            "type": "string",
+            "description": "The new content of the comment. Supports markdown-formatted text and hyperlinks"
+          }
+        },
+        "required": [
+          "id",
+          "content"
+        ]
+      },
+      "confirmation": true
+    },
+    {
+      "name": "delete-comment",
+      "title": "Delete Comment",
+      "description": "Deletes a comment from a Todoist task",
+      "input": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The ID of the comment to delete"
+          }
+        },
+        "required": [
+          "id"
+        ]
+      },
+      "confirmation": true
+    }
+  ],
+  "ai": {
+    "instructions": "\\n- When getting tasks, use filters only if you can't find the tasks with the project_id, section_id, or label first.\\n- When asked about the tasks scheduled for a specific day, only return the tasks scheduled for that day.\\n- Users can use shortcuts to create a task, they can include in the text: a project name starting with the # character (without spaces), a label starting with the @ character, an assignee starting with the + character, a priority (e.g., p1), or a description starting from // until the end of the text.\\n- Make sure the title doesn't contain the date.\\n- Before creating something, check if it already exists first.",
+    "evals": [
+      {
+        "input": "@todoist Buy groceries today at 10 in home project",
+        "mocks": {
+          "get-projects": [
+            {
+              "id": "fitness",
+              "color": "red",
+              "name": "Fitness"
+            },
+            {
+              "id": "home",
+              "name": "Home",
+              "color": "green"
+            }
+          ],
+          "create-task": "Successfully called \"create-task\""
+        },
+        "expected": [
+          {
+            "callsTool": "get-projects"
+          },
+          {
+            "callsTool": {
+              "arguments": {
+                "content": "Buy groceries",
+                "project_id": "home"
+              },
+              "name": "create-task"
+            }
+          }
+        ]
+      },
+      {
+        "input": "@todoist what's scheduled for today",
+        "mocks": {
+          "get-tasks": [
+            {
+              "id": "1",
+              "content": "Buy groceries",
+              "due": {
+                "date": "2025-01-22"
+              }
+            },
+            {
+              "id": "2",
+              "content": "Finish the report",
+              "due": {
+                "date": "2025-01-23"
+              }
+            },
+            {
+              "id": "3",
+              "content": "Schedule a meeting with the team",
+              "due": {
+                "date": "2025-01-24"
+              }
+            }
+          ]
+        },
+        "expected": [
+          {
+            "callsTool": "get-tasks"
+          },
+          {
+            "meetsCriteria": "The answer includes the tasks scheduled for today."
+          }
+        ]
+      },
+      {
+        "input": "@todoist Create a filter for my high-priority tasks in work",
+        "mocks": {
+          "create-filter": "Successfully called \"create-filter\"",
+          "get-other-data": {
+            "filters": []
+          }
+        },
+        "expected": [
+          {
+            "callsTool": "create-filter"
+          },
+          {
+            "meetsCriteria": "The answer includes a filter."
+          }
+        ]
+      },
+      {
+        "input": "@todoist What have I done last week",
+        "mocks": {
+          "get-completed-tasks": [
+            {
+              "id": 1,
+              "event_type": "completed",
+              "extra_data": {
+                "content": "Planifier le budget pour la rénovation"
+              }
+            },
+            {
+              "id": 2,
+              "event_type": "completed",
+              "extra_data": {
+                "content": "Eat vitamins"
+              }
+            },
+            {
+              "id": 3,
+              "event_type": "completed",
+              "extra_data": {
+                "content": "Wire theming settings"
+              }
+            },
+            {
+              "id": 4,
+              "event_type": "completed",
+              "extra_data": {
+                "content": "Write a blog post"
+              }
+            }
+          ]
+        },
+        "expected": [
+          {
+            "callsTool": "get-completed-tasks"
+          },
+          {
+            "meetsCriteria": "The answer includes a list of completed tasks."
+          }
+        ]
+      },
+      {
+        "input": "@todoist Add urgent label to my website bugs tasks",
+        "mocks": {
+          "get-projects": [
+            {
+              "id": "fitness",
+              "color": "red",
+              "name": "Fitness"
+            },
+            {
+              "id": "home",
+              "name": "Home",
+              "color": "green"
+            }
+          ],
+          "get-other-data": {
+            "labels": [
+              {
+                "name": "urgent",
+                "id": "1",
+                "color": "red"
+              }
+            ]
+          },
+          "get-tasks": [
+            {
+              "id": "2",
+              "content": "Strange Safari bug on website"
+            }
+          ],
+          "update-task": "Successfully called \"update-task\""
+        },
+        "expected": [
+          {
+            "callsTool": {
+              "arguments": {
+                "resource_types": {
+                  "includes": "labels"
+                }
+              },
+              "name": "get-other-data"
+            }
+          },
+          {
+            "callsTool": {
+              "arguments": {
+                "id": "2",
+                "labels": [
+                  "urgent"
+                ]
+              },
+              "name": "update-task"
+            }
+          }
+        ]
+      },
+      {
+        "input": "@todoist Update the priority of task Task 1 to priority 1",
+        "mocks": {
+          "get-tasks": [
+            {
+              "id": "Task 1",
+              "priority": 4
+            }
+          ],
+          "update-task": "Successfully called \"update-task\""
+        },
+        "expected": [
+          {
+            "callsTool": {
+              "arguments": {
+                "id": "Task 1",
+                "priority": 1
+              },
+              "name": "update-task"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "preferences": [
+    {
+      "name": "token",
+      "type": "password",
+      "required": false,
+      "title": "Todoist Token",
+      "description": "Your Todoist Token. Find it in Todoist integration settings view.",
+      "placeholder": "Enter your Todoist token"
+    },
+    {
+      "name": "focusLabelName",
+      "type": "textfield",
+      "required": false,
+      "title": "Focus Label",
+      "description": "Shared label name to apply to your focused task. No label will be applied if left empty.",
+      "placeholder": "raycast-focus"
+    },
+    {
+      "name": "useConfetti",
+      "type": "checkbox",
+      "label": "Use confetti to celebrate task completion",
+      "description": "When enabled, completing a task will trigger a confetti celebration.",
+      "default": false,
+      "required": false
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.104.19",
+    "@raycast/utils": "^2.2.6",
+    "axios": "^1.17.0",
+    "chrono-node": "^2.9.1",
+    "date-fns": "^4.4.0",
+    "form-data": "^4.0.5",
+    "lodash": "^4.18.1",
+    "mime": "^4.1.0",
+    "remove-markdown": "^0.6.4"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^2.1.1",
+    "@types/lodash": "^4.17.24",
+    "@types/mime": "^4.0.0",
+    "@types/node": "^25.9.2",
+    "@types/react": "^19.2.17",
+    "@types/remove-markdown": "^0.3.4",
+    "eslint": "^10.4.1",
+    "prettier": "^3.8.4",
+    "typescript": "^5.8.3"
+  },
+  "scripts": {
+    "build": "ray build -e dist",
+    "dev": "ray develop",
+    "lint": "ray lint",
+    "fix-lint": "ray lint --fix",
+    "publish": "npx @raycast/api@latest publish"
+  }
+}

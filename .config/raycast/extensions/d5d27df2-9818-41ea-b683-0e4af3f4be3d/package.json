@@ -136,8 +136,8 @@
     },
     {
       "title": "AI Message Signature",
-      "label": "Add “Sent via Raycast” to messages sent with AI",
-      "description": "Show a subtle “Sent via Raycast” note below messages sent by the Send Message and Reply to Thread AI tools.",
+      "label": "Add a Raycast signature to messages written with AI",
+      "description": "Show a subtle Raycast signature below messages written by AI tools.",
       "name": "showAiMessageSignature",
       "type": "checkbox",
       "required": false,
@@ -322,7 +322,7 @@
     {
       "title": "Send Message",
       "name": "send-message",
-      "description": "Send a Slack message to a channel, group DM, existing DM, or user. Pass a conversation ID or user ID and the message text. When given a user ID, the tool opens or finds the DM first.",
+      "description": "Send a Slack message to a channel, group DM, existing DM, or user. Pass a conversation ID or user ID and the message text. When given a user ID, the tool opens or finds the DM first. For messages with file attachments, use Upload Files instead.",
       "input": {
         "type": "object",
         "properties": {
@@ -332,7 +332,7 @@
           },
           "text": {
             "type": "string",
-            "description": "The message text to send. Slack mrkdwn is supported."
+            "description": "The message text to send. Standard Markdown is supported, including headings, lists, task lists, tables, links, block quotes, and code blocks. Use Slack IDs for native mentions, such as `<@U12345678>` for a person and `<#C12345678>` for a channel."
           }
         },
         "required": [
@@ -343,9 +343,37 @@
       "confirmation": false
     },
     {
+      "title": "Update Message",
+      "name": "update-message",
+      "description": "Edit a Slack message posted by the authenticated user. Requires the channel ID, message timestamp, and complete replacement text. Use the permalink or a read/search tool to resolve the message first when needed.",
+      "input": {
+        "type": "object",
+        "properties": {
+          "channel": {
+            "type": "string",
+            "description": "The Slack channel ID containing the message. Use a Slack permalink, Get Channels, Read Conversation, Get Channel History, or Search Messages to find it.\n\n@example \"C12345678\""
+          },
+          "messageTs": {
+            "type": "string",
+            "description": "The timestamp of the message to edit. This is the `ts` value from a Slack permalink or a read/search tool.\n\n@example \"1718899200.000100\""
+          },
+          "text": {
+            "type": "string",
+            "description": "The complete replacement text for the message. Standard Markdown is supported, including headings, lists, task lists, tables, links, block quotes, and code blocks. Use Slack IDs for native mentions, such as `<@U12345678>` for a person and `<#C12345678>` for a channel."
+          }
+        },
+        "required": [
+          "channel",
+          "messageTs",
+          "text"
+        ]
+      },
+      "confirmation": false
+    },
+    {
       "title": "Reply to Thread",
       "name": "reply-thread",
-      "description": "Post a reply to a Slack thread. Requires the channel ID, the parent message timestamp, and the reply text. Use Read Thread first when context is needed.",
+      "description": "Post a reply to a Slack thread. Requires the channel ID, the parent message timestamp, and the reply text. Use Read Thread first when context is needed. For replies with file attachments, use Upload Files instead.",
       "input": {
         "type": "object",
         "properties": {
@@ -359,13 +387,62 @@
           },
           "text": {
             "type": "string",
-            "description": "The text to post as a reply in the thread."
+            "description": "The text to post as a reply in the thread. Standard Markdown is supported, including headings, lists, task lists, tables, links, block quotes, and code blocks. Use Slack IDs for native mentions, such as `<@U12345678>` for a person and `<#C12345678>` for a channel."
           }
         },
         "required": [
           "channel",
           "threadTs",
           "text"
+        ]
+      },
+      "confirmation": false
+    },
+    {
+      "title": "Get Huddle Link",
+      "name": "get-huddle-link",
+      "description": "Get a Slack Huddle join link for a channel, DM, group DM, or user. Pass a conversation ID or user ID. When given a user ID, the tool opens or finds the DM first.",
+      "input": {
+        "type": "object",
+        "properties": {
+          "conversation": {
+            "type": "string",
+            "description": "A Slack conversation ID or user ID. Conversation IDs start with C, D, or G. User IDs start with U or W and are resolved to a direct-message conversation.\n\n@example \"C12345678\""
+          }
+        },
+        "required": [
+          "conversation"
+        ]
+      },
+      "confirmation": false
+    },
+    {
+      "title": "Upload Files",
+      "name": "upload-files",
+      "description": "Upload one or more local files to a Slack channel, DM, group DM, or thread, optionally with message text. Use this instead of Send Message or Reply to Thread when the user asks to attach files. Pass multiple absolute file paths separated by newlines.",
+      "input": {
+        "type": "object",
+        "properties": {
+          "channel": {
+            "type": "string",
+            "description": "The Slack conversation ID to send the files to. Conversation IDs start with C, D, or G; never pass a U or W user ID. To send files to a person, first use Read Conversation with their user ID, then pass its returned channel ID.\n\n@example \"C12345678\""
+          },
+          "filePaths": {
+            "type": "string",
+            "description": "Absolute local paths of the files to upload, one path per line. Use the path from an attachment supplied by the user when available."
+          },
+          "text": {
+            "type": "string",
+            "description": "Optional message text to send with the files. Slack mrkdwn is supported. Omit it to send only the files."
+          },
+          "threadTs": {
+            "type": "string",
+            "description": "Optional timestamp of the parent message when the files should be posted as a thread reply. Never use a reply's timestamp.\n\n@example \"1718899200.000100\""
+          }
+        },
+        "required": [
+          "channel",
+          "filePaths"
         ]
       },
       "confirmation": false
@@ -441,6 +518,117 @@
         ],
         "mocks": {
           "reply-thread": "success"
+        }
+      },
+      {
+        "input": "@slack edit this message to say \"Updated copy\": https://example.slack.com/archives/C12345678/p1718899200000100",
+        "expected": [
+          {
+            "callsTool": {
+              "name": "update-message",
+              "arguments": {
+                "channel": "C12345678",
+                "messageTs": "1718899200.000100",
+                "text": {
+                  "includes": "Updated copy"
+                }
+              }
+            }
+          }
+        ],
+        "mocks": {
+          "update-message": "success"
+        }
+      },
+      {
+        "input": "@slack send this screenshot to Daniel with the message \"Testing Slack attachments\": /Users/me/Desktop/test.png",
+        "expected": [
+          {
+            "callsTool": {
+              "name": "find-users",
+              "arguments": {
+                "query": {
+                  "includes": "Daniel"
+                }
+              }
+            }
+          },
+          {
+            "callsTool": {
+              "name": "read-conversation",
+              "arguments": {
+                "conversation": {
+                  "includes": "U12345678"
+                }
+              }
+            }
+          },
+          {
+            "callsTool": {
+              "name": "upload-files",
+              "arguments": {
+                "channel": {
+                  "includes": "D12345678"
+                },
+                "filePaths": {
+                  "includes": "/Users/me/Desktop/test.png"
+                },
+                "text": {
+                  "includes": "Testing Slack attachments"
+                }
+              }
+            }
+          }
+        ],
+        "mocks": {
+          "find-users": [
+            {
+              "id": "U12345678",
+              "displayName": "Daniel"
+            }
+          ],
+          "read-conversation": {
+            "channel": "D12345678"
+          },
+          "upload-files": "success"
+        }
+      },
+      {
+        "input": "@slack get me a huddle link with Daniel",
+        "expected": [
+          {
+            "callsTool": {
+              "name": "find-users",
+              "arguments": {
+                "query": {
+                  "includes": "Daniel"
+                }
+              }
+            }
+          },
+          {
+            "callsTool": {
+              "name": "get-huddle-link",
+              "arguments": {
+                "conversation": {
+                  "includes": "U12345678"
+                }
+              }
+            }
+          }
+        ],
+        "mocks": {
+          "find-users": [
+            {
+              "id": "U12345678",
+              "displayName": "Daniel"
+            }
+          ],
+          "get-huddle-link": {
+            "workspaceId": "T12345678",
+            "channel": "D12345678",
+            "url": "https://app.slack.com/huddle/T12345678/D12345678"
+          }
         }
       }
     ]

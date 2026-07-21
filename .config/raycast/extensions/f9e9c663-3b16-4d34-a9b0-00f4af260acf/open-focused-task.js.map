@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../src/open-focused-task.tsx"],
+  "sourcesContent": ["import { Cache, launchCommand, LaunchType, showToast, Toast } from \"@raycast/api\";\n\nconst cache = new Cache();\n\nconst command = async () => {\n  const cachedTaskData = cache.get(\"todoist.focusedTask\");\n  const focusedTask = cachedTaskData ? JSON.parse(cachedTaskData) : undefined;\n\n  try {\n    if (focusedTask) {\n      await launchCommand({\n        name: \"home\",\n        type: LaunchType.UserInitiated,\n        context: { view: `task_${focusedTask.id}` },\n      });\n    } else {\n      await showToast({ style: Toast.Style.Failure, title: \"No focused task\" });\n\n      await launchCommand({\n        name: \"home\",\n        type: LaunchType.UserInitiated,\n        context: { view: \"inbox\" },\n      });\n    }\n  } catch {\n    /* empty */\n  }\n};\n\nexport default command;\n"],
+  "mappings": "yaAAA,IAAAA,EAAA,GAAAC,EAAAD,EAAA,aAAAE,IAAA,eAAAC,EAAAH,GAAA,IAAAI,EAAmE,wBAE7DC,EAAQ,IAAI,QAEZC,EAAU,SAAY,CAC1B,IAAMC,EAAiBF,EAAM,IAAI,qBAAqB,EAChDG,EAAcD,EAAiB,KAAK,MAAMA,CAAc,EAAI,OAElE,GAAI,CACEC,EACF,QAAM,iBAAc,CAClB,KAAM,OACN,KAAM,aAAW,cACjB,QAAS,CAAE,KAAM,QAAQA,EAAY,EAAE,EAAG,CAC5C,CAAC,GAED,QAAM,aAAU,CAAE,MAAO,QAAM,MAAM,QAAS,MAAO,iBAAkB,CAAC,EAExE,QAAM,iBAAc,CAClB,KAAM,OACN,KAAM,aAAW,cACjB,QAAS,CAAE,KAAM,OAAQ,CAC3B,CAAC,EAEL,MAAQ,CAER,CACF,EAEON,EAAQI",
+  "names": ["open_focused_task_exports", "__export", "open_focused_task_default", "__toCommonJS", "import_api", "cache", "command", "cachedTaskData", "focusedTask"]
+}
