@@ -114,5 +114,5 @@ cask "font-fira-code-nerd-font"
 cask "font-iosevka"
 # Keyboard customiser
 cask "karabiner-elements"
-# GPU-based terminal emulator
-cask "kitty"
+# Terminal emulator that uses platform-native UI and GPU acceleration
+cask "ghostty"
