@@ -13,6 +13,6 @@ for file in ~/icons/*
 
     set appname "/Applications/$newname"
 
-    fileicon set $appname $file
+    sudo fileicon set $appname $file
 end
 killall Dock
