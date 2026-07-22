@@ -1,5 +1,5 @@
 tap "asmvik/formulae", trusted: true
-tap "bengerthelorf/tap", "https://github.com/Bengerthelorf/homebrew-tap"
+tap "bengerthelorf/tap", "https://github.com/Bengerthelorf/homebrew-tap", trusted: { casks: ["iconchanger"] }
 tap "felixkratz/formulae", "https://github.com/FelixKratz/homebrew-formulae", trusted: true
 # Powerful, enterprise-ready, open source web server with automatic HTTPS
 brew "caddy"
@@ -19,6 +19,8 @@ brew "libgit2"
 brew "eza"
 # Play, record, convert, and stream select audio and video codecs
 brew "ffmpeg"
+# macOS CLI for managing custom icons for files and folders
+brew "fileicon"
 # User-friendly command-line shell for UNIX-like operating systems
 brew "fish"
 # Terminal JSON viewer
@@ -117,7 +119,5 @@ cask "font-fira-code-nerd-font"
 cask "font-iosevka"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
-# Customize macOS app icons
-cask "bengerthelorf/tap/iconchanger", trusted: true
 # Keyboard customiser
 cask "karabiner-elements"

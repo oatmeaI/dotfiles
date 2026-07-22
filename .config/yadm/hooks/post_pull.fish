@@ -1,0 +1,17 @@
+#!/usr/bin/env fish
+
+for file in ~/icons/*
+    if not test -e "$file"
+        continue
+    end
+
+    # Get just the filename (strip directory path)
+    set basename (string replace -r '.*/' '' -- $file)
+
+    # Replace the file extension with .app
+    set newname (string replace -r '\.[^.]+$' '.app' -- $basename)
+
+    set appname "/Applications/$newname"
+
+    fileicon set $appname $file
+end
