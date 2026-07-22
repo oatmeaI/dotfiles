@@ -3,6 +3,7 @@
 subject to breaking changes constantly
 
 - [kitty](https://sw.kovidgoyal.net/kitty/)
+- [Ghostty](https://ghostty.org/)
 - [fish](https://fishshell.com)
 - [nvim](https://neovim.io)
 - [lazyvim](http://www.lazyvim.org)
