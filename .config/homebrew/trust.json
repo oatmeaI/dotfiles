@@ -3,10 +3,10 @@
     "asmvik/formulae",
     "felixkratz/formulae"
   ],
-  "trustedformulae": [
-    "asmvik/formulae/yabai"
-  ],
   "trustedcasks": [
     "bengerthelorf/tap/iconchanger"
+  ],
+  "trustedformulae": [
+    "asmvik/formulae/yabai"
   ]
 }
