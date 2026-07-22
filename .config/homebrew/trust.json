@@ -5,5 +5,8 @@
   ],
   "trustedformulae": [
     "asmvik/formulae/yabai"
+  ],
+  "trustedcasks": [
+    "bengerthelorf/tap/iconchanger"
   ]
 }

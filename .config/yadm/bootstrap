@@ -8,7 +8,7 @@ brew update
 brew bundle --global
 brew upgrade
 brew cleanup
-brew bundle dump --global -f
+brew bundle dump --global -f --no-npm --no-uv --no-vscode    # Update Brewfile
 
 # Install / Bootstrap:
 # - Install YADM + pull branch

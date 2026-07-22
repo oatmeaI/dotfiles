@@ -1,4 +1,5 @@
 tap "asmvik/formulae", trusted: true
+tap "bengerthelorf/tap", "https://github.com/Bengerthelorf/homebrew-tap"
 tap "felixkratz/formulae", "https://github.com/FelixKratz/homebrew-formulae", trusted: true
 # Powerful, enterprise-ready, open source web server with automatic HTTPS
 brew "caddy"
@@ -116,5 +117,7 @@ cask "font-fira-code-nerd-font"
 cask "font-iosevka"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
+# Customize macOS app icons
+cask "bengerthelorf/tap/iconchanger", trusted: true
 # Keyboard customiser
 cask "karabiner-elements"
