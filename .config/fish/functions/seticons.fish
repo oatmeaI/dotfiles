@@ -20,9 +20,11 @@ function seticons
         end
     end
     if test $haschanged -eq 1
-        echo restarting dock
+        echo clearing dock icon cache
         rm /var/folders/*/*/*/com.apple.dock.iconcache
+        echo clearing icon service cache
         rm -r /var/folders/*/*/*/com.apple.iconservices*
+        echo restarting dock
         killall Dock
     end
 end
