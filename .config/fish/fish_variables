@@ -49,4 +49,4 @@ SETUVAR fish_pager_color_selected_background:\x1d
 SETUVAR fish_pager_color_selected_completion:\x1d
 SETUVAR fish_pager_color_selected_description:\x1d
 SETUVAR fish_pager_color_selected_prefix:\x1d
-SETUVAR fish_user_paths:/Users/oatmeal/\x2elocal/bin\x1e/Users/keenan/\x2edocker/bin\x1e/Users/keenan/\x2elocal/bin\x1e/Users/villanih/\x2elocal/bin\x1e/Applications/Ghostty\x2eapp/Contents/MacOS
+SETUVAR fish_user_paths:/opt/homebrew/lib/ruby/gems/4\x2e0\x2e0/gems/neocities\x2d0\x2e2\x2e1/bin\x1e/opt/homebrew/lib/ruby/gems/4\x2e0\x2e0/gems\x1e/opt/homebrew/lib/ruby/gems\x1e/opt/homebrew/lib\x1e/Users/oatmeal/\x2elocal/bin\x1e/Users/keenan/\x2edocker/bin\x1e/Users/keenan/\x2elocal/bin\x1e/Users/villanih/\x2elocal/bin\x1e/Applications/Ghostty\x2eapp/Contents/MacOS
