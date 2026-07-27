@@ -6,6 +6,7 @@ Pickers = {
     Symbols         = p.lsp_document_symbols,
     References      = p.lsp_references,
     Definition      = p.lsp_definitions,
+    Buffers         = p.buffers,
     Files           = p.files,
     Branches        = p.git_branches,
     Registers       = p.registers,
