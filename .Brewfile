@@ -116,8 +116,6 @@ brew "podman-compose"
 # Python package management tool
 brew "poetry"
 # Object-relational database system
-brew "postgresql@14", link: false
-# Object-relational database system
 brew "postgresql@18", restart_service: :changed
 # Code formatter for JavaScript, CSS, JSON, GraphQL, Markdown, YAML
 brew "prettier"
@@ -135,8 +133,6 @@ brew "ripgrep"
 brew "rust"
 # Cross-shell prompt for astronauts
 brew "starship"
-# Scriptable music downloader for Qobuz, Tidal, SoundCloud, and Deezer
-brew "streamrip"
 # Modern and pretty fancy file manager for the terminal
 brew "superfile"
 # OCR (Optical Character Recognition) engine
