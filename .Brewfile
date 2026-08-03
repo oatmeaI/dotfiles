@@ -1,6 +1,7 @@
 tap "asmvik/formulae", trusted: true
 tap "bengerthelorf/tap", "https://github.com/Bengerthelorf/homebrew-tap", trusted: { casks: ["iconchanger"] }
 tap "felixkratz/formulae", "https://github.com/FelixKratz/homebrew-formulae", trusted: true
+tap "jackielii/tap"
 # Codec library for encoding and decoding AV1 video streams
 brew "aom"
 # Generic-purpose lossless compression algorithm by Google
@@ -160,3 +161,9 @@ cask "font-iosevka"
 cask "ghostty"
 # Keyboard customiser
 cask "karabiner-elements"
+# Open-source Markdown editor
+cask "macdown"
+# Markdown editor
+cask "markedit"
+# Simple hotkey daemon written in Zig
+cask "jackielii/tap/skhd-zig", trusted: true

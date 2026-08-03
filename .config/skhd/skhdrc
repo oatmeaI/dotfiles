@@ -1,0 +1,13 @@
+:: yabaimode 
+
+hyper - d ; yabaimode : sketchybar --set skhd label="SKHD: WINDOW" && sketchybar --add item hint center && sketchybar --set hint label="L/R to stack; Hyper-L/R to unstack"
+yabaimode < escape ; default : sketchybar --set skhd label="SKHD: NORMAL" && sketchybar --remove hint
+
+# Stack
+yabaimode < left     : yabai -m window --stack west
+yabaimode < right    : yabai -m window --stack east
+
+# Unstack
+# TODO: could add a script here that checks to see if we should unstack or warp?
+yabaimode < hyper - left     : yabai -m window --insert west && yabai -m window --toggle float && yabai -m window --toggle float
+yabaimode < hyper - right    : yabai -m window --insert east && yabai -m window --toggle float && yabai -m window --toggle float

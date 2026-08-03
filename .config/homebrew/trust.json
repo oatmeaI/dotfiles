@@ -4,7 +4,8 @@
     "felixkratz/formulae"
   ],
   "trustedcasks": [
-    "bengerthelorf/tap/iconchanger"
+    "bengerthelorf/tap/iconchanger",
+    "jackielii/tap/skhd-zig"
   ],
   "trustedformulae": [
     "asmvik/formulae/yabai"
