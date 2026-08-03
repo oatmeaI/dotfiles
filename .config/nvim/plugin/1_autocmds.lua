@@ -5,7 +5,7 @@ AutoCmd("FocusLost", { command = "lua pcall(vim.cmd('wall'))" })
 AutoCmd("VimLeavePre", { command = "lua pcall(vim.cmd('wall'))" })
 
 -- Save session when quitting
-AutoCmd("QuitPre", { callback = SaveSession })
+-- AutoCmd("QuitPre", { callback = SaveSession })
 
 -- Highlight yanked text
 AutoCmd("TextYankPost", {

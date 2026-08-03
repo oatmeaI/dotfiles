@@ -1,6 +1,7 @@
 tap "asmvik/formulae", trusted: true
 tap "bengerthelorf/tap", "https://github.com/Bengerthelorf/homebrew-tap", trusted: { casks: ["iconchanger"] }
 tap "felixkratz/formulae", "https://github.com/FelixKratz/homebrew-formulae", trusted: true
+tap "jackielii/tap"
 # Codec library for encoding and decoding AV1 video streams
 brew "aom"
 # Generic-purpose lossless compression algorithm by Google
@@ -116,8 +117,6 @@ brew "podman-compose"
 # Python package management tool
 brew "poetry"
 # Object-relational database system
-brew "postgresql@14", link: false
-# Object-relational database system
 brew "postgresql@18", restart_service: :changed
 # Code formatter for JavaScript, CSS, JSON, GraphQL, Markdown, YAML
 brew "prettier"
@@ -135,8 +134,6 @@ brew "ripgrep"
 brew "rust"
 # Cross-shell prompt for astronauts
 brew "starship"
-# Scriptable music downloader for Qobuz, Tidal, SoundCloud, and Deezer
-brew "streamrip"
 # Modern and pretty fancy file manager for the terminal
 brew "superfile"
 # OCR (Optical Character Recognition) engine
@@ -164,3 +161,9 @@ cask "font-iosevka"
 cask "ghostty"
 # Keyboard customiser
 cask "karabiner-elements"
+# Open-source Markdown editor
+cask "macdown"
+# Markdown editor
+cask "markedit"
+# Simple hotkey daemon written in Zig
+cask "jackielii/tap/skhd-zig", trusted: true

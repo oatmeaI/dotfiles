@@ -23,6 +23,12 @@ del("n", "gri")
 del("n", "grn")
 del("n", "grr")
 del("n", "grt")
+del("n", "grx")
+
+--> Hacks <-- 
+-- Replace default `p` behavior to always paste from yank register
+nmap("p",      '"0p',               "paste from yank register")
+nmap("P",      '""p',               "paste from unnamed register")
 
 --> Basic Nav Etc <-- 
 tmap("<esc>",   HideTerminal,       "hide terminal")
@@ -65,7 +71,8 @@ lmap("e",       Pickers.Resume,     "resume previous picker")
 
 lmap("fh",      Pickers.Help,       "pick help tags")
 lmap("fr",      Pickers.Registers,  "pick register contents")
-lmap("fb",      Pickers.Branches,   "pick git branches")
+lmap("fg",      Pickers.Branches,   "pick git branches")
+lmap("fb",      Pickers.Buffers,    "pick open buffers")
 
 lmap(",c",      Pickers.Colors,     "pick colorscheme")
 

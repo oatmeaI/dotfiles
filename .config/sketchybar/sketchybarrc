@@ -12,11 +12,11 @@ sketchybar --bar y_offset=1
 
 # ------- Item Defaults ----------
 PADDING=20
-TEXT_FONT="FiraCode Nerd Font Mono:Medium:12.0"
-ICON_FONT="FiraCode Nerd Font Mono:Medium:22.0"
+TEXT_FONT="Iosevka Term:Medium Extended:12.0"
+# ICON_FONT="FiraCode Nerd Font Mono:Medium:22.0"
 
 default=(
-  icon.font="$ICON_FONT"
+  icon.font="$TEXT_FONT"
   label.font="$TEXT_FONT"
   padding_left=5
   padding_right=5
@@ -58,6 +58,10 @@ YABAI_SCRIPT='sketchybar -m --set yabai label="$(sh $HOME/.config/sketchybar/yab
 sketchybar --add item yabai right
 sketchybar --set yabai script="$YABAI_SCRIPT"
 # sketchybar --set yabai padding_right=0
+
+# ------- skhd Mode ----------
+sketchybar --add item skhd right
+sketchybar --set skhd label="SKHD: NORMAL"
 
 # ------- Date ----------
 # DATE_SCRIPT='sketchybar --set date label="$(date "+%m/%d/%y (%a)" | awk "{print toupper(\$0)}")"'
