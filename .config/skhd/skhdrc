@@ -3,6 +3,10 @@
 hyper - d ; yabaimode : sketchybar --set skhd label="SKHD: WINDOW" && sketchybar --add item hint center && sketchybar --set hint label="L/R to stack; Hyper-L/R to unstack"
 yabaimode < escape ; default : sketchybar --set skhd label="SKHD: NORMAL" && sketchybar --remove hint
 
+# Layout
+# 
+yabaimode < space    : ~/.config/skhd/toggle_layout.py
+
 # Stack
 yabaimode < left     : yabai -m window --stack west
 yabaimode < right    : yabai -m window --stack east
