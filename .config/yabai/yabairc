@@ -5,5 +5,5 @@ yabai -m config left_padding    8
 yabai -m config window_gap      5
 yabai -m config auto_balance    on
 
-yabai -m config layout bsp
+yabai -m config layout float
 yabai -m config mouse_drop_action stack
