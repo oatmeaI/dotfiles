@@ -1,4 +1,4 @@
-:: yabaimode @ : sketchybar --set skhd label="SKHD: WINDOW" && sketchybar --add item hint center && sketchybar --set hint label="L/R to move side by side; <space> to fullscreen; <enter> to align all windows"
+:: yabaimode @ : sketchybar --set skhd label="SKHD: WINDOW" && sketchybar --add item hint center && sketchybar --set hint label="L/R to move side by side; <space> to fullscreen; <enter> to align all windows; f/s/b for float/stack/bsp"
 :: default : sketchybar --set skhd label="SKHD: NORMAL" && sketchybar --remove hint
 
 hyper - d ; yabaimode 
@@ -7,9 +7,12 @@ yabaimode < escape ; default
 
 # Grid: <rows>:<cols>:<start-x>:<start-y>:<width>:<height>
 yabaimode < return      ; default : yabai -m space --layout stack && yabai -m space --layout float 
-yabaimode < left        : yabai -m window --grid 1:2:0:0:1:1
-yabaimode < right       : yabai -m window --grid 1:2:1:0:1:1
-yabaimode < space       : yabai -m window --grid 1:1:0:0:1:1
+yabaimode < b           ; default : yabai -m space --layout bsp
+yabaimode < f           ; default : yabai -m space --layout float
+yabaimode < s           ; default : yabai -m space --layout stack
+yabaimode < space       ; default : yabai -m space --layout float && yabai -m window --grid 1:1:0:0:1:1
+yabaimode < left        : yabai -m space --layout float && yabai -m window --grid 1:2:0:0:1:1
+yabaimode < right       : yabai -m space --layout float && yabai -m window --grid 1:2:1:0:1:1
 
 
 # yabaimode < space       : ~/.config/skhd/toggle_layout.py
