@@ -48,6 +48,7 @@ miniclue.setup({
         miniclue.gen_clues.windows(),
         miniclue.gen_clues.z(),
         { mode = "n", keys = "<Leader>c", desc = "+code" },
+        { mode = "n", keys = "<Leader>m", desc = "+marks" },
         { mode = "n", keys = "<Leader>s", desc = "+sessions" },
         { mode = "n", keys = "<Leader>w", desc = "+windows" },
         { mode = "n", keys = "<Leader>t", desc = "+tabs" },

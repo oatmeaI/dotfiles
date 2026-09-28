@@ -129,3 +129,11 @@ end
 function ToggleTerminal()
     vim.cmd("ToggleTerm")
 end
+
+function ToggleMark()
+    require("marks").toggle()
+end
+
+function PreviewMark()
+    require("marks").preview()
+end
