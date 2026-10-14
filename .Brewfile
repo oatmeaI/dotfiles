@@ -17,7 +17,7 @@ brew "cairo"
 # Cross-platform make
 brew "cmake"
 # Cryptography and SSL/TLS Toolkit
-brew "openssl@3"
+brew "openssl@3", link: true
 # Cryptographic recipes and primitives for Python
 brew "cryptography"
 # C library of Git core methods that is re-entrant and linkable
@@ -36,6 +36,8 @@ brew "fx"
 brew "fzf"
 # GNU multiple precision arithmetic library
 brew "gmp"
+# GitHub command-line tool
+brew "gh"
 # GNU implementation of the famous stream editor
 brew "gnu-sed"
 # GNU Transport Layer Security (TLS) Library
