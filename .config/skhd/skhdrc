@@ -7,9 +7,13 @@ yabaimode < escape ; default
 # Grid: <rows>:<cols>:<start-x>:<start-y>:<width>:<height>
 
 yabaimode < j           ; default : ~/.config/skhd/toggle_window_bsp.sh
+yabaimode < h           ; default : yabai -m window --swap west
+yabaimode < l           ; default : yabai -m window --swap east
+yabaimode < shift - l           ; default : yabai -m window --stack east
+yabaimode < shift - h           ; default : yabai -m window --stack west
 
 yabaimode < return      ; default : ~/.config/skhd/fullscreen_all.sh 
-yabaimode < space       ; default : ~/.config/skhd/float_window.sh && yabai -m window --grid 1:1:0:0:1:1
+yabaimode < space       ; default : ~/.config/skhd/float_window.sh && yabai -m window --grid 1:1:0:0:1:1 #&& sketchybar --set skhd label="SKHD: NORMAL" && sketchybar --remove hint
 
 yabaimode < left        ; default : ~/.config/skhd/float_window.sh && yabai -m window --grid 1:2:0:0:1:1
 yabaimode < right       ; default : ~/.config/skhd/float_window.sh && yabai -m window --grid 1:2:1:0:1:1

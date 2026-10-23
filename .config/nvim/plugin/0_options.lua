@@ -1,14 +1,13 @@
 local vim = vim
 
--- TODO: enable this vim.oion once it's available in neovim
--- vim.o.pumborder = "rounded"
+-- vim.o.textwidth         = 90                        -- Set max line width
 
 -- stylua: ignore start
 vim.cmd("filetype plugin indent on")                -- Enable filetype detection + filetype specific plugins + filetype specific indentation.
 vim.cmd("packadd nohlsearch")                       -- Plugin that automatically turns off hlsearch (highlighting last search term) after `updatetime`
 
 vim.g.mapleader         = " "                       -- Use <space> as leader key
-vim.o.shell             = "fish"                    -- use fish
+vim.o.shell             = "zsh"                     -- use zsh
 vim.o.tabstop           = 4                         -- 1 tab (\t) = 4 spaces
 vim.o.softtabstop       = 4                         -- 1 tab keypress = 4 spaces
 vim.o.shiftwidth        = 4                         -- 1 indent = 4 spaces
@@ -24,13 +23,13 @@ vim.o.foldmethod        = "expr"                    -- This + line below: use Tr
 vim.o.foldexpr          = "v:lua.vim.treesitter.foldexpr()"
 vim.o.foldlevel         = 999                       -- Folds start open
 vim.o.winborder         = "rounded"                 -- Rounded borders everywhere
+vim.o.pumborder         = "rounded"
 vim.o.switchbuf         = 'usetab'                  -- Use already open buffers when switching
 vim.o.undofile          = true                      -- Persisent undo history across sessions
 vim.o.mouse             = 'a'                       -- Enable mouse in all modes
 vim.o.number            = true                      -- Show line numbers
 vim.o.relativenumber    = true                      -- Use relative line numbers. With `number` above, we get "hybrid" numbers
 vim.o.formatoptions     = 'tcrqnj'                  -- Improve some editing stuff. See :h fo-table 
-vim.o.textwidth         = 90                        -- Set max line width
 vim.o.autoindent        = true                      -- When adding a new line, match indent of line above
 vim.o.breakindent       = true                      -- Same as above, but for when a line breaks automatically (ie, we're past the `textwidth`)
 vim.o.cursorline        = true                      -- Highlight the line the cursor is on
