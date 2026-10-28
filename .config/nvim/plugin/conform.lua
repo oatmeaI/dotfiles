@@ -7,8 +7,8 @@ Pack({
     config = {
         formatters_by_ft = {
             typescript = { "eslint_d", "prettier", stop_after_first = true },
-            typescriptreact = { "prettier", stop_after_first = true },
-            javascript = { "prettier", stop_after_first = true },
+            typescriptreact = { "eslint_d", "prettier", stop_after_first = true },
+            javascript = { "eslint_d", "prettier", stop_after_first = true },
             lua = { "stylua", stop_after_first = true },
         },
         format_on_save = {
