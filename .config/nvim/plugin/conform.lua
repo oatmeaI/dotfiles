@@ -6,13 +6,13 @@ Pack({
     setup = true,
     config = {
         formatters_by_ft = {
-            typescript = { "prettierd", "prettier", stop_after_first = true },
-            typescriptreact = { "prettierd", "prettier", stop_after_first = true },
-            javascript = { "prettierd", "prettier", stop_after_first = true },
-            lua = { "stylua", stop_after_first = true }
+            typescript = { "eslint_d", "prettier", stop_after_first = true },
+            typescriptreact = { "eslint_d", "prettier", stop_after_first = true },
+            javascript = { "eslint_d", "prettier", stop_after_first = true },
+            lua = { "stylua", stop_after_first = true },
         },
         format_on_save = {
-            timeout_ms = 500,
+            timeout_ms = 5000,
             lsp_format = "fallback",
         },
     },

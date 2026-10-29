@@ -4,4 +4,9 @@ Pack({
     callback = function()
         FzfLua.register_ui_select()
     end,
+    config = {
+        marks = {
+            marks = "^%a$", -- omit special marks from the picker
+        },
+    },
 })

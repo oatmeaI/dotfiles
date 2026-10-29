@@ -1,9 +1,9 @@
 theme = catppuccin-macchiato.conf
-command = /opt/homebrew/bin/fish
+# command = tmux
 cursor-style = block
 window-inherit-working-directory = true
-macos-titlebar-style = tabs
-macos-titlebar-proxy-icon = hidden
+# macos-titlebar-style = tabs
+# macos-titlebar-proxy-icon = hidden
 macos-option-as-alt = false
 macos-icon = custom
 window-new-tab-position = end

@@ -36,6 +36,8 @@ brew "fx"
 brew "fzf"
 # GNU multiple precision arithmetic library
 brew "gmp"
+# GitHub command-line tool
+brew "gh"
 # GNU implementation of the famous stream editor
 brew "gnu-sed"
 # GNU Transport Layer Security (TLS) Library
@@ -102,6 +104,8 @@ brew "nginx"
 brew "ninja"
 # Open-source, cross-platform JavaScript runtime environment
 brew "node"
+# Libraries for security-enabled client and server applications
+brew "nss"
 # Manage multiple Node.js versions
 brew "nvm"
 # Open Visual Inference And Optimization toolkit for AI inference

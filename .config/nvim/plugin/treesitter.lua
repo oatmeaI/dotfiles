@@ -3,6 +3,7 @@
 Pack({
     source = "nvim-treesitter/nvim-treesitter",
     name = "nvim-treesitter.configs",
+    checkout = "main",
     setup = true,
     config = {
         indent = { enable = true },

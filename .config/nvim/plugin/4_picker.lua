@@ -16,4 +16,5 @@ Pickers = {
     Help            = p.helptags,
     Colors          = p.colorschemes,
     Blame           = p.git_blame,
+    Marks           = p.marks,
 }
