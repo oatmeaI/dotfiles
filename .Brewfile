@@ -1,3 +1,5 @@
+instance_eval(File.read(File.join(Dir.home,".Brewfile.local")))
+
 tap "asmvik/formulae", trusted: true
 tap "felixkratz/formulae", "https://github.com/FelixKratz/homebrew-formulae", trusted: true
 tap "jackielii/tap"
