@@ -1,2 +1,48 @@
 #!/usr/bin/env zsh
 brew bundle -g
+
+
+haschanged=0
+
+for file in ~/icons/*(N); do
+    [[ -e $file ]] || continue
+
+    # Get just the filename (strip directory path)
+    basename=${file:t}
+
+    # Replace the file extension with .app
+    if [[ $basename == *.* ]]; then
+        newname="${basename%.*}.app"
+    else
+        newname=$basename
+    fi
+
+    appname="/Applications/$newname"
+
+    if [[ ! -e $appname ]]; then
+        echo "$appname not installed, skipping..."
+        continue
+    fi
+
+    if ! fileicon test "$appname"; then
+        sudo fileicon set "$appname" "$file"
+        haschanged=1
+    fi
+done
+
+if (( haschanged )); then
+    files=(/var/folders/*/*/*/com.apple.dock.iconcache(N))
+    if (( ${#files} > 0 )); then
+        echo "clearing dock icon cache"
+        rm -- "${files[@]}"
+    fi
+
+    files=(/var/folders/*/*/*/com.apple.iconservices*(N))
+    if (( ${#files} > 0 )); then
+        echo "clearing icon service cache"
+        rm -r -- "${files[@]}"
+    fi
+
+    echo "restarting dock"
+    killall Dock
+fi
