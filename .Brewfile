@@ -54,4 +54,3 @@ brew "fileicon"
 brew "ffmpeg"
 # Modern, maintained replacement for ls
 brew "eza"
-
