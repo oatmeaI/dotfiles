@@ -7,3 +7,6 @@ yabai -m config auto_balance    on
 
 yabai -m config layout bsp
 yabai -m config mouse_drop_action stack
+
+yabai -m rule --add title="^.*$" manage=off
+yabai -m rule --apply
