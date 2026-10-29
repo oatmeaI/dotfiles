@@ -4,33 +4,14 @@
             "complex_modifications": {
                 "rules": [
                     {
-                        "enabled": false,
-                        "manipulators": [
-                            {
-                                "description": "Change caps_lock to command+control+option+shift.",
-                                "from": {
-                                    "key_code": "caps_lock",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_shift",
-                                        "modifiers": ["left_command", "left_control", "left_option"]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
                         "description": "Caps -> Hyper",
                         "manipulators": [
                             {
                                 "from": { "key_code": "caps_lock" },
                                 "to": [
                                     {
-                                        "key_code": "left_shift",
-                                        "modifiers": ["left_command", "left_control", "left_option"]
+                                        "key_code": "right_shift",
+                                        "modifiers": ["right_command", "right_control", "right_option"]
                                     }
                                 ],
                                 "to_if_alone": [{ "key_code": "escape" }],
@@ -45,7 +26,7 @@
                                 "from": {
                                     "key_code": "j",
                                     "modifiers": {
-                                        "mandatory": ["left_option", "left_command", "left_control", "left_shift"],
+                                        "mandatory": ["right_option", "right_command", "right_control", "right_shift"],
                                         "optional": ["any"]
                                     }
                                 },
@@ -61,7 +42,7 @@
                                 "from": {
                                     "key_code": "k",
                                     "modifiers": {
-                                        "mandatory": ["left_option", "left_command", "left_control", "left_shift"],
+                                        "mandatory": ["right_option", "right_command", "right_control", "right_shift"],
                                         "optional": ["any"]
                                     }
                                 },
@@ -77,7 +58,7 @@
                                 "from": {
                                     "key_code": "h",
                                     "modifiers": {
-                                        "mandatory": ["left_option", "left_command", "left_control", "left_shift"],
+                                        "mandatory": ["right_option", "right_command", "right_control", "right_shift"],
                                         "optional": ["any"]
                                     }
                                 },
@@ -93,7 +74,7 @@
                                 "from": {
                                     "key_code": "l",
                                     "modifiers": {
-                                        "mandatory": ["left_option", "left_command", "left_control", "left_shift"],
+                                        "mandatory": ["right_option", "right_command", "right_control", "right_shift"],
                                         "optional": ["any"]
                                     }
                                 },
@@ -111,19 +92,20 @@
                         "product_id": 20602,
                         "vendor_id": 12815
                     },
+                    "ignore": false,
                     "manipulate_caps_lock_led": false,
                     "simple_modifications": [
                         {
-                            "from": { "key_code": "f6" },
-                            "to": [{ "consumer_key_code": "rewind" }]
+                            "from": { "consumer_key_code": "fast_forward" },
+                            "to": [{ "consumer_key_code": "fast_forward" }]
                         },
                         {
-                            "from": { "key_code": "f7" },
+                            "from": { "consumer_key_code": "play_or_pause" },
                             "to": [{ "consumer_key_code": "play_or_pause" }]
                         },
                         {
-                            "from": { "key_code": "f8" },
-                            "to": [{ "consumer_key_code": "fast_forward" }]
+                            "from": { "consumer_key_code": "rewind" },
+                            "to": [{ "consumer_key_code": "rewind" }]
                         },
                         {
                             "from": { "key_code": "left_command" },
@@ -154,6 +136,18 @@
                         "vendor_id": 4152
                     },
                     "ignore": true
+                },
+                {
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "is_pointing_device": true,
+                        "product_id": 65278,
+                        "vendor_id": 3141
+                    },
+                    "ignore": false,
+                    "ignore_vendor_events": true,
+                    "manipulate_caps_lock_led": false,
+                    "treat_as_built_in_keyboard": true
                 }
             ],
             "name": "Default profile",
