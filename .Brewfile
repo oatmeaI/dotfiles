@@ -17,7 +17,7 @@ brew "cairo"
 # Cross-platform make
 brew "cmake"
 # Cryptography and SSL/TLS Toolkit
-brew "openssl@3", link: true
+brew "openssl@3"
 # Cryptographic recipes and primitives for Python
 brew "cryptography"
 # C library of Git core methods that is re-entrant and linkable

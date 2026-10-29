@@ -4,12 +4,14 @@ export XDG_CONFIG_HOME=~/.config
 export PATH="$PATH:/opt/homebrew/bin:$HOME/.local/bin"
 
 ##### Work stuff
-source ~/secretvars.zsh
+if [ -e ~/secretvars.zsh ]
+then
+        source ~/secretvars.zsh
+fi
 
 ##### Antigen
 source /opt/homebrew/share/antigen/antigen.zsh
 antigen init ~/.config/antigen/.antigenrc
-# source ~/.antigen/init.zsh
 
 ##### zsh-history-substring-search configuration
 bindkey '^[[A' history-substring-search-up # or '\eOA'
