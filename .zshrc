@@ -1,6 +1,6 @@
 ##### Basics
 alias ls="eza -al"
-alias brewup="brew bundle -g & brew autoremove && brew cleanup"
+alias brewup="brew bundle -g && brew autoremove && brew cleanup"
 alias brewadd="brew bundle -g add"
 alias brewme="brew bundle --file=$HOME/.Brewfile.local add"
 alias unbrew="brew bundle -g remove"
