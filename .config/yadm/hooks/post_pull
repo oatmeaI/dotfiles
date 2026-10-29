@@ -1,3 +1,2 @@
 #!/usr/bin/env zsh
-fish ~/.config/yadm/hooks/seticons.fish
 brew bundle -g
