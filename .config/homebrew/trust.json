@@ -8,6 +8,7 @@
     "jackielii/tap/skhd-zig"
   ],
   "trustedformulae": [
-    "asmvik/formulae/yabai"
+    "asmvik/formulae/yabai",
+    "felixkratz/formulae/sketchybar"
   ]
 }
