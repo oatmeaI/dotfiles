@@ -8,6 +8,8 @@ cask "jackielii/tap/skhd-zig", trusted: true
 cask "karabiner-elements"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
+# Plugin manager for zsh, inspired by oh-my-zsh and vundle
+brew "antigen"
 # A tiling window manager for macOS based on binary space partitioning.
 brew "asmvik/formulae/yabai", trusted: true
 # Custom macOS statusbar with shell plugin, interaction and graph support
