@@ -1,12 +1,13 @@
 ##### Basics
 alias ls="eza -al"
+alias brewup="brew bundle -g & brew autoremove && brew cleanup"
 export XDG_CONFIG_HOME=~/.config
 export PATH="$PATH:/opt/homebrew/bin:$HOME/.local/bin"
 
 ##### Work stuff
 if [ -e ~/secretvars.zsh ]
 then
-        source ~/secretvars.zsh
+    source ~/secretvars.zsh
 fi
 
 ##### Antigen
