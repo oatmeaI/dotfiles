@@ -7,7 +7,7 @@ window-inherit-working-directory = true
 macos-option-as-alt = false
 macos-icon = custom
 window-new-tab-position = end
-background-opacity = 0.95
+background-opacity = 0.98
 background-blur = true 
 keybind = global:cmd+shift+alt+ctrl+p=toggle_quick_terminal
 keybind = cmd+[=move_tab:-1
