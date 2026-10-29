@@ -56,3 +56,5 @@ brew "fileicon"
 brew "ffmpeg"
 # Modern, maintained replacement for ls
 brew "eza"
+# Drop-in replacement for tmux-plugin-manager (tpm) with a TUI
+brew "tpack"

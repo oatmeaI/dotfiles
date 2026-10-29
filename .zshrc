@@ -1,9 +1,11 @@
 ##### Basics
 alias ls="eza -al"
+
 alias brewup="brew bundle -g && brew autoremove && brew cleanup"
 alias brewadd="brew bundle -g add"
 alias brewme="brew bundle --file=$HOME/.Brewfile.local add"
 alias unbrew="brew bundle -g remove"
+
 export XDG_CONFIG_HOME=~/.config
 export PATH="$PATH:/opt/homebrew/bin:$HOME/.local/bin"
 
