@@ -2,6 +2,8 @@ tap "asmvik/formulae", trusted: true
 tap "bengerthelorf/tap", "https://github.com/Bengerthelorf/homebrew-tap", trusted: { casks: ["iconchanger"] }
 tap "felixkratz/formulae", "https://github.com/FelixKratz/homebrew-formulae", trusted: true
 tap "jackielii/tap"
+# Plugin manager for zsh, inspired by oh-my-zsh and vundle
+brew "antigen"
 # Codec library for encoding and decoding AV1 video streams
 brew "aom"
 # Generic-purpose lossless compression algorithm by Google
