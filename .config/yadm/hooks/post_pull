@@ -1,5 +1,3 @@
-#!/usr/bin/env fish
-seticons
+#!/usr/bin/env zsh
+fish ~/.config/yadm/hooks/seticons.fish
 brew bundle -g
-brew autoremove
-brew cleanup
