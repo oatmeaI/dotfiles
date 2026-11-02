@@ -5,9 +5,9 @@ Pack({
     name = "catppuccin",
     setup = true,
     config = {
-        transparent_background = true,
+        transparent_background = false,
         float = {
-            transparent = true, -- enable transparent floating windows
+            transparent = false, -- enable transparent floating windows
             solid = true, -- use solid styling for floating windows, see |winborder|
         },
         integrations = {
