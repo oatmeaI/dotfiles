@@ -7,6 +7,9 @@ AutoCmd("VimLeavePre", { command = "lua pcall(vim.cmd('wall'))" })
 -- Save session when quitting
 -- AutoCmd("QuitPre", { callback = SaveSession })
 
+-- Even out splits when resized (b/c tmux)
+AutoCmd("VimResized", { command = "wincmd =" })
+
 -- Highlight yanked text
 AutoCmd("TextYankPost", {
     callback = function()
