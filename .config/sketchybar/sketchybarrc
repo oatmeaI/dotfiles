@@ -57,7 +57,11 @@ sketchybar --set uptime script="$UPTIME_SCRIPT"
 YABAI_SCRIPT='sketchybar -m --set yabai label="$(sh $HOME/.config/sketchybar/yabai.sh)"'
 sketchybar --add item yabai right
 sketchybar --set yabai script="$YABAI_SCRIPT"
-# sketchybar --set yabai padding_right=0
+
+# ------- Yabai Space Mode ----------
+YABAI_SPACE='sketchybar -m --set yabai_space label="$(sh $HOME/.config/sketchybar/yabai_space.sh)"'
+sketchybar --add item yabai_space right
+sketchybar --set yabai_space script="$YABAI_SPACE"
 
 # ------- skhd Mode ----------
 sketchybar --add item skhd right

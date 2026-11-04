@@ -14,5 +14,5 @@ if [[ "$YABAI_SCRIPT" == "TRUE" ]]; then
     echo "WIN: FLOAT"
 fi
 if [[ "$YABAI_SCRIPT" == "FALSE" ]]; then
-    echo "WIN: BSP"
+    echo "WIN: MANAGED"
 fi
