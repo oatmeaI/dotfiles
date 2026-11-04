@@ -9,12 +9,6 @@ alias unbrew="brew bundle -g remove"
 export XDG_CONFIG_HOME=~/.config
 export PATH="$PATH:/opt/homebrew/bin:$HOME/.local/bin"
 
-##### Work stuff
-if [ -e ~/secretvars.zsh ]
-then
-    source ~/secretvars.zsh
-fi
-
 ##### Antigen
 source /opt/homebrew/share/antigen/antigen.zsh
 antigen init ~/.config/antigen/.antigenrc
@@ -31,4 +25,10 @@ eval "$(starship init zsh)"
 FNM_PATH="/opt/homebrew/opt/fnm/bin"
 if [ -d "$FNM_PATH" ]; then
   eval "$(fnm env --shell zsh)"
+fi
+
+##### Work stuff
+if [ -e ~/secretvars.zsh ]
+then
+    source ~/secretvars.zsh
 fi
