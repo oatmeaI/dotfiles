@@ -1,5 +1,10 @@
 YABAI_SCRIPT=$(yabai -m query --windows --window | jq -r '.["space"]' | awk "{print toupper(\$0)}")
 
+YABAI_FLOAT=$(yabai -m query --windows --window | jq -r '.["is-floating"]' | awk "{print toupper(\$0)}")
+if [[ "$YABAI_FLOAT" == "TRUE" ]]; then
+    yabai -m window --toggle float
+fi
+
 # Move to Space 2 if we're adding to BSP; Space 1 if we're floating
 if [[ "$YABAI_SCRIPT" == "2" ]]; then
     yabai -m window --space 1

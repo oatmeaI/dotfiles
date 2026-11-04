@@ -20,6 +20,8 @@ yabaimode < space       ; default : ~/.config/skhd/float_window.sh && yabai -m w
 yabaimode < left        ; default : ~/.config/skhd/float_window.sh && yabai -m window --grid 1:2:0:0:1:1
 yabaimode < right       ; default : ~/.config/skhd/float_window.sh && yabai -m window --grid 1:2:1:0:1:1
 
+yabaimode < n           ; default : yabai -m window --display next
+yabaimode < p           ; default : yabai -m window --display prev
 
 # Unstack
 # TODO: could add a script here that checks to see if we should unstack or warp?
