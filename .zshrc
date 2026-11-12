@@ -32,3 +32,5 @@ if [ -e ~/secretvars.zsh ]
 then
     source ~/secretvars.zsh
 fi
+
+fnm use 2>/dev/null

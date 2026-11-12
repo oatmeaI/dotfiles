@@ -25,6 +25,12 @@ AutoCmd("QuitPre", {
     end,
 })
 
+AutoCmd("CursorHold", {
+    callback = function()
+        vim.cmd("mksession! " .. vim.fn.getcwd() .. "/.session.vim")
+    end,
+})
+
 -- Even out splits when resized (b/c tmux)
 AutoCmd("VimResized", { command = "wincmd =" })
 
