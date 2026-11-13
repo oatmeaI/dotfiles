@@ -85,6 +85,7 @@ lmap("wd",      "<c-w>c",           "close current window")
 lmap("ws",      "<cmd>sp<cr>",      "split window horizontally")
 lmap("wv",      "<cmd>vs<cr>",      "split window vertically")
 lmap("wz",      Zoom,               "toggle window zoom")
+lmap("w=",      ":wincmd =<cr>",    "equalize splits")
 
 -- Tabs
 lmap("td",      "<cmd>tabc<cr>",    "close current tab")
@@ -101,6 +102,3 @@ lmap("cr",      lsp.rename,         "rename")
 
 -- Marks
 lmap("m",       ToggleMark,         "toggle mark")
-
-
-
