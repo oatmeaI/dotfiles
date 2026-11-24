@@ -102,3 +102,9 @@ lmap("cr",      lsp.rename,         "rename")
 
 -- Marks
 lmap("m",       ToggleMark,         "toggle mark")
+
+-- QF List
+lmap("la",      AddEntry,           "add to qf")
+lmap("lc",      ClearQF,            "clear qf")
+lmap("lo",      ToggleQF,           "toggle qf")
+lmap("ld",      RemoveEntry,        "remove from qf")
