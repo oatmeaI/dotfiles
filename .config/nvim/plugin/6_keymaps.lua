@@ -104,7 +104,7 @@ lmap("cr",      lsp.rename,         "rename")
 lmap("m",       ToggleMark,         "toggle mark")
 
 -- QF List
-lmap("la",      AddEntry,           "add to qf")
-lmap("lc",      ClearQF,            "clear qf")
-lmap("lo",      ToggleQF,           "toggle qf")
-lmap("ld",      RemoveEntry,        "remove from qf")
+lmap("ia",      AddEntry,           "add to qf")
+lmap("ic",      ClearQF,            "clear qf")
+lmap("io",      ToggleQF,           "toggle qf")
+lmap("id",      RemoveEntry,        "remove from qf")

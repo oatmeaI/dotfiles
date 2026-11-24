@@ -7,4 +7,4 @@ yabai -m config auto_balance    on
 
 yabai -m config layout stack
 yabai -m config mouse_drop_action stack
-
+yabai -m space 2 --layout bsp
