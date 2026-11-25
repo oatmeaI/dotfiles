@@ -8,7 +8,7 @@ AutoCmd("VimLeavePre", { command = "lua pcall(vim.cmd('wall'))" })
 AutoCmd("VimEnter", {
     callback = function()
         local file = vim.fn.getcwd() .. "/.session.vim"
-        if vim.uv.fs_stat(file) then
+        if vim.uv.fs_stat(file) and vim.fn.argc(-1) == 0 then
             -- Defer allows the main loop to start up so that syntax highlighting, etc, works
             vim.defer_fn(function()
                 vim.cmd("source " .. file)
